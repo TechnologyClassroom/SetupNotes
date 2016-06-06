@@ -34,8 +34,11 @@ Uncheck Use hardware acceleration when available
 
 # Extensions
 
+Adblock Plus removes ads from most webpages.  This is reported to decrease your network traffic by about 17% which increases the speed of your entire network.
+https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb?utm_source=chrome-app-launcher-info-dialog
+
 History 2 helps reviewing browsing history on a per machine basis.
 https://chrome.google.com/webstore/detail/history-2/cahejgbbfgmlmjgdjlibphdjeldhagkp?utm_source=chrome-app-launcher-info-dialog
 
-Adblock Plus removes ads from most webpages.  This is reported to decrease your network traffic by about 17% which increases the speed of your entire network.
-https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb?utm_source=chrome-app-launcher-info-dialog
+Link Grabber is useful for copying all links from a page.
+https://chrome.google.com/webstore/detail/link-grabber/caodelkhipncidmoebgbbeemedohcdma

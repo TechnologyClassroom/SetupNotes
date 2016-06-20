@@ -29,11 +29,12 @@ Continue.
 
 Skip
 
+
 Click the Apple icon in the top left.  System Preferences.
 
-Mouse
-	Uncheck Scroll direction: Natural
-	Track speed > fast
+Dock
+	50%
+	Check Magnification  75%
 
 Mission Control
 	Mission control -
@@ -41,16 +42,31 @@ Mission Control
 	Show Dashboard -
 	Change all hotcorners to -
 
-Dock
-	50%
-	Check Magnification  75%
-
 # Security & Privacy
 #	radio Anywhere > Allow from anywhere
+
+Energy Saver
+	Unlock to make changes.
+	Schedule...
+		Check Start up or wake Weekdays at 12:30PM
+		Check Shut Down Every Day at 7:50PM
+		OK
 
 Keyboard > Shortcuts
 	Mission Control Uncheck mission control
 	Accessibility Uncheck all
+
+Mouse
+	Uncheck Scroll direction: Natural
+	Track speed > fast
+
+Network
+	Turn Wi-Fi off
+	Advanced options
+	Check Create computer...
+	Check Change Network
+	Check Turn Wi-Fi..
+	Apply
 
 Sharing
 	Give the computer a name here.
@@ -60,14 +76,6 @@ Users & Groups
 	# Make a standard account
 	Login Options
 	Automatic login: standard account
-
-Network
-	Turn Wi-Fi off
-	Advanced options
-	Check Create computer...
-	Check Change Network
-	Check Turn Wi-Fi..
-	Apply
 
 App Store
 	Check all
@@ -93,7 +101,7 @@ General
 	Uncheck Open "safe" file after download
 Autofill
 	Uncheck all
-Passowrds
+Passwords
 	Uncheck all
 Search
 	Search DuckDuckGo or Google

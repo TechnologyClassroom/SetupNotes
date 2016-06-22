@@ -1,0 +1,7 @@
+Windows
+
+# MSN opens a browser when logging in
+http://www.troublefixing.in/solved-windows-launch-msn-or-bing-page-on-starup/345/
+regedit Run As Administrator
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet\
+On right side pane you will find a EnableActiveProbing value, just double click on it and change its value from 1 to 0.

@@ -1,6 +1,8 @@
-Windows
+Windows (INCOMPLETE)
 
-# MSN opens a browser when logging in
+When installing a Windows system, it comes with terrible defaults that do not always have your best interests in mind.  Be very careful when installing for the first time.  As a rule of thumb, turn everything off unless you are sure that you need it.
+
+# Problem: MSN opens a browser when logging in
 http://www.troublefixing.in/solved-windows-launch-msn-or-bing-page-on-starup/345/
 regedit Run As Administrator
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet\

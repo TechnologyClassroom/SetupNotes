@@ -14,3 +14,7 @@ https://wiki.archlinux.org/
 # UEFI Install resources
 http://ubuntuforums.org/showthread.php?t=2147295
 
+# Allow passwords of any length (Only use this for standard account)
+http://ubuntuhandbook.org/index.php/2015/06/minimum-password-length-ubuntu/
+sudo nano /etc/pam.d/common-password
+# Remove the word 'obscure' and save.

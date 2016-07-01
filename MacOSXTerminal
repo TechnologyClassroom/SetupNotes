@@ -98,3 +98,7 @@ scp /Directory/path/of/file.zip pi@ipaddressofpi:/home/pi
 # Puppet
 
 /opt/puppetlabs/puppet/bin/puppet
+
+# Force SketchUp to close as limited user.  SketchUp starts in a window without the standard red button to exit.  This can prevent a shutdown.
+
+su Computer\ Clubhouse -c sudo\ pkill\ -9\ SketchUp

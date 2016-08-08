@@ -18,3 +18,7 @@ http://ubuntuforums.org/showthread.php?t=2147295
 http://ubuntuhandbook.org/index.php/2015/06/minimum-password-length-ubuntu/
 sudo nano /etc/pam.d/common-password
 # Remove the word 'obscure' and save.
+
+# Problem Ubuntu's outdated Sugar DE clobbers the cursor outside of sugar
+# Solution: Reset cursor theme
+gsettings reset org.gnome.desktop.interface cursor-theme

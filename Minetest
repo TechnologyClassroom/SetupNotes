@@ -1,0 +1,31 @@
+Minetest
+
+Michael McMahon
+
+Minetest is an open source game engine similar to Minecraft or other voxel games.  This engine can run a variety of games called subgames.
+
+Subgames to start with:
+
+-Carbone - Comes action packed with monsters and excellent mods
+
+-Dreambuilder - Comes packed with lots of building materials
+
+
+
+Mods to look for:
+
+-craft_guide - With 5 sticks, you can build a craft guide.  This guide can be placed anywhere and shows all of the ways to craft any item available.  This allows you to stay immersed in the game without searching through code or forums to find crafting recipes.
+
+-streets - adds roads to the game
+
+-pyramids - adds pyramids with treasure and traps
+
+-ufos - adds spaceships
+
+-worldedit - adds a world manipulation tool.  This is great for building large structures.
+
+Troubleshooting
+
+Read the errors from the terminal and look them up on http://wiki.minetest.net/Troubleshooting
+
+The most common one I have run into is “ServerEnvironment::loadMeta(): EnvArgsEnd not found” and the solution is to delete the env_meta.txt in the world's folder.

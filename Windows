@@ -3,7 +3,12 @@ Windows (INCOMPLETE)
 When installing a Windows system, it comes with terrible defaults that do not always have your best interests in mind.  Be very careful when installing for the first time.  As a rule of thumb, turn everything off unless you are sure that you need it.
 
 # Problem: MSN opens a browser when logging in
-http://www.troublefixing.in/solved-windows-launch-msn-or-bing-page-on-starup/345/
+From http://www.troublefixing.in/solved-windows-launch-msn-or-bing-page-on-starup/345/
 regedit Run As Administrator
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet\
 On right side pane you will find a EnableActiveProbing value, just double click on it and change its value from 1 to 0.
+
+# Problem: users start multiple instances of a program causing nothing to work.
+From http://superuser.com/questions/654088/start-programs-via-command-line-but-only-if-not-already-running
+Create a batch script in a text file using this line and save it as like KSPLaunch.bat in the directory with the process.  Replace KSP.exe with your process name.  Replace shortcuts with a shortcut to the batch script.  Replace shortcut icons with the original icons.
+tasklist /nh /fi "imagename eq KSP.exe" | find /i "KSP.exe" > nul || (start KSP.exe)

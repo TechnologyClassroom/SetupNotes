@@ -3,14 +3,24 @@ Notes on setting up systems in Educational Environments
 
 Michael McMahon
 
-Chrome demonstrates the settings and extensions I use.
+  * Chrome demonstrates the settings and extensions I use.
+  
+  * Firefox incomplete notes
 
-iPad & iPod shows how to add only the apps you want for your program area and prevent children from browsing inappropriate materials and adding their own apps.
+  * Github incomplete notes
 
-MacOSX shows how to configure or upgrade the Mac OS X operating system.
+  * GNULinux incomplete notes
 
-MacOSXTerminal has many of my favorite commands for the Mac Terminal.  With Terminal, you can use the Unix system that runs the system.  The drawback is an extremely lower number of available applications than FreeBSD or GNU/Linux and the software is out of date with GPL2 only applications.
+  * iPad & iPod shows how to add only the apps you want for your program area and prevent children from browsing inappropriate materials and adding their own apps.
 
-Teleprompter shows one way to configure a teleprompter setup using a Mac, two ipods, and a router.  There are cheaper ways to do this, but I was given all of those materials and asked to come up with a solution.  The process uses VNC to share the screen between the devices.
+  * MacOSX shows how to configure or upgrade the Mac OS X operating system.
+
+  * MacOSXTerminal has many of my favorite commands for the Mac Terminal.  With Terminal, you can use the Unix system that runs the system.  The drawback is an extremely lower number of available applications than FreeBSD or GNU/Linux and the software is out of date with GPL2 only applications.
+
+  * Minetest notes
+
+  * Teleprompter shows one way to configure a teleprompter setup using a Mac, two ipods, and a router.  There are cheaper ways to do this, but I was given all of those materials and asked to come up with a solution.  The process uses VNC to share the screen between the devices.
+
+  * Windows incomplete notes
 
 More to come!

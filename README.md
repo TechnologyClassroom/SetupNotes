@@ -10,6 +10,8 @@ Michael McMahon
   * Github incomplete notes
 
   * GNULinux incomplete notes
+  
+  * GNULinuxOnMacbooks.md incomplete install instructions for dual-booting a white Macbook from 2009
 
   * iPad & iPod shows how to add only the apps you want for your program area and prevent children from browsing inappropriate materials and adding their own apps.
 

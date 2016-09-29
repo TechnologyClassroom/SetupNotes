@@ -6,6 +6,8 @@ This guide is incomplete and actively in progress.  I have only tested this on w
 
 # [Configuring the original Mac OS X 10.6.8](#configuring-the-original-mac-os-x-10.6.8)
 
+Skip this section if you have already setup your Mac for the first time.  The Macs I tested this on had never been used before.
+
 * Brand new first run configuring the system
   * Choose your country (United States) > Continue
   * Choose your keyboard (U.S.) > Continue
@@ -142,7 +144,7 @@ Type in "sudo pkill ubiquity" without quotes and press enter or return.
 * Click on the "Shut Down" button.  If you are using a DVD, it will eject and ask you to press the enter key.
 
 # rEFIt can now be uninstalled
-* The first time I ran this guide, rEFIt loaded when I rebooted.  The second time, the computer booted straight to grub.  ???
+* The first time I rebooted, the computer booted straight to grub.  The second time I booted, rEFIt loaded.  ???  In the rEFIt menu, you can only use the arrow keys and the enter or return key.  Select "Boot EFI\ubuntu\grubx54.efi from EFI" to load the grub menu and Ubuntu Studio.  Select "Boot Mac OS X from 10.6" to directly load Mac OS.
 
 # Configuring Ubuntu Studio
 
@@ -156,7 +158,7 @@ Type in "sudo pkill ubiquity" without quotes and press enter or return.
  * Click on the "Close" button.  Click on the "Close" button.
  
 
-* Install wireless drivers
+* (Optional) Install wireless drivers through the Additional Drivers GUI
   * The Macbook I used had proprietary drivers available.
   * Click on the Ubuntu Studio menu at the top left.  Type in "Additional Drivers" without quotes
   * Click on the "Using ____ wireless driver source from _____ (proprietary)" option to use a proprietary driver.
@@ -164,15 +166,20 @@ Type in "sudo pkill ubiquity" without quotes and press enter or return.
   * Click on the "Close" button.
   * Reboot and you can unplug the ethernet wire or through a wifi device.
 
+* (Optional) Install wireless drivers through the CLI
+
+http://askubuntu.com/questions/22118/can-i-install-extra-drivers-via-the-command-prompt
+
 * Upgrade the system
+
 sudo apt-get update && sudo apt-get upgrade -y
 
 * Install more software
-sudo apt-get install -y lxde-core leafpad puppet python-pygame git xaos cowsay fortune bb feh libaa-bin caca-utils aview figlet sl telnet awesome xfonts-mona xfonts-terminus xfonts-100dpi xfonts-75dpi xfonts-base screenfetch
 
-add idle too
+sudo apt-get install -y lxde-core awesome leafpad python-pygame idle-python2.7 git puppet xaos cowsay fortune bb feh libaa-bin caca-utils aview figlet sl telnet xfonts-mona xfonts-terminus xfonts-100dpi xfonts-75dpi xfonts-base screenfetch
 
 * Install Processing
+
 wget http://download.processing.org/processing-3.2.1-linux64.tgz
 --missing install line
 * Create a Desktop icon for processing

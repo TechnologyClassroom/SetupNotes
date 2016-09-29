@@ -133,17 +133,36 @@ Type in "sudo pkill ubiquity" without quotes and press enter or return.
 
    * (Optional) Click on the "Advanced options" arrow.  Click on the "Other options" tab.  Uncheck the "Upload the report to a pastebin" and "Participate to statistics of use" boxes.  Click on the "Advanced options" arrow to collapse the menu.
    * Click on the "Recommended repair (repairs most frequent problems)" button.
-   * Follow all of the directions it gives.  Click on the "Forward" button after you have completed each action.
+   * Follow all of the directions it gives.  Click on the "Forward" button after you have completed each action.  When I ran the Boot-Repair, I ran 3 commands, Forward, 1 command, Forward, No, OK, and I closed the logfile.
+
+# Shutdown the liveDVD
+
+* Click on the Ubuntu Studio icon in the top left.
+* Click on the power icon in the drop down menu.
+* Click on the "Shut Down" button.  If you are using a DVD, it will eject and ask you to press the enter key.
 
 # rEFIt can now be uninstalled
-
-
+* The first time I ran this guide, rEFIt loaded when I rebooted.  The second time, the computer booted straight to grub.  ???
 
 # Configuring Ubuntu Studio
+
+* Connect to the Internet through an ethernet wire or through a wifi device that is supported by the Linux kernel.
+
+* Incomplete Language Support window
+ * Click on the "Run this action now" button.
+ * Click on the "Install" button.
+ * Enter your password.
+ * Wait for it to finish.
+ * Click on the "Close" button.  Click on the "Close" button.
+ 
 
 * Install wireless drivers
   * The Macbook I used had proprietary drivers available.
   * Click on the Ubuntu Studio menu at the top left.  Type in "Additional Drivers" without quotes
+  * Click on the "Using ____ wireless driver source from _____ (proprietary)" option to use a proprietary driver.
+  * Click on the "Apply Changes" button
+  * Click on the "Close" button.
+  * Reboot and you can unplug the ethernet wire or through a wifi device.
 
 * Upgrade the system
 sudo apt-get update && sudo apt-get upgrade -y

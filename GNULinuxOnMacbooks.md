@@ -108,7 +108,7 @@ Choose a standard password for your admin account.
 --missing button name
 Wait a long time for the system to be installed.
 
-# If grub fails...
+# If grub fails to install...
 Due to a bug in the ubiquity installer, it may read "GRUB installation failed The 'grub-efi-amd64-signed' package failed to install into /target/. Without the GRUB boot loader, the installed system will not boot."  That is serious, but do not worry.  We can fix it in the next section > OK  The installer may crash after that with "Installer crashed Installer crashed We're sorry; the installer crashed.  After you close this window, we'll allow you to file a bug report using the integrated bug reporting tool.  This will gather information about your system and your installation process.  The details will be sent to our bug tracker and a developer will attend to the problem as soon as possible" > Close
 Click on the Ubuntu Studio icon in the top left.
 Click on Terminal Emulator.
@@ -116,12 +116,24 @@ Type in "sudo pkill ubiquity" without quotes and press enter or return.
 
 # If the grub installation fails, use Boot-Repair
   * Connect to the Internet through an ethernet wire or through a wifi device that is supported by the Linux kernel.
-	* Install and run Boot-Repair
-    * Boot from a ubuntu based distribution.  Enter thsese commands and follow the directions:
+  * Install Boot-Repair
+    * Boot from a ubuntu based distribution.  Enter these commands and follow the directions:
 
-sudo add-apt-repository ppa:yannubuntu/boot-repair
+sudo add-apt-repository ppa:yannubuntu/boot-repair -y
+<!-- verify the -y switch works and remove the enter key. -->
+      * Press the enter or return key to continue adding the repository
+
 sudo apt-get update
-sudo apt-get install -y boot-repair && boot-repair
+sudo apt-get install -y boot-repair
+
+  * Run Boot-Repair
+    * In a terminal, run this command:
+
+boot-repair
+
+    * (Optional) Click on the "Advanced options" arrow.  Click on the "Other options" tab.  Uncheck the "Upload the report to a pastebin" and "Participate to statistics of use" boxes.  Click on the "Advanced options" arrow to collapse the menu.
+    * Click on the "Recommended repair (repairs most frequent problems)" button.
+    * Follow all of the directions it gives.  Click on the "Forward" button after you have completed each action.
 
 # rEFIt can now be uninstalled
 
@@ -130,6 +142,8 @@ sudo apt-get install -y boot-repair && boot-repair
 # Configuring Ubuntu Studio
 
 * Install wireless drivers
+  * The Macbook I used had proprietary drivers available.
+  * Click on the Ubuntu Studio menu at the top left.  Type in "Additional Drivers" without quotes
 
 * Upgrade the system
 sudo apt-get update && sudo apt-get upgrade -y

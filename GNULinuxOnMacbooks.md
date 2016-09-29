@@ -117,23 +117,23 @@ Type in "sudo pkill ubiquity" without quotes and press enter or return.
 # If the grub installation fails, use Boot-Repair
   * Connect to the Internet through an ethernet wire or through a wifi device that is supported by the Linux kernel.
   * Install Boot-Repair
-    * Boot from a ubuntu based distribution.  Enter these commands and follow the directions:
+   * Boot from a ubuntu based distribution.  Enter these commands and follow the directions:
 
-sudo add-apt-repository ppa:yannubuntu/boot-repair -y
+    sudo add-apt-repository ppa:yannubuntu/boot-repair -y
 <!-- verify the -y switch works and remove the enter key. -->
-      * Press the enter or return key to continue adding the repository
+   * Press the enter or return key to continue adding the repository
 
-sudo apt-get update
-sudo apt-get install -y boot-repair
+    sudo apt-get update
+    sudo apt-get install -y boot-repair
 
   * Run Boot-Repair
-    * In a terminal, run this command:
+   * In a terminal, run this command:
 
-boot-repair
+    boot-repair
 
-    * (Optional) Click on the "Advanced options" arrow.  Click on the "Other options" tab.  Uncheck the "Upload the report to a pastebin" and "Participate to statistics of use" boxes.  Click on the "Advanced options" arrow to collapse the menu.
-    * Click on the "Recommended repair (repairs most frequent problems)" button.
-    * Follow all of the directions it gives.  Click on the "Forward" button after you have completed each action.
+   * (Optional) Click on the "Advanced options" arrow.  Click on the "Other options" tab.  Uncheck the "Upload the report to a pastebin" and "Participate to statistics of use" boxes.  Click on the "Advanced options" arrow to collapse the menu.
+   * Click on the "Recommended repair (repairs most frequent problems)" button.
+   * Follow all of the directions it gives.  Click on the "Forward" button after you have completed each action.
 
 # rEFIt can now be uninstalled
 

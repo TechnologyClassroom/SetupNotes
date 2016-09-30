@@ -10,7 +10,8 @@ This guide is incomplete and actively in progress.  I have only tested this on w
 * <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#download-and-install-refit">Download and Install rEFIt</a>
 * <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#create-a-livedvd-or-liveusb-with-a-gnu-linux-iso">Create a liveDVD or liveUSB with a GNU/Linux ISO</a>
 * <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#install-gnu-linux">Install GNU/Linux</a>
-* More Table of Contents to come!
+* <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#if-the-grub-installation-fails-use-boot-repair">If the grub installation fails, use Boot-Repair</a>
+* <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#configure-ubuntu-studio">Configure Ubuntu Studio</a>
 
 # [Configuring the original Mac OS X 10.6.8](#configuring-the-original-mac-os-x-10.6.8)
 
@@ -119,13 +120,11 @@ Choose a standard password for your admin account.
 --missing button name
 Wait a long time for the system to be installed.
 
-# If grub fails to install...
-Due to a bug in the ubiquity installer, it may read "GRUB installation failed The 'grub-efi-amd64-signed' package failed to install into /target/. Without the GRUB boot loader, the installed system will not boot."  That is serious, but do not worry.  We can fix it in the next section > OK  The installer may crash after that with "Installer crashed Installer crashed We're sorry; the installer crashed.  After you close this window, we'll allow you to file a bug report using the integrated bug reporting tool.  This will gather information about your system and your installation process.  The details will be sent to our bug tracker and a developer will attend to the problem as soon as possible" > Close
-Click on the Ubuntu Studio icon in the top left.
-Click on Terminal Emulator.
-Type in "sudo pkill ubiquity" without quotes and press enter or return.
-
 # [If the grub installation fails, use Boot-Repair](#if-the-grub-installation-fails-use-boot-repair)
+Due to a bug in the ubiquity installer, it may read "GRUB installation failed The 'grub-efi-amd64-signed' package failed to install into /target/. Without the GRUB boot loader, the installed system will not boot." That is serious, but do not worry. We can fix it in the next section > OK
+
+The installer may crash after that with "Installer crashed Installer crashed We're sorry; the installer crashed. After you close this window, we'll allow you to file a bug report using the integrated bug reporting tool. This will gather information about your system and your installation process. The details will be sent to our bug tracker and a developer will attend to the problem as soon as possible" > Close Click on the Ubuntu Studio icon in the top left.  Click on Terminal Emulator.  Type in "sudo pkill ubiquity" without quotes and press enter or return.
+
   * Connect to the Internet through an ethernet wire or through a wifi device that is supported by the Linux kernel.
   * Install Boot-Repair
    * Boot from a ubuntu based distribution.  Enter these commands and follow the directions:

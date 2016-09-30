@@ -1,8 +1,16 @@
-# Notes on Installing GNU/Linux on Macbook 2009
+# [Notes on dual-booting GNU/Linux on Macbook 2009](#notes-on-dual-booting-gnu-linux-on-macbook-2009)
 
 Rewrite/update based on Peter Upfolds article https://fosswire.com/post/2009/03/how-to-ubuntu-810-on-white-macbook/
 
 This guide is incomplete and actively in progress.  I have only tested this on white macbooks from 2009.
+
+# Table of Contents
+* <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#configuring-the-original-mac-os-x-10.6.8">Configuring the orignal Mac OS X 10.6.8</a>
+* <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#shrink-your-mac-installation-to-make-room-for-gnu-linux">Shrink your Mac installation to make room for GNU/Linux</a>
+* <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#download-and-install-refit">Download and Install rEFIt</a>
+* <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#create-a-livedvd-or-liveusb-with-a-gnu-linux-iso">Create a liveDVD or liveUSB with a GNU/Linux ISO</a>
+* <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#install-gnu-linux">Install GNU/Linux</a>
+* More Table of Contents to come!
 
 # [Configuring the original Mac OS X 10.6.8](#configuring-the-original-mac-os-x-10.6.8)
 
@@ -57,6 +65,7 @@ Note: On a Mac that is intended for use in educational environments, I would do 
   * Continue
   * I have the Mac OS X installation disc... > Continue
   * Click on the dot between the Mac OS X and Windows section.  Drag left until the Mac OS X section reads 30 GB.  > Partion
+   * Note: This is the configuration I used for Macs OS installations that were not used and not intended to be used.  If you already have data, you can find out how much free space you have and decide how much you should use with the terminal command: df -h
   * Click on "Quit and Install Later" because we are not installing Windows.
 
 # [Download and install rEFIt](#download-and-install-refit)
@@ -116,7 +125,7 @@ Click on the Ubuntu Studio icon in the top left.
 Click on Terminal Emulator.
 Type in "sudo pkill ubiquity" without quotes and press enter or return.
 
-# If the grub installation fails, use Boot-Repair
+# [If the grub installation fails, use Boot-Repair](#if-the-grub-installation-fails-use-boot-repair)
   * Connect to the Internet through an ethernet wire or through a wifi device that is supported by the Linux kernel.
   * Install Boot-Repair
    * Boot from a ubuntu based distribution.  Enter these commands and follow the directions:
@@ -137,16 +146,16 @@ Type in "sudo pkill ubiquity" without quotes and press enter or return.
    * Click on the "Recommended repair (repairs most frequent problems)" button.
    * Follow all of the directions it gives.  Click on the "Forward" button after you have completed each action.  When I ran the Boot-Repair, I ran 3 commands, Forward, 1 command, Forward, No, OK, and I closed the logfile.
 
-# Shutdown the liveDVD
+# [Shut Down the liveDVD or liveUSB](#shut-down-the-livedvd-or-liveusb)
 
 * Click on the Ubuntu Studio icon in the top left.
 * Click on the power icon in the drop down menu.
 * Click on the "Shut Down" button.  If you are using a DVD, it will eject and ask you to press the enter key.
 
-# rEFIt can now be uninstalled
+# [rEFIt can now be uninstalled](#refit-can-now-be-uninstalled)
 * The first time I rebooted, the computer booted straight to grub.  The second time I booted, rEFIt loaded.  ???  In the rEFIt menu, you can only use the arrow keys and the enter or return key.  Select "Boot EFI\ubuntu\grubx54.efi from EFI" to load the grub menu and Ubuntu Studio.  Select "Boot Mac OS X from 10.6" to directly load Mac OS.
 
-# Configuring Ubuntu Studio
+# [Configuring Ubuntu Studio](#configure-ubuntu-studio)
 
 * Connect to the Internet through an ethernet wire or through a wifi device that is supported by the Linux kernel.
 

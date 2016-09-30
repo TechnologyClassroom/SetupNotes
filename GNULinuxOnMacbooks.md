@@ -4,7 +4,7 @@ Rewrite/update based on Peter Upfolds article https://fosswire.com/post/2009/03/
 
 This guide is incomplete and actively in progress.  I have only tested this on white macbooks from 2009.
 
-# Table of Contents
+# [Table of Contents](#toc)
 * <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#configuring-the-original-mac-os-x-10.6.8">Configuring the orignal Mac OS X 10.6.8</a>
 * <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#shrink-your-mac-installation-to-make-room-for-gnu-linux">Shrink your Mac installation to make room for GNU/Linux</a>
 * <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#download-and-install-refit">Download and Install rEFIt</a>

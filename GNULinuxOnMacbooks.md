@@ -102,6 +102,7 @@ Note: On a Mac that is intended for use in educational environments, I would do 
 * Double click "Install Ubuntu Studio 16.04..."
 * Choose your language > Continue
 * (Optional) If you have a compatible wireless card plugged in, the menu will give you the opportunity to connect to wifi. > Continue
+ * Note: This will save time later and you will not have to deal with Boot-Repair.
 * Continue
 * Continue  Note: if you are only intending to do audio production, uncheck the rest of the boxes that do not have to do with audio.  Otherwise, leave them all checked.
 * Something else > Continue

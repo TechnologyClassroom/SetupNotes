@@ -168,16 +168,20 @@ The installer may crash after that with "Installer crashed Installer crashed We'
  
 
 * (Optional) Install wireless drivers through the Additional Drivers GUI
-  * The Macbook I used had proprietary drivers available.
+  * The Macbook I used had proprietary drivers available that would enable the internal wifi card.
   * Click on the Ubuntu Studio menu at the top left.  Type in "Additional Drivers" without quotes
   * Click on the "Using ____ wireless driver source from _____ (proprietary)" option to use a proprietary driver.
   * Click on the "Apply Changes" button
   * Click on the "Close" button.
-  * Reboot and you can unplug the ethernet wire or through a wifi device.
+  * Reboot and you can unplug the ethernet wire or through a wifi device.  You will need to enter your wifi password again.
 
 * (Optional) Install wireless drivers through the CLI
 
-http://askubuntu.com/questions/22118/can-i-install-extra-drivers-via-the-command-prompt
+Open a terminal and run this command to install all of the proprietary drivers for your system:
+
+sudo ubuntu-devices autoinstall
+
+Note: This will install drivers that cannot be security audited.  For more information, see <a href="http://askubuntu.com/questions/22118/can-i-install-extra-drivers-via-the-command-prompt">this post</a>.
 
 * Upgrade the system
 

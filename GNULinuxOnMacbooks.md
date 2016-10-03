@@ -22,8 +22,8 @@ Skip this section if you have already setup your Mac for the first time.  The Ma
   * Choose your keyboard (U.S.) > Continue
   * Do not transfer my information now > Continue
   * Choose your wireless network and enter the password or connect through ethernet > Continue
-  * (Optional) Enter your Apple ID and password > Continue
-  * (Optional) Enter your registration details > Continue
+  * (Optional yet more clean) Enter your Apple ID and password > Continue
+  * (Optional yet more clean) Enter your registration details > Continue
   * Full Name change's the system name.  Make these details consistent across your network.  Account Name is the default admin account.  Write the password down.  > Continue
   * Choose from the picture library.  Choose a picture > Continue
   * Choose your time zone > Continue
@@ -65,6 +65,7 @@ Note: On a Mac that is intended for use in educational environments, I would do 
   * Type "Boot Camp Assistant" and press enter or return.
   * Continue
   * I have the Mac OS X installation disc... > Continue
+   * Note: If the error "Boot Camp Assistant cannot be used.  The disk is not journaled. You must enable journaling using Disk Utility before using the Boot Camp Assitant." box comes up, open Disk Utility through the magnifying glass in the top right.  Click on your Mac OS X partition.  In this case mine was "10.6" but yours may differ.  Click on the green "Enable Journaling" button at the top.  Click the red X at the top left to close Disk Utility.
   * Click on the dot between the Mac OS X and Windows section.  Drag left until the Mac OS X section reads 30 GB.  > Partion
    * Note: This is the configuration I used for Macs OS installations that were not used and not intended to be used.  If you already have data, you can find out how much free space you have and decide how much you should use with the terminal command: df -h
   * Click on "Quit and Install Later" because we are not installing Windows.
@@ -123,6 +124,7 @@ Wait a long time for the system to be installed.
 # [If the grub installation fails, use Boot-Repair](#if-the-grub-installation-fails-use-boot-repair)
 Due to a bug in the ubiquity installer, it may read "GRUB installation failed The 'grub-efi-amd64-signed' package failed to install into /target/. Without the GRUB boot loader, the installed system will not boot." That is serious, but do not worry. We can fix it in the next section > OK
 
+
 The installer may crash after that with "Installer crashed Installer crashed We're sorry; the installer crashed. After you close this window, we'll allow you to file a bug report using the integrated bug reporting tool. This will gather information about your system and your installation process. The details will be sent to our bug tracker and a developer will attend to the problem as soon as possible" > Close Click on the Ubuntu Studio icon in the top left.  Click on Terminal Emulator.  Type in "sudo pkill ubiquity" without quotes and press enter or return.
 
   * Connect to the Internet through an ethernet wire or through a wifi device that is supported by the Linux kernel.
@@ -130,10 +132,9 @@ The installer may crash after that with "Installer crashed Installer crashed We'
    * Boot from a ubuntu based distribution.  Enter these commands and follow the directions:
 
     sudo add-apt-repository ppa:yannubuntu/boot-repair -y
-<!-- verify the -y switch works and remove the enter key. -->
-   * Press the enter or return key to continue adding the repository
-
+    
     sudo apt-get update
+    
     sudo apt-get install -y boot-repair
 
   * Run Boot-Repair

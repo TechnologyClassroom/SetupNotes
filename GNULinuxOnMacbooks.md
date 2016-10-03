@@ -93,33 +93,34 @@ Note: On a Mac that is intended for use in educational environments, I would do 
   * Shut Down
 
 # [Install GNU/Linux](#install-gnu-linux)
-Insert a liveUSB or liveDVD with GNU/Linux installed.  I am using Ubuntu Studio 16.04.1 64 bit on a DVD.
-Press the power button.
-Wait just a moment until the chime sound.  Hold the alt or option key until you see a menu.  If you boot into Mac OS X.  Shut down and try again.
-Click EFI Boot.
-Click the arrow under EFI Boot.
-"Try Ubuntu Studio without installing" should be highlighted.  Hit the enter or return key.  Be patient while the system loads.  It takes longer to load an entire operating system to RAM from a DVD or USB than it normally does to boot a system.
-Double click "Install Ubuntu Studio 16.04..."
-Choose your language > Continue
-Continue
-Continue  Note: if you are only intending to do audio production, uncheck the rest of the boxes that do not have to do with audio.  Otherwise, leave them all checked.
-Something else > Continue
-Click on "/dev/sda3 fat32" and click the "-" minus sign.
-Click on "free space" at the bottom and click the "+" plus sign.
-Change the "Mount point:" to "/" from the drop down menu.
-OK
-Change "Device for boot loader installation:" to "/dev/sda3" from the drop down menu.
-Install Now
-Continue
-Continue
-Choose your time zone (New York) > Continue
-Choose your keyboard layout (English (US) English (US)) > Continue
-For the "Your name:" entry, choose a username for your admin account.  The installer will automatically format it into an acceptable format below.
-For the "Your computer's name:" entry, pick the same scheme as you did on the Mac operating system above.
-Choose a standard password for your admin account.
---missing radio choice
---missing button name
-Wait a long time for the system to be installed.
+* Insert a liveUSB or liveDVD with GNU/Linux installed.  I am using Ubuntu Studio 16.04.1 64 bit on a DVD.
+* Press the power button.
+* Wait just a moment until the chime sound.  Hold the alt or option key until you see a menu.  If the chime is not played, hold alt or option around the time the monitor turns on.  If you boot into Mac OS X.  Shut down and try again.
+* Click EFI Boot.
+* Click the arrow under EFI Boot.
+* "Try Ubuntu Studio without installing" should be highlighted.  Hit the enter or return key.  Be patient while the system loads.  It takes longer to load an entire operating system to RAM from a DVD or USB than it normally does to boot a system.
+* Double click "Install Ubuntu Studio 16.04..."
+* Choose your language > Continue
+* (Optional) If you have a compatible wireless card plugged in, the menu will give you the opportunity to connect to wifi. > Continue
+* Continue
+* Continue  Note: if you are only intending to do audio production, uncheck the rest of the boxes that do not have to do with audio.  Otherwise, leave them all checked.
+* Something else > Continue
+* Click on "/dev/sda3 fat32" and click the "-" minus sign.
+* Click on "free space" at the bottom and click the "+" plus sign.
+* Leave everything as the default except change the "Mount point:" to "/" from the drop down menu.
+* OK
+* Change "Device for boot loader installation:" to "/dev/sda3" from the drop down menu.
+* Install Now
+* Continue
+* Continue
+* Choose your time zone (New York) > Continue
+* Choose your keyboard layout (English (US) English (US)) > Continue
+* For the "Your name:" entry, choose a username for your admin account.  The installer will automatically format it into an acceptable format below.
+* For the "Your computer's name:" entry, pick the same scheme as you did on the Mac operating system above.
+* Choose a standard password for your admin account.
+* Click on the "Require my password to log in" radio button.
+* Continue
+* Wait a long time for the system to be installed.
 
 # [If the grub installation fails, use Boot-Repair](#if-the-grub-installation-fails-use-boot-repair)
 Due to a bug in the ubiquity installer, it may read "GRUB installation failed The 'grub-efi-amd64-signed' package failed to install into /target/. Without the GRUB boot loader, the installed system will not boot." That is serious, but do not worry. We can fix it in the next section > OK

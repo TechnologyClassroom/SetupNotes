@@ -195,9 +195,10 @@ sudo apt-get install -y lxde-core awesome leafpad python-pygame idle-python2.7 g
 
 * Install Processing
 
-wget http://download.processing.org/processing-3.2.1-linux64.tgz
---missing install line
-* Create a Desktop icon for processing
+wget https://raw.githubusercontent.com/TechnologyClassroom/Install-Processing-on-Ubuntu-16.04/master/InstallProcessing.sh
+sudo sh InstallProcessing.sh
+
+* (Optional) Create a Desktop icon for processing
 http://askubuntu.com/questions/299052/how-to-execute-sh-script-from-a-desktop-shortcut
 
 * Configure users

@@ -19,6 +19,11 @@ http://ubuntuhandbook.org/index.php/2015/06/minimum-password-length-ubuntu/
 sudo nano /etc/pam.d/common-password
 # Remove the word 'obscure' and save.
 
-# Problem Ubuntu's outdated Sugar DE clobbers the cursor outside of sugar
+# Problem: Ubuntu's outdated Sugar DE clobbers the cursor outside of sugar
 # Solution: Reset cursor theme
 gsettings reset org.gnome.desktop.interface cursor-theme
+
+# Problem: Keyboard incorrectly set to international and your minimal install does not have the GUI tools to fix this problem
+# Solution: Change default keyboard settings in /etc/default/keyboard
+sudo nano /etc/default/keyboard
+# Remove intl from XKBLAYOUT and XKBVARIANT.  Hold CTRL and press X, press y, and press the enter or return key.

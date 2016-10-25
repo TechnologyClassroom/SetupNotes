@@ -8,3 +8,34 @@ https://pythonhosted.org/an_example_pypi_project/sphinx.html
 
 # Examples
 https://github.com/sphinx-doc/sphinx/blob/master/EXAMPLES
+
+Front: https://docs.chef.io/index.html
+Back: https://github.com/chef/chef-web-docs/tree/master/chef_master/source
+
+
+# Code Snippets
+
+<h2>Picture</h2>
+
+.. image:: ../../images/Picture1.svg
+   :width: 700px
+   :align: center
+
+.. end_tag
+
+<h2>3 column time table</h2>
+
++-----------+------------+----------+
+|      Time | Activity   | Notes    |
++===========+============+==========+
+|  5-10 min | ...        | ...      |
++-----------+------------+----------+
+| 10-15 min | ...        | ...      |
++-----------+------------+----------+
+|    15 min | ...        | ...      |
++-----------+------------+----------+
+|    40 min | ...        | ...      |
++-----------+------------+----------+
+|    10 min | ...        | ...      |
++-----------+------------+----------+
+

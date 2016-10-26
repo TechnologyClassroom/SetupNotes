@@ -204,3 +204,46 @@ http://askubuntu.com/questions/299052/how-to-execute-sh-script-from-a-desktop-sh
 * Configure users
 
 * Configure browser preferences
+
+# Add right click buttons
+
+The white macbook I used did not have a right click.  This limits what you can do with a GUI environment.
+
+There is a solution posted by user hajk from https://ubuntuforums.org/showthread.php?t=921609
+
+1. Install the "xev" package (if it isn't already installed), then in a terminal give the "xev" command. A little window opens with a small square: put the cursor in that square. Then hit the right-Alt and right-Command keys and watch the output for the keycodes, probably 108 and 134, and write them down. Keycodes do change from time-to-time, though, so check them yourself. Then close the little window by clicking on the X; this terminates xev.
+
+2. Make a little script, like /usr/local/bin/keyboard (you need root privileges for that),
+
+```
+sudo nano /usr/local/bin/keyboard
+```
+
+Code:
+
+```
+#!/bin/sh
+xmodmap -e "keycode 108 = Pointer_Button3"
+xmodmap -e "keycode 134 = Pointer_Button2"
+xkbset m
+```
+
+where you should substitute the keycodes on your keyboard if different from mine. Make this script executable with the command:
+
+```
+sudo chmod a+x /usr/local/bin/keyboard
+```
+
+3. Make sure that the "xkbset" package is installed, then find where your keyboard settings can be modified and enable control of the mouse with the keyboard, so that the "xkbset m" command in the script will work.
+
+```
+sudo apt-get install -y xbkset
+```
+
+4. Finally, as user give the command "keyboard", and now those two keys should work as right- and middle mouse-clicks.
+
+```
+keyboard
+```
+
+If this works, then add the command "/usr/local/bin/keyboard" to the startup applications.

@@ -7,6 +7,7 @@ http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html
 https://pythonhosted.org/an_example_pypi_project/sphinx.html
 
 # Examples
+http://www.sphinx-doc.org/en/stable/tutorial.html
 https://github.com/sphinx-doc/sphinx/blob/master/EXAMPLES
 
 Front: https://docs.chef.io/index.html

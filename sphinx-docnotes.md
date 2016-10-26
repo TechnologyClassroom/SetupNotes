@@ -10,6 +10,10 @@ https://pythonhosted.org/an_example_pypi_project/sphinx.html
 
 # Templates
 
+Themes are located in the /usr/share/sphinx/themes/ folder.
+
+The default theme can be found in the /usr/share/sphinx/themes/basic folder.
+
 http://www.sphinx-doc.org/en/1.4.8/templating.html
 
 Adding creative commons

@@ -16,8 +16,14 @@ The default theme can be found in the /usr/share/sphinx/themes/basic folder.
 
 http://www.sphinx-doc.org/en/1.4.8/templating.html
 
+http://tinkerer.me/doc/theming.html
+
 Adding creative commons
 TP from https://groups.google.com/forum/#!topic/sphinx-users/f3Yl45l1KYg suggests overwriting the footer with a template:
+
+NOTE: THIS SECTION IS A WORK IN PROGRESS
+
+Note: {{ and }} have been changed to { and } because of jinja interpretation.
 
 CC BY 3.0 US
 ```
@@ -25,7 +31,7 @@ CC BY 3.0 US
       <div class="footer">
        <span class="creativecommons">
         <a href="http://creativecommons.org/licenses/by/3.0/us/" >
-          <img src="{{ pathto("_static/creativecommons-88x31.png", 1) }}"
+          <img src="{ pathto("_static/creativecommons-88x31.png", 1) }"
                border="0" alt="Creative Commons License"/>
          </a>
         Whatever is licensed under a
@@ -43,7 +49,7 @@ CC BY-SA 4.0 INTL
       <div class="footer">
        <span class="creativecommons">
         <a href="https://creativecommons.org/licenses/by-sa/4.0/" >
-          <img src="{{ pathto(".static/ccby-sa4.0intl88x31.png", 1) }}"
+          <img src="{ pathto("_static/ccby-sa4.0intl88x31.png", 1) }"
                border="0" alt="Creative Commons License"/>
          </a>
         This work is licensed under a 
@@ -54,8 +60,31 @@ CC BY-SA 4.0 INTL
       </div>
     {%- endblock %}
 ```
+Or modify the original layout.html file with this command:
 
+```
+sudo leafpad /usr/share/sphinx/themes/basic/layout.html
+```
 
+Search for the copyright section of the footer and change it to this.
+
+Code:
+
+```
+      {%- if hasdoc('copyright') %}
+        {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.
+        <span class="creativecommons">
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" >
+          <img src="{ pathto("_static/ccby-sa4.0intl88x31.png", 1) }"
+               border="0" alt="Creative Commons License"/>
+        </a>
+        This work is licensed under a 
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+         Creative Commons Attribution-ShareAlike 4.0 International License
+        </a>
+        </span>
+        {% endtrans %}
+```
 
 # Examples
 http://www.sphinx-doc.org/en/stable/tutorial.html

@@ -32,3 +32,20 @@ sudo nano /etc/default/keyboard
 # Solution: Remove the cdrom source from the /etc/apt/sources.list file.
 sudo nano /etc/apt/sources.list
 # Add a # at the beginning of the line that starts with "deb cdrom" and leave everything else.  Hold CTRL and press X, press y, and press the enter or return key.
+
+# Samba Network Shares
+# If you want to share files between Windows and GNU/Linux, you should use samba.
+sudo apt-get install samba samba-client
+# Modify the configuration file
+sudo nano /etc/samba/smb.conf
+# Add the details for your share at the bottom of the page.  Here is an example that worked as a public folder:
+[TestShare]
+path = /home/noob/test # Folder directory
+public = yes
+force user = noob # Replace noob with the username of the owner of the folder.
+guest ok = yes
+writable = yes
+read only = no
+create mask = 0755
+# Restart samba for changes to take effect.
+sudo /etc/init.d/samba restart

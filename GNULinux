@@ -27,3 +27,8 @@ gsettings reset org.gnome.desktop.interface cursor-theme
 # Solution: Change default keyboard settings in /etc/default/keyboard
 sudo nano /etc/default/keyboard
 # Remove intl from XKBLAYOUT and XKBVARIANT.  Hold CTRL and press X, press y, and press the enter or return key.
+
+# Problem: Debian asks for the installation CD while updating repositories.
+# Solution: Remove the cdrom source from the /etc/apt/sources.list file.
+sudo nano /etc/apt/sources.list
+# Add a # at the beginning of the line that starts with "deb cdrom" and leave everything else.  Hold CTRL and press X, press y, and press the enter or return key.

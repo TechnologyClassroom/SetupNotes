@@ -1,7 +1,7 @@
 # SetupNotes
 Notes on setting up systems in Educational Environments
 
-Michael McMahon
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br>Copyright © Michael McMahon 2015-2016.  Except where otherwise specified, the text on <a href="https://github.com/TechnologyClassroom/SetupNotes/">Setup Notes</a> by Michael McMahon is licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike License 4.0 (International) (CC-BY-SA 4.0)</a>.
 
   * Chrome demonstrates the settings and extensions I use.
   
@@ -24,5 +24,3 @@ Michael McMahon
   * Teleprompter shows one way to configure a teleprompter setup using a Mac, two ipods, and a router.  There are cheaper ways to do this, but I was given all of those materials and asked to come up with a solution.  The process uses VNC to share the screen between the devices.
 
   * Windows incomplete notes
-
-More to come!

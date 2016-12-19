@@ -19,6 +19,12 @@ http://ubuntuhandbook.org/index.php/2015/06/minimum-password-length-ubuntu/
 sudo nano /etc/pam.d/common-password
 # Remove the word 'obscure' and save.
 
+# Problem: Ubuntu defaults to dash instead of bash.  Bash scripts sometimes do not work.
+# Solution: Remove links to dash and repace link to bash.
+sudo rm /bin/sh # Remove symlink to dash
+sudo ln -s /bin/bash /bin/sh # Symlink bash to sh
+exec bash # Restart shell
+
 # Problem: Ubuntu's outdated Sugar DE clobbers the cursor outside of sugar
 # Solution: Reset cursor theme
 gsettings reset org.gnome.desktop.interface cursor-theme

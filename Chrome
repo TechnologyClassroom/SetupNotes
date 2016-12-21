@@ -37,6 +37,9 @@ Uncheck Use hardware acceleration when available
 uBlock Origin removes ads from most webpages.  This is reported to decrease your network traffic by about 17% which increases the speed of your entire network.
 https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en
 
+Privacy Badger blocks tracking between websites.  It automatically builds your blocklist as you browse.
+https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp?hl=en-US
+
 History 2 helps reviewing browsing history on a per machine basis.
 https://chrome.google.com/webstore/detail/history-2/cahejgbbfgmlmjgdjlibphdjeldhagkp?utm_source=chrome-app-launcher-info-dialog
 

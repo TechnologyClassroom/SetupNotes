@@ -29,6 +29,11 @@ exec bash # Restart shell
 # Solution: Reset cursor theme
 gsettings reset org.gnome.desktop.interface cursor-theme
 
+# Problem: No audio output and command line only.
+# Solution: Use amixer to toggle your output.
+amixer # Lists all outputs
+amixer sset Headphone toggle
+
 # Problem: Keyboard incorrectly set to international and your minimal install does not have the GUI tools to fix this problem
 # Solution: Change default keyboard settings in /etc/default/keyboard
 sudo nano /etc/default/keyboard

@@ -67,3 +67,11 @@ sudo pip3 install --user greg
 # Upgrade pip
 sudo pip install --upgrade pip
 sudo pip3 install --upgrade pip
+
+#Proprietary NVIDIA drivers
+Download without a gui
+wget http://us.download.nvidia.com/XFree86/Linux-x86_64/375.26/NVIDIA-Linux-x86_64-375.26.run
+wget https://developer.nvidia.com/compute/cuda/8.0/prod/local_installers/cuda_8.0.44_linux-run
+
+To uninstall use the --uninstall switch
+NVIDIA-Linux-x86-377.44.run --uninstall

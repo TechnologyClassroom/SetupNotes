@@ -75,3 +75,12 @@ wget https://developer.nvidia.com/compute/cuda/8.0/prod/local_installers/cuda_8.
 
 To uninstall use the --uninstall switch
 NVIDIA-Linux-x86-377.44.run --uninstall
+
+# Stress testing debian based systems
+
+http://askubuntu.com/questions/15832/how-do-i-get-the-cpu-temperature
+http://www.tecmint.com/linux-cpu-load-stress-test-with-stress-ng-tool/
+
+apt update && apt install lm-sensors stress stress-ng
+
+sensors && uptime && stress --cpu 8 -v --timeout 30s && uptime && sensors

@@ -12,3 +12,8 @@ On right side pane you will find a EnableActiveProbing value, just double click 
 From http://superuser.com/questions/654088/start-programs-via-command-line-but-only-if-not-already-running
 Create a batch script in a text file using this line and save it as like KSPLaunch.bat in the directory with the process.  Replace KSP.exe with your process name.  Replace shortcuts with a shortcut to the batch script.  Replace shortcut icons with the original icons.
 tasklist /nh /fi "imagename eq KSP.exe" | find /i "KSP.exe" > nul || (start KSP.exe)
+
+# How to search for literal strings in Explorer
+From Kustardking on https://answers.microsoft.com/en-us/windows/forum/windows_7-files/how-do-i-search-for-parenthesis/ff8982f2-7a65-4569-a3f1-0373d0763ad8
+name:~"*(2)*"
+(2) can be changed to other literal strings.

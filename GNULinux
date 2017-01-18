@@ -25,6 +25,9 @@ sudo rm /bin/sh # Remove symlink to dash
 sudo ln -s /bin/bash /bin/sh # Symlink bash to sh
 exec bash # Restart shell
 
+# Links for directories work the same way.
+sudo ln -s /data/software/drivers/linux /usr/share/nginx/html/
+
 # Problem: Ubuntu's outdated Sugar DE clobbers the cursor outside of sugar
 # Solution: Reset cursor theme
 gsettings reset org.gnome.desktop.interface cursor-theme

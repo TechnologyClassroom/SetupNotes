@@ -28,6 +28,14 @@ exec bash # Restart shell
 # Links for directories work the same way.
 sudo ln -s /data/software/drivers/linux /usr/share/nginx/html/
 
+# Problem: Ubuntu skips grub menu
+# Solution: During boot, hold Shift to access a hidden grub menu.
+# If that does not work, edit the /etc/default/grub file.
+sudo nano /etc/default/grub
+#Add a "#" symbol at the start of line GRUB_HIDDEN_TIMEOUT=0.  CTRL+X, y, enter to save.
+sudo update-grub
+# Modified from Eric Carvalho & Vojtech Trefny at http://askubuntu.com/questions/16042/how-to-get-to-the-grub-menu-at-boot-time
+
 # Problem: Ubuntu's outdated Sugar DE clobbers the cursor outside of sugar
 # Solution: Reset cursor theme
 gsettings reset org.gnome.desktop.interface cursor-theme
@@ -71,13 +79,15 @@ sudo pip3 install --user greg
 sudo pip install --upgrade pip
 sudo pip3 install --upgrade pip
 
-#Proprietary NVIDIA drivers
+
+# Proprietary NVIDIA drivers
 Download without a gui
 wget http://us.download.nvidia.com/XFree86/Linux-x86_64/375.26/NVIDIA-Linux-x86_64-375.26.run
 wget https://developer.nvidia.com/compute/cuda/8.0/prod/local_installers/cuda_8.0.44_linux-run
 
-To uninstall use the --uninstall switch
-NVIDIA-Linux-x86-377.44.run --uninstall
+# To uninstall use the --uninstall switch
+./NVIDIA-Linux-x86_64-375.26.run --uninstall
+
 
 # Stress testing debian based systems
 

@@ -79,6 +79,9 @@ sudo pip3 install --user greg
 sudo pip install --upgrade pip
 sudo pip3 install --upgrade pip
 
+# Seach within files for a string and list the filenames with matches
+grep string -l *
+
 
 # Proprietary NVIDIA drivers
 Download without a gui
@@ -103,22 +106,22 @@ sensors && uptime && stress --cpu 8 -v --timeout 30s && uptime && sensors
 
 I often find myself trying to set a drive to automatically boot on a system.
 
-This lists the drives by uuid:
+# List the drives by uuid:
 ls -la /dev/disk/by-uuid/
 
-Find the one you want and complete the ls entry using tab completion
+# Find the one you want and complete the ls entry using tab completion
 
 ls -la /dev/disk/by-uuid/926c2f9e-239d-4f4b-8bfd-f937f0de253f
 
-As root, remove the first part and replace it with echo and append it to the /etc/fstab file.
+# As root, remove the first part and replace it with echo and append it to the /etc/fstab file.
 
 echo 926c2f9e-239d-4f4b-8bfd-f937f0de253f >> /etc/fstab
 
-Edit /etc/fstab:
+# Edit /etc/fstab:
 
 nano /etc/fstab
 
-Modify the line to look like this:
+# Modify the line to look like this:
 UUID=926c2f9e-239d-4f4b-8bfd-f937f0de253f /mnt/desiredtmountpoint      ext4    defaults        0       2
 
-Change desired mountpoint to that of your chosing.
+# Change desired mountpoint to that of your chosing.

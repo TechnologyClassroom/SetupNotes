@@ -72,7 +72,7 @@ create mask = 0755
 # Restart samba for changes to take effect.
 sudo /etc/init.d/samba restart
 
-# Install grep podcatcher
+# Install greg podcatcher
 sudo pip3 install --user greg
 
 # Upgrade pip

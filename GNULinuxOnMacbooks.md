@@ -154,9 +154,6 @@ The installer may crash after that with "Installer crashed Installer crashed We'
 * Click on the power icon in the drop down menu.
 * Click on the "Shut Down" button.  If you are using a DVD, it will eject and ask you to press the enter key.
 
-# [rEFIt can now be uninstalled](#refit-can-now-be-uninstalled)
-* The first time I rebooted, the computer booted straight to grub.  The second time I booted, rEFIt loaded.  ???  In the rEFIt menu, you can only use the arrow keys and the enter or return key.  Select "Boot EFI\ubuntu\grubx54.efi from EFI" to load the grub menu and Ubuntu Studio.  Select "Boot Mac OS X from 10.6" to directly load Mac OS.
-
 # [Configuring Ubuntu Studio](#configure-ubuntu-studio)
 
 * Connect to the Internet through an ethernet wire or through a wifi device that is supported by the Linux kernel.

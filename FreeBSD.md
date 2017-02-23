@@ -36,6 +36,6 @@ portsnap fetch update
 
 update only retrieves the new configurations instead of retrieving all configurations.
 
-Update all of your ports at once:
+Update all of your ports at once (this takes a long time with many configuration prompts):
 
 portupgrade -a

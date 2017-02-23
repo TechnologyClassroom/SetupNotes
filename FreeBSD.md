@@ -20,3 +20,8 @@ The ports system automates package compilation and dependency resolution.  ports
 
 tmux is very useful to continue exploring while software compiles.  I would suggest installing tmux first.
 
+
+
+Update all of your ports at once:
+
+portupgrade -a

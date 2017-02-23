@@ -14,13 +14,27 @@ The file system can be viewed with this command:
 
 ls /
 
-# Installing packages
+# Installing software
 
 The ports system automates package compilation and dependency resolution.  ports can be installed during installation.
+
+https://www.freebsd.org/doc/handbook/ports-using.html
+
+The first time you update port configuration, you must download all configurations (similar to apt-get update on Debian based distros):
+
+portsnap fetch extract
 
 tmux is very useful to continue exploring while software compiles.  I would suggest installing tmux first.
 
 
+
+# Update software
+
+Update the latest port configurations (similar to apt-get update on Debian based distros):
+
+portsnap fetch update
+
+update only retrieves the new configurations instead of retrieving all configurations.
 
 Update all of your ports at once:
 

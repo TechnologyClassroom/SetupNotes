@@ -28,7 +28,7 @@ tmux is very useful to continue exploring while software compiles.  I would sugg
 
 
 
-# Update software
+# Updating software
 
 Update the latest port configurations (similar to apt-get update on Debian based distros):
 

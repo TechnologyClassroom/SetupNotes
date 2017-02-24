@@ -68,7 +68,9 @@ make install
 
 Update all of your ports at once (this takes a long time with many configuration prompts):
 
-portupgrade -a
+portupgrade -a -c -r
+
+Switch explanations: -a all -c configure before -r recursive
 
 # nano - An Easy Command Line Text Editor
 

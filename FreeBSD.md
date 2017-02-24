@@ -48,7 +48,12 @@ make install
 
 Start tmux and a green bar will show up at the bottom of the shell.
 
-While using the shell, you can split the screen into a new shell with CTRL+B and then ".
+To invoke a tmux command use CTRL+B followed by another character.
+
+Character   -   Action
+?   -   help
+"   -   Split the screen vertically
+%   -   Split the screen horizontally
 
 # Updating software
 

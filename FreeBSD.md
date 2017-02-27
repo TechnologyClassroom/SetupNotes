@@ -14,7 +14,9 @@ The file system can be viewed with this command:
 
 ls /
 
-# Installing software (tmux example)
+Note: if you want a distribution that allows you to start with a GUI environment that is still built on FreeBSD, <a href="https://www.trueos.org/downloads/">try TrueOS</a>.
+
+# Installing software from Ports (tmux example)
 
 The ports system automates package compilation and dependency resolution.  ports can be installed during installation.
 
@@ -55,7 +57,7 @@ Character   -   Action
 "   -   Split the screen vertically
 %   -   Split the screen horizontally
 
-# Updating software
+# Updating software from Ports
 
 Update the latest port configurations (similar to apt-get update on Debian based distros):
 

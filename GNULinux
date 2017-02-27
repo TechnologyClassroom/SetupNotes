@@ -1,16 +1,25 @@
 # GNU/Linux
 
 # Suggested Distributions
+- Debian
+https://www.debian.org/
+
 - Ubuntu Studio for those interested in graphic design and audio/video production activities.
 https://ubuntustudio.org/
 
-- Arch
+- Trisquel - Ubuntu with non-free software removed
+https://trisquel.info/
+
+- Arch - Bleeding edge community driven distro based on minimalism
 https://www.archlinux.org/
 
-- Fedora
+- Parabola - Arch Linux with non-free software removed
+https://www.parabola.nu/
+
+- Fedora - Bleeding edge community driven branch of Red Hat Enterprise Linux
 https://getfedora.org/
 
-- CentOS
+- CentOS - Stable community driven branch of Red Hat Enterprise Linux
 https://www.centos.org/
 
 # Arch Wiki

@@ -65,7 +65,7 @@ Note: On a Mac that is intended for use in educational environments, I would do 
   * Type "Boot Camp Assistant" and press enter or return.
   * Continue
   * I have the Mac OS X installation disc... > Continue
-   * Note: If the error "Boot Camp Assistant cannot be used.  The disk is not journaled. You must enable journaling using Disk Utility before using the Boot Camp Assitant." box comes up, open Disk Utility through the magnifying glass in the top right.  Click on your Mac OS X partition.  In this case mine was "10.6" but yours may differ.  Click on the green "Enable Journaling" button at the top.  Click the red X at the top left to close Disk Utility.
+   * Note: If using a different version of Mac OS X and the two options above are not available, use Disk Utility to shrink your Mac partition.  If the error "Boot Camp Assistant cannot be used.  The disk is not journaled. You must enable journaling using Disk Utility before using the Boot Camp Assitant." box comes up, open Disk Utility through the magnifying glass in the top right.  Click on your Mac OS X partition.  In this case mine was "10.6" but yours may differ.  Click on the green "Enable Journaling" button at the top.  Click the red X at the top left to close Disk Utility.
   * Click on the dot between the Mac OS X and Windows section.  Drag left until the Mac OS X section reads 30 GB.  > Partion
    * Note: This is the configuration I used for Macs OS installations that were not used and not intended to be used.  If you already have data, you can find out how much free space you have and decide how much you should use with the terminal command: df -h
   * Click on "Quit and Install Later" because we are not installing Windows.

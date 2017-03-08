@@ -60,6 +60,11 @@ gsettings reset org.gnome.desktop.interface cursor-theme
 amixer # Lists all outputs
 amixer sset Headphone toggle
 
+# Problem: All ethernet devices are not shown in ifconfig.
+# Solution: List all cards and manually add them to /etc/network/interfaces
+ip link show # Lists all network ports.  Network ports are something like eth0, em1, p4n1, enp3s0, and wlan0.
+nano /etc/network/interfaces # Requires root.  Use the template shown with lo for all of your network ports.
+
 # Problem: Keyboard incorrectly set to international and your minimal install does not have the GUI tools to fix this problem
 # Solution: Change default keyboard settings in /etc/default/keyboard
 sudo nano /etc/default/keyboard

@@ -146,3 +146,14 @@ nano /etc/fstab
 UUID=926c2f9e-239d-4f4b-8bfd-f937f0de253f /mnt/desiredtmountpoint      ext4    defaults        0       2
 
 # Change desired mountpoint to that of your chosing.
+
+
+# opensuse tumbleweed notes
+# Look for a package
+cnf man
+# Install package
+sudo zypper install -y -l man
+# Update packages
+sudo zypper update -y -l
+# Update distribution packages
+sudo zypper dist-upgrade -y -l

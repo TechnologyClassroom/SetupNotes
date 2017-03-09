@@ -118,6 +118,7 @@ http://askubuntu.com/questions/15832/how-do-i-get-the-cpu-temperature
 http://www.tecmint.com/linux-cpu-load-stress-test-with-stress-ng-tool/
 
 apt update && apt install lm-sensors stress stress-ng
+# If lm-sensors and stress are not found, add universe to the /etc/apt/sources.list file.
 
 sensors && uptime && stress --cpu 8 -v --timeout 30s && uptime && sensors
 

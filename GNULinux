@@ -157,3 +157,7 @@ sudo zypper install -y -l man
 sudo zypper update -y -l
 # Update distribution packages
 sudo zypper dist-upgrade -y -l
+
+# Exit QEMU
+CTRL+ALT+2
+quit

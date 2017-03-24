@@ -47,18 +47,25 @@ Using another computer on the network, open a browser to the IP address shown in
 My answers were:
 
 Language: English
+
 Console Keyboard Map:	United States of America ISO-8859-1
+
 Timezone: America/New_York
+
 Next
 
 Pool Name: data
+
 Automatic
+
 Next
 
 Exit?
 
 System > General > Updates
+
 Check Now
+
 Update
 
 # Troubleshooting networking

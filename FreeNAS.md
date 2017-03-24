@@ -36,3 +36,39 @@ OK
 
 Yes, that is really how simple the installation is.  Installation media can be removed.
 
+# First boot
+
+The first boot takes a long time as it generates random numbers.  If you miss the first prompt informing you of this, it may appear broken.
+
+If all goes well, it will display an IP address.  If no IP address is shown, go to Troubleshooting networking.
+
+Using another computer on the network, open a browser to the IP address shown in FreeNAS.
+
+My answers were:
+
+Language: English
+Console Keyboard Map:	United States of America ISO-8859-1
+Timezone: America/New_York
+Next
+
+Pool Name: data
+Automatic
+Next
+
+Exit?
+
+System > General > Updates
+Check Now
+Update
+
+# Troubleshooting networking
+
+If the IP does not display use 9 Shell to acquire an IP address with the dhclient command.
+
+List your network interfaces:
+
+ifconfig
+
+Use dhclient to assign yourself an IP (My NIC is ix0 in this example):
+
+dhclient ix0

@@ -18,6 +18,8 @@ Product Compatibility and Interoperability Matrixes: http://partnerweb.vmware.co
 
 Download (free account required): http://www.vmware.com/go/get-free-esxi
 
+Note: At the time of this writing, only 6.5 can be downloaded with a free account.  In January 2017, every available version could be downloaded with a free account.
+
 # Installation
 
 The installation of ESXi to be extremely easy compared to GNU/Linux and UNIX distros.

@@ -13,7 +13,7 @@ I have only tested this on white macbooks from 2009 with Mac OS X 10.6.8.
 * <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#create-a-livedvd-or-liveusb-with-a-gnu-linux-iso">Create a liveDVD or liveUSB with a GNU/Linux ISO</a>
 * <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#install-gnu-linux">Install GNU/Linux</a>
 * <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#if-the-grub-installation-fails-use-boot-repair">If the grub installation fails, use Boot-Repair</a>
-* <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#configure-ubuntu-studio">Configure Ubuntu Studio</a>
+* <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#configuring-ubuntu-studio">Configure Ubuntu Studio</a>
 
 # [Configuring the original Mac OS X 10.6.8](#configuring-the-original-mac-os-x-10.6.8)
 
@@ -156,7 +156,7 @@ The installer may crash after that with "Installer crashed Installer crashed We'
 * Click on the power icon in the drop down menu.
 * Click on the "Shut Down" button.  If you are using a DVD, it will eject and ask you to press the enter key.
 
-# [Configuring Ubuntu Studio](#configure-ubuntu-studio)
+# [Configuring Ubuntu Studio](#configuring-ubuntu-studio)
 
 * Connect to the Internet through an ethernet wire or through a wifi device that is supported by the Linux kernel.
 

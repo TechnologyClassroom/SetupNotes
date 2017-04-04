@@ -1,5 +1,7 @@
 # FreeBSD
 
+Michael McMahon
+
 WARNING: FreeBSD is for advanced users only.  If you are not very comfortable with UNIX-like command line usage, I would suggest using Debian, Ubuntu, CentOS, or Arch instead of FreeBSD.
 
 FreeBSD is a general purpose UNIX distro that you can install for free at home.

@@ -1,5 +1,7 @@
 # FreeNAS
 
+Michael McMahon
+
 WARNING: FreeNAS is for advanced users only.  If you are not very comfortable with UNIX-like command line usage, I would suggest using Debian, Ubuntu, CentOS, or Arch instead of FreeNAS.
 
 FreeNAS is a UNIX distro built for network storage solutions that you can install for free.

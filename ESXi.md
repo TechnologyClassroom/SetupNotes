@@ -69,3 +69,7 @@ An IP address should be shown.  To access the web portal, open the address liste
 Press tab.  Enter password.  Press enter.
 
 <F2> Shut Down
+
+# Hardware Notes
+
+Intel Ethernet Converged Network Adapter X710-DA4 does not work with v6.0 U2 and does work with v6.5.

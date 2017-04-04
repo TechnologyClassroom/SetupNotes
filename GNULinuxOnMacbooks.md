@@ -1,8 +1,10 @@
 # [Notes on dual-booting GNU/Linux on Macbook 2009](#notes-on-dual-booting-gnu-linux-on-macbook-2009)
 
+Michael McMahon
+
 Rewrite/update based on Peter Upfolds article https://fosswire.com/post/2009/03/how-to-ubuntu-810-on-white-macbook/
 
-This guide is incomplete and actively in progress.  I have only tested this on white macbooks from 2009.
+I have only tested this on white macbooks from 2009 with Mac OS X 10.6.8.
 
 # [Table of Contents](#toc)
 * <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#configuring-the-original-mac-os-x-10.6.8">Configuring the orignal Mac OS X 10.6.8</a>

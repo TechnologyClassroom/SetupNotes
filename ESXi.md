@@ -62,6 +62,8 @@ Note: If all of your network adapters are not shown, reinstall with a different 
 
 Press enter.  Press escape.  Press Y.  Press escape.
 
+An IP address should be shown.  To access the web portal, open the address listed with a web browser from another computer on the network.  Example: http://555.555.555.555/ (DHCP)
+
 <F12> Shut Down/Restart
 
 Press tab.  Enter password.  Press enter.

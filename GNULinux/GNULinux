@@ -75,6 +75,15 @@ sudo nano /etc/default/keyboard
 sudo nano /etc/apt/sources.list
 # Add a # at the beginning of the line that starts with "deb cdrom" and leave everything else.  Hold CTRL and press X, press y, and press the enter or return key.
 
+
+# Change default applications
+sudo update-alternatives --config
+# Use tab completion after this to list all options.  I use:
+sudo update-alternatives --config editor
+sudo update-alternatives --config x-terminal-emulator
+sudo update-alternatives --config x-www-browser
+
+
 # Samba Network Shares
 # If you want to share files between Windows and GNU/Linux, you should use samba.
 sudo apt-get install samba samba-client

@@ -75,6 +75,12 @@ sudo nano /etc/default/keyboard
 sudo nano /etc/apt/sources.list
 # Add a # at the beginning of the line that starts with "deb cdrom" and leave everything else.  Hold CTRL and press X, press y, and press the enter or return key.
 
+# Problem: Num lock is off after reboot.
+# Solution: Install numlockx and insert the command into your rc.local file.
+sudo apt-get install numlockx
+sudo sed -i 's|^exit 0.*$|# Numlock enable\n[ -x /usr/bin/numlockx ] \&\& numlockx on\n\nexit 0|' /etc/rc.local
+# https://help.ubuntu.com/community/NumLock
+
 
 # Change default applications
 sudo update-alternatives --config

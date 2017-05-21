@@ -4,6 +4,8 @@ Michael McMahon
 
 Rewrite/update based on Peter Upfolds article https://fosswire.com/post/2009/03/how-to-ubuntu-810-on-white-macbook/
 
+Note: Do not buy a Macbook in hopes of using it for GNU/Linux.  Windows based computers are much easier starting places than Chromebooks and Macs.  Use this guide if you already have a Mac that has outlived its Apple lifespan or if you want to increase the productivity of your Mac.
+
 I have only tested this on white macbooks from 2009 with Mac OS X 10.6.8.
 
 # [Table of Contents](#toc)

@@ -176,6 +176,19 @@ sgpio -p 1 -s locate
 sgpio -p 1 -s off
 
 
+# Problem: fat32 and fat16 formatted flash drive gives errors and has trouble booting.
+# Solution: Use GNU/Linux command line tools to inspect and repair problems.
+# This command checked the fat32 partition for errors.  If errors are found, fix them automatically.  /dev/sdc is my flash drive in this example.
+sudo dosfsck -w -r -l -a -v -t /dev/sdc1
+# dosfsck complained about a dirty bit and could not automatically repair.  This command can fix a dirty bit:
+sudo fsck.vfat /dev/sdc1
+# My response was 2 to restore backup.
+# My response was 1 and y to remove dirty bit.
+Sources:
+http://askubuntu.com/questions/147228/how-to-repair-a-corrupted-fat32-file-system
+https://bbs.archlinux.org/viewtopic.php?id=164185
+
+
 # opensuse tumbleweed notes
 # Look for a package
 cnf man

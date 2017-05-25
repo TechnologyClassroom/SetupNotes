@@ -127,7 +127,7 @@ wget https://developer.nvidia.com/compute/cuda/8.0/prod/local_installers/cuda_8.
 ./NVIDIA-Linux-x86_64-375.26.run --uninstall
 
 
-# Stress testing debian based systems
+# Stress testing CPU on debian based systems
 
 http://askubuntu.com/questions/15832/how-do-i-get-the-cpu-temperature
 http://www.tecmint.com/linux-cpu-load-stress-test-with-stress-ng-tool/
@@ -136,6 +136,8 @@ apt update && apt install lm-sensors stress stress-ng
 # If lm-sensors and stress are not found, add universe to the /etc/apt/sources.list file.
 
 sensors && uptime && stress --cpu 8 -v --timeout 30s && uptime && sensors
+
+Also see https://github.com/TechnologyClassroom/HardwareTest for a thorough, comprehensive test.
 
 
 # Add drive to fstab manually
@@ -187,6 +189,25 @@ sudo fsck.vfat /dev/sdc1
 Sources:
 http://askubuntu.com/questions/147228/how-to-repair-a-corrupted-fat32-file-system
 https://bbs.archlinux.org/viewtopic.php?id=164185
+
+
+# Problem: nodejs cannot find the correct path.  Gives error:
+/usr/bin/env: node: No such file or directory
+# Solution: Improperly named nodejs needs to be linked to node.  Create symlink with:
+sudo ln -s /usr/bin/nodejs /usr/bin/node
+# From digitalmediums at https://github.com/nodejs/node-v0.x-archive/issues/3911
+
+
+# Install tldr offline examples
+sudo npm install -g tldr
+tldr --update
+tldr tar
+# Source https://github.com/tldr-pages/tldr
+
+
+# Access common examples from command line without installing additional packages.
+curl cheat.sh/tar
+# Source https://github.com/chubin/cheat.sh
 
 
 # opensuse tumbleweed notes

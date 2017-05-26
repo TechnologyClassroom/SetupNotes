@@ -18,7 +18,7 @@ ls /
 
 Note: if you want a distribution that allows you to start with a GUI environment that is still built on FreeBSD, <a href="https://www.trueos.org/downloads/">try TrueOS</a>.
 
-# Installing software from Ports (tmux example)
+# Compiling software from Ports (tmux example)
 
 The ports system automates package compilation and dependency resolution.  ports can be installed during installation.
 

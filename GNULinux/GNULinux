@@ -210,6 +210,14 @@ curl cheat.sh/tar
 # Source https://github.com/chubin/cheat.sh
 
 
+# CentOS 7 Minimal notes
+yum update -y
+yum groups install -y Development\ Tools
+yum install -y tmux
+yum install -y nano
+yum clean all # Clean package cache
+
+
 # opensuse tumbleweed notes
 # Look for a package
 cnf man

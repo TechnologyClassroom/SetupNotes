@@ -211,10 +211,11 @@ curl cheat.sh/tar
 
 
 # CentOS 7 Minimal notes
-yum update -y
-yum groups install -y Development\ Tools
-yum install -y tmux
-yum install -y nano
+nmtui # CLI network manager
+yum update -y # Update all software to the latest version
+yum groups install -y Development\ Tools # Install the Development Tools group
+yum install -y tmux # Install tmux
+yum install -y nano # Install nano
 yum clean all # Clean package cache
 
 

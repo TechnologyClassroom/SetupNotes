@@ -75,6 +75,16 @@ sudo nano /etc/default/keyboard
 sudo nano /etc/apt/sources.list
 # Add a # at the beginning of the line that starts with "deb cdrom" and leave everything else.  Hold CTRL and press X, press y, and press the enter or return key.
 
+# Problem: Ubuntu machine lost power during an install.
+# Solution: Log into TTY and attempt to fix packages.
+sudo apt-get install -f
+sudo dpkg --configure -a
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get dist-upgrade -y
+sudo shutdown -r now
+# If this does not fix the problem, backup and reinstall.
+
 # Problem: Num lock is off after reboot.
 # Solution: Install numlockx and insert the command into your rc.local file.
 sudo apt-get install numlockx

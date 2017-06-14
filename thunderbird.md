@@ -1,5 +1,7 @@
 Mozilla Thunderbird is a great free and open source email program.
 
+https://www.mozilla.org/en-US/thunderbird/
+
 # Add-ons:
 -Send Later - Queue emails to send at reasonable, professional hours with Send Later.  Alternative to "Boomerang for Gmail" without giving your login details to strangers.
 https://addons.mozilla.org/en-US/thunderbird/addon/send-later-3/

@@ -20,19 +20,28 @@ https://addons.mozilla.org/en-US/thunderbird/addon/thunderhtmledit/
 From https://support.mozilla.org/en-US/questions/1019583
 
 -Menu Icon (Sandwich) > Preferences > Preferences > Advanced> General tab
+
 -Click on the "Config Editor..." button.
+
 -Click on the "I accept the risk!" button.
+
 -In top search, type: separator
+
 -Look for the entry: mail.identity.default.suppress_signature_separator; false
+
 -Double click to toggle 'false' to 'true'
+
 -Close config editor with CTRL+W.
+
 -Click on the "Close" button to save changes.
 
 # Move signature above quoted text for replies and forwards
 From http://www.pctips4u.com/2016/10/add-email-signature-above-quoted-text.html
 
 -Menu Icon (Sandwich) > Preferences > Account Settings > Composition & Addressing
+
 -Use the pull down box to change:
-"[...] and place my signature: below the quote (recommended)"
-to "below my reply (above the quote)"
+
+"[...] and place my signature: below the quote (recommended)" to "below my reply (above the quote)"
+
 -Click on the "OK" button to save changes.

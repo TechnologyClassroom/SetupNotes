@@ -93,6 +93,8 @@ iface eth2 inet dhcp
 
 -Boot into recovery mode
 
+-resume
+
 -Update software
 ```
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get install -y ledmon build-essential

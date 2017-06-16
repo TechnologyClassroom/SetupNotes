@@ -21,7 +21,7 @@ iface eth2 inet dhcp
 
 
 
-# Ubuntu 16.04 Server with Nvidia graphics card video output
+# Ubuntu 16.04 Server with Nvidia graphics card video output with a disk that is smaller than 2TB
 
 -Boot from disc
 
@@ -36,6 +36,8 @@ iface eth2 inet dhcp
 -Configure keyboard
 
 -Detect and mount CD-ROM
+
+-Load debconf preconfiguration file
 
 -Load installer components from CD
 
@@ -63,7 +65,7 @@ iface eth2 inet dhcp
 
 -Install the system
 
-  -Normal
+  -normal
 
 -Configure the package manager
 

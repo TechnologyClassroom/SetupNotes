@@ -39,9 +39,9 @@ iface eth2 inet dhcp
 
 -Load installer components from CD
 
-	-choose-mirror
+  -choose-mirror
 
-	-load-media
+  -load-media
 
 -Detect network hardware
 
@@ -57,35 +57,35 @@ iface eth2 inet dhcp
 
 -Partition disks
 
-	-Manual
+  -Manual
 
-	-msdos
+  -msdos
 
 -Install the system
 
-	-Normal
+  -Normal
 
 -Configure the package manager
 
-	-restricted yes
+  -restricted yes
 
-	-universe yes
+  -universe yes
 	
-	-multiverse no
+  -multiverse no
 	
-	-backports no
+  -backports no
 	
-	-source no
+  -source no
 
 -Select and install software
 
 -Install the GRUB boot loader to a hard disk
 	
-	-Force UEFI no
+  -Force UEFI no
 
 -Finish the installation
 	
-	-UTC no
+  -UTC no
 
 
 
@@ -112,7 +112,8 @@ sudo nano /etc/network/interfaces
 
 -Install proprietary nvidia drivers and cuda toolkit
 ```
-sudo init 3
+sudo su
+init 3
 wget -q http://us.download.nvidia.com/XFree86/Linux-x86_64/375.66/NVIDIA-Linux-x86_64-375.66.run
 wget -q https://developer.nvidia.com/compute/cuda/8.0/prod2/local_installers/cuda_8.0.61_375.26_linux-run
 sh NVIDIA-Linux-x86_64-375.66.run --accept-license -q -X
@@ -120,7 +121,6 @@ sh cuda_8.0.61_375.26_linux-run --toolkit -silent --override
 echo export 'PATH=/usr/local/cuda/bin:$PATH' >> /etc/bashrc
 echo /usr/local/cuda/lib64 >> /etc/ld.so.conf
 echo /usr/local/cuda/lib >> /etc/ld.so.conf
-echo "Blacklisting nouveau driver..."
 echo blacklist nouveau >> /etc/modprobe.d/blacklist.conf
 ldconfig
 ```

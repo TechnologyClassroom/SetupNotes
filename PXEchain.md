@@ -108,7 +108,7 @@ This changes the default boot option from ```pxeboot.com``` to ```pxelinux.0``` 
 
 - If everything is configured correctly, the client should be able to PXE into the WDS and see the new menu.  All options except for the second option should work at this time.
 
-# [Configuring the GNU/Linux PXE server without DHCP or DNS](#configuring-the-gnu-linux-pxe-server-without-dhcp-or-dns)
+# [Configuring a CentOS 7 PXE server without DHCP or DNS](#configuring-a-centos-7-pxe-server-without-dhcp-or-dns)
 
 - Install a CentOS 7 Minimal install.
 - Login as root.

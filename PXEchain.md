@@ -43,7 +43,7 @@ Rename ```abortpxe.com``` to ```abortpxe.0```.
 
 Rename ```pxeboot.com``` to ```pxeboot.0```.
 
-<!-- Add picture here -->
+![Screenshot](https://github.com/TechnologyClassroom/SetupNotes/blob/master/Images/PXE1.png?raw=true "Screenshot")
 
 - Create a new folder C:\RemoteInstall\Boot\x64\pxelinux.cfg and make a new file in that folder called default.
 
@@ -74,7 +74,7 @@ LABEL local
   LOCALBOOT 0
 ```
 
-<!-- Add picture here -->
+![Screenshot](https://github.com/TechnologyClassroom/SetupNotes/blob/master/Images/PXE2.png?raw=true "Screenshot")
 
 The default first choice continues booting the WDS server as usual.  The second choice chains into a second PXE server.  The third choice exits PXE and boots with the next available boot option according to your boot order.  The fourth choice attempts to boot from the local disk.
 

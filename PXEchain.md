@@ -22,7 +22,7 @@ Requirements:
 
 # Configuring the WDS server with syslinux
 
-- <a href="https://www.kernel.org/pub/linux/utils/boot/syslinux/6.xx/syslinux-6.03.zip">Download syslinux 6.03</a> and extract these files to C:\RemoteInstall\Boot\x64\ your tftp location.
+- <a href="https://www.kernel.org/pub/linux/utils/boot/syslinux/6.xx/syslinux-6.03.zip">Download syslinux 6.03</a> and extract these files to C:\RemoteInstall\Boot\x64\ your tftp location without their folder structure.
 
 ```
 /bios/com32/chain/chain.c32
@@ -36,6 +36,12 @@ Requirements:
 ```
 
 The syslinux archive has many files, but we only need these eight files for legacy boot options.
+
+- Rename two files in the C:\RemoteInstall\Boot\x64\ folder.
+
+Rename ```abortpxe.com``` to ```abortpxe.0```.
+
+Rename ```pxeboot.com``` to ```pxeboot.0```.
 
 - Create a new folder C:\RemoteInstall\Boot\x64\pxelinux.cfg and make a new file in that folder called default.
 
@@ -65,6 +71,7 @@ LABEL local
   MENU LABEL Boot from ^Local Computer
   LOCALBOOT 0
 ```
+
 The default first choice continues booting the WDS server as usual.  The second choice chains into a second PXE server.  The third choice exits PXE and boots with the next available boot option according to your boot order.  The fourth choice attempts to boot from the local disk.
 
 ```menu.c32``` can be changed to ```vesamenu.c32``` for a better look, but compatibility may decrease.

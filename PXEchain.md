@@ -1,4 +1,6 @@
-# [Setting up two PXE servers on the same network: WDS and GNU/Linux PXE Server](#setting-up-two-pxe-servers-on-the-same-network)
+# [Setting up two PXE servers on the same network: WDS and GNU/Linux PXE Server](#twopxeservers)
+
+Work in progress!
 
 Michael McMahon
 
@@ -17,3 +19,33 @@ Requirements:
 * A third machine that can boot into PXE
 * A switch
 * Network cables to connect the four boxes
+
+```
+DEFAULT menu.c32
+MENU TITLE SCC Norwood WDS PXE Server
+PROMPT 0
+TIMEOUT 100 # 10 seconds
+ 
+LABEL wds
+  MENU DEFAULT
+  MENU LABEL Windows Deployment Services (WDS)
+  KERNEL pxeboot.0
+ 
+LABEL gnulinuxpxe
+  MENU LABEL GNU/Linux PXE Server
+  KERNEL pxechn.c32
+  APPEND 192.168.1.15::pxelinux.0
+
+LABEL abort
+  MENU LABEL Abort PXE
+  Kernel abortpxe.0
+
+LABEL local
+  MENU LABEL Boot from Local Computer
+  LOCALBOOT 0
+```
+
+```
+wdsutil /set-server /bootprogram:boot\x64\pxelinux.0 /architecture:x64
+wdsutil /set-server /N12bootprogram:boot\x64\pxelinux.0 /architecture:x64
+```

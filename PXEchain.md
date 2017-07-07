@@ -176,12 +176,45 @@ cp bios/com32/libutil/libutil.c32 /var/lib/tftpboot/
 cp bios/core/pxelinux.0 /var/lib/tftpboot/
 ```
 
+- Example of setting up a CentOS 7 minimal setup for PXE booting
+
+```
+wget http://mirror.pac-12.org/7/isos/x86_64/CentOS-7-x86_64-Minimal-1611.iso # Download an ISO
+mount -o loop CentOS-7-x86_64-Minimal-1611.iso /mnt # Mount the ISO to the /mnt directory
+mkdir /var/lib/tftpboot/centos7 # Create a folder in the tftp directory
+cp /mnt/images/pxeboot/vmlinuz /var/lib/tftpboot/centos7 # Copy the vmlinuz file to tftp
+cp /mnt/images/pxeboot/initrd.img /var/lib/tftpboot/centos7 # Copy the initrd.img file to tftp
+mkdir /var/ftp/pub/centos7 # Create a folder in the ftp directory
+cp -r /mnt/* /var/ftp/pub/centos7/ # Copy the contents of the entire ISO to the ftp
+umount /mnt # Unmount the ISO
+chmod -R 755 /var/ftp/pub # Set permissions on all files in the ftp directory
+```
+
 - Edit your syslinux config file.
 
 ```
 mkdir /var/lib/tftpboot/pxelinux.cfg
 touch /var/lib/tftpboot/pxelinux.cfg/default
 nano /var/lib/tftpboot/pxelinux.cfg/default
+```
+
+- Example default file
+
+```
+DEFAULT menu.c32
+PROMPT 0
+TIMEOUT 300
+ONTIMEOUT 2
+MENU TITLE ########## PXE Boot Menu ##########
+
+LABEL 1
+  MENU LABEL Install ^CentOS 7 x64 with Local Repo
+  KERNEL centos7/vmlinuz
+  APPEND initrd=centos7/initrd.img method=ftp://10.12.16.117/pub/centos7 devfs=nomount
+
+LABEL 2
+  MENU LABEL Boot from ^Local Computer
+  LOCALBOOT 0
 ```
 
 - Open ports on the firewall
@@ -192,3 +225,5 @@ firewall-cmd --add-port=69/udp --permanent
 firewall-cmd --add-port=4011/udp --permanent
 firewall-cmd --reload
 ```
+
+The ftp files can be viewed from other computers on the network by going to ftp://192.168.1.15/pub

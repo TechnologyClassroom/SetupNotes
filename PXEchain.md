@@ -11,9 +11,14 @@ Scenario: My organization has a WDS server configured on our network.  We use GN
 Configure and test this entire process in a test environment before implementing this on a production environment.
 
 Requirements:
+
 -A working WDS server with DHCP and DNS configured.  This needs to be tested with PXE booting before starting.
+
 -Another server to configure as a GNU/Linux PXE server
+
 -A third machine that can boot into PXE
+
 -A switch
+
 -Network cables to connect the four boxes
 

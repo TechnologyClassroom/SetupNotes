@@ -22,26 +22,26 @@ Requirements:
 
 ```
 DEFAULT menu.c32
-MENU TITLE SCC Norwood WDS PXE Server
+MENU TITLE WDS PXE Server
 PROMPT 0
 TIMEOUT 100 # 10 seconds
  
 LABEL wds
   MENU DEFAULT
-  MENU LABEL Windows Deployment Services (WDS)
+  MENU LABEL ^Windows Deployment Services (WDS)
   KERNEL pxeboot.0
  
 LABEL gnulinuxpxe
-  MENU LABEL GNU/Linux PXE Server
+  MENU LABEL GNU/^Linux PXE Server
   KERNEL pxechn.c32
   APPEND 192.168.1.15::pxelinux.0
 
 LABEL abort
-  MENU LABEL Abort PXE
+  MENU LABEL ^Abort PXE
   Kernel abortpxe.0
 
 LABEL local
-  MENU LABEL Boot from Local Computer
+  MENU LABEL Boot from ^Local Computer
   LOCALBOOT 0
 ```
 

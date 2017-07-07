@@ -93,7 +93,7 @@ wdsutil /set-server /bootprogram:boot\x64\pxelinux.0 /architecture:x64
 wdsutil /set-server /N12bootprogram:boot\x64\pxelinux.0 /architecture:x64
 ```
 
-<!-- Add picture here -->
+![Screenshot](https://github.com/TechnologyClassroom/SetupNotes/blob/master/Images/PXE3.png?raw=true "Screenshot")
 
 If you will be using 32 bit machines, double the above steps for the \x86\ folder and run these commands:
 

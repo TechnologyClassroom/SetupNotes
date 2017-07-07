@@ -10,6 +10,8 @@ There are many guides on setting up a Windows Deployment Server (WDS) and GNU/Li
 
 Scenario: My organization has a WDS server configured on our network.  We use GNU/Linux regularly and want to use a GNU/Linux PXE server.  Our options are creating a new network with new cable drops or use the prexisting network.  Using the preexisting network would be easier and cheaper.
 
+Do not run two DHCP servers on the same network.
+
 Configure and test this entire process in a test environment before implementing this on a production environment.
 
 Requirements:
@@ -83,6 +85,8 @@ The default first choice continues booting the WDS server as usual.  The second 
 wdsutil /set-server /bootprogram:boot\x64\pxelinux.0 /architecture:x64
 wdsutil /set-server /N12bootprogram:boot\x64\pxelinux.0 /architecture:x64
 ```
+
+This changes the default boot option from ```pxeboot.com``` to ```pxelinux.0``` and our new menu.
 
 # Configuring the GNU/Linux PXE server without DHCP or DNS
 

@@ -1,7 +1,5 @@
 # Setting up two or more PXE servers on the same network: WDS and GNU/Linux PXE Server
 
-Work in progress!
-
 Michael McMahon
 
 Rewrite/update based on Eric Gray's 2011 article http://www.vcritical.com/2011/06/peaceful-coexistence-wds-and-linux-pxe-servers/
@@ -226,4 +224,6 @@ firewall-cmd --add-port=4011/udp --permanent
 firewall-cmd --reload
 ```
 
-The ftp files can be viewed from other computers on the network by going to ftp://192.168.1.15/pub
+The ftp files can be viewed from other computers on the network by going to ftp://192.168.1.15/pub with a web browser.
+
+- Test client machine should be able to now boot through the WDS server to the GNU/Linux PXE server.

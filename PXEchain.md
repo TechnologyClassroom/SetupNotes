@@ -210,7 +210,7 @@ MENU TITLE ########## PXE Boot Menu ##########
 LABEL 1
   MENU LABEL Install ^CentOS 7 x64 with Local Repo
   KERNEL centos7/vmlinuz
-  APPEND initrd=centos7/initrd.img method=ftp://10.12.16.117/pub/centos7 devfs=nomount
+  APPEND initrd=centos7/initrd.img method=ftp://192.168.1.15/pub/centos7 devfs=nomount
 
 LABEL 2
   MENU LABEL Boot from ^Local Computer

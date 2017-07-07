@@ -4,7 +4,7 @@ Michael McMahon
 
 Rewrite/update based on Eric Gray's 2011 article http://www.vcritical.com/2011/06/peaceful-coexistence-wds-and-linux-pxe-servers/
 
-There are many guides on setting up a Windows Deployment Server (WDS) and GNU/Linux PXE servers.  I will not go into the specifics of setting up a general PXE server.  Setting up a WDS server or a GNU/Linux PXE server is simple by following guides availabe online, but there are very few articles about configuring multiple PXE servers on the same network.
+There are many guides on setting up a Windows Deployment Server (WDS) and GNU/Linux PXE servers.  I will not go into the specifics of setting up a general PXE server.  Setting up a WDS server or a GNU/Linux PXE server is simple by following guides availabe online, but there are very few articles about configuring multiple PXE servers on the same network using PXE chain.
 
 Scenario: My organization has a WDS server configured on our network.  We use GNU/Linux regularly and want to use a GNU/Linux PXE server.  Our options are creating a new network with new cable drops or use the prexisting network.  Using the preexisting network would be easier and cheaper.  We want to make minimal changes to the WDS server so turning off the DNS and DHCP servers and using a GNU/Linux DHCP server that points to the WDS server is not an option.
 
@@ -116,6 +116,8 @@ This changes the default boot option from ```pxeboot.com``` to ```pxelinux.0``` 
 - If everything is configured correctly, the client should be able to PXE into the WDS and see the new menu.  All options except for the second option should work at this time.
 
 # [Configuring a CentOS 7 PXE server without DHCP or DNS](#configuring-a-centos-7-pxe-server-without-dhcp-or-dns)
+
+This portion is modified from Matei Cezar's article at https://www.tecmint.com/install-pxe-network-boot-server-in-centos-7/
 
 - Install a CentOS 7 Minimal install.
 - Login as root.

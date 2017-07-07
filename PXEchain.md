@@ -23,7 +23,19 @@ Requirements:
 # Configuring the WDS server with syslinux
 
 - <a href="https://www.kernel.org/pub/linux/utils/boot/syslinux/6.xx/syslinux-6.03.zip">Download syslinux 6.03</a> to both PXE servers and extract these files to your tftp locations C:\RemoteInstall\Boot\x64\ for WDS and /var/lib/tftpboot for CentOS 7.
-/bios/com32/chain/
+
+```
+/bios/com32/chain/chain.c32
+/bios/com32/elflink/ldlinux/ldlinux.c32
+/bios/com32/lib/libcom32.c32
+/bios/com32/menu/menu.c32
+/bios/com32/menu/vesamenu.c32
+/bios/com32/modules/pxechn.c32
+/bios/com32/libutil/libutil.c32
+/bios/core/pxelinux.0
+```
+
+The syslinux archive has many files, but we only need these eight files for legacy boot options.
 
 - Create a new folder C:\RemoteInstall\Boot\x64\pxelinux.cfg and make a new file in that folder called default.
 

@@ -64,3 +64,61 @@ The default first choice continues booting the WDS server as usual.  The second 
 wdsutil /set-server /bootprogram:boot\x64\pxelinux.0 /architecture:x64
 wdsutil /set-server /N12bootprogram:boot\x64\pxelinux.0 /architecture:x64
 ```
+
+# Configuring the GNU/Linux PXE server without DHCP or DNS
+
+- Install a CentOS 7 Minimal install.
+- Login as root.
+- Update the system.
+
+```
+yum update -y
+```
+
+- Configure your network with the static IP that you used before and the same gateway as the WDS.
+
+```
+nmtui
+```
+
+- Install tftp and ftp and extra software
+
+```
+yum groups install -y Development\ Tools
+yum install -y tftp
+yum install -y tftp-server
+yum install -y xinetd
+yum install -y vsftpd
+yum install -y wget
+yum install -y nano
+yum install -y tmux
+```
+
+- Enable and start services
+
+```
+systemctl enable xinetd tftp vsftpd
+systemctl start xinetd tftp vsftpd
+```
+
+- Download syslinux
+
+- Unzip syslinux
+
+- Copy the necessary files from syslinux to your tftp directory
+
+- Edit your syslinux config file.
+
+```
+touch /var/lib/tftpboot/pxelinux.cfg/default
+nano /var/lib/tftpboot/pxelinux.cfg/default
+```
+
+- Open ports on the firewall
+
+```
+firewall-cmd --add-service=ftp --permanent
+firewall-cmd --add-port=69/udp --permanent
+firewall-cmd --add-port=4011/udp --permanent
+firewall-cmd --reload
+```

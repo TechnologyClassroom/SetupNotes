@@ -20,6 +20,8 @@ Requirements:
 * A switch
 * Network cables to connect the four boxes
 
+# Configuring the WDS server with syslinux
+
 - <a href="https://www.kernel.org/pub/linux/utils/boot/syslinux/6.xx/syslinux-6.03.zip">Download syslinux 6.03</a> to both PXE servers and extract these files to your tftp locations C:\RemoteInstall\Boot\x64\ for WDS and /var/lib/tftpboot for CentOS 7.
 /bios/com32/chain/
 
@@ -52,6 +54,8 @@ LABEL local
   LOCALBOOT 0
 ```
 The default first choice continues booting the WDS server as usual.  The second choice chains into a second PXE server.  The third choice exits PXE and boots with the next available boot option according to your boot order.  The fourth choice attempts to boot from the local disk.
+
+```menu.c32``` can be changed to ```vesamenu.c32``` for a better look, but compatibility may decrease.
 
 - Change 192.168.1.15 to an available IP address outside of your DHCP server's scope.  Assign your GNU/Linux PXE server a static IP that matches.
 

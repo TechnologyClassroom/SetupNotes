@@ -14,7 +14,7 @@ Configure and test this entire process in a test environment before implementing
 
 Requirements:
 
-* A working WDS server with DHCP and DNS configured.  This needs to be tested with PXE booting before starting.
+* A working WDS server with DHCP and DNS configured.  I used Windows Server 2012 R2.  This needs to be tested with PXE booting before starting.
 * Another server to configure as a GNU/Linux PXE server.  I am using CentOS 7 Minimal.
 * A third machine that can boot into PXE
 * A switch
@@ -22,7 +22,7 @@ Requirements:
 
 # Configuring the WDS server with syslinux
 
-- <a href="https://www.kernel.org/pub/linux/utils/boot/syslinux/6.xx/syslinux-6.03.zip">Download syslinux 6.03</a> to both PXE servers and extract these files to your tftp locations C:\RemoteInstall\Boot\x64\ for WDS and /var/lib/tftpboot for CentOS 7.
+- <a href="https://www.kernel.org/pub/linux/utils/boot/syslinux/6.xx/syslinux-6.03.zip">Download syslinux 6.03</a> and extract these files to C:\RemoteInstall\Boot\x64\ your tftp location.
 
 ```
 /bios/com32/chain/chain.c32
@@ -113,15 +113,42 @@ systemctl enable xinetd tftp vsftpd
 systemctl start xinetd tftp vsftpd
 ```
 
+- Make a new directory for syslinux and change into that directory
+
+```
+mkdir syslinux
+cd syslinux
+```
+
 - Download syslinux
+
+```
+wget https://www.kernel.org/pub/linux/utils/boot/syslinux/6.xx/syslinux-6.03.zip
+```
 
 - Unzip syslinux
 
+```
+unzip syslinux-6.03.zip
+```
+
 - Copy the necessary files from syslinux to your tftp directory
+
+```
+cp bios/com32/chain/chain.c32 /var/lib/tftpboot/
+cp bios/com32/elflink/ldlinux/ldlinux.c32 /var/lib/tftpboot/
+cp bios/com32/lib/libcom32.c32 /var/lib/tftpboot/
+cp bios/com32/menu/menu.c32 /var/lib/tftpboot/
+cp bios/com32/menu/vesamenu.c32 /var/lib/tftpboot/
+cp bios/com32/modules/pxechn.c32 /var/lib/tftpboot/
+cp bios/com32/libutil/libutil.c32 /var/lib/tftpboot/
+cp bios/core/pxelinux.0 /var/lib/tftpboot/
+```
 
 - Edit your syslinux config file.
 
 ```
+mkdir /var/lib/tftpboot/pxelinux.cfg
 touch /var/lib/tftpboot/pxelinux.cfg/default
 nano /var/lib/tftpboot/pxelinux.cfg/default
 ```

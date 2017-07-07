@@ -1,4 +1,4 @@
-# [Setting up two PXE servers on the same network: WDS and GNU/Linux PXE Server](#twopxeservers)
+# [Setting up two or more PXE servers on the same network: WDS and GNU/Linux PXE Server](#twopxeservers)
 
 Work in progress!
 
@@ -8,7 +8,7 @@ Rewrite/update based on Eric Gray's 2011 article http://www.vcritical.com/2011/0
 
 There are many guides on setting up a Windows Deployment Server (WDS) and GNU/Linux PXE servers.  I will not go into the specifics of setting up a general PXE server.  Setting up a WDS server or a GNU/Linux PXE server is simple by following guides availabe online, but there are very few articles about configuring multiple PXE servers on the same network.
 
-Scenario: My organization has a WDS server configured on our network.  We use GNU/Linux regularly and want to use a GNU/Linux PXE server.  Our options are creating a new network with new cable drops or use the prexisting network.  Using the preexisting network would be easier and cheaper.
+Scenario: My organization has a WDS server configured on our network.  We use GNU/Linux regularly and want to use a GNU/Linux PXE server.  Our options are creating a new network with new cable drops or use the prexisting network.  Using the preexisting network would be easier and cheaper.  We want to make minimal changes to the WDS server so turning off the DNS and DHCP servers and using a GNU/Linux DHCP server that points to the WDS server is not an option.
 
 Do not run two DHCP servers on the same network.
 
@@ -24,7 +24,7 @@ Requirements:
 
 # Configuring the WDS server with syslinux
 
-- <a href="https://www.kernel.org/pub/linux/utils/boot/syslinux/6.xx/syslinux-6.03.zip">Download syslinux 6.03</a> and extract these files to C:\RemoteInstall\Boot\x64\ your tftp location without their folder structure.
+- <a href="https://www.kernel.org/pub/linux/utils/boot/syslinux/6.xx/syslinux-6.03.zip">Download syslinux 6.03 from the official source</a> and extract these eight files to C:\RemoteInstall\Boot\x64\ your tftp location without their folder structure:
 
 ```
 /bios/com32/chain/chain.c32
@@ -44,6 +44,8 @@ The syslinux archive has many files, but we only need these eight files for lega
 Rename ```abortpxe.com``` to ```abortpxe.0```.
 
 Rename ```pxeboot.com``` to ```pxeboot.0```.
+
+<!-- Add picture here -->
 
 - Create a new folder C:\RemoteInstall\Boot\x64\pxelinux.cfg and make a new file in that folder called default.
 
@@ -74,19 +76,37 @@ LABEL local
   LOCALBOOT 0
 ```
 
+<!-- Add picture here -->
+
 The default first choice continues booting the WDS server as usual.  The second choice chains into a second PXE server.  The third choice exits PXE and boots with the next available boot option according to your boot order.  The fourth choice attempts to boot from the local disk.
 
 ```menu.c32``` can be changed to ```vesamenu.c32``` for a better look, but compatibility may decrease.
 
 - Change 192.168.1.15 to an available IP address outside of your DHCP server's scope.  Assign your GNU/Linux PXE server a static IP that matches.
 
+- Change the PXE settings to boot from pxelinux.0
+
+Right click on the Windows icon in the bottom right and click on the ```Command Prompt (Admin)``` option.
+
+Type in these two commands:
 
 ```
 wdsutil /set-server /bootprogram:boot\x64\pxelinux.0 /architecture:x64
 wdsutil /set-server /N12bootprogram:boot\x64\pxelinux.0 /architecture:x64
 ```
 
-This changes the default boot option from ```pxeboot.com``` to ```pxelinux.0``` and our new menu.
+<!-- Add picture here -->
+
+If you will be using 32 bit machines, double the above steps for the \x86\ folder and run these commands:
+
+```
+wdsutil /set-server /bootprogram:boot\x86\pxelinux.0 /architecture:x86
+wdsutil /set-server /N12bootprogram:boot\x86\pxelinux.0 /architecture:x86
+```
+
+This changes the default boot option from ```pxeboot.com``` to ```pxelinux.0``` and routes to our new menu.
+
+- If everything is configured correctly, the client should be able to PXE into the WDS and see the new menu.  All options except for the second option should work at this time.
 
 # Configuring the GNU/Linux PXE server without DHCP or DNS
 

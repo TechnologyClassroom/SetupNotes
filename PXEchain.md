@@ -43,6 +43,15 @@ Rename ```abortpxe.com``` to ```abortpxe.0```.
 
 Rename ```pxeboot.com``` to ```pxeboot.0```.
 
+This can be accomplished with Explorer or with the command prompt.  Right click on the Windows icon in the bottom right and click on the ```Command Prompt (Admin)``` option.  Type in these two commands:
+
+```
+ren C:\RemoteInstall\Boot\x64\pxeboot.com C:\RemoteInstall\Boot\x64\pxeboot.0
+ren C:\RemoteInstall\Boot\x64\abortpxe.com C:\RemoteInstall\Boot\x64\abortpxe.0
+```
+
+The folder should look like this:
+
 ![Screenshot](https://github.com/TechnologyClassroom/SetupNotes/blob/master/Images/PXE1.png?raw=true "Screenshot")
 
 - Create a new folder C:\RemoteInstall\Boot\x64\pxelinux.cfg and make a new file in that folder called default.

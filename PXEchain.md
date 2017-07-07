@@ -22,7 +22,7 @@ Requirements:
 * A switch
 * Network cables to connect the four boxes
 
-# Configuring the WDS server with syslinux
+# [Configuring the WDS server with syslinux](#configwds)
 
 - <a href="https://www.kernel.org/pub/linux/utils/boot/syslinux/6.xx/syslinux-6.03.zip">Download syslinux 6.03 from the official source</a> and extract these eight files to C:\RemoteInstall\Boot\x64\ your tftp location without their folder structure:
 
@@ -108,7 +108,7 @@ This changes the default boot option from ```pxeboot.com``` to ```pxelinux.0``` 
 
 - If everything is configured correctly, the client should be able to PXE into the WDS and see the new menu.  All options except for the second option should work at this time.
 
-# Configuring the GNU/Linux PXE server without DHCP or DNS
+# [Configuring the GNU/Linux PXE server without DHCP or DNS](#configcentos)
 
 - Install a CentOS 7 Minimal install.
 - Login as root.

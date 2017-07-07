@@ -15,10 +15,17 @@ Configure and test this entire process in a test environment before implementing
 Requirements:
 
 * A working WDS server with DHCP and DNS configured.  This needs to be tested with PXE booting before starting.
-* Another server to configure as a GNU/Linux PXE server
+* Another server to configure as a GNU/Linux PXE server.  I am using CentOS 7 Minimal.
 * A third machine that can boot into PXE
 * A switch
 * Network cables to connect the four boxes
+
+- <a href="https://www.kernel.org/pub/linux/utils/boot/syslinux/6.xx/syslinux-6.03.zip">Download syslinux 6.03</a> to both PXE servers and extract these files to your tftp locations C:\RemoteInstall\Boot\x64\ for WDS and /var/lib/tftpboot for CentOS 7.
+/bios/com32/chain/
+
+- Create a new folder C:\RemoteInstall\Boot\x64\pxelinux.cfg and make a new file in that folder called default.
+
+- Change the contents of the C:\RemoteInstall\Boot\x64\pxelinux.cfg\default file.
 
 ```
 DEFAULT menu.c32
@@ -44,6 +51,10 @@ LABEL local
   MENU LABEL Boot from ^Local Computer
   LOCALBOOT 0
 ```
+The default first choice continues booting the WDS server as usual.  The second choice chains into a second PXE server.  The third choice exits PXE and boots with the next available boot option according to your boot order.  The fourth choice attempts to boot from the local disk.
+
+- Change 192.168.1.15 to an available IP address outside of your DHCP server's scope.  Assign your GNU/Linux PXE server a static IP that matches.
+
 
 ```
 wdsutil /set-server /bootprogram:boot\x64\pxelinux.0 /architecture:x64

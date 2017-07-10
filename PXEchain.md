@@ -214,7 +214,7 @@ DEFAULT menu.c32
 PROMPT 0
 TIMEOUT 300
 ONTIMEOUT 2
-MENU TITLE ########## PXE Boot Menu ##########
+MENU TITLE GNU/Linux PXE Server
 
 LABEL 1
   MENU LABEL Install ^CentOS 7 x64 with Local Repo
@@ -224,7 +224,14 @@ LABEL 1
 LABEL 2
   MENU LABEL Boot from ^Local Computer
   LOCALBOOT 0
+
+LABEL 99
+  MENU LABEL Chain to ^Windows Deployment Server (WDS)
+  KERNEL pxechn.c32
+  APPEND 192.158.1.2::boot\x64\pxelinux.0 -W
 ```
+
+```LABEL 99``` goes chains back to the WDS server.  This also illustrates how to do the opposite configuration.  If you have an environment with a GNU/Linux PXE server that handles DHCP and DNS that needs to chain to a WDS server that does not have DHCP and DNS, change ```pxelinux.0``` to ```pxeboot.com``` or install syslinux on both and use the exact code from above.
 
 - Open ports on the firewall
 

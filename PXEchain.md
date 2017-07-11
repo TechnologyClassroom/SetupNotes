@@ -37,7 +37,7 @@ Requirements:
 
 The syslinux archive has many files, but we only need these eight files for legacy boot options.
 
-- Rename two files in the C:\RemoteInstall\Boot\x64\ folder.
+- Rename or copy two files in the C:\RemoteInstall\Boot\x64\ folder.
 
 Rename ```abortpxe.com``` to ```abortpxe.0```.
 

@@ -2,6 +2,8 @@
 
 Michael McMahon
 
+DEPRECATED Updates and more configurations regarding this document will be kept on https://github.com/TechnologyClassroom/PXE
+
 Rewrite/update based on Eric Gray's 2011 article http://www.vcritical.com/2011/06/peaceful-coexistence-wds-and-linux-pxe-servers/
 
 There are many guides on setting up a Windows Deployment Server (WDS) and GNU/Linux PXE servers.  I will not go into the specifics of setting up a general PXE server.  Setting up a WDS server or a GNU/Linux PXE server is simple by following guides availabe online, but there are very few articles about configuring multiple PXE servers on the same network using PXE chain.

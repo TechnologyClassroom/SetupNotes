@@ -111,7 +111,7 @@ wdsutil /set-server /bootprogram:boot\x86\pxelinux.0 /architecture:x86
 wdsutil /set-server /N12bootprogram:boot\x86\pxelinux.0 /architecture:x86
 ```
 
-This changes the default boot option from ```pxeboot.com``` to ```pxelinux.0``` and routes to our new menu.
+This changes the default boot option from ```pxeboot.com``` to ```pxelinux.0``` which routes to our new menu.
 
 - If everything is configured correctly, the client should be able to PXE into the WDS and see the new menu.  All options except for the second option should work at this time.
 
@@ -231,7 +231,7 @@ LABEL 99
   APPEND 192.158.1.2::boot\x64\pxelinux.0 -W
 ```
 
-```LABEL 99``` goes chains back to the WDS server.  This also illustrates how to do the opposite configuration.  If you have an environment with a GNU/Linux PXE server that handles DHCP and DNS that needs to chain to a WDS server that does not have DHCP and DNS, change ```pxelinux.0``` to ```pxeboot.com``` or install syslinux on both and use the exact code from above.
+```LABEL 99``` chains back to the WDS server.  This also illustrates how to do the opposite configuration.  If you have an environment with a GNU/Linux PXE server that handles DHCP and DNS that needs to chain to a WDS server that does not have DHCP and DNS, change ```pxelinux.0``` to ```pxeboot.com``` or install syslinux on both and use the exact code from above.
 
 - Open ports on the firewall
 

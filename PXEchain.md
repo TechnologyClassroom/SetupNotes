@@ -245,3 +245,7 @@ firewall-cmd --reload
 The ftp files can be viewed from other computers on the network by going to ftp://192.168.1.15/pub with a web browser.
 
 - Test client machine should be able to now boot through the WDS server to the GNU/Linux PXE server.
+
+# [Other uses for pxechn.c32](#other-uses-for-pxechn.c32)
+
+Some operating systems may require specific versions of syslinux such as VMware vSphere (ESXi) requiring syslinux 3.86.  pxechn.c32 can be used to switch between versions of syslinux within the same tftp directory.

@@ -66,7 +66,7 @@ Your tmux session will be exactly as you left it.
 
 ```CTRL+b right arrow key``` Change focus to the pane on the right of the current position.
 
-Windows can be closed with ```exit``` or the ```CTRL+b &``` keystroke.
+Windows can be closed with ```exit``` or the ```CTRL+b x``` keystroke.
 
 # Resize pane
 

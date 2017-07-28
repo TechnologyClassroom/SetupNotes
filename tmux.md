@@ -30,7 +30,15 @@ A green bar will appear on the bottom of the terminal.
 
 # List all keystrokes
 
-```CTRL+b ?``` will show all keystrokes.  ```CTRL+b``` is necessary for entering all tmux keystrokes.  After pressing ```CTRL+b```, release both CTRL and b and then press the next key.
+```CTRL+b ?``` will show all keystrokes.  ```CTRL+b``` is necessary for entering all tmux keystrokes.  After pressing ```CTRL+b```, release both CTRL and b and then press the next key.  ```q``` will quit help and revert back to the previous terminal pane.
+
+# Page up
+
+When you are in a TTY, the information above the current view is gone after new information pushes it out of the way.  This information can be viewed if you sent that data to a log file or piped with less, but that requires prior planning.
+
+tmux allows you to page up and down.
+
+```CTRL+b Page Up``` enters copy mode.  This allows you to use the page up and down keys to view more of the previous output.
 
 # Splitting windows
 

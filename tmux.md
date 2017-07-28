@@ -129,3 +129,9 @@ I have three typical tmux layouts that I commonly use.  Instead of manually work
 <a href="https://github.com/TechnologyClassroom/bash/blob/master/tmux2.sh">tmux2.sh</a> has three panes.  One wide on top.  Two on the bottom.  The monitoring tool top runs in the bottom left automatically.  This is my personal favorite.
 
 <a href="https://github.com/TechnologyClassroom/bash/blob/master/tmux4.sh">tmux4.sh</a> has four panes.
+
+# Break and join panes
+
+A pane can be disconnected into the background with ```CTRL+b !```.
+
+A pane can be brought back with ```CTRL+b :join-pane -s :0```

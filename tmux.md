@@ -40,6 +40,18 @@ tmux allows you to page up and down.
 
 ```CTRL+b Page Up``` enters copy mode.  This allows you to use the page up and down keys to view more of the previous output.  ```q``` will quit copy mode and revert back to the previous terminal pane.
 
+# Preserve work during remote connections
+
+If you are familar with SSH connections, you have probably ran into the scenario where you were working on a long process and lost connection or closed the terminal window.  The process cancels at that point on the remote server and can be very tedious to clean up.
+
+tmux can fix this scenario.  ssh into a remote server, install tmux, and run tmux.  If you lose connection or close the terminal, ssh back in and run
+
+```
+tmux attach
+```
+
+Your tmux session will be exactly as you left it.
+
 # Splitting windows
 
 ```CTRL+b "``` will split the window into two shells one on top of the other.

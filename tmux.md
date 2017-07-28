@@ -38,7 +38,7 @@ When you are in a TTY, the information above the current view is gone after new 
 
 tmux allows you to page up and down.
 
-```CTRL+b Page Up``` enters copy mode.  This allows you to use the page up and down keys to view more of the previous output.
+```CTRL+b Page Up``` enters copy mode.  This allows you to use the page up and down keys to view more of the previous output.  ```q``` will quit copy mode and revert back to the previous terminal pane.
 
 # Splitting windows
 

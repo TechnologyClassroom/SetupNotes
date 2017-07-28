@@ -52,6 +52,14 @@ tmux attach
 
 Your tmux session will be exactly as you left it.
 
+# tmux in tmux
+
+![Screenshot](https://github.com/TechnologyClassroom/SetupNotes/blob/master/Images/tmux.jpg?raw=true "Screenshot")
+
+When you have tmux inside of tmux, use ```CTRL+b``` twice to control the inside instance of tmux.
+
+For example, if you want to split a window horizontally inside of tmux inside of tmux, use ```CTRL+b CTRL+b "```.
+
 # Splitting windows
 
 ```CTRL+b "``` will split the window into two shells one on top of the other.

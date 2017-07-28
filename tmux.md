@@ -66,6 +66,8 @@ Your tmux session will be exactly as you left it.
 
 ```CTRL+b right arrow key``` Change focus to the pane on the right of the current position.
 
+Windows can be closed with ```exit``` or the ```CTRL+b &``` keystroke.
+
 # Resize pane
 
 ```CTRL+b CTRL+up arrow key``` Resize the current pane by expanding the top edge.
@@ -87,6 +89,28 @@ nano ~/.tmux.conf
 My config can be found <a href="https://github.com/TechnologyClassroom/dotfiles/blob/master/tmux.conf">here</a>.  Example configurations can be found in the ```/usr/share/doc/tmux/examples``` directory.
 
 Reload a new config in an active session with ```CTRL+b :source-file ~/.tmux.conf```.
+
+# Sync panes
+
+synchronize-panes is useful for manually making one change many servers at once.  Ansible, Puppet, and other configuration managers are better at scale, but this is useful for two or three quick changes.
+
+1. ssh into as many servers as you want to change in separate panes.
+
+2. Synchronize panes
+
+```
+CTRL+b :set-window-option synchronize-panes on
+```
+
+3. Type commands into all windows at once.
+
+4. Turn off synchronize panes
+
+```
+CTRL+b :set-window-option synchronize-panes off
+```
+
+This can be added to a keybind with a <a href="https://github.com/TechnologyClassroom/dotfiles/blob/master/tmux.conf">custom config</a>.
 
 # Load predefined tmux layouts with shell scripts
 

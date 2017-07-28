@@ -67,3 +67,13 @@ nano ~/.tmux.conf
 My config can be found <a href="https://github.com/TechnologyClassroom/dotfiles/blob/master/tmux.conf">here</a>.  Example configurations can be found in the ```/usr/share/doc/tmux/examples``` directory.
 
 Reload a new config in an active session with ```CTRL+b :source-file ~/.tmux.conf```.
+
+# Load predefined tmux layouts with shell scripts
+
+I have three typical tmux layouts that I commonly use.  Instead of manually workflow such as open tmux, split window, change pane, split window, change pane, and get started, I launch tmux with a shell script.  These shells scripts can be launched with my window manager session.
+
+<a href="https://github.com/TechnologyClassroom/bash/blob/master/tmux.sh">tmux.sh</a> has three panes.  One long on the left.  Two on the right.  The monitoring tool top runs in the bottom right automatically.
+
+<a href="https://github.com/TechnologyClassroom/bash/blob/master/tmux2.sh">tmux2.sh</a> has three panes.  One wide on top.  Two on the bottom.  The monitoring tool top runs in the bottom left automatically.  This is my personal favorite.
+
+<a href="https://github.com/TechnologyClassroom/bash/blob/master/tmux4.sh">tmux4.sh</a> has four panes.

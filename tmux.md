@@ -58,9 +58,11 @@ Your tmux session will be exactly as you left it.
 
 When you have tmux inside of tmux, use ```CTRL+b``` twice to control the inside instance of tmux.  This is useful when you are using tmux on your workstation to ssh into a remote system with tmux in case you lose your connection.
 
+For example, if you want to split a window horizontally inside of tmux inside of tmux, use ```CTRL+b CTRL+b "```.
+
 ![Screenshot](https://github.com/TechnologyClassroom/SetupNotes/blob/master/Images/tmux2.png?raw=true "Screenshot")
 
-For example, if you want to split a window horizontally inside of tmux inside of tmux, use ```CTRL+b CTRL+b "```.
+In this image, I am using my host machine with tmux to ssh into two different machines that also have tmux.
 
 # Splitting windows
 

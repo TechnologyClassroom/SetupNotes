@@ -126,7 +126,7 @@ This can be added to a keybind with a <a href="https://github.com/TechnologyClas
 
 # Load predefined tmux layouts with shell scripts
 
-I have three typical tmux layouts that I commonly use.  Instead of manually workflow such as open tmux, split window, change pane, split window, change pane, and get started, I launch tmux with a shell script.  These shells scripts can be launched with my window manager session.
+I have three typical tmux layouts that I commonly use.  Instead of a manual workflow such as open tmux, split window, change pane, split window, change pane, and get started, I launch tmux with a shell script.  These shells scripts can be launched with my window manager session init.
 
 <a href="https://github.com/TechnologyClassroom/bash/blob/master/tmux.sh">tmux.sh</a> has three panes.  One long on the left.  Two on the right.  The monitoring tool top runs in the bottom right automatically.
 

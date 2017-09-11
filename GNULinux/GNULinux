@@ -245,3 +245,20 @@ sudo zypper dist-upgrade -y -l
 # Exit QEMU
 CTRL+ALT+2
 quit
+
+
+
+Problem: Installing vim, changes vi.
+Solution: Change vim to vim.tiny
+$ sudo update-alternatives --config vi
+There are 2 choices for the alternative vi (providing /usr/bin/vi).
+
+  Selection    Path                Priority   Status
+------------------------------------------------------------
+* 0            /usr/bin/vim.basic   30        auto mode
+  1            /usr/bin/vim.basic   30        manual mode
+  2            /usr/bin/vim.tiny    10        manual mode
+
+Press <enter> to keep the current choice[*], or type selection number: 2
+update-alternatives: using /usr/bin/vim.tiny to provide /usr/bin/vi (vi) in manual mode
+

@@ -98,6 +98,7 @@ https://github.com/yoloseem/awesome-sphinxdoc
 
 # Code Snippets
 
+```
 <h2>Picture</h2>
 
 .. image:: ../../images/Picture1.svg
@@ -121,4 +122,4 @@ https://github.com/yoloseem/awesome-sphinxdoc
 +-----------+------------+----------+
 |    10 min | ...        | ...      |
 +-----------+------------+----------+
-
+```

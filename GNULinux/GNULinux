@@ -46,6 +46,10 @@ sudo ln -s /data/software/drivers/linux /usr/share/nginx/html/
 # Restart network stack with Ubuntu 16.04 server
 sudo systemctl restart NetworkManager.service
 
+# Problem: Ubuntu 16.04 crashes on apt-get update.
+# Solution: Something changed in Ubuntu 16.04 during the Summer of 2017 and libappstream3 breaks updates.  Remove libappstream3 to fix the problem.
+sudo apt-get purge -y libappstream3
+
 # Problem: Ubuntu skips grub menu
 # Solution: During boot, hold Shift to access a hidden grub menu.
 # If that does not work, edit the /etc/default/grub file.

@@ -58,6 +58,12 @@ sudo nano /etc/default/grub
 sudo update-grub
 # Modified from Eric Carvalho & Vojtech Trefny at http://askubuntu.com/questions/16042/how-to-get-to-the-grub-menu-at-boot-time
 
+# Problem: Ubuntu 16.04 does not manage the network devices.  dhcp can be set manually.
+# Solution: Edit config file and set managed equal to true.
+sudo nano /etc/NetworkManager/NetworkManager.conf
+Change managed=false to managed=true
+CTRL+X, y, enter
+
 # Problem: Ubuntu's outdated Sugar DE clobbers the cursor outside of sugar
 # Solution: Reset cursor theme
 gsettings reset org.gnome.desktop.interface cursor-theme

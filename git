@@ -1,0 +1,8 @@
+# git is a great way to track changes to text files
+
+# Problem: I overwrote one of my scripts and I was able to track down the change and recover my lost code.
+git whatchanged
+# I looked for recent commits that involved the overwritten file.
+git diff c4d6ee5cdf4f170e27731999cac63191134e06c6
+# Replace c4d6ee5cdf4f170e27731999cac63191134e06c6 with the unique identifer for the commit.
+# The diff shows patch style changes included in the commit.  I found my lost code.

@@ -137,3 +137,15 @@ exit
 rm .bash_history
 history -c
 ```
+
+# Problems
+
+Problem: Ubuntu 12.04 Server cannot update.
+Solution: Remove the contents of /var/lib/apt/lists/ with this command:
+
+```
+sudo rm -rf /var/lib/apt/lists/*
+sudo apt-get update
+```
+
+From Lorem at https://askubuntu.com/questions/41605/trouble-downloading-packages-list-due-to-a-hash-sum-mismatch-error

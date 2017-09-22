@@ -141,6 +141,7 @@ history -c
 # Problems
 
 Problem: Ubuntu 12.04 Server cannot update.
+
 Solution: Remove the contents of /var/lib/apt/lists/ with this command:
 
 ```

@@ -90,6 +90,12 @@ Windows can be closed with ```exit``` or the ```CTRL+b x``` keystroke.
 
 ```CTRL+b CTRL+right arrow key``` Resize the current pane by expanding the right edge.
 
+# Zoom or fullscreen one pane
+
+```CTRL+b z``` Resize the current pane to fullscreen.
+
+```CTRL+b z``` Revert fullscreen changes to their original state.
+
 # Customize your tmux configuration
 
 Stick with the defaults until you know what you would like to change.  Create a new file and add more binding.

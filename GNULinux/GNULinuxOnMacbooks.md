@@ -9,7 +9,7 @@ Note: Do not buy a Macbook in hopes of using it for GNU/Linux.  Windows based co
 I have only tested this on white macbooks from 2009 with Mac OS X 10.6.8.
 
 # [Table of Contents](#toc)
-* <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#configuring-the-original-mac-os-x-10.6.8">Configuring the orignal Mac OS X 10.6.8</a>
+* <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#configuring-the-original-mac-os-x-10.6.8">Configuring the original Mac OS X 10.6.8</a>
 * <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#shrink-your-mac-installation-to-make-room-for-gnu-linux">Shrink your Mac installation to make room for GNU/Linux</a>
 * <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#download-and-install-refit">Download and Install rEFIt</a>
 * <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinuxOnMacbooks.md#create-a-livedvd-or-liveusb-with-a-gnu-linux-iso">Create a liveDVD or liveUSB with a GNU/Linux ISO</a>

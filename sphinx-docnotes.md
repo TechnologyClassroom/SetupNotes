@@ -4,6 +4,8 @@ sphinx-doc is a way to write ebooks, documentation, or websites once and export 
 # Markup Syntax
 http://www.sphinx-doc.org/en/stable/rest.html
 
+http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html
+
 http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html
 
 https://pythonhosted.org/an_example_pypi_project/sphinx.html
@@ -16,51 +18,31 @@ Install sphinx-doc according to their documentation.  Open a terminal.  Navigate
 
 I used these answers:
 
-.
-
-y
-
-_
-
-InsertProjectNameHere
-
-InsertAuthorOrAuthorsNamesHere
-
-1.0
-
-1.0
-
-en
-
-.rst
-
-index
-
-y
-
-y
-
-n
-
-n
-
-n
-
-n
-
-n
-
-n
-
-n
-
-n
-
-n
-
-y
-
-y
+```
+> Root path for the documentation [.]: .
+> Separate source and build directories (y/n) [n]: y
+> Name prefix for templates and static dir [_]: _
+> Project name: InsertProjectName
+> Author name(s): InsertAuthorOrAuthorsHere
+> Project version []: 1.0
+> Project release [1.0]: 1.0
+> Project language [en]: en
+> Source file suffix [.rst]: .rst
+> Name of your master document (without suffix) [index]: index
+> Do you want to use the epub builder (y/n) [n]: y
+> autodoc: automatically insert docstrings from modules (y/n) [n]: y
+> doctest: automatically test code snippets in doctest blocks (y/n) [n]: n
+> intersphinx: link between Sphinx documentation of different projects (y/n) [n]: n
+> todo: write "todo" entries that can be shown or hidden on build (y/n) [n]: n
+> coverage: checks for documentation coverage (y/n) [n]: n
+> imgmath: include math, rendered as PNG or SVG images (y/n) [n]: n
+> mathjax: include math, rendered in the browser by MathJax (y/n) [n]: n
+> ifconfig: conditional inclusion of content based on config values (y/n) [n]: n
+> viewcode: include links to the source code of documented Python objects (y/n) [n]: n
+> githubpages: create .nojekyll file to publish the document on GitHub pages (y/n) [n]: n
+> Create Makefile? (y/n) [y]: y
+> Create Windows command file? (y/n) [y]: y
+```
 
 After this the directory trees are created.  Edit ./source/index.rst to modify the document.
 

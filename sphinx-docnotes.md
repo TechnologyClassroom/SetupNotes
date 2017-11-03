@@ -8,6 +8,66 @@ http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html
 
 https://pythonhosted.org/an_example_pypi_project/sphinx.html
 
+# Creating a new sphinx-doc project
+
+Install sphinx-doc according to their documentation.  Open a terminal.  Navigate to a new directory for your project.  Run the sphinx-quickstart program.
+
+```sphinx-quickstart```
+
+I used these answers:
+
+.
+
+y
+
+_
+
+InsertProjectNameHere
+
+InsertAuthorOrAuthorsNamesHere
+
+1.0
+
+1.0
+
+en
+
+.rst
+
+index
+
+y
+
+y
+
+n
+
+n
+
+n
+
+n
+
+n
+
+n
+
+n
+
+n
+
+n
+
+y
+
+y
+
+After this the directory trees are created.  Edit ./source/index.rst to modify the document.
+
+Build a new epub into the build directory with this command:
+
+```sphinx-build -b epub source build```
+
 # Templates
 
 Themes are located in the /usr/share/sphinx/themes/ folder.

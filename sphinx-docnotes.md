@@ -1,15 +1,6 @@
 # sphinx-doc
 sphinx-doc is a way to write ebooks, documentation, or websites once and export to your desired output.  Exported formats include epub, html, pdf, etc.
 
-# Markup Syntax
-http://www.sphinx-doc.org/en/stable/rest.html
-
-http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html
-
-http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html
-
-https://pythonhosted.org/an_example_pypi_project/sphinx.html
-
 # Creating a new sphinx-doc project
 
 Install sphinx-doc according to their documentation.  Open a terminal.  Navigate to a new directory for your project.  Run the sphinx-quickstart program.
@@ -50,67 +41,67 @@ Build a new epub into the build directory with this command:
 
 ```sphinx-build -b epub source build```
 
+# conf.py
+
+[config.py epub options](http://www.sphinx-doc.org/en/stable/config.html#options-for-epub-output)
+
+An example conf.py file I have used can be found [here](https://github.com/GhostCityGames/Midnight-Riders/blob/master/source/conf.py).
+
+```
+# epub cover image
+epub_cover = ('_static/mr-cover.png', '')
+
+# epub index
+epub_use_index = False
+
+# If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
+#
+html_show_sphinx = False
+```
+
 # Templates
 
 Themes are located in the /usr/share/sphinx/themes/ folder.
 
 The default theme can be found in the /usr/share/sphinx/themes/basic folder.
 
-http://www.sphinx-doc.org/en/1.4.8/templating.html
+[Templating](http://www.sphinx-doc.org/en/stable/templating.html)
 
-http://tinkerer.me/doc/theming.html
+[Theming at tinkerer.me](http://tinkerer.me/doc/theming.html)
 
 Adding creative commons
 TP from https://groups.google.com/forum/#!topic/sphinx-users/f3Yl45l1KYg suggests overwriting the footer with a template:
 
-Create the file ./source/_templates/layout.html
+Template modifiers can be placed in the file ./source/_templates/layout.html
 
 CC BY-SA 4.0 INTL
 ```
 {% extends "!layout.html" %}
 {%- block footer %}
+{{ super() }}
   <div class="footer">
     <span class="creativecommons">
       <a href="https://creativecommons.org/licenses/by-sa/4.0/" >
         <img src="{{ pathto("_static/ccby-sa4.0intl88x31.png", 1) }}"
-          border="0" alt="Creative Commons License"/>
-      </a>
+          alt="Creative Commons License"/></a>
       This work is licensed under a
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
         Creative Commons Attribution-ShareAlike 4.0 International License
       </a>
     </span>
   </div>
-{{ super() }}
 {%- endblock %}
 ```
-Or modify the original layout.html file with this command:
+
+Removing the navigation links at the top of each page
 
 ```
-sudo leafpad /usr/share/sphinx/themes/basic/layout.html
-```
-
-Search for the copyright section of the footer and change it to this.
-
-Code:
-
-```
-      {%- if hasdoc('copyright') %}
-        {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.
-        <span class="creativecommons">
-        <a href="https://creativecommons.org/licenses/by-sa/4.0/" >
-          <img src="{ pathto("_static/ccby-sa4.0intl88x31.png", 1) }"
-               border="0" alt="Creative Commons License"/>
-        </a>
-        This work is licensed under a 
-        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-         Creative Commons Attribution-ShareAlike 4.0 International License
-        </a>
-        </span>
-        {% endtrans %}
+{% block relbar1 %}{% endblock %}
 ```
 
 # Examples
+https://github.com/GhostCityGames/Midnight-Riders
+
 http://www.sphinx-doc.org/en/stable/tutorial.html
 
 https://github.com/sphinx-doc/sphinx/blob/master/EXAMPLES
@@ -123,9 +114,9 @@ https://github.com/yoloseem/awesome-sphinxdoc
 # Code Snippets
 
 ```
-<h2>Picture</h2>
+Adding a picture
 
-.. image:: ../../images/Picture1.svg
+.. image:: /_static/picture.png
    :width: 700px
    :align: center
 
@@ -147,3 +138,29 @@ https://github.com/yoloseem/awesome-sphinxdoc
 |    10 min | ...        | ...      |
 +-----------+------------+----------+
 ```
+
+# Helpful links for Sphinx and ReStructuredText
+
+http://www.sphinx-doc.org/en/stable/rest.html
+
+http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html
+
+http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html
+
+https://pythonhosted.org/an_example_pypi_project/sphinx.html
+
+[epub FAQ](http://sphinx.readthedocs.io/en/latest/faq.html#epub-info)
+
+[config.py epub options](http://www.sphinx-doc.org/en/stable/config.html#options-for-epub-output)
+
+[Theming](http://www.sphinx-doc.org/en/stable/theming.html)
+
+[Theming at tinkerer.me](http://tinkerer.me/doc/theming.html)
+
+[Templating](http://www.sphinx-doc.org/en/stable/templating.html)
+
+[ReStructured Text](http://docutils.sourceforge.net/rst.html)
+
+[ReStructured Text Quick Reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html)
+
+[ReStructured Text Primer](http://docutils.sourceforge.net/docs/user/rst/quickstart.html)

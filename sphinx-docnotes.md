@@ -164,3 +164,27 @@ https://pythonhosted.org/an_example_pypi_project/sphinx.html
 [ReStructured Text Quick Reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html)
 
 [ReStructured Text Primer](http://docutils.sourceforge.net/docs/user/rst/quickstart.html)
+
+# Check links
+
+Make sure all of your links work with this command:
+
+```make linkcheck```
+
+# Troubleshooting
+
+Problem: ```make latexpdf``` returns errors about python2.7 and normalize with Debian.
+
+Solution: While making pdfs is experimental, I was able to remove this error by forcing python 3.
+
+Remove all copies of sphinx with python 2.
+
+```
+sudo apt purge python-sphinx
+sudo apt purge sphinx-doc
+sudo pip uninstall sphinx
+```
+
+Install sphinx with python 3.
+
+```sudo apt install python3-sphinx```

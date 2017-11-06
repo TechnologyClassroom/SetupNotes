@@ -191,7 +191,7 @@ Install sphinx with python 3.
 
 Change this line in ```Makefile```:
 
-```SPHINXBUILD   = python3 -msphinx```
+```SPHINXBUILD   = python -msphinx```
 
 to this:
 

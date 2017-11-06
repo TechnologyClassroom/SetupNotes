@@ -188,3 +188,11 @@ sudo pip uninstall sphinx
 Install sphinx with python 3.
 
 ```sudo apt install python3-sphinx```
+
+Change this line in ```Makefile```:
+
+```SPHINXBUILD   = python3 -msphinx```
+
+to this:
+
+```SPHINXBUILD   = python3 -msphinx```

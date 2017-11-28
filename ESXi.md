@@ -100,7 +100,7 @@ Open a terminal.  Navigate to the download location.
 
 Use scp to copy the update to the server.
 
-In this case, my server is 10.12.17.101.
+In this case, my server is 10.12.17.101.  My update is ESXi650-201710001.zip.
 
 ```scp ESXi650-201710001.zip root@10.12.17.101:/vmfs/volumes/datastore1```
 

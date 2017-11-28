@@ -75,3 +75,57 @@ Press tab.  Enter password.  Press enter.
 # Hardware Notes
 
 Intel Ethernet Converged Network Adapter X710-DA4 does not work with v6.0 U2 and does work with v6.5.
+
+# Updating the system
+
+Based on https://miketabor.com/easy-upgrade-esxi-6-5-command-line/
+
+<F2> Customize System/View Logs
+
+Press tab.  Enter password.  Press enter.
+
+Troubleshooting Options
+
+Enable ESXi SHell
+
+Enable SSH
+
+On a machine with ssh and scp, open a browser to https://my.vmware.com/group/vmware/patch#search.
+
+Change the drop down to "ESXi (Embedded and Installable)" and click on the blue Search button.
+
+Updates are cumulative.  Click on the blue Download button for the latest update.
+
+Open a terminal.  Navigate to the download location.
+
+Use scp to copy the update to the server.
+
+In this case, my server is 10.12.17.101.
+
+```scp ESXi650-201710001.zip root@10.12.17.101:/vmfs/volumes/datastore1```
+
+Type yes and enter the password.
+
+ssh into the server.
+
+```ssh root@10.12.17.101```
+
+Change to the datastore1 directory.
+
+```cd /vmfs/volumes/datastore1```
+
+List the available updates.
+
+```esxcli software sources profile list -d /vmfs/volumes/datastore1/ESXi650-201710001.zip```
+
+Install the version of the update that you want to install.
+
+```esxcli software profile update -d /vmfs/volumes/datastore1/ESXi650-201710001.zip -p ESXi-6.5.0-20171004001-standard```
+
+Remove the update.
+
+```rm ESXi650-201710001.zip```
+
+Reboot the system.
+
+```reboot```

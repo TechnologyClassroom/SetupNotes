@@ -78,7 +78,7 @@ Intel Ethernet Converged Network Adapter X710-DA4 does not work with v6.0 U2 and
 
 # Updating the system
 
-Based on https://miketabor.com/easy-upgrade-esxi-6-5-command-line/
+Based on William Lam's article: https://www.virtuallyghetto.com/2013/06/quick-tip-listing-image-profiles-from.html
 
 <F2> Customize System/View Logs
 
@@ -129,3 +129,13 @@ Remove the update.
 Reboot the system.
 
 ```reboot```
+
+<F2> Customize System/View Logs
+
+Press tab.  Enter password.  Press enter.
+
+Troubleshooting Options
+
+Disable ESXi SHell
+
+Disable SSH

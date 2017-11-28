@@ -22,7 +22,7 @@ Note: At the time of this writing, only 6.5 can be downloaded with a free accoun
 
 # Installation
 
-The installation of ESXi to be extremely easy compared to GNU/Linux and UNIX distros.
+The installation of ESXi is extremely easy compared to GNU/Linux and UNIX distros.
 
 Set the BIOS to legacy mode.
 
@@ -64,7 +64,7 @@ Note: If all of your network adapters are not shown, reinstall with a different 
 
 Press enter.  Press escape.  Press Y.  Press escape.
 
-An IP address should be shown.  To access the web portal, open the address listed with a web browser from another computer on the network.  Example: http://555.555.555.555/ (DHCP)
+An IP address should be shown.  To access the web portal, open the address listed with a web browser from another computer on the network.  Example: http://555.555.555.555/ (DHCP).  Username is root.  Password is set during installation.
 
 <F12> Shut Down/Restart
 

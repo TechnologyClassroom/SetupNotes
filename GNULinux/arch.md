@@ -6,13 +6,13 @@ Arch has a steep learning curve for users that are new to GNU/Linux.  I would on
 
 [The Arch webpage](https://www.archlinux.org/)
 
-[The Arch Wiki](https://wiki.archlinux.org/) is an extensive resource for Arch and other GNU/Linux operating systems.
+[The Arch Wiki](https://wiki.archlinux.org/) - an extensive resource for Arch and other GNU/Linux operating systems
 
-[The Arch Way](https://wiki.archlinux.org/index.php/The_Arch_Way_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)) describes the philosophy behind Arch.
+[The Arch Way](https://wiki.archlinux.org/index.php/The_Arch_Way_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)) - the philosophy behind Arch
 
 [Arch Packages](https://www.archlinux.org/packages/) - compiled software available for the system
 
-[AUR](https://aur.archlinux.org/) - Arch User Repository is a set of build scripts for more software
+[Arch User Repository (AUR)](https://aur.archlinux.org/) - a set of build scripts for more software
 
 # Downloading Arch
 

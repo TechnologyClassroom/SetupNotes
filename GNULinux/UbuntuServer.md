@@ -1,26 +1,5 @@
 # Ubuntu Server
 
-Problem: After installation, only one network device is shown under ifconfig.  Only the device used during install is configured under /etc/network/interfaces and all others are missing.  All other devices are displayed with the ip a or ipconfig -a commands.
-
-Solution: Edit the /etc/network/interfaces file.  Copy the two lines for the configured device or lo and paste them below.  Change the device name to match the entries from ifconfig -a or ip a.  Change auto to allow-hotplug for all new entries.
-
-Example:
-```
-auto lo
-iface lo inet loopback
-
-auto eth0
-iface eth0 inet dhcp
-
-allow-hotplug eth1
-iface eth1 inet dhcp
-
-allow-hotplug eth2
-iface eth2 inet dhcp
-```
-
-
-
 # Ubuntu 16.04 Server with Nvidia graphics card video output with a disk that is smaller than 2TB
 
 -Boot from disc
@@ -150,3 +129,23 @@ sudo apt-get update
 ```
 
 From Lorem at https://askubuntu.com/questions/41605/trouble-downloading-packages-list-due-to-a-hash-sum-mismatch-error
+
+
+Problem: After installation, only one network device is shown under ifconfig.  Only the device used during install is configured under /etc/network/interfaces and all others are missing.  All other devices are displayed with the ip a or ipconfig -a commands.
+
+Solution: Edit the /etc/network/interfaces file.  Copy the two lines for the configured device or lo and paste them below.  Change the device name to match the entries from ifconfig -a or ip a.  Change auto to allow-hotplug for all new entries.
+
+Example:
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+
+allow-hotplug eth1
+iface eth1 inet dhcp
+
+allow-hotplug eth2
+iface eth2 inet dhcp
+```

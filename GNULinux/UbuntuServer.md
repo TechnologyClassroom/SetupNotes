@@ -1,5 +1,9 @@
 # Ubuntu Server
 
+[Ubuntu Server webpage](https://www.ubuntu.com/download/server)
+
+Ubuntu Server is Ubuntu without a Graphic User Interface (GUI).  This leaves your server with only a Command Line Interface (CLI).  Ubuntu Server or Ubuntu Minimal are a good choice when a system will have no monitor connected to it or when performance is preferred to UI.
+
 # Ubuntu 16.04 Server with Nvidia graphics card video output with a disk that is smaller than 2TB
 
 -Boot from disc

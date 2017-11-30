@@ -34,4 +34,6 @@ On your second install, the installation for pacaur can be automated with this b
 
 # Customizing a new Arch ISO
 
+[Remastering the Install ISO](https://wiki.archlinux.org/index.php/Remastering_the_Install_ISO)
+
 [archiso](https://wiki.archlinux.org/index.php/archiso)

@@ -64,6 +64,10 @@ View a log.  Replace nameoflog with the log you would like to inspect.
 
 ```less /var/log/nameoflog```
 
+List NICs.
+
+```esxcfg-nics -l```
+
 # First boot
 
 <F2> Customize System/View Logs

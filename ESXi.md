@@ -48,6 +48,16 @@ Enter your password twice.  Use tab to get to the second password box.  (Enter) 
 
 (Enter) Reboot
 
+NOTE: If the installation fails, enter a different TTY for troubleshooting.  CTRL+ALT+F1 will drop to TTY1.  User is root.  Password is blank.
+
+List the logs.
+
+```ls /var/log/```
+
+View a log.  Replace nameoflog with the log you would like to inspect.
+
+```less /var/log/nameoflog```
+
 # First boot
 
 <F2> Customize System/View Logs

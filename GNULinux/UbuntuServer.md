@@ -30,59 +30,59 @@ Ubuntu Server is Ubuntu without a Graphic User Interface (GUI).  This leaves you
 
 * Detect network hardware
 
-*Configure the network
+* Configure the network
 
--Choose a mirror of the Ubuntu archive
+* Choose a mirror of the Ubuntu archive
 
--Set up users and passwords
+* Set up users and passwords
 
--Configure the clock
+* Configure the clock
 
--Detect disks
+* Detect disks
 
--Partition disks
+* Partition disks
 
-  -Manual
+  * Manual
 
-  -msdos
+  * msdos
 
--Install the system
+* Install the system
 
-  -normal
+  * normal
 
--Configure the package manager
+* Configure the package manager
 
-  -restricted yes
+  * restricted yes
 
-  -universe yes
+  * universe yes
+
+  * multiverse no
+
+  * backports no
+
+  * source no
+
+* Select and install software
+
+* Install the GRUB boot loader to a hard disk
 	
-  -multiverse no
+  * Force UEFI no
+
+* Finish the installation
 	
-  -backports no
-	
-  -source no
-
--Select and install software
-
--Install the GRUB boot loader to a hard disk
-	
-  -Force UEFI no
-
--Finish the installation
-	
-  -UTC no
+  * UTC no
 
 
 
--Boot into recovery mode
+* Boot into recovery mode
 
--resume
+* resume
 
--Update software
+* Update software
 ```
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get install -y ledmon build-essential
 ```
--Properly add nomodeset to boot
+* Properly add nomodeset to boot
 
 ```
 sudo sed -i 's/T=""/T="nomodeset"/' /etc/default/grub
@@ -90,14 +90,14 @@ sudo update-grub
 reboot
 ```
 
--Add network interfaces to ifconfig
+* Add network interfaces to ifconfig
 ```
 ip a
 sudo nano /etc/network/interfaces
 ```
--Add each missing interface with allow-hotplug instead of allow.
+* Add each missing interface with allow-hotplug instead of allow.
 
--Install proprietary nvidia drivers and cuda toolkit
+* Install proprietary nvidia drivers and cuda toolkit
 ```
 sudo su
 init 3
@@ -111,11 +111,11 @@ echo /usr/local/cuda/lib >> /etc/ld.so.conf
 echo blacklist nouveau >> /etc/modprobe.d/blacklist.conf
 ldconfig
 ```
--Remove history
+* Remove history
 ```
 exit
 ```
--Login
+* Login
 ```
 rm .bash_history
 history -c

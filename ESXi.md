@@ -48,7 +48,13 @@ Enter your password twice.  Use tab to get to the second password box.  (Enter) 
 
 (Enter) Reboot
 
-NOTE: If the installation fails, enter a different TTY for troubleshooting.  CTRL+ALT+F1 will drop to TTY1.  User is root.  Password is blank.
+# Installing through PXE
+
+See [my page on PXE](https://github.com/TechnologyClassroom/pxe) for my syslinux configs.
+
+# Troubleshooting Installation
+
+If the installation fails, enter a different TTY for troubleshooting.  CTRL+ALT+F1 will drop to TTY1.  User is root.  Password is blank.
 
 List the logs.
 

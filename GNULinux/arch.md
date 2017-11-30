@@ -37,3 +37,11 @@ On your second install, the installation for pacaur can be automated with this b
 [Remastering the Install ISO](https://wiki.archlinux.org/index.php/Remastering_the_Install_ISO)
 
 [archiso](https://wiki.archlinux.org/index.php/archiso)
+
+# Free Software and the FSF
+
+Arch Linux contains proprietary software.  The [Free Software Foundation](http://www.fsf.org/) has approved [Parabola](https://www.parabola.nu/) as an Arch based [free distro](https://www.gnu.org/distros/free-distros.html) that does not include proprietary software at all.
+
+[Parabola](https://www.parabola.nu/) - includes resources to convert your Arch install to Parabola
+
+[Parabola Downloads](https://wiki.parabola.nu/Get_Parabola)

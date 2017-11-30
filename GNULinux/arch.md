@@ -28,7 +28,7 @@ On your second install, the use your notes or use [ArchFi](https://github.com/Ma
 
 # AUR and pacaur
 
-As a right of passage, you should install your first packages yourself using the Arch wiki.  Package managers exist for the AUR.  Install cower and pacaur first.  Once you have pacaur, more software can be easily installed from the AUR.
+As a right of passage, you should install your first AUR packages yourself using the Arch wiki.  Package managers exist for the AUR.  I would suggest installing cower and pacaur first.  Once you have pacaur, more software can be easily installed from the AUR.
 
 On your second install, the installation for pacaur can be automated with this bash script: https://gist.github.com/Tadly/0e65d30f279a34c33e9b
 

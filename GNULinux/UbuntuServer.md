@@ -6,31 +6,31 @@ Ubuntu Server is Ubuntu without a Graphic User Interface (GUI).  This leaves you
 
 # Ubuntu 16.04 Server with Nvidia graphics card video output with a disk that is smaller than 2TB
 
--Boot from disc
+*Boot from disc
 
--English
+*English
 
--(F6) Expert mode (Enter) (Esc)
+*(F6) Expert mode (Enter) (Esc)
 
--Change "vga=788" to "vga=794"
+*Change "vga=788" to "vga=794"
 
--Choose language
+*Choose language
 
--Configure keyboard
+*Configure keyboard
 
--Detect and mount CD-ROM
+*Detect and mount CD-ROM
 
--Load debconf preconfiguration file
+*Load debconf preconfiguration file
 
--Load installer components from CD
+*Load installer components from CD
 
-  -choose-mirror
+  *choose-mirror
 
-  -load-media
+  *load-media
 
--Detect network hardware
+*Detect network hardware
 
--Configure the network
+*Configure the network
 
 -Choose a mirror of the Ubuntu archive
 

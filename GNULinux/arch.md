@@ -60,3 +60,7 @@ Arch Linux contains proprietary software.  The [Free Software Foundation](http:/
 [Parabola](https://www.parabola.nu/) - includes resources to convert your Arch install to Parabola
 
 [Parabola Downloads](https://wiki.parabola.nu/Get_Parabola)
+
+# More resources
+
+[Arch + btrfs + Jenkins +  systemd-nspawn containers](https://blog.bastelfreak.de/2016/05/creating-a-reliable-arch-linux-package-build-environment/)

@@ -40,6 +40,17 @@ pacaur builds packages as ~/.cache/pacaur/packagename/packagename-version-arch.p
 
 [archiso](https://wiki.archlinux.org/index.php/archiso)
 
+# Creating a custom repo
+
+[Custom local repository](https://wiki.archlinux.org/index.php/Pacman/Tips_and_tricks#Custom_local_repository)
+
+```
+cd /location/for/custom/repo
+mkdir -p customrepo/x86_64
+mv /location/of/custom/package/builds/*.tar.xz .
+repo-add customrep.db.tar.gz ./*
+```
+
 # Free Software and the FSF
 
 Arch Linux contains proprietary software.  The [Free Software Foundation](http://www.fsf.org/) has approved [Parabola](https://www.parabola.nu/) as an Arch based [free distro](https://www.gnu.org/distros/free-distros.html) that does not include proprietary software at all.

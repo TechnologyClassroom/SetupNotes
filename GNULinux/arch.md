@@ -64,3 +64,5 @@ Arch Linux contains proprietary software.  The [Free Software Foundation](http:/
 # More resources
 
 [Arch + btrfs + Jenkins +  systemd-nspawn containers](https://blog.bastelfreak.de/2016/05/creating-a-reliable-arch-linux-package-build-environment/)
+
+[Powerpill](https://wiki.archlinux.org/index.php/powerpill) - Pacman wrapper using parallel and segmented downloading

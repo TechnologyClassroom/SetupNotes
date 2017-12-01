@@ -44,11 +44,19 @@ pacaur builds packages as ~/.cache/pacaur/packagename/packagename-version-arch.p
 
 [Custom local repository](https://wiki.archlinux.org/index.php/Pacman/Tips_and_tricks#Custom_local_repository)
 
+Create initial repo database
 ```
 cd /location/for/custom/repo
 mkdir -p customrepo/x86_64
 mv /location/of/custom/package/builds/*.tar.xz .
 repo-add customrep.db.tar.gz ./*
+```
+
+Update repo database
+```
+cd /location/for/custom/repo/customrepo/x86_64
+mv /location/of/custom/package/builds/*.tar.xz .
+repo-add -n customrep.db.tar.gz ./*.xz
 ```
 
 [Fusion809 shows how to create a custom repo on github](https://fusion809.github.io/how-to-create-archlinux-repository/)

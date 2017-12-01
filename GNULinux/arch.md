@@ -51,6 +51,8 @@ mv /location/of/custom/package/builds/*.tar.xz .
 repo-add customrep.db.tar.gz ./*
 ```
 
+[Fusion809 shows how to create a custom repo on github](https://fusion809.github.io/how-to-create-archlinux-repository/)
+
 # Free Software and the FSF
 
 Arch Linux contains proprietary software.  The [Free Software Foundation](http://www.fsf.org/) has approved [Parabola](https://www.parabola.nu/) as an Arch based [free distro](https://www.gnu.org/distros/free-distros.html) that does not include proprietary software at all.

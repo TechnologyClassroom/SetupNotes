@@ -22,6 +22,8 @@ Download the latest ISO with through torrents or your closest HTTP direct source
 
 As a right of passage, you should install Arch using only the [Installation Guide](https://wiki.archlinux.org/index.php/Installation_guide) and the [Arch Wiki](https://wiki.archlinux.org/).  Take notes as you go.  You will learn more about the system if you avoid blog posts and youtube videos the first time.
 
+After installation, look at the [General recommendations](https://wiki.archlinux.org/index.php/General_recommendations) for a direction to take.
+
 If you give a full attempt and fail, try [Antegros](https://antergos.com/try-it/) or [ArchBang](http://bbs.archbang.org/) which are Arch based distributions that still use the default Arch repositories.
 
 On your second install, the use your notes or use [ArchFi](https://github.com/MatMoul/archfi) to automate the installation.

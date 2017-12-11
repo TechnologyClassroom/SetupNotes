@@ -110,6 +110,17 @@ My config can be found <a href="https://github.com/TechnologyClassroom/dotfiles/
 
 Reload a new config in an active session with ```CTRL+b :source-file ~/.tmux.conf```.
 
+# Start tmux with your terminal
+
+[Start tmux on every shell login](https://wiki.archlinux.org/index.php/Tmux#Start_tmux_on_every_shell_login)
+
+Add these lines to your .bashrc file:
+
+```
+[[ $- != *i* ]] && return
+[[ -z "$TMUX" ]] && exec tmux
+```
+
 # Sync panes
 
 synchronize-panes is useful for manually making one change many servers at once.  Ansible, Puppet, and other configuration managers are better at scale, but this is useful for two or three quick changes.

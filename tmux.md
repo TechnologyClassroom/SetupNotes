@@ -106,6 +106,8 @@ nano ~/.tmux.conf
 
 My config can be found <a href="https://github.com/TechnologyClassroom/dotfiles/blob/master/tmux.conf">here</a>.  Example configurations can be found in the ```/usr/share/doc/tmux/examples``` directory.
 
+[Solarized color palette](https://github.com/altercation/solarized)
+
 Reload a new config in an active session with ```CTRL+b :source-file ~/.tmux.conf```.
 
 # Sync panes

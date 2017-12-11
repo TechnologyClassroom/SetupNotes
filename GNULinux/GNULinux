@@ -272,3 +272,7 @@ There are 2 choices for the alternative vi (providing /usr/bin/vi).
 Press <enter> to keep the current choice[*], or type selection number: 2
 update-alternatives: using /usr/bin/vim.tiny to provide /usr/bin/vi (vi) in manual mode
 
+
+Problem: How do I find which display manager I am using with systemd?
+Solution: Run this command:
+$ cat /etc/systemd/system/display-manager.service | grep ExecStart

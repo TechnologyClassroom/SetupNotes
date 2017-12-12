@@ -106,9 +106,20 @@ nano ~/.tmux.conf
 
 My config can be found <a href="https://github.com/TechnologyClassroom/dotfiles/blob/master/tmux.conf">here</a>.  Example configurations can be found in the ```/usr/share/doc/tmux/examples``` directory.
 
-[Solarized color palette](https://github.com/altercation/solarized/tree/master/tmux)
-
 Reload a new config in an active session with ```CTRL+b :source-file ~/.tmux.conf```.
+
+# Customize the colors of tmux on different machines
+
+I ssh into several different servers on a regular basis.  I keep my workstation on the default tmux colors.  I change my production server to bright warm colors.  I change my development server to cool colors.
+
+Example .tmux.conf files for color [Solarized color palette](https://github.com/altercation/solarized/tree/master/tmux)
+
+Display all of the standard tmux colors using this one-liner:
+
+```
+for i in {0..255}; do printf "\x1b[38;5;${i}mcolor%-5i\x1b[0m" $i ; if ! (( ($i + 1 ) % 8 )); then echo ; fi ; done
+# From 12431234123412341234123 at https://superuser.com/questions/285381/how-does-the-tmux-color-palette-work
+```
 
 # Start tmux with your terminal
 

@@ -20,7 +20,9 @@ You are brought to a command line shell upon first boot.  This is similar to min
 
 The file system can be viewed with this command:
 
+```
 ls /
+```
 
 Note: if you want a distribution that allows you to start with a GUI environment that is still built on FreeBSD, <a href="https://www.trueos.org/downloads/">try TrueOS</a>.
 
@@ -47,27 +49,36 @@ https://www.freebsd.org/doc/handbook/ports-using.html
 
 The first time you update port configuration, you must download all configurations (similar to apt-get update on Debian based distros):
 
+```
 portsnap fetch extract
+```
 
 tmux is very useful to continue exploring while software compiles.  I would suggest installing tmux first.
 
+```
 cd /usr/ports
-
 find . | grep tmux
+```
 
 This reveals ./sysutils/tmux amongst other files.  CTRL+C will stop the search process.
 
+```
 cd sysutils/tmux
+```
 
 The next step is very important.  If we do not configure dependencies first, the installation will hang between each compilation at each dependency configuration.  All configurations can be done at once with:
 
+```
 make configure-recursive
+```
 
 Up and down arrows move through the menu.  The space bar selects and deselects options.  The enter key goes to the next package configuration.  Pressing enter multiple times will choose the default options.
 
 After configuring each package, compile every package necessary with:
 
+```
 make install
+```
 
 # Using tmux
 
@@ -84,45 +95,63 @@ Character   -   Action
 
 Update the latest port configurations (similar to apt-get update on Debian based distros):
 
+```
 portsnap fetch update
+```
 
 update only retrieves the new configurations instead of retrieving all configurations.
 
 Install portupgrade with these commands:
 
+```
 cd /usr/ports/ports-mgmt/portupgrade
-
 make config-recursive
-
 make install
+```
 
 Update all of your ports at once (this takes a long time with many configuration prompts):
 
+```
 portupgrade -a -c -r
+```
 
 Switch explanations: -a all -c configure before -r recursive
 
 # nano - An Easy Command Line Text Editor
 
+```
 cd /usr/ports/editors/nano
-
 make config-recursive
-
 make install
+```
 
 # Alias - Creating shorthand shortcuts in the shell
 
 Check all of the aliases on the user account with this command:
 
+```
 alias
+```
 
 Create a new alias with this syntax:
 
+```
 alias pfu='portsnap fetch update'
+```
 
 To edit the root user's aliases, run this command:
 
+```
 nano /root/.cshrc
+```
+
+# Clearing bash history
+
+```
+rm .history
+history -c
+exit
+```
 
 # GNU/Linux Alternatives
 

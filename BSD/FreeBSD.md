@@ -8,6 +8,12 @@ FreeBSD is a general purpose UNIX distro that you can install for free at home.
 
 A client uses FreeBSD so I have started teaching myself.  These are notes as I am learning.  Much of my GNU/Linux knowledge carries over, but there are plenty of differences.  If you see I have made a mistake or know of a better way of doing things, add an issue to the SetupNotes repository or send me an email.
 
+# Installation
+
+[Installing FreeBSD](https://www.freebsd.org/doc/handbook/bsdinstall.html)
+
+[Installing with software RAID 1](https://www.ateamsystems.com/tech-blog/installing-freebsd-9-gmirror-gpt-partitions-raid-1/)
+
 # After installation
 
 You are brought to a command line shell upon first boot.  This is similar to minimal and server GNU/Linux distro installations.
@@ -17,6 +23,21 @@ The file system can be viewed with this command:
 ls /
 
 Note: if you want a distribution that allows you to start with a GUI environment that is still built on FreeBSD, <a href="https://www.trueos.org/downloads/">try TrueOS</a>.
+
+# Installing software
+
+[Find software packages](https://www.freebsd.org/doc/handbook/ports-finding-applications.html)
+
+[Install binary packages with pkg](https://www.freebsd.org/doc/handbook/pkgng-intro.html)
+
+[Compiling from ports](https://www.freebsd.org/doc/handbook/ports-using.html)
+
+# Updating software
+
+```
+freebsd-update fetch
+freebsd-update install
+```
 
 # Compiling software from Ports (tmux example)
 

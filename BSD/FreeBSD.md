@@ -102,3 +102,7 @@ alias pfu='portsnap fetch update'
 To edit the root user's aliases, run this command:
 
 nano /root/.cshrc
+
+# GNU/Linux Alternatives
+
+lsblk = 'geom disk list | grep Geom'

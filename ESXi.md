@@ -96,7 +96,7 @@ Press tab.  Enter password.  Press enter.
 
 Intel Ethernet Converged Network Adapter X710-DA4 does not work with v6.0 U2 and does work with v6.5.
 
-# Updating the system
+# Updating the system manually
 
 Based on William Lam's article: https://www.virtuallyghetto.com/2013/06/quick-tip-listing-image-profiles-from.html
 
@@ -157,5 +157,73 @@ Press tab.  Enter password.  Press enter.
 Troubleshooting Options
 
 Disable ESXi SHell
+
+Disable SSH
+
+# Updating the system with a script
+
+Based on William Lam's article: https://www.virtuallyghetto.com/2013/06/quick-tip-listing-image-profiles-from.html
+
+<F2> Customize System/View Logs
+
+Press tab.  Enter password.  Press enter.
+
+Troubleshooting Options
+
+Enable SSH
+
+On a machine with ssh and scp, open a browser to https://my.vmware.com/group/vmware/patch#search.
+
+Change the drop down to "ESXi (Embedded and Installable)" and click on the blue Search button.
+
+Updates are cumulative.  Click on the blue Download button for the latest update.
+
+Open a terminal.  Navigate to the download location.
+
+Create this script and modify the variables for the update.
+
+```
+# pushupdates.sh
+# Michael McMahon
+# Installs ESXi650-201710001.zip to selected server
+
+# Usage: sh pushupdate.sh 10.12.17.71
+#   where 10.12.17.71 is the local IP address of the ESXi server.
+
+# Depends on scp and sshpass.
+# Must be run from a directory with the update file.
+# Must be run on the same subnet.
+# The ESXi machine must have SSH enabled.
+
+update=ESXi650-201710001
+password=password
+
+sshpass -p $password scp \
+-oUserKnownHostsFile=/dev/null \
+-oStrictHostKeyChecking=no \
+$update.zip root@$1:/vmfs/volumes/datastore1
+
+sshpass -p $password ssh \
+-oUserKnownHostsFile=/dev/null \
+-oStrictHostKeyChecking=no root@$1 \
+esxcli software profile update -d /vmfs/volumes/datastore1/$update.zip \
+-p $update-standard
+
+sshpass -p $password ssh \
+-oUserKnownHostsFile=/dev/null \
+-oStrictHostKeyChecking=no root@$1 \
+rm /vmfs/volumes/datastore1/$update.zip
+
+sshpass -p $password ssh \
+-oUserKnownHostsFile=/dev/null \
+-oStrictHostKeyChecking=no root@$1 \
+reboot
+```
+
+<F2> Customize System/View Logs
+
+Press tab.  Enter password.  Press enter.
+
+Troubleshooting Options
 
 Disable SSH

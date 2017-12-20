@@ -207,7 +207,8 @@ sshpass -p $password ssh \
 -oUserKnownHostsFile=/dev/null \
 -oStrictHostKeyChecking=no root@$1 \
 esxcli software profile update -d /vmfs/volumes/datastore1/$update.zip \
--p $update-standard
+-p $(esxcli software sources profile list -d \
+/vmfs/volumes/datastore1/$update.zip | awk '{ print $1 }' | tail -n 1)
 
 sshpass -p $password ssh \
 -oUserKnownHostsFile=/dev/null \

@@ -199,6 +199,9 @@ sshpass -p $password scp \
 -oStrictHostKeyChecking=no \
 $update.zip root@$1:/vmfs/volumes/datastore1
 
+# NOTE: This segment is broken.  "$(esxcli" is interpreted on the
+# host instead of remote. This segment of python code could parse the same result.
+# print(update[0:4] + "-" + update[4:5] + "." + update[5:6] + "." + update[6:7] + update[7:])
 sshpass -p $password ssh \
 -oUserKnownHostsFile=/dev/null \
 -oStrictHostKeyChecking=no root@$1 \

@@ -192,6 +192,7 @@ Create this script and modify the variables for the update.
 # The ESXi machine must have SSH enabled.
 
 update=ESXi650-201710001
+updatepackage=ESXi-6.5.0-201710001-standard
 password=password
 
 sshpass -p $password scp \
@@ -199,15 +200,13 @@ sshpass -p $password scp \
 -oStrictHostKeyChecking=no \
 $update.zip root@$1:/vmfs/volumes/datastore1
 
-# NOTE: This segment is broken.  "$(esxcli" is interpreted on the
-# host instead of remote. This segment of python code could parse the same result.
+# This segment of python code could parse the same result as updatepackage:
 # print(update[0:4] + "-" + update[4:5] + "." + update[5:6] + "." + update[6:])
 sshpass -p $password ssh \
 -oUserKnownHostsFile=/dev/null \
 -oStrictHostKeyChecking=no root@$1 \
 esxcli software profile update -d /vmfs/volumes/datastore1/$update.zip \
--p $(esxcli software sources profile list -d \
-/vmfs/volumes/datastore1/$update.zip | awk '{ print $1 }' | tail -n 1)
+-p $updatepackage
 
 sshpass -p $password ssh \
 -oUserKnownHostsFile=/dev/null \

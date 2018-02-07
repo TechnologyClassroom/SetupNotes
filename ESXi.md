@@ -92,10 +92,6 @@ Press tab.  Enter password.  Press enter.
 
 <F2> Shut Down
 
-# Hardware Notes
-
-Intel Ethernet Converged Network Adapter X710-DA4 does not work with v6.0 U2 and does work with v6.5.
-
 # Updating the system manually
 
 Based on William Lam's article: https://www.virtuallyghetto.com/2013/06/quick-tip-listing-image-profiles-from.html
@@ -228,3 +224,11 @@ Press tab.  Enter password.  Press enter.
 Troubleshooting Options
 
 Disable SSH
+
+# RAID Notes
+
+ESXi cannot do fake RAID or software RAID.  If you need to install ESXi to a RAID, you must use a hardware RAID controller such as 3108.
+
+# Hardware Notes
+
+Intel Ethernet Converged Network Adapter X710-DA4 does not work with v6.0 U2 and does work with v6.5.

@@ -209,7 +209,7 @@ update.sh root@$1:/vmfs/volumes/datastore1
 sshpass -p $password ssh \
 -oUserKnownHostsFile=/dev/null \
 -oStrictHostKeyChecking=no root@$1 \
-sh update.sh
+sh /vmfs/volumes/datastore1/update.sh
 ```
 
 ```

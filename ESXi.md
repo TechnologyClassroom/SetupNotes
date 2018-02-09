@@ -4,7 +4,11 @@ Michael McMahon
 
 ESXi (VMware vSphere Hypervisor) uses the proprietary vmkernel.
 
-Clients use ESXi so I have started teaching myself.  I am not interested in this subject so I will only focus on installation and initial configuration.  If you see I have made a mistake or know of a better way of doing things, add an issue to the SetupNotes repository or send me an email.
+Some of my clients use ESXi so I have started teaching myself.  I am not interested in this subject so I will only focus on installation and initial configuration because of VMware's proprietary nature and 
+[this](https://sfconservancy.org/copyleft-compliance/vmware-lawsuit-faq.html), 
+[this](http://www.zdnet.com/article/vmware-sued-for-failure-to-comply-with-linuxs-license/), and 
+[this](https://opensource.com/law/16/8/gpl-enforcement-action-hellwig-v-vmware).
+If you see I have made a mistake or know of a better way of doing things, add an issue to the SetupNotes repository or send me an email.
 
 Official documentation: https://www.vmware.com/support/vsphere-hypervisor.html
 

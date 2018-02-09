@@ -136,7 +136,7 @@ List the available updates.
 
 Install the version of the update that you want to install.
 
-```esxcli software profile update -d /vmfs/volumes/datastore1/ESXi650-201710001.zip -p ESXi-6.5.0-20171004001-standard```
+```esxcli software profile update -d /vmfs/volumes/datastore1/ESXi650-201710001.zip -p $(esxcli software sources profile list -d /vmfs/volumes/datastore1/ESXi650-201710001.zip | awk '{ print $1 }' | tail -n 1)```
 
 Remove the update.
 

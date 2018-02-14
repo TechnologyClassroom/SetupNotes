@@ -95,10 +95,15 @@ reboot
 ip a
 sudo nano /etc/network/interfaces
 ```
-* Add each missing interface with allow-hotplug instead of allow.
+* Do not change lo.
+
+Add each missing interface from ip a with allow-hotplug instead of auto.
+
+Change the default NIC from auto to allow-hotplug.
 
 * Install proprietary nvidia drivers and cuda toolkit
 ```
+# THIS IS PORTION IS OUT OF DATE
 sudo su
 init 3
 wget -q http://us.download.nvidia.com/XFree86/Linux-x86_64/375.66/NVIDIA-Linux-x86_64-375.66.run
@@ -114,7 +119,17 @@ ldconfig
 * Remove history
 ```
 exit
+# Log back in
+sudo su
+rm -f /root/.bash_history
+history -c
+exit
+exit
+# Log back in
+rm .bash_history
+history -c
 ```
+
 * Login
 ```
 rm .bash_history

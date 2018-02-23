@@ -9,13 +9,13 @@ Note: Do not buy a Macbook in hopes of using it for GNU/Linux.  Windows based co
 I have only tested this on white macbooks from 2009 with Mac OS X 10.6.8.
 
 ## [Table of Contents](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#table-of-contents)
-* <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#configuring-the-original-mac-os-x-1068">Configuring the original Mac OS X 10.6.8</a>
-* <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#shrink-your-mac-installation-to-make-room-for-gnulinux">Shrink your Mac installation to make room for GNU/Linux</a>
-* <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#download-and-install-refit">Download and Install rEFIt</a>
-* <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#create-a-livedvd-or-liveusb-with-a-gnulinux-iso">Create a liveDVD or liveUSB with a GNU/Linux ISO</a>
-* <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#install-gnulinux">Install GNU/Linux</a>
-* <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#if-the-grub-installation-fails-use-boot-repair">If the grub installation fails, use Boot-Repair</a>
-* <a href="https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#configuring-ubuntu-studio">Configure Ubuntu Studio</a>
+* [Configuring the original Mac OS X 10.6.8](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#configuring-the-original-mac-os-x-1068)
+* [Shrink your Mac installation to make room for GNU/Linux](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#shrink-your-mac-installation-to-make-room-for-gnulinux)
+* [Download and Install rEFIt](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#download-and-install-refit)
+* [Create a liveDVD or liveUSB with a GNU/Linux ISO](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#create-a-livedvd-or-liveusb-with-a-gnulinux-iso)
+* [Install GNU/Linux](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#install-gnulinux)
+* [If the grub installation fails, use Boot-Repair](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#if-the-grub-installation-fails-use-boot-repair)
+* [Configure Ubuntu Studio](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#configuring-ubuntu-studio)
 
 ## [Configuring the original Mac OS X 10.6.8](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#configuring-the-original-mac-os-x-1068)
 
@@ -199,8 +199,7 @@ sudo apt-get install -y lxde-core awesome leafpad python-pygame idle-python2.7 g
 wget https://raw.githubusercontent.com/TechnologyClassroom/Install-Processing-on-Ubuntu-16.04/master/InstallProcessing.sh
 sudo sh InstallProcessing.sh
 
-* (Optional) Create a Desktop icon for processing
-http://askubuntu.com/questions/299052/how-to-execute-sh-script-from-a-desktop-shortcut
+* [(Optional) Create a Desktop icon for processing](http://askubuntu.com/questions/299052/how-to-execute-sh-script-from-a-desktop-shortcut)
 
 * Configure users
 
@@ -216,9 +215,7 @@ There is a solution posted by user hajk from https://ubuntuforums.org/showthread
 
 2. Make a little script, like /usr/local/bin/keyboard (you need root privileges for that),
 
-```
-sudo nano /usr/local/bin/keyboard
-```
+```sudo nano /usr/local/bin/keyboard```
 
 Code:
 
@@ -231,20 +228,14 @@ xkbset m
 
 where you should substitute the keycodes on your keyboard if different from mine. Make this script executable with the command:
 
-```
-sudo chmod a+x /usr/local/bin/keyboard
-```
+```sudo chmod a+x /usr/local/bin/keyboard```
 
 3. Make sure that the "xkbset" package is installed, then find where your keyboard settings can be modified and enable control of the mouse with the keyboard, so that the "xkbset m" command in the script will work.
 
-```
-sudo apt-get install -y xbkset
-```
+```sudo apt-get install -y xbkset```
 
 4. Finally, as user give the command "keyboard", and now those two keys should work as right- and middle mouse-clicks.
 
-```
-keyboard
-```
+```keyboard```
 
 If this works, then add the command "/usr/local/bin/keyboard" to the startup applications.

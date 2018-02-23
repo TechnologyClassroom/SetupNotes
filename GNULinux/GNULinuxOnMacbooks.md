@@ -1,4 +1,4 @@
-# [Notes on dual-booting GNU/Linux on Macbook 2009](#notes-on-dual-booting-gnu-linux-on-macbook-2009)
+# [Notes on dual-booting GNU/Linux on Macbook 2009](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#notes-on-dual-booting-gnulinux-on-macbook-2009)
 
 Michael McMahon
 
@@ -188,18 +188,18 @@ or return.
    * Boot from a ubuntu based distribution.  Enter these commands and follow the
      directions:
 
-    ```
-    sudo add-apt-repository ppa:yannubuntu/boot-repair -y
-    
-    sudo apt-get update
-    
-    sudo apt-get install -y boot-repair
-    ```
+```
+sudo add-apt-repository ppa:yannubuntu/boot-repair -y
+
+sudo apt-get update
+
+sudo apt-get install -y boot-repair
+```
 
   * Run Boot-Repair
    * In a terminal, run this command:
 
-    ```boot-repair```
+```boot-repair```
 
    * (Optional) Click on the "Advanced options" arrow.  Click on the "Other
      options" tab.  Uncheck the "Upload the report to a pastebin" and

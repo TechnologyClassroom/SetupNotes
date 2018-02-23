@@ -1,9 +1,12 @@
 # sphinx-doc
-sphinx-doc is a way to write ebooks, documentation, or websites once and export to your desired output.  Exported formats include epub, html, pdf, etc.
 
-# Creating a new sphinx-doc project
+sphinx-doc is a way to write ebooks, documentation, or websites once and export
+to your desired output.  Exported formats include epub, html, pdf, etc.
 
-Install sphinx-doc according to their documentation.  Open a terminal.  Navigate to a new directory for your project.  Run the sphinx-quickstart program.
+## Creating a new sphinx-doc project
+
+Install sphinx-doc according to their documentation.  Open a terminal.  Navigate
+to a new directory for your project.  Run the sphinx-quickstart program.
 
 ```sphinx-quickstart```
 
@@ -35,17 +38,19 @@ I used these answers:
 > Create Windows command file? (y/n) [y]: y
 ```
 
-After this the directory trees are created.  Edit ./source/index.rst to modify the document.
+After this the directory trees are created.  Edit ./source/index.rst to modify
+the document.
 
 Build a new epub into the build directory with this command:
 
 ```sphinx-build -b epub source build```
 
-# conf.py
+## conf.py
 
 [config.py epub options](http://www.sphinx-doc.org/en/stable/config.html#options-for-epub-output)
 
-An example conf.py file I have used can be found [here](https://github.com/GhostCityGames/Midnight-Riders/blob/master/source/conf.py).
+An example conf.py file I have used can be found
+[here](https://github.com/GhostCityGames/Midnight-Riders/blob/master/source/conf.py).
 
 ```
 # epub cover image
@@ -59,7 +64,7 @@ epub_use_index = False
 html_show_sphinx = False
 ```
 
-# Templates
+## Templates
 
 Themes are located in the /usr/share/sphinx/themes/ folder.
 
@@ -70,11 +75,13 @@ The default theme can be found in the /usr/share/sphinx/themes/basic folder.
 [Theming at tinkerer.me](http://tinkerer.me/doc/theming.html)
 
 Adding creative commons
-TP from https://groups.google.com/forum/#!topic/sphinx-users/f3Yl45l1KYg suggests overwriting the footer with a template:
+TP from https://groups.google.com/forum/#!topic/sphinx-users/f3Yl45l1KYg
+suggests overwriting the footer with a template:
 
 Template modifiers can be placed in the file ./source/_templates/layout.html
 
 CC BY-SA 4.0 INTL
+
 ```
 {% extends "!layout.html" %}
 {%- block footer %}
@@ -99,19 +106,22 @@ Removing the navigation links at the top of each page
 {% block relbar1 %}{% endblock %}
 ```
 
-# Examples
+## Examples
+
 https://github.com/GhostCityGames/Midnight-Riders
 
 http://www.sphinx-doc.org/en/stable/tutorial.html
 
 https://github.com/sphinx-doc/sphinx/blob/master/EXAMPLES
 
-Front: https://docs.chef.io/index.html Back: https://github.com/chef/chef-web-docs/tree/master/chef_master/source
+Frontend : https://docs.chef.io/index.html
+
+Backend: https://github.com/chef/chef-web-docs/tree/master/chef_master/source
 
 https://github.com/yoloseem/awesome-sphinxdoc
 
 
-# Code Snippets
+## Code Snippets
 
 ```
 Adding a picture
@@ -139,7 +149,7 @@ Adding a picture
 +-----------+------------+----------+
 ```
 
-# Helpful links for Sphinx and ReStructuredText
+## Helpful links for Sphinx and ReStructuredText
 
 http://www.sphinx-doc.org/en/stable/rest.html
 
@@ -165,13 +175,22 @@ https://pythonhosted.org/an_example_pypi_project/sphinx.html
 
 [ReStructured Text Primer](http://docutils.sourceforge.net/docs/user/rst/quickstart.html)
 
-# Check links
+## Check links
 
 Make sure all of your links work with this command:
 
 ```make linkcheck```
 
-# Troubleshooting
+## Linting
+
+Linting can be carried out by [doc8](https://pypi.python.org/pypi/doc8).
+
+```
+sudo pip install doc8
+doc8 source/index.rst
+```
+
+## Troubleshooting
 
 Problem: ```make latexpdf``` returns errors about python2.7 and normalize with Debian.
 

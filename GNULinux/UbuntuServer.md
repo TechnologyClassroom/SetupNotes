@@ -2,9 +2,12 @@
 
 [Ubuntu Server webpage](https://www.ubuntu.com/download/server)
 
-Ubuntu Server is Ubuntu without a Graphic User Interface (GUI).  This leaves your server with only a Command Line Interface (CLI).  Ubuntu Server or Ubuntu Minimal are a good choice when a system will have no monitor connected to it or when performance is preferred to UI.
+Ubuntu Server is Ubuntu without a Graphic User Interface (GUI).  This leaves
+your server with only a Command Line Interface (CLI).  Ubuntu Server or Ubuntu
+Minimal are a good choice when a system will have no monitor connected to it or
+when performance is preferred to UI.
 
-# Ubuntu 16.04 Server with Nvidia graphics card video output with a disk that is smaller than 2TB
+## Ubuntu 16.04 Server with Nvidia graphics card video output with a disk that is smaller than 2TB
 
 * Boot from disc
 
@@ -93,17 +96,36 @@ reboot
 ```
 
 * Add network interfaces to ifconfig
+
 ```
 ip a
 sudo nano /etc/network/interfaces
 ```
-* Do not change lo.
 
-Add each missing interface from ip a with allow-hotplug instead of auto.
+Do not change lo.
 
 Change the default NIC from auto to allow-hotplug.
 
+Add each missing interface from ip a with allow-hotplug instead of auto.
+
+Reboot.
+
+```reboot```
+
+List all configured NICs.
+
+```ifconfig```
+
+Test each NIC by pinging out.
+
+```ping www.google.com```
+
+CTRL+C stops the ping.  Remove the ethernet plug from the NIC.  Release the DHCP
+lease with ```sudo ifdown eno1```.  Move the plug to the next NIC, wait a
+moment, ping out, and repeat this process until all NICs have been tested.
+
 * Install proprietary nvidia drivers and cuda toolkit
+
 ```
 # THIS IS PORTION IS OUT OF DATE
 sudo su
@@ -118,7 +140,9 @@ echo /usr/local/cuda/lib >> /etc/ld.so.conf
 echo blacklist nouveau >> /etc/modprobe.d/blacklist.conf
 ldconfig
 ```
+
 * Remove history
+
 ```
 exit
 # Log back in
@@ -138,9 +162,11 @@ rm .bash_history
 history -c
 ```
 
-## Ubuntu 17.10 Server networking
+## [Ubuntu 17.10 Server networking](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/UbuntuServer.md#ubuntu-1710-server-networking)
 
-The workflow for Ubuntu Server networking has changed on 17.10 because it now uses netplan.  Instead of changing the /etc/network/interfaces file, we change the /etc/netplan/01-netcfg.yaml file.
+The workflow for Ubuntu Server networking has changed on 17.10 because it now
+uses netplan.  Instead of changing the /etc/network/interfaces file, we change
+the /etc/netplan/01-netcfg.yaml file.
 
 List all NICs.
 
@@ -150,7 +176,8 @@ Edit the netplan configuration file.
 
 ```sudo nano /etc/netplan/01-netcfg.yaml```
 
-Cut the last two lines and paste them to match the number of network interface cards (NICs).
+Cut the last two lines and paste them to match the number of network interface
+cards (NICs).
 
 Here is an example /etc/netplan/01-netcfg.yaml with two NICs:
 
@@ -185,9 +212,11 @@ Test each NIC by pinging out.
 
 ```ping www.google.com```
 
-CTRL+C stops the ping.  Move the plug to the next NIC, wait a moment, ping out, and move on until all NICs have been tested.
+CTRL+C stops the ping.  Move the plug to the next NIC, wait a moment, ping out,
+and repeat this process until all NICs have been tested.
 
 Links:
+
 https://websiteforstudents.com/configuring-static-ips-ubuntu-17-10-servers/
 
 https://wiki.ubuntu.com/Netplan
@@ -198,7 +227,7 @@ https://askubuntu.com/questions/972955/ubuntu-17-10-server-static-ip-netplan-how
 
 https://insights.ubuntu.com/2017/07/10/netplan-by-default-in-17-10/
 
-# Problems
+## Problems
 
 Problem: Ubuntu 12.04 Server cannot update.
 
@@ -212,9 +241,15 @@ sudo apt-get update
 From Lorem at https://askubuntu.com/questions/41605
 
 
-Problem: After installation, only one network device is shown under ifconfig.  Only the device used during install is configured under /etc/network/interfaces and all others are missing.  All other devices are displayed with the ip a or ipconfig -a commands.
+Problem: After installation, only one network device is shown under ifconfig.
+Only the device used during install is configured under /etc/network/interfaces
+and all others are missing.  All other devices are displayed with the ```ip a```
+or ```ipconfig -a``` commands.
 
-Solution: Edit the /etc/network/interfaces file.  Copy the two lines for the configured device or lo and paste them below.  Change the device name to match the entries from ifconfig -a or ip a.  Change auto to allow-hotplug for all new entries.
+Solution: Edit the /etc/network/interfaces file.  Copy the two lines for the
+configured device or lo and paste them below.  Change the device name to match
+the entries from ifconfig -a or ip a.  Change auto to allow-hotplug for all new
+entries.
 
 Example:
 

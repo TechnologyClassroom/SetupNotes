@@ -79,9 +79,11 @@ Ubuntu Server is Ubuntu without a Graphic User Interface (GUI).  This leaves you
 * resume
 
 * Update software
+
 ```
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get install -y ledmon build-essential
 ```
+
 * Properly add nomodeset to boot
 
 ```
@@ -136,6 +138,66 @@ rm .bash_history
 history -c
 ```
 
+## Ubuntu 17.10 Server networking
+
+The workflow for Ubuntu Server networking has changed on 17.10 because it now uses netplan.  Instead of changing the /etc/network/interfaces file, we change the /etc/netplan/01-netcfg.yaml file.
+
+List all NICs.
+
+```ip a```
+
+Edit the netplan configuration file.
+
+```sudo nano /etc/netplan/01-netcfg.yaml```
+
+Cut the last two lines and paste them to match the number of network interface cards (NICs).
+
+Here is an example /etc/netplan/01-netcfg.yaml with two NICs:
+
+```
+# This file describes the network interfaces available on your system
+# For more information, see netplan(5).
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    eno1:
+      dhcp4: yes
+    eno2:
+      dhcp4: yes
+```
+
+Save with CTRL+X, y, enter, and enter.
+
+Apply the configuration.
+
+```sudo netplan apply```
+
+Reboot.
+
+```reboot```
+
+List all configured NICs.
+
+```ifconfig```
+
+Test each NIC by pinging out.
+
+```ping www.google.com```
+
+CTRL+C stops the ping.  Move the plug to the next NIC, wait a moment, ping out, and move on until all NICs have been tested.
+
+Links:
+https://websiteforstudents.com/configuring-static-ips-ubuntu-17-10-servers/
+
+https://wiki.ubuntu.com/Netplan
+
+https://helpmanual.io/man5/netplan/
+
+https://askubuntu.com/questions/972955/ubuntu-17-10-server-static-ip-netplan-how-to-set-netmask
+
+https://insights.ubuntu.com/2017/07/10/netplan-by-default-in-17-10/
+
 # Problems
 
 Problem: Ubuntu 12.04 Server cannot update.
@@ -147,7 +209,7 @@ sudo rm -rf /var/lib/apt/lists/*
 sudo apt-get update
 ```
 
-From Lorem at https://askubuntu.com/questions/41605/trouble-downloading-packages-list-due-to-a-hash-sum-mismatch-error
+From Lorem at https://askubuntu.com/questions/41605
 
 
 Problem: After installation, only one network device is shown under ifconfig.  Only the device used during install is configured under /etc/network/interfaces and all others are missing.  All other devices are displayed with the ip a or ipconfig -a commands.
@@ -155,6 +217,7 @@ Problem: After installation, only one network device is shown under ifconfig.  O
 Solution: Edit the /etc/network/interfaces file.  Copy the two lines for the configured device or lo and paste them below.  Change the device name to match the entries from ifconfig -a or ip a.  Change auto to allow-hotplug for all new entries.
 
 Example:
+
 ```
 auto lo
 iface lo inet loopback

@@ -13,6 +13,8 @@ http://stackoverflow.com/questions/5319754/cross-reference-named-anchor-in-markd
 Modifying wiki pages like other code repositories
 https://help.github.com/articles/adding-and-editing-wiki-pages-locally/
 
+## Troubleshooting
+
 Problem: One optional folder in a repo is adding a large amount of size to an
 otherwise very small repository.
 Solution: Remove the folder and its history from the repo.
@@ -20,7 +22,7 @@ Solution: Remove the folder and its history from the repo.
 This is also userful if you accidentally add a password or sensitive
 information to a public repo.
 
-Based on Mohsen, Mathias Bynens, participant, knocte, and Lázaro Clapp from
+Based on Mohsen, Mathias Bynens, knocte, and Lázaro Clapp from
 https://stackoverflow.com/questions/10067848
 
 Note: Backup the folder into another repository first.

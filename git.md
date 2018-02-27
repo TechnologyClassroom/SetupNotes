@@ -1,4 +1,4 @@
-# git
+# git notes
 
 git is a great way to track changes to text files.
 

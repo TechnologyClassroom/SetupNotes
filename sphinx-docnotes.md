@@ -149,32 +149,6 @@ Adding a picture
 +-----------+------------+----------+
 ```
 
-## Helpful links for Sphinx and ReStructuredText
-
-http://www.sphinx-doc.org/en/stable/rest.html
-
-http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html
-
-http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html
-
-https://pythonhosted.org/an_example_pypi_project/sphinx.html
-
-[epub FAQ](http://sphinx.readthedocs.io/en/latest/faq.html#epub-info)
-
-[config.py epub options](http://www.sphinx-doc.org/en/stable/config.html#options-for-epub-output)
-
-[Theming](http://www.sphinx-doc.org/en/stable/theming.html)
-
-[Theming at tinkerer.me](http://tinkerer.me/doc/theming.html)
-
-[Templating](http://www.sphinx-doc.org/en/stable/templating.html)
-
-[ReStructured Text](http://docutils.sourceforge.net/rst.html)
-
-[ReStructured Text Quick Reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html)
-
-[ReStructured Text Primer](http://docutils.sourceforge.net/docs/user/rst/quickstart.html)
-
 ## Check links
 
 Make sure all of your links work with this command:
@@ -215,3 +189,29 @@ Change this line in ```Makefile```:
 to this:
 
 ```SPHINXBUILD   = python3 -msphinx```
+
+## Helpful links for Sphinx and ReStructuredText
+
+http://www.sphinx-doc.org/en/stable/rest.html
+
+http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html
+
+http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html
+
+https://pythonhosted.org/an_example_pypi_project/sphinx.html
+
+[epub FAQ](http://sphinx.readthedocs.io/en/latest/faq.html#epub-info)
+
+[config.py epub options](http://www.sphinx-doc.org/en/stable/config.html#options-for-epub-output)
+
+[Theming](http://www.sphinx-doc.org/en/stable/theming.html)
+
+[Theming at tinkerer.me](http://tinkerer.me/doc/theming.html)
+
+[Templating](http://www.sphinx-doc.org/en/stable/templating.html)
+
+[ReStructured Text](http://docutils.sourceforge.net/rst.html)
+
+[ReStructured Text Quick Reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html)
+
+[ReStructured Text Primer](http://docutils.sourceforge.net/docs/user/rst/quickstart.html)

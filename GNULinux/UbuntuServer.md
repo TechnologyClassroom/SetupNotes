@@ -7,87 +7,50 @@ your server with only a Command Line Interface (CLI).  Ubuntu Server or Ubuntu
 Minimal are a good choice when a system will have no monitor connected to it or
 when performance is preferred to UI.
 
-## Ubuntu 16.04 Server with Nvidia graphics card video output with a disk that is smaller than 2TB
+## Ubuntu 16.04 Server with Nvidia video output with a disk smaller than 2TB
 
-* Boot from disc
-
-* English
-
-* (F6) Expert mode (Enter) (Esc)
-
-* Change "vga=788" to "vga=794"
-
-* Choose language
-
-* Configure keyboard
-
-* Detect and mount CD-ROM
-
-* Load debconf preconfiguration file
-
-* Load installer components from CD
-
-  * choose-mirror
-
-  * load-media
-
-* Detect network hardware
-
-* Configure the network
-
-* Choose a mirror of the Ubuntu archive
-
-* Set up users and passwords
-
-* Configure the clock
-
-* Detect disks
-
-* Partition disks
-
-  * Manual
-
-  * msdos
-
-* Install the system
-
-  * normal
-
-* Configure the package manager
-
-  * restricted yes
-
-  * universe yes
-
-  * multiverse no
-
-  * backports no
-
-  * source no
-
-* Select and install software
-
-* Install the GRUB boot loader to a hard disk
-	
-  * Force UEFI no
-
-* Finish the installation
-	
-  * UTC no
-
-
-
-* Boot into recovery mode
-
-* resume
-
-* Update software
+- Boot from disc
+- English
+- (F6) Expert mode (Enter) (Esc)
+- Change "vga=788" to "vga=794"
+- Choose language
+- Configure keyboard
+- Detect and mount CD-ROM
+- Load debconf preconfiguration file
+- Load installer components from CD
+  - choose-mirror
+  - load-media
+- Detect network hardware
+- Configure the network
+- Choose a mirror of the Ubuntu archive
+- Set up users and passwords
+- Configure the clock
+- Detect disks
+- Partition disks
+  - Manual
+  - msdos
+- Install the system
+  - normal
+- Configure the package manager
+  - restricted yes
+  - universe yes
+  - multiverse no
+  - backports no
+  - source no
+- Select and install software
+- Install the GRUB boot loader to a hard disk
+  - Force UEFI no
+- Finish the installation
+  - UTC no
+- Boot into recovery mode.
+- resume
+- Update software.
 
 ```
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get install -y ledmon build-essential
 ```
 
-* Properly add nomodeset to boot
+- Properly add nomodeset to boot.
 
 ```
 sudo sed -i 's/T=""/T="nomodeset"/' /etc/default/grub
@@ -95,7 +58,7 @@ sudo update-grub
 reboot
 ```
 
-* Add network interfaces to ifconfig
+- Add network interfaces to ifconfig.
 
 ```
 ip a
@@ -124,7 +87,7 @@ CTRL+C stops the ping.  Remove the ethernet plug from the NIC.  Release the DHCP
 lease with ```sudo ifdown eno1```.  Move the plug to the next NIC, wait a
 moment, ping out, and repeat this process until all NICs have been tested.
 
-* Install proprietary nvidia drivers and cuda toolkit
+- Install proprietary nvidia drivers and cuda toolkit
 
 ```
 # THIS IS PORTION IS OUT OF DATE
@@ -141,7 +104,7 @@ echo blacklist nouveau >> /etc/modprobe.d/blacklist.conf
 ldconfig
 ```
 
-* Remove history
+- Remove history
 
 ```
 exit
@@ -156,7 +119,8 @@ rm .bash_history
 history -c
 ```
 
-* Login
+- Login
+
 ```
 rm .bash_history
 history -c
@@ -217,17 +181,13 @@ and repeat this process until all NICs have been tested.
 
 Links:
 
-https://websiteforstudents.com/configuring-static-ips-ubuntu-17-10-servers/
+- https://websiteforstudents.com/configuring-static-ips-ubuntu-17-10-servers/
+- https://wiki.ubuntu.com/Netplan
+- https://helpmanual.io/man5/netplan/
+- https://askubuntu.com/questions/972955/ubuntu-17-10-server-static-ip-netplan-how-to-set-netmask
+- https://insights.ubuntu.com/2017/07/10/netplan-by-default-in-17-10/
 
-https://wiki.ubuntu.com/Netplan
-
-https://helpmanual.io/man5/netplan/
-
-https://askubuntu.com/questions/972955/ubuntu-17-10-server-static-ip-netplan-how-to-set-netmask
-
-https://insights.ubuntu.com/2017/07/10/netplan-by-default-in-17-10/
-
-## Problems
+## Troubleshooting
 
 Problem: Ubuntu 12.04 Server cannot update.
 

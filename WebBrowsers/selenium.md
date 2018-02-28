@@ -2,7 +2,7 @@
 
 Selenium can test websites without manually clicking on buttons.
 
-# Install webdrivers
+## Install webdrivers
 
 ```
 # Install Chrome webdriver for 64bit GNU/Linux

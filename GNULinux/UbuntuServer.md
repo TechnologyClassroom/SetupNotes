@@ -7,6 +7,77 @@ your server with only a Command Line Interface (CLI).  Ubuntu Server or Ubuntu
 Minimal are a good choice when a system will have no monitor connected to it or
 when performance is preferred to UI.
 
+## Standard Ubuntu 16.04 Server Install
+
+This is a standard legacy install with a drive smaller than 2 TB.
+
+- Boot from disc or network.
+- Press enter five times to set the language and keyboard configuration
+  (English, United States, No, English (US), English (US))
+- Select the Network Interface to use with the arrow keys and press enter.  I
+  selected ```eno1``` in my example.
+- Set the hostname.  I chose the default ```ubuntu```.  Continue.
+- Choose the network mirror.  I chose ```United States```.
+- Confirm network mirror.  I chose ```us.archive.ubuntu.com```.
+- Choose proxy information.  I leave this blank for none.  Continue.
+- Enter the full name of a new user.  When setting up a system for a client, I
+  choose ```Default User```.
+- Enter a username for the new user with all lowercase letters.  When setting up
+  a system for a client, I choose ```user```.
+- Enter a password.  When setting up a system for a client, I choose
+  ```password```.
+- Enter the password again.
+- Decide if you would like to encrypt your home directory.  When setting up a
+  system for a client, I choose ```No```.
+- NTP will be set based on your location.  Verify it is correct with ```Yes```.
+- Choose a partitioning method.  For this example, I will choose a standard
+  configuration using ```Manual```.
+- Choose the device for the OS.  In my example, I will use ```/dev/sda```.
+  - Create a new empty partition table on this device? Yes
+  - Select FREE SPACE under sda.
+    - Create a new partition
+    - New partition size: ```500 MB```
+    - Primary
+    - Beginning
+    - Use as: Ext2 file system
+    - Mount point: /boot
+    - Done setting up the partition
+  - Select FREE SPACE under sda
+    - Create a new partition
+    - New partition size: ```20 GB```
+    - Primary
+    - Beginning
+    - Use as: Ext4 file system
+    - Mount point: /
+    - Done setting up the partition
+  - Select FREE SPACE under sda
+    - Create a new partition
+    - New partition size: ```8 GB```
+    - Primary
+    - Beginning
+    - Use as: swap area
+    - Done setting up the partition
+  - Select FREE SPACE under sda
+    - Create a new partition
+    - Press enter to select all of the remaining space on the drive.
+    - Primary
+    - Use as: Ext4 file system
+    - Mount point: /home
+    - Done setting up the partition
+  - If you have more disks, you can partition them as Ext4 as well with custom
+    mountpoints.
+  - Finish partitioning and write changes to disk
+- Write the changes to disks? ```Yes```
+- Wait for the base system to install.  This will take a moment.
+- How do you want to manage upgrade on this system? ```No automatic updates```
+- Choose software to install: This menu gives you the option to install
+  metapackages.  Use tab enter to skip installing extra packages.
+  - The ```tasksel``` command will give you this menu on any Debian based system
+    if would like to make a change to a workstation.
+- Install the GRUB boot loader to the master boot record? ```Yes```
+- Installation complete.  Press enter for ```Continue```.
+- The system will reboot into your system.
+
 ## Ubuntu 16.04 Server with Nvidia video output with a disk smaller than 2TB
 
 - Boot from disc
@@ -42,26 +113,30 @@ when performance is preferred to UI.
   - Force UEFI no
 - Finish the installation
   - UTC no
-- Boot into recovery mode.
-- resume
+
+## System configuration
+
 - Update software.
 
 ```
-sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get install -y ledmon build-essential
-```
-
-- Properly add nomodeset to boot.
-
-```
-sudo sed -i 's/T=""/T="nomodeset"/' /etc/default/grub
-sudo update-grub
-reboot
+sudo apt update && sudo apt upgrade -y && sudo apt-get dist-upgrade -y && sudo apt install -y ledmon build-essential
 ```
 
 - Add network interfaces to ifconfig.
 
 ```
+tmux
+```
+
+Split the screen with CTRL+b %.
+
+```
 ip a
+```
+
+Switch the the screen to the left with CTRL+b left arrow.
+
+```
 sudo nano /etc/network/interfaces
 ```
 
@@ -88,6 +163,16 @@ lease with ```sudo ifdown eno1```.  Move the plug to the next NIC, wait a
 moment, ping out, and repeat this process until all NICs have been tested.
 
 - Install proprietary nvidia drivers and cuda toolkit
+
+- Properly add nomodeset to boot.
+
+```
+sudo sed -i 's/T=""/T="nomodeset"/' /etc/default/grub
+sudo update-grub
+reboot
+```
+
+Install NVIDIA drivers.
 
 ```
 # THIS IS PORTION IS OUT OF DATE

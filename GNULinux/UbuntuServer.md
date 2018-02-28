@@ -162,9 +162,7 @@ CTRL+C stops the ping.  Remove the ethernet plug from the NIC.  Release the DHCP
 lease with ```sudo ifdown eno1```.  Move the plug to the next NIC, wait a
 moment, ping out, and repeat this process until all NICs have been tested.
 
-- Install proprietary nvidia drivers and cuda toolkit
-
-- Properly add nomodeset to boot.
+## Properly add nomodeset to boot.
 
 ```
 sudo sed -i 's/T=""/T="nomodeset"/' /etc/default/grub
@@ -172,22 +170,45 @@ sudo update-grub
 reboot
 ```
 
-Install NVIDIA drivers.
+## Install Proprietary NVIDIA drivers and cuda
+
+Change to runlevel 3.
+
+```sudo init 3```
+
+Download the latest stable driver from http://www.nvidia.com/object/unix.html
+into /tmp.
 
 ```
-# THIS IS PORTION IS OUT OF DATE
+cd /tmp
+wget http://us.download.nvidia.com/XFree86/Linux-x86_64/390.25/NVIDIA-Linux-x86_64-390.25.run
+wget http://developer2.download.nvidia.com/compute/cuda/9.0/secure/Prod/local_installers/cuda_9.1.85_387.26_linux.run
+```
+
+Install proprietary NVIDIA drivers and cuda.
+
+```
+sudo sh NVIDIA-Linux-x86_64-390.25.run --accept-license -q -X -Z --ui=none -s
+sudo sh cuda_9.1.85_387.26_linux.run --toolkit --silent --override
+```
+
+Add cuda to the PATH and remove nouveau.
+
+```
 sudo su
-init 3
-wget -q http://us.download.nvidia.com/XFree86/Linux-x86_64/375.66/NVIDIA-Linux-x86_64-375.66.run
-wget -q https://developer.nvidia.com/compute/cuda/8.0/prod2/local_installers/cuda_8.0.61_375.26_linux-run
-sh NVIDIA-Linux-x86_64-375.66.run --accept-license -q -X
-sh cuda_8.0.61_375.26_linux-run --toolkit -silent --override
-echo export 'PATH=/usr/local/cuda/bin:$PATH' >> /etc/bashrc
+echo export 'PATH=/usr/local/cuda/bin:$PATH' >> /etc/bash.bashrc
 echo /usr/local/cuda/lib64 >> /etc/ld.so.conf
 echo /usr/local/cuda/lib >> /etc/ld.so.conf
 echo blacklist nouveau >> /etc/modprobe.d/blacklist.conf
+echo blacklist lbm-nouveau >> /etc/modprobe.d/blacklist.conf
 ldconfig
+exit
+reboot
 ```
+
+Check to see if the NVIDIA driver is working.
+
+```nvidia-smi```
 
 - Remove history
 
@@ -200,13 +221,6 @@ history -c
 exit
 exit
 # Log back in
-rm .bash_history
-history -c
-```
-
-- Login
-
-```
 rm .bash_history
 history -c
 ```

@@ -118,7 +118,7 @@ Press tab.  Enter password.  Press enter.
 
 <F2> Shut Down
 
-# Updating the system manually
+## Updating the system manually
 
 Based on William Lam's article:
 https://www.virtuallyghetto.com/2013/06/quick-tip-listing-image-profiles-from.html
@@ -148,9 +148,9 @@ Open a terminal.  Navigate to the download location.
 
 Use scp to copy the update to the server.
 
-In this case, my server is 10.12.17.101.  My update is ESXi650-201710001.zip.
+In this case, my server is 10.12.17.101.  My update is ESXi650-201803001.zip.
 
-```scp ESXi650-201710001.zip root@10.12.17.101:/vmfs/volumes/datastore1```
+```scp ESXi650-201803001.zip root@10.12.17.101:/vmfs/volumes/datastore1```
 
 Type yes and enter the password.
 
@@ -164,15 +164,19 @@ Change to the datastore1 directory.
 
 List the available updates.
 
-```esxcli software sources profile list -d /vmfs/volumes/datastore1/ESXi650-201710001.zip```
+```esxcli software sources profile list -d /vmfs/volumes/datastore1/ESXi650-201803001.zip```
 
 Install the version of the update that you want to install.
 
-```esxcli software profile update -d /vmfs/volumes/datastore1/ESXi650-201710001.zip -p $(esxcli software sources profile list -d /vmfs/volumes/datastore1/ESXi650-201710001.zip | awk '{ print $1 }' | tail -n 1)```
+```esxcli software profile update -d /vmfs/volumes/datastore1/ESXi650-201803001.zip -p $(esxcli software sources profile list -d /vmfs/volumes/datastore1/ESXi650-201803001.zip | awk '{ print $1 }' | tail -n 1)```
+
+Note: The above command will only work if it is run from the shell of the ESXi
+machine.  If the ```$(...)``` portion of the script is run from another machine,
+the esxcli command will not be understood and the update will not continue.
 
 Remove the update.
 
-```rm ESXi650-201710001.zip```
+```rm ESXi650-201803001.zip```
 
 Reboot the system.
 
@@ -229,7 +233,7 @@ Create these scripts and modify the variables for the update.
 # Must be run on the same subnet.
 # The ESXi machine must have SSH enabled.
 
-update=ESXi650-201710001
+update=ESXi650-201803001
 password=password
 
 sshpass -p $password scp \
@@ -262,7 +266,7 @@ sh /vmfs/volumes/datastore1/update.sh
 # Must be run on the same subnet.
 # The ESXi machine must have SSH enabled.
 
-update=ESXi650-201710001
+update=ESXi650-201803001
 
 esxcli software profile update -d /vmfs/volumes/datastore1/$update.zip -p $(esxcli software sources profile list -d /vmfs/volumes/datastore1/$update.zip | awk '{ print $1 }' | tail -n 1)
 
@@ -274,8 +278,10 @@ reboot
 Run the script.
 
 ```
-sh pushupdates.sh
+sh pushupdates.sh 192.168.1.67
 ```
+
+Replace ```192.168.1.67``` with the IP address of the ESXi machine.
 
 <F2> Customize System/View Logs
 
@@ -285,12 +291,12 @@ Troubleshooting Options
 
 Disable SSH
 
-# RAID Notes
+## RAID Notes
 
 ESXi cannot do fake RAID or software RAID.  If you need to install ESXi to a
 RAID, you must use a hardware RAID controller such as 3108.
 
-# Hardware Notes
+## Hardware Notes
 
 Intel Ethernet Converged Network Adapter X710-DA4 does not work with v6.0 U2 and
 does work with v6.5.

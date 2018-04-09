@@ -6,6 +6,24 @@ Copyright © Michael McMahon 2015-2018.  Except where otherwise specified, the
 text on [Setup Notes](https://github.com/TechnologyClassroom/SetupNotes/)
 by Michael McMahon is licensed under the
 [Creative Commons Attribution-ShareAlike License 4.0 (International) (CC-BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
+
+The one thing that has advanced my career with technology the most is taking
+notes.
+
+When I am about to do something new, I first write out what I am trying to do,
+the problem that I am trying to solve, or the original error message.  I then
+research the topic.  I take notes on the research and add the relevant links.
+Before I follow a workflow from the Internet, I try to understand the workflow
+as thoroughly as possible.  I document the process I use and add any notes about
+what each step does.
+
+If I messed up something, I should be able to refer to my notes and undo any
+changes.  I then document that process.
+
+Months later when I have forgotten the process, I can can look at my notes
+instead of restarting over again at the research phase.
+
+These are my notes.
   
 - [Apple/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/Apple)
 - [BSD/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/BSD)

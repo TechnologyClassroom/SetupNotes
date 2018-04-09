@@ -91,7 +91,23 @@ man cat
 - [vim adventures](https://vim-adventures.com/) teaches vim like an old school
   rpg.  vim is a command line text editor like nano, but FAR more powerful and
   customizable.
-
+- Stay up-to-date with changes by subscribing to relevant news sources such as:
+  - [LWN.net](https://lwn.net/)
+  - [Linux Today](https://www.linuxtoday.com/)
+  - [Linux Insider](https://www.linuxinsider.com/)
+  - [LXer](http://lxer.com)
+  - [News from the Free Software Foundation](https://www.fsf.org/news)
+  - [Electronic Freedom Foundation](https://www.eff.org/)
+  - Subreddits
+    - [/r/linux](https://www.reddit.com/r/linux/)
+    - [/r/linux4noobs](https://www.reddit.com/r/linux4noobs/)
+    - [/r/linuxquestions](https://www.reddit.com/r/linuxquestions/)
+  - Magazines
+    - [Linux Format](https://www.linuxformat.com/)
+    - [Linux Magazine](http://www.linux-magazine.com/)
+    - [Linux Journal](https://www.linuxjournal.com/)
+    - Raspberry Pi's [MagPi](https://www.raspberrypi.org/magpi/)
+  
 ## Suggested Distributions
 
 - [Debian](https://www.debian.org/) - Community driven, stable OS with only
@@ -113,6 +129,30 @@ man cat
   graphical user interface (GUI) is a popular choice for enterprise servers.
 - [Lubuntu](https://lubuntu.net/downloads/) - Ubuntu with the LXDE desktop
   environment (DE) is good for older computers.
+
+## Proprietary NVIDIA drivers
+
+See my [NVIDIA](https://github.com/TechnologyClassroom/nvidia) repository for
+bash scripts to help make installing proprietary NVIDIA drivers and CUDA.
+
+Note: If privacy is a concern of yours do not use the proprietary NVIDIA
+drivers as they contain telemetry that cannot be turned off.  Instead use the
+nouveau driver if you must use NVIDIA hardware.
+
+## Stress testing CPU on debian based systems
+
+http://askubuntu.com/questions/15832/how-do-i-get-the-cpu-temperature
+http://www.tecmint.com/linux-cpu-load-stress-test-with-stress-ng-tool/
+
+```apt update && apt install lm-sensors stress stress-ng```
+
+If lm-sensors and stress are not found, add universe to the
+/etc/apt/sources.list file.
+
+```sensors && uptime && stress --cpu 8 -v --timeout 30s && uptime && sensors```
+
+See my [HardwareTest](https://github.com/TechnologyClassroom/HardwareTest)
+repository for more thorough, comprehensive tests.
 
 ## UEFI Install resources
 
@@ -146,9 +186,7 @@ Restart samba for changes to take effect.
 
 ```sudo /etc/init.d/samba restart```
 
-Install greg podcatcher
-
-```sudo pip3 install --user greg```
+## Useful commands
 
 Upgrade pip
 
@@ -161,33 +199,23 @@ Seach within files for a string and list the filenames with matches
 
 ```grep string -l *```
 
-## Proprietary NVIDIA drivers
-
-Download without a gui
+Install tldr offline examples
 
 ```
-wget http://us.download.nvidia.com/XFree86/Linux-x86_64/375.26/NVIDIA-Linux-x86_64-375.26.run
-wget https://developer.nvidia.com/compute/cuda/8.0/prod/local_installers/cuda_8.0.44_linux-run
+sudo npm install -g tldr
+tldr --update
+tldr tar
 ```
 
-To uninstall use the --uninstall switch.
+Source https://github.com/tldr-pages/tldr
 
-```./NVIDIA-Linux-x86_64-375.26.run --uninstall```
+Access common examples from command line without installing additional packages.
 
-## Stress testing CPU on debian based systems
+```curl cheat.sh/tar```
 
-http://askubuntu.com/questions/15832/how-do-i-get-the-cpu-temperature
-http://www.tecmint.com/linux-cpu-load-stress-test-with-stress-ng-tool/
+Replace tar with the program name.
 
-```apt update && apt install lm-sensors stress stress-ng```
-
-If lm-sensors and stress are not found, add universe to the
-/etc/apt/sources.list file.
-
-```sensors && uptime && stress --cpu 8 -v --timeout 30s && uptime && sensors```
-
-Also see https://github.com/TechnologyClassroom/HardwareTest for a thorough,
-comprehensive test.
+Source https://github.com/chubin/cheat.sh
 
 ## Add drive to fstab manually
 
@@ -240,59 +268,6 @@ sgpio -p 1 -s locate
 sgpio -p 1 -s off
 ```
 
-Problem: fat32 and fat16 formatted flash drive gives errors and has trouble
-booting.
-
-Solution: Use GNU/Linux command line tools to inspect and repair problems.
-
-This command checked the fat32 partition for errors.  If errors are found, fix
-them automatically.  /dev/sdc is my flash drive in this example.
-
-```sudo dosfsck -w -r -l -a -v -t /dev/sdc1```
-
-dosfsck complained about a dirty bit and could not automatically repair.  This
-command can fix a dirty bit:
-
-```sudo fsck.vfat /dev/sdc1```
-
-My response was 2 to restore backup.
-
-My response was 1 and y to remove dirty bit.
-
-Sources:
-http://askubuntu.com/questions/147228/how-to-repair-a-corrupted-fat32-file-system
-https://bbs.archlinux.org/viewtopic.php?id=164185
-
-Problem: nodejs cannot find the correct path.  Gives error:
-
-```/usr/bin/env: node: No such file or directory```
-
-
-Solution: Improperly named nodejs needs to be linked to node.  Create symlink
-with:
-
-```sudo ln -s /usr/bin/nodejs /usr/bin/node```
-
-From digitalmediums at https://github.com/nodejs/node-v0.x-archive/issues/3911
-
-Install tldr offline examples
-
-```
-sudo npm install -g tldr
-tldr --update
-tldr tar
-```
-
-Source https://github.com/tldr-pages/tldr
-
-Access common examples from command line without installing additional packages.
-
-```curl cheat.sh/tar```
-
-Replace tar with the program name.
-
-Source https://github.com/chubin/cheat.sh
-
 ## CentOS 7 Minimal notes
 
 ```
@@ -330,6 +305,40 @@ quit
 ```
 
 ## Troubleshooting
+
+Problem: fat32 and fat16 formatted flash drive gives errors and has trouble
+booting.
+
+Solution: Use GNU/Linux command line tools to inspect and repair problems.
+
+This command checked the fat32 partition for errors.  If errors are found, fix
+them automatically.  /dev/sdc is my flash drive in this example.
+
+```sudo dosfsck -w -r -l -a -v -t /dev/sdc1```
+
+dosfsck complained about a dirty bit and could not automatically repair.  This
+command can fix a dirty bit:
+
+```sudo fsck.vfat /dev/sdc1```
+
+My response was 2 to restore backup.
+
+My response was 1 and y to remove dirty bit.
+
+Sources:
+http://askubuntu.com/questions/147228/how-to-repair-a-corrupted-fat32-file-system
+https://bbs.archlinux.org/viewtopic.php?id=164185
+
+Problem: nodejs cannot find the correct path.  Gives error:
+
+```/usr/bin/env: node: No such file or directory```
+
+Solution: Improperly named nodejs needs to be linked to node.  Create symlink
+with:
+
+```sudo ln -s /usr/bin/nodejs /usr/bin/node```
+
+From digitalmediums at https://github.com/nodejs/node-v0.x-archive/issues/3911
 
 Problem: Password is too short.
 Solution: Allow passwords of any length
@@ -450,8 +459,8 @@ Solution: Log into TTY and attempt to fix packages.
 ```
 sudo apt-get install -f
 sudo dpkg --configure -a
-sudo apt-get update
-sudo apt-get upgrade -y
+sudo apt update
+sudo apt upgrade -y
 sudo apt-get dist-upgrade -y
 sudo shutdown -r now
 ```

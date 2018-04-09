@@ -1,26 +1,118 @@
 # GNU/Linux
 
+This is a set of notes on learning more about GNU/Linux.
+
+## Learning GNU/Linux in a self-paced way
+
+I am frequently asked how to learn GNU/Linux.  The fastest way to learn is to
+install a GNU/Linux distribution on your computer and use it everyday.  Figure
+out how to do all of the tasks you would normally do with a computer using only
+free, libre, and open source software.
+
+The second thing that has advanced my career with GNU/Linux the most is taking
+notes.
+
+When I am about to do something new, I first write out what I am trying to do,
+the problem that I am trying to solve, or the original error message.  I then
+research the topic.  I take notes on the research and add the relevant links.
+Before I enter in any commands from the Internet, I try to understand the
+commands and switches as thoroughly as possible.  I document the commands I use
+and add any notes about what each command does.  If I forgot to document my
+commands, I can piece them together by looking at the. bash_history file.
+
+If I messed up something, I should be able to refer to my notes and undo any
+changes.  I then document that process.
+
+Months later when the issue arises again and I have forgotten the process, I can
+look at my notes instead of restarting over again at the research phase.
+
+Here are some other resources that can help you along the way:
+
+- [Codecademy](https://www.codecademy.com/learn/learn-the-command-line) is a
+  great interactive way to learn programming languages for the web.  They have a
+  quick course on using the UNIX and GNU/Linux command line.  Expect to spend
+  about an hour on this course and it should be done in one sitting.
+  https://www.codecademy.com/learn/learn-the-command-line
+
+  Other useful courses on Codecademy: Their HTML + CSS course is very quick and
+  useful.  Their Python 2 course is VERY good.
+
+- [The Linux Foundation](https://training.linuxfoundation.org/linux-courses/system-administration-training)
+  has a series of free MOOCs about understanding and learning "Linux" for the
+  enterprise.
+  https://training.linuxfoundation.org/linux-courses/system-administration-training
+
+  [Introduction to Linux](https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-0)
+  is their popular course and the one you should start with.
+  https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-0
+
+  Add any courses you complete to your resume.
+
+- [Linux Journey](https://linuxjourney.com/) has milestones to help you learn
+  GNU/Linux as if you were playing an RPG game sort of.
+  https://linuxjourney.com/
+
+- If you do not have permission to install another operating system or dual-boot
+  your machine, you can use a Virtual Machine manager such as
+  [VirtualBox](https://www.virtualbox.org/) to practice installing and using an
+  operating sytem that you may not be familiar with.  Install
+  [Ubuntu Server](https://www.ubuntu.com/download/server),
+  [Lubuntu](https://lubuntu.net/downloads/), or
+  [Debian](https://www.debian.org/) as a virtual machine and follow along with
+  the tutorials in a course.
+
+- [The Linux Command Line](http://linuxcommand.org/tlcl.php) By William Shotts
+  and published by No Starch Press is an excellent book to learn some of the
+  basics about the command line.  You can also download the PDF free from
+  [his page](http://sourceforge.net/projects/linuxcommand/files/TLCL/17.10/TLCL-17.10.pdf/download).
+
+- [The Debian System Administrator's Handbook](https://debian-handbook.info/) is
+  a useful ebook for learning system administration techniques.
+
+- Self reference -  All commands have built in help.
+
+```
+cat -h
+cat --help
+man cat
+```
+
+- [Explainshell](http://explainshell.com/) pulls relevant man page information
+  for commands that are entered.
+- [The Arch wiki](https://wiki.archlinux.org/) contains a large amount of
+  quality information about GNU/Linux.  Arch is an operating system, but the
+  information is very useful for all GNU/Linux distributions.
+- [overthewire](http://overthewire.org/) is a series of games.
+  [Bandit](http://overthewire.org/wargames/bandit/) is a game played through
+  SSH.  Try to get the next level's password by figuring out a command line
+  concept.
+- [cmdchallenge](https://cmdchallenge.com/) has tricky problems that can be
+  solved with UNIX one-liners (web based).
+- [vim adventures](https://vim-adventures.com/) teaches vim like an old school
+  rpg.  vim is a command line text editor like nano, but FAR more powerful and
+  customizable.
+
 ## Suggested Distributions
 
-- Debian https://www.debian.org/
-- Ubuntu Studio for those interested in graphic design and audio/video
-  production activities. https://ubuntustudio.org/
-- Trisquel - Ubuntu with non-free software removed https://trisquel.info/
-- Arch - Bleeding edge community driven distro based on minimalism
-  https://www.archlinux.org/
-- Parabola - Arch Linux with non-free software removed https://www.parabola.nu/
-- Fedora - Bleeding edge community driven branch of Red Hat Enterprise Linux
-  https://getfedora.org/
-- CentOS - Stable community driven branch of Red Hat Enterprise Linux
-  https://www.centos.org/
-
-## Arch Wiki
-
-The Arch Wiki contains lots of information about GNU/Linux.  Some of the wiki is
-specific to Arch Linux, but the wiki is very useful for all GNU/Linux
-distributions.
-
-https://wiki.archlinux.org/
+- [Debian](https://www.debian.org/) - Community driven, stable OS with only
+  libre software by default.  https://www.debian.org/
+- [Ubuntu Studio](https://ubuntustudio.org/) - Targeted towards those interested
+  in graphic design and audio/video production activities.
+  https://ubuntustudio.org/
+- [Trisquel](https://trisquel.info/) - Based on Ubuntu, but with all non-free
+  software removed.  https://trisquel.info/
+- [Arch](https://www.archlinux.org/) - Bleeding edge community driven distro
+  based on minimalism and simplicity.  https://www.archlinux.org/
+- [Parabola](https://www.parabola.nu/) - Arch Linux with non-free software
+  removed.  https://www.parabola.nu/
+- [Fedora](https://getfedora.org/) - Community driven development branch of Red
+  Hat Enterprise Linux.  https://getfedora.org/
+- [CentOS](https://www.centos.org/) - Stable community driven branch of Red Hat
+  Enterprise Linux.  https://www.centos.org/
+- [Ubuntu Server](https://www.ubuntu.com/download/server) - Ubuntu without a
+  graphical user interface (GUI) is a popular choice for enterprise servers.
+- [Lubuntu](https://lubuntu.net/downloads/) - Ubuntu with the LXDE desktop
+  environment (DE) is good for older computers.
 
 ## UEFI Install resources
 
@@ -366,17 +458,6 @@ sudo shutdown -r now
 
 If this does not fix the problem, backup and reinstall.
 
-Problem: Num lock is off after reboot.
-
-Solution: Install numlockx and insert the command into your rc.local file.
-
-```
-sudo apt-get install numlockx
-sudo sed -i 's|^exit 0.*$|# Numlock enable\n[ -x /usr/bin/numlockx ] \&\& numlockx on\n\nexit 0|' /etc/rc.local
-```
-
-https://help.ubuntu.com/community/NumLock
-
 Problem: The default program is not the preferred choice.
 
 Solution: Change default applications.
@@ -389,6 +470,14 @@ Use tab completion after this to list all options.  I use:
 sudo update-alternatives --config editor
 sudo update-alternatives --config x-terminal-emulator
 sudo update-alternatives --config x-www-browser
+```
+
+Problem: How do I find which display manager I am using with systemd?
+
+Solution: Run this command:
+
+```
+cat /etc/systemd/system/display-manager.service | grep ExecStart
 ```
 
 Problem: Installing vim, changes vi.
@@ -410,8 +499,13 @@ Press <enter> to keep the current choice[*], or type selection number: 2
 update-alternatives: using /usr/bin/vim.tiny to provide /usr/bin/vi (vi) in manual mode
 ```
 
-Problem: How do I find which display manager I am using with systemd?
+Problem: Num lock is off after reboot.
 
-Solution: Run this command:
+Solution: Install numlockx and insert the command into your rc.local file.
 
-```cat /etc/systemd/system/display-manager.service | grep ExecStart```
+```
+sudo apt-get install numlockx
+sudo sed -i 's|^exit 0.*$|# Numlock enable\n[ -x /usr/bin/numlockx ] \&\& numlockx on\n\nexit 0|' /etc/rc.local
+```
+
+https://help.ubuntu.com/community/NumLock

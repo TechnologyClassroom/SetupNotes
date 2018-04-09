@@ -8,6 +8,7 @@ Minecraft or other voxel games.  This engine can run a variety of games called
 
 ## Teaching computer science
 
+The engine is written in C++, but knowing C++ is not necessary to mod the game.
 All subgames are created with
 [the LUA programming language](https://www.lua.org/).  Lua is a beginner,
 interpreted language.  You can modify most things in the game without
@@ -35,34 +36,46 @@ singleplayer.
 
 Change this line:
 
-```			"button[4,4.15;2.6,0.5;world_delete;".. fgettext("Delete") .. "]" ..```
+```
+			"button[4,4.15;2.6,0.5;world_delete;".. fgettext("Delete") .. "]" ..
+```
 
 to this:
 
-```--			"button[4,4.15;2.6,0.5;world_delete;".. fgettext("Delete") .. "]" ..```
+```
+--			"button[4,4.15;2.6,0.5;world_delete;".. fgettext("Delete") .. "]" ..
+```
 
 The file minetest/builtin/mainmenu/tab_server.lua is the menu for starting a
 server.
 
 Change this line:
 
-```		"button[4,4.15;2.6,0.5;world_delete;" .. fgettext("Delete") .. "]" ..```
+```
+		"button[4,4.15;2.6,0.5;world_delete;" .. fgettext("Delete") .. "]" ..
+```
 
 to this:
 
-```--		"button[4,4.15;2.6,0.5;world_delete;" .. fgettext("Delete") .. "]" ..```
+```
+--		"button[4,4.15;2.6,0.5;world_delete;" .. fgettext("Delete") .. "]" ..
+```
 
 And this line:
 
-```		"checkbox[0.25,1.15;cb_server_announce;" .. fgettext("Public") .. ";" ..```
+```
+		"checkbox[0.25,1.15;cb_server_announce;" .. fgettext("Public") .. ";" ..
+```
 
 to this:
 
-```--		"checkbox[0.25,1.15;cb_server_announce;" .. fgettext("Public") .. ";" ..```
+```
+--		"checkbox[0.25,1.15;cb_server_announce;" .. fgettext("Public") .. ";" ..
+```
 
 ## Project ideas
 
-- Try building your building to scale.
+- Try building your room/building/yard to scale.
 - Change a mod.
 - Build a mod.
 - Create a subgame.
@@ -75,12 +88,17 @@ to this:
 
 ## Mods to look for:
 
-- protector - adds protection blocks.  This prevents your house from being
-  destroyed or looted.  Kids can be mean and this helps curb this.  Protection
-  blocks can be added to your initial inventory as well by changing the mod
+- [Blockly Minetest](https://devel.trisquel.info/ruben/blockly-minetest) - adds
+  a python and blockly api to build blocks with code.
+- [protector](https://forum.minetest.net/viewtopic.php?id=4212) - adds
+  protection blocks.  This prevents your house from being destroyed or looted.
+  Kids can be mean and this helps curb this.  Protection blocks can be added to
+  your initial inventory as well by changing the mod
   /give_initial_stuff/init.lua with this line:
 
-```player:get_inventory():add_item("main", "protector:protect 1")```
+```
+player:get_inventory():add_item("main", "protector:protect 1")
+```
 
 - craft_guide - With 5 sticks, you can build a craft guide.  This guide can be
   placed anywhere and shows all of the ways to craft any item available.  This

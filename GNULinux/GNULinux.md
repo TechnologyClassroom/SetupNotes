@@ -217,6 +217,24 @@ Replace tar with the program name.
 
 Source https://github.com/chubin/cheat.sh
 
+List cronjobs.
+
+```
+crontab -l
+```
+
+Edit cron jobs as root.
+
+```
+sudo crontab -e
+```
+
+Edit cron jobs as another users.
+
+```
+sudo crontab -u username -e
+```
+
 ## Add drive to fstab manually
 
 I often find myself trying to set a drive to automatically boot on a system.

@@ -206,7 +206,7 @@ Troubleshooting Options
 
 Enable SSH
 
-On a machine with ssh and scp, open a browser to
+On a machine with openssh-client and scp, open a browser to
 https://my.vmware.com/group/vmware/patch#search.
 
 Login or make a free account.
@@ -229,7 +229,7 @@ Create these scripts and modify the variables for the update.
 # Usage: sh pushupdate.sh 10.12.17.71
 #   where 10.12.17.71 is the local IP address of the ESXi server.
 
-# Depends on scp and sshpass.
+# Depends on openssh-client, scp, and sshpass.
 # Must be run from a directory with the update file.
 # Must be run on the same subnet.
 # The ESXi machine must have SSH enabled.
@@ -262,10 +262,8 @@ sh /vmfs/volumes/datastore1/update.sh
 
 # Usage: sh update.sh
 
-# Depends on scp and sshpass.
+# Must be run on the ESXi shell.
 # Must be run from a directory with the update file.
-# Must be run on the same subnet.
-# The ESXi machine must have SSH enabled.
 
 update=ESXi650-201803001
 

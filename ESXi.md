@@ -133,7 +133,7 @@ Enable ESXi SHell
 
 Enable SSH
 
-On a machine with ssh and scp, open a browser to
+On a machine with openssh-client and scp, open a browser to
 https://my.vmware.com/group/vmware/patch#search.
 
 Login or make a free account.
@@ -146,7 +146,8 @@ update.
 
 Open a terminal.  Navigate to the download location.
 
-Use scp to copy the update to the server.
+Use scp to copy the update to the server.  Note: WinSCP can be used on Windows
+instead of scp.
 
 In this case, my server is 10.12.17.101.  My update is ESXi650-201803001.zip.
 
@@ -154,7 +155,7 @@ In this case, my server is 10.12.17.101.  My update is ESXi650-201803001.zip.
 
 Type yes and enter the password.
 
-ssh into the server.
+ssh into the server.  Note: PuTTY can be used on Windows instead of ssh.
 
 ```ssh root@10.12.17.101```
 
@@ -274,6 +275,8 @@ rm /vmfs/volumes/datastore1/$update.zip
 
 reboot
 ```
+
+Install sshpass and openssh-client, if you do not have them on your system.
 
 Run the script.
 

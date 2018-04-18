@@ -10,6 +10,18 @@ that you need it.
 
 ## Troubleshooting
 
+Problem: Motherboard is set to UTC time for GNU/Linux distributions.  Windows 7
+has the incorrect time.
+Solution: Add a Windows registry key to use UTC time.
+
+- Run regedit.exe as Administrator.
+- Navigate to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation
+- Add a new DWORD entry titled: RealTimeIsUniversal
+- Set the value of RealTimeIsUniversal to 1.
+- Reboot
+
+From http://crashmag.net/configuring-windows-7-support-for-utc-bios-time
+
 Problem: MSN opens a browser when logging in.
 Solution: Change the registry.
 From http://www.troublefixing.in/solved-windows-launch-msn-or-bing-page-on-starup/345/
@@ -30,17 +42,20 @@ tasklist /nh /fi "imagename eq KSP.exe" | find /i "KSP.exe" > nul || (start KSP.
 
 From http://superuser.com/questions/654088
 
-Problem: Motherboard is set to UTC time for GNU/Linux distributions.  Windows 7
-has the incorrect time.
-Solution: Add a Windows registry key to use UTC time.
+Problem: Password expiration notice appears and the machine's password should
+not expire.
+Solution: Disable Password Expiration for a User in Windows 8.1/8/7
 
-- Run regedit.exe as Administrator.
-- Navigate to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation
-- Add a new DWORD entry titled: RealTimeIsUniversal
-- Set the value of RealTimeIsUniversal to 1.
-- Reboot
+- Run lusrmgr.msc as Administrator.
+- Click on ```Users``` in the left pane.
+- Right click on the username to be modified.
+- Click on ```Properties```.
+- CHECK ```Password never expires```.
+- Click ```OK```.
+- Exit lusrmgr.
 
-From http://crashmag.net/configuring-windows-7-support-for-utc-bios-time
+Based on https://www.windowspasswordsrecovery.com/articles/password/enable-or-disable-password-expiration-for-a-user-in-windows-8-7.html
+
 
 ## How to search for literal strings in Explorer
 

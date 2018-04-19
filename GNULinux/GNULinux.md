@@ -507,6 +507,24 @@ Solution: Run this command:
 cat /etc/systemd/system/display-manager.service | grep ExecStart
 ```
 
+Problem: During a Ubuntu 16.04 upgrade, I receive the error:
+
+```
+dpkg: error processing package grub-efi-amd64-signed (--configure):
+ subprocess installed post-installation script returned error exit status 1
+```
+
+Solution: Remove grub and reinstall grub-efi.
+
+```
+sudo apt-get purge -y grub\*
+sudo apt-get install -y grub-efi
+sudo apt-get autoremove -y
+sudo update-grub
+```
+
+Based on John and David Foerster at https://askubuntu.com/questions/763472
+
 Problem: Installing vim, changes vi.
 
 Solution: Change vim to vim.tiny

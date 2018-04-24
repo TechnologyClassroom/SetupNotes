@@ -28,12 +28,15 @@ These are my notes.
 - [Apple/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/Apple)
 - [BSD/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/BSD)
 - [GNULinux/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/GNULinux)
-  - GNULinuxOnMacbooks.md install instructions for dual-booting a white Macbook from 2009
+  - [GNULinuxOnMacbooks.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md)
+    install instructions for dual-booting a white Macbook from 2009
 - [WebBrowsers/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/WebBrowsers)
 - [Chromebook.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/Chromebook.md)
 - [ESXi.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/ESXi.md)
 - [git.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/git.md)
 - [Github.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/Github.md)
+- [management/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/management)
+  - [ansible.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/management/ansible.md)
 - [Minetest.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/Minetest.md)
 - [PXEchain.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/PXEchain.md)
   is deprecated.  See

@@ -37,6 +37,8 @@ These are my notes.
 - [Github.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/Github.md)
 - [management/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/management)
   - [ansible.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/management/ansible.md)
+- [mobile/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/mobile)
+  - [android.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/mobile/android.md)
 - [Minetest.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/Minetest.md)
 - [PXEchain.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/PXEchain.md)
   is deprecated.  See

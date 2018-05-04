@@ -4,6 +4,8 @@ Michael McMahon
 
 Google Chrome and Chromium are popular Internet browsers.
 
+Do not place trust in Google Chrome.
+
 After installing, click on the sandwich menu in the top right corner of the
 screen and choose Settings.
 
@@ -36,6 +38,8 @@ you remove them.
 - Privacy Badger blocks tracking between websites.  It automatically builds your
   blocklist as you browse.
   https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp?hl=en-US
+- HTTPS Everywhere defaults to using the https version of a website
+  https://www.eff.org/https-everywhere
 - History 2 helps reviewing browsing history on a per machine basis.
   https://chrome.google.com/webstore/detail/history-2/cahejgbbfgmlmjgdjlibphdjeldhagkp?utm_source=chrome-app-launcher-info-dialog
 - Link Grabber is useful for copying all links from a page.

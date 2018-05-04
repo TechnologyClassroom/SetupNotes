@@ -21,15 +21,15 @@ not work, but may work in the future or with a legacy build.
   https://addons.mozilla.org/en-US/firefox/addon/video-downloadhelper/
 - uMatrix allows you to control the content of your browser.
   https://addons.mozilla.org/en-US/firefox/addon/umatrix/
-- uBlock Origin removes ads from most webpages.  This is reported to decrease
-  your network traffic by about 17% which increases the speed of your entire
-  network.
+- uBlock Origin removes ads and trackers from most webpages.  This is reported
+  to decrease your network traffic by about 17% which increases the speed of
+  your entire network.
   https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
-- Privacy Badger blocks tracking between websites.  It automatically builds your
+- Privacy Badger blocks tracking between websites and automatically builds your
   blocklist as you browse.
   https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/
-- FireFTP allows you to copy files to and from FTP sites.
-  https://addons.mozilla.org/en-US/firefox/addon/fireftp/
+- HTTPS Everywhere defaults to using the https version of a website
+  https://www.eff.org/https-everywhere
 - FT DeepDark
   https://addons.mozilla.org/en-US/firefox/addon/ft-deepdark/
 

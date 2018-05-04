@@ -25,6 +25,8 @@ not work, but may work in the future or with a legacy build.
   to decrease your network traffic by about 17% which increases the speed of
   your entire network.
   https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
+- KeePassXC-Browser communicates between KeePassXC to store passwords securely.
+  https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/
 - Privacy Badger blocks tracking between websites and automatically builds your
   blocklist as you browse.
   https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/

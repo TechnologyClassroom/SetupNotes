@@ -38,6 +38,8 @@ you remove them.
 - Privacy Badger blocks tracking between websites.  It automatically builds your
   blocklist as you browse.
   https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp?hl=en-US
+- KeePassXC-Browser communicates between KeePassXC to store passwords securely.
+  https://chrome.google.com/webstore/detail/keepassxc-browser/oboonakemofpalcgghocfoadofidjkkk
 - HTTPS Everywhere defaults to using the https version of a website
   https://www.eff.org/https-everywhere
 - History 2 helps reviewing browsing history on a per machine basis.

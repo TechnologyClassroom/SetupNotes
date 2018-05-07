@@ -287,6 +287,44 @@ https://docs.ansible.com/ansible/devel/user_guide/windows_winrm.html
 
 Instead of SSH, Ansible uses WinRM to connect to Windows machines.
 
+Install pywinrm to communicate with Windows.
+
+```
+sudo pip install "pywinrm>=0.3.0"
+```
+
+Install pywinrm[credssp] to install the dependencies for the CredSSP
+authentication protocol.
+
+```
+pip install pywinrm[credssp]
+```
+
+CredSSP must be enabled on the hosts.
+
+Download
+[ConfigureRemotingForAnsible.ps1](https://github.com/ansible/ansible/blob/devel/examples/scripts/ConfigureRemotingForAnsible.ps1).
+
+Open a command prompt as Admin.
+
+Run powershell with temporary script execution rights.
+
+```
+powershell.exe -ExecutionPolicy Unrestricted
+```
+
+Change to the directory of the .ps1 script.
+
+```
+cd 'C:\Users\YOURUSERNAME\Downloads\'
+```
+
+Enable CredSSP.
+
+```
+.\ConfigureRemotingForAnsible.ps1 -EnableCredSSP
+```
+
 See the links section below for useful Windows modules.
 
 ## Playbooks
@@ -318,7 +356,7 @@ galaxy.ansible.com website.
 
 Create an empty role template.
 
-````
+```
 ansible-galaxy init security
 ```
 

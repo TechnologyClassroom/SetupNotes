@@ -72,6 +72,14 @@ Continue
 See [my page on PXE](https://github.com/TechnologyClassroom/pxe) for my syslinux
 configs.
 
+The boot.cfg file must be modified once the extracted into the tftp.  This sed
+command will remove all of the forward slashes if run from the same directory.
+
+```
+cp boot.cfg boot.cfg.bak
+sed -i 's/\///g' boot.cfg
+```
+
 ## Troubleshooting Installation
 
 If the installation fails, enter a different TTY for troubleshooting.

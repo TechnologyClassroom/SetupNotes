@@ -103,6 +103,9 @@ List NICs.
 
 Press tab.  Enter password.  Press enter.
 
+Note: With ESXi 6.7, the password rules have changes and require multiple
+character types.
+
 Configure Management Network
 
 Network Adapters

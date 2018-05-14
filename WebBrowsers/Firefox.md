@@ -19,7 +19,8 @@ not work, but may work in the future or with a legacy build.
   websites.  This is very useful for slow Internet connections and preparing for
   presentations.
   https://addons.mozilla.org/en-US/firefox/addon/video-downloadhelper/
-- uMatrix allows you to control the content of your browser.
+- uMatrix allows you to control the content of your browser.  This will break
+  website functionality until properly configured.
   https://addons.mozilla.org/en-US/firefox/addon/umatrix/
 - uBlock Origin removes ads and trackers from most webpages.  This is reported
   to decrease your network traffic by about 17% which increases the speed of
@@ -32,8 +33,11 @@ not work, but may work in the future or with a legacy build.
   https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/
 - HTTPS Everywhere defaults to using the https version of a website
   https://www.eff.org/https-everywhere
-- FT DeepDark
+- FT DeepDark is a dark theme for Firefox.
   https://addons.mozilla.org/en-US/firefox/addon/ft-deepdark/
+- Dark background light text is a dark theme for webpages.  This will break
+  website functionality.
+  https://addons.mozilla.org/en-US/firefox/addon/dark-background-light-text/
 
 ## Troubleshooting
 

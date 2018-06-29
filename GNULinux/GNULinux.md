@@ -435,6 +435,24 @@ amixer # Lists all outputs
 amixer sset Headphone toggle
 ```
 
+Problem: gem install fails with message:
+
+```
+mkmf.rb can't find header files for ruby at /usr/lib/ruby/include/ruby.h
+```
+
+Solution: Install ruby dev packages.
+
+```
+sudo apt-get update 2>/dev/null
+sudo apt-get install -y ruby-dev 2>/dev/null
+sudo apt-get install -y ruby2.0-dev 2>/dev/null
+sudo apt-get install -y ruby2.2-dev 2>/dev/null
+sudo apt-get install -y ruby2.3-dev 2>/dev/null
+sudo yum install -y ruby-devel 2>/dev/null
+sudo zypper install -y ruby-devel 2>/dev/null
+```
+
 Problem: All ethernet devices are not shown in ifconfig on Ubuntu Server 16.04.
 
 Solution: List all cards and manually add them to /etc/network/interfaces

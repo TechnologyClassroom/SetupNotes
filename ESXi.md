@@ -60,6 +60,10 @@ hardware.
 
 Choose the language with the up and down arrow keys.  (Enter) Continue
 
+NOTE: As of ESXi 6.7, the password rules have changed.  All passwords require a
+lowercase letter, an uppercase letter, a number, and a special character.  The
+simplest default password is Password1!
+
 Enter your password twice.  Use tab to get to the second password box.  (Enter)
 Continue
 
@@ -155,6 +159,8 @@ Search button.
 Updates are cumulative.  Click on the blue Download button for the latest
 update.
 
+Check to see if there is an update.
+
 Open a terminal.  Navigate to the download location.
 
 Use scp to copy the update to the server.  Note: WinSCP can be used on Windows
@@ -246,7 +252,7 @@ Create these scripts and modify the variables for the update.
 # The ESXi machine must have SSH enabled.
 
 update=ESXi650-201803001
-password=password
+password=Password1!
 
 sshpass -p $password scp \
 -oUserKnownHostsFile=/dev/null \
@@ -307,6 +313,69 @@ Disable SSH
 
 ESXi cannot do fake RAID or software RAID.  If you need to install ESXi to a
 RAID, you must use a hardware RAID controller such as 3108.
+
+## Installing Broadcom LSI Drivers (Manually)
+
+- Download the LSI drivers.
+
+Unlike LSI drivers for all other operating systems, LSI drivers must be
+downloaded from the vmware page.  A free login is required.  Here is a search
+link to start your search:
+
+https://www.vmware.com/search.html#/?q=lsi%20driver&client=VMware_Site_1&num=20&filter=0&site=(VMware_Site_support_and_downloads)&ie=UTF-8&oe=UTF-8&getfields=*&partialfields=&requiredfields=&entqr=0&start=0&sort=&tlen=200&numgm=3&cn=vmware&cc=en&cid=&tid=&stype=main
+
+- Once you have the package for your version, extract the vib file from the
+archive onto your local machine.
+
+- On the ESXi machine, enable SSH.
+
+<F2> Customize System/View Logs
+
+Press tab.  Enter password.  Press enter.
+
+Troubleshooting Options
+
+Enable SSH
+
+- Copy the vib file to your machine with scp or winscp.
+
+```
+scp vmware-esx-provider-lsiprovider.vib root@10.12.17.108:/vmfs/volumes/datastore1/
+```
+
+In this case, my ESXi server is located at 10.12.17.108.
+
+- Login to the server with ssh or PuTTY.
+
+```
+ssh root@10.12.17.108
+```
+
+- Install the vib file.
+
+```
+esxcli software vib install -v /vmfs/volumes/datastore1/vmware-esx-provider-lsiprovider.vib
+```
+
+- Remove the vib file.
+
+```
+rm /vmfs/volumes/datastore1/vmware-esx-provider-lsiprovider.vib
+```
+
+- Disable SSH from ESXi.
+
+<F2> Customize System/View Logs
+
+Press tab.  Enter password.  Press enter.
+
+Troubleshooting Options
+
+Disable ESXi SHell
+
+Disable SSH
+
+- Reboot the server.
 
 ## Hardware Notes
 

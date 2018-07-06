@@ -6,6 +6,7 @@ puppet, and chef.  Scripts are written in YAML and Jinja.
 Salt is free and open source and licensed under the Apache 2.0 license.
 
 [Website](https://saltstack.com/)
+
 [github](https://github.com/saltstack/salt)
 
 ## Ports
@@ -47,3 +48,255 @@ user:
 ## Managing Windows
 
 Modules specific to Windows start with ```win_```.
+
+## Management options
+
+- Single Master
+  - Traditional setup with one master.
+- Multi-Master
+  - Redundant
+    - All masters run simutaneously.
+    - Any masters can be accessed.
+    - Masters share the same public key.
+    - All minions must be added to all masters.
+    - Masters must be synced separately through git, rsync, or another method.
+    - ```file_roots``` and ```pillar_roots``` must be the same across all masters.
+  - Failover
+    - Single master at a time.
+    - When the current master cannot be reached, the next master is called.
+- Masterless
+  - In minion config, set ```file_client``` line to ```local```.
+  - ```--local``` is not necessary.
+  - Good for testing before pushing to production or configuring masters.
+
+## Installing Salt
+
+Here are four methods:
+
+- Bootstrap master
+- Bootstrap minion
+- Install through SaltStack apt repository
+- Install through SaltStack yum repository
+
+### Bootstrap the Master
+
+The bootstrap method is most common.
+
+- Install the dependencies ```curl``` and ```python3-pip``` using your package manager.
+
+
+```
+yum install -y curl 2>/dev/null
+apt update 2>/dev/null
+apt install -y curl 2>/dev/null
+```
+
+Note: The above three lines would work in a script for both Red Hat based distributions and Debian based distributions.
+
+- Download the script.
+
+```
+curl -L https://bootstrap.saltstack.com -o install_salt.sh
+```
+
+- View the script to make sure the website was not compromised.
+
+```
+less install_salt.sh
+```
+
+- Run the script as root.
+
+```
+sh install_salt.sh -P -M
+```
+
+```-P``` allows the usage of pip.  ```-M``` configures a master server.
+
+- Salt expects the hostname to be salt.  Update the /etc/hosts file with this command as root.
+
+```
+sed -i 's/127.0.0.1/127.0.0.1 salt /' /etc/hosts
+```
+
+- Salt is installed.
+
+### Bootstrap the Minions
+
+The bootstrap method is most common.
+
+- Install the dependencies ```curl``` and ```python3-pip``` using your package manager as root.
+
+```
+yum install -y curl 2>/dev/null
+apt update 2>/dev/null
+apt install -y curl 2>/dev/null
+```
+
+Note: The above three lines would work in a script for both Red Hat based distributions and Debian based distributions.
+
+- Download the script.
+
+```
+curl -L https://bootstrap.saltstack.com -o install_salt.sh
+```
+
+- View the script to make sure the website was not compromised.
+
+```
+less install_salt.sh
+```
+
+- Run the script as root.
+
+```
+sh install_salt.sh -P
+```
+
+```-P``` allows the usage of pip.  ```-M``` is not used like in the master.
+
+- The minion needs the master added to its hosts file.  Update the /etc/hosts file with this command as root.
+
+```
+echo "192.168.50.207 salt" >> /etc/hosts
+```
+
+- Salt is installed.
+
+### Install Through Apt Repository
+
+This is specific to Ubuntu 16.04, but other Debian based distributions can follow this section by modifying addresses when noted.
+
+- Add the key.
+
+```
+wget -O https://repo.saltstack.com/apt/ubuntu/16.04/amd64/latest/SALTSTACK-GPG-KEY.pub | sudo apt-key add -
+```
+
+Note: This key is specifically for Ubuntu 16.04.  Change the address accordingly for a different Debian based distribution or version.
+
+- Add the repsitory to the sources list as root.
+
+```
+echo "deb https://repo.saltstack.com/apt/ubuntu/16.04/amd64/latest xenial main" >> /etc/apt/sources.list.d/saltstack.list
+```
+
+Note: This repo is specifically for Ubuntu 16.04.  Change the address accordingly for a different Debian based distribution or version.
+
+- Update the repositories.
+
+```
+sudo apt update
+```
+
+- Install salt.
+
+```
+sudo apt install -y salt-minion
+```
+
+Note: salt-minion can be replaced with salt-master, salt-ssh, salt-syndic, salt-cloud, or salt-api depending on your use case.
+
+- Salt is installed.
+
+### Install Through Yum Repository
+
+This works for almost all Red Hat based distributions such CentOS, RHEL, Fedora, and Scientific Linux.
+
+- Add the repo as root.
+
+```
+yum install https://repo.saltstack.com/yum/redhat/salt-repo-latest-2.el7.noarch.rpm
+```
+
+- Update yum repositories as root.
+
+```
+yum clean expire-cache
+```
+
+- Install salt.
+
+```
+yum install -y salt-minion
+```
+
+Note: salt-minion can be replaced with salt-master, salt-ssh, salt-syndic, salt-cloud, or salt-api depending on your use case.
+
+- Salt is installed.
+
+## Masterless Configuration
+
+- Install salt-minion with any of the above methods.
+
+- Stop the salt-minion service as root.
+
+```
+systemctl stop salt-minion
+```
+
+- Change the ```file_client``` from the default ```remote``` to ```local``` in the ```/etc/salt/minion``` config file.
+
+```
+sed -i 's/#file_client: remote/file_client: local/' /etc/salt/minion
+```
+
+- Uncomment the ```file_roots``` section below ```file_client```.
+
+```
+sed -i 's/#file_roots:/file_roots:/' /etc/salt/minion
+sed -i 's/#  base:/  base:/' /etc/salt/minion
+sed -i 's/#    - /srv/salt/    - /srv/salt/' /etc/salt/minion
+```
+
+## Key management
+
+- View configured keys as root.
+
+```
+salt-key -L
+```
+
+Note: If you see one extra, the master acts as a minion to itself.
+
+- View the master's public key.
+
+```
+salt-key -F master
+```
+
+- Add the ```master.pub``` key to the ```/etc/salt/minion``` file to pair the master with itself.
+
+```
+sed -i "s/#master_finger: /x27/x27/master_finger: /x27$(salt-key -F master | grep master.pub | cud -d' ' -f3)/x27/" /etc/salt/minion
+```
+
+Note: This same command will not work for minions.  ```\x27``` is an alternative for apostraphe.  ```$(salt-key -F master | grep master.pub | cud -d' ' -f3)``` expands into the public key.
+
+- Restart the salt service as root.
+
+```
+systemctl restart salt-minion
+```
+
+- View fingerprints of available keys as root.
+
+```
+salt-key -F
+```
+
+- Find our local fingerprint as root.
+
+```
+salt-call --local key.finger
+```
+
+- Match the fingerprints from the last two commands.  Copy the hostname.
+
+- Accept the minion id as root.
+
+```
+salt-key -a debian -y
+```
+
+Note: debian is my hostname in my example.

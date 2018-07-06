@@ -9,6 +9,10 @@ Salt is free and open source and licensed under the Apache 2.0 license.
 
 [github](https://github.com/saltstack/salt)
 
+Concepts in this file mostly from the Linux Academy course
+[Using Salt for Configuration Management and Orchestration](https://linuxacademy.com/cp/modules/view/id/190),
+and I made the commands more script friendly with sed.
+
 ## Ports
 
 Minions listens to Master on port 4505.
@@ -113,7 +117,8 @@ sh install_salt.sh -P -M
 
 ```-P``` allows the usage of pip.  ```-M``` configures a master server.
 
-- Salt expects the hostname to be salt.  Update the /etc/hosts file with this command as root.
+- Salt expects the hostname to be salt.  Update the /etc/hosts file with this
+  command as root.
 
 ```
 sed -i 's/127.0.0.1/127.0.0.1 salt /' /etc/hosts
@@ -125,7 +130,8 @@ sed -i 's/127.0.0.1/127.0.0.1 salt /' /etc/hosts
 
 The bootstrap method is most common.
 
-- Install the dependencies ```curl``` and ```python3-pip``` using your package manager as root.
+- Install the dependencies ```curl``` and ```python3-pip``` using your package
+  manager as root.
 
 ```
 yum install -y curl 2>/dev/null
@@ -133,7 +139,8 @@ apt update 2>/dev/null
 apt install -y curl 2>/dev/null
 ```
 
-Note: The above three lines would work in a script for both Red Hat based distributions and Debian based distributions.
+Note: The above three lines would work in a script for both Red Hat based
+distributions and Debian based distributions.
 
 - Download the script.
 
@@ -155,7 +162,8 @@ sh install_salt.sh -P
 
 ```-P``` allows the usage of pip.  ```-M``` is not used like in the master.
 
-- The minion needs the master added to its hosts file.  Update the /etc/hosts file with this command as root.
+- The minion needs the master added to its hosts file.  Update the
+  ```/etc/hosts``` file with this command as root.
 
 ```
 echo "192.168.50.207 salt" >> /etc/hosts
@@ -165,7 +173,8 @@ echo "192.168.50.207 salt" >> /etc/hosts
 
 ### Install Through Apt Repository
 
-This is specific to Ubuntu 16.04, but other Debian based distributions can follow this section by modifying addresses when noted.
+This is specific to Ubuntu 16.04, but other Debian based distributions can
+follow this section by modifying addresses when noted.
 
 - Add the key.
 
@@ -173,7 +182,8 @@ This is specific to Ubuntu 16.04, but other Debian based distributions can follo
 wget -O https://repo.saltstack.com/apt/ubuntu/16.04/amd64/latest/SALTSTACK-GPG-KEY.pub | sudo apt-key add -
 ```
 
-Note: This key is specifically for Ubuntu 16.04.  Change the address accordingly for a different Debian based distribution or version.
+Note: This key is specifically for Ubuntu 16.04.  Change the address accordingly
+for a different Debian based distribution or version.
 
 - Add the repsitory to the sources list as root.
 
@@ -181,7 +191,8 @@ Note: This key is specifically for Ubuntu 16.04.  Change the address accordingly
 echo "deb https://repo.saltstack.com/apt/ubuntu/16.04/amd64/latest xenial main" >> /etc/apt/sources.list.d/saltstack.list
 ```
 
-Note: This repo is specifically for Ubuntu 16.04.  Change the address accordingly for a different Debian based distribution or version.
+Note: This repo is specifically for Ubuntu 16.04.  Change the address
+accordingly for a different Debian based distribution or version.
 
 - Update the repositories.
 
@@ -195,13 +206,15 @@ sudo apt update
 sudo apt install -y salt-minion
 ```
 
-Note: salt-minion can be replaced with salt-master, salt-ssh, salt-syndic, salt-cloud, or salt-api depending on your use case.
+Note: salt-minion can be replaced with salt-master, salt-ssh, salt-syndic,
+salt-cloud, or salt-api depending on your use case.
 
 - Salt is installed.
 
 ### Install Through Yum Repository
 
-This works for almost all Red Hat based distributions such CentOS, RHEL, Fedora, and Scientific Linux.
+This works for almost all Red Hat based distributions such CentOS, RHEL, Fedora,
+and Scientific Linux.
 
 - Add the repo as root.
 
@@ -221,7 +234,8 @@ yum clean expire-cache
 yum install -y salt-minion
 ```
 
-Note: salt-minion can be replaced with salt-master, salt-ssh, salt-syndic, salt-cloud, or salt-api depending on your use case.
+Note: salt-minion can be replaced with salt-master, salt-ssh, salt-syndic,
+salt-cloud, or salt-api depending on your use case.
 
 - Salt is installed.
 
@@ -235,7 +249,8 @@ Note: salt-minion can be replaced with salt-master, salt-ssh, salt-syndic, salt-
 systemctl stop salt-minion
 ```
 
-- Change the ```file_client``` from the default ```remote``` to ```local``` in the ```/etc/salt/minion``` config file.
+- Change the ```file_client``` from the default ```remote``` to ```local``` in
+  the ```/etc/salt/minion``` config file.
 
 ```
 sed -i 's/#file_client: remote/file_client: local/' /etc/salt/minion
@@ -265,13 +280,16 @@ Note: If you see one extra, the master acts as a minion to itself.
 salt-key -F master
 ```
 
-- Add the ```master.pub``` key to the ```/etc/salt/minion``` file to pair the master with itself.
+- Add the ```master.pub``` key to the ```/etc/salt/minion``` file to pair the
+master with itself.
 
 ```
 sed -i "s/#master_finger: /x27/x27/master_finger: /x27$(salt-key -F master | grep master.pub | cud -d' ' -f3)/x27/" /etc/salt/minion
 ```
 
-Note: This same command will not work for minions.  ```\x27``` is an alternative for apostraphe.  ```$(salt-key -F master | grep master.pub | cud -d' ' -f3)``` expands into the public key.
+Note: This same command will not work for minions.  ```\x27``` is an alternative
+for apostraphe.  ```$(salt-key -F master | grep master.pub | cud -d' ' -f3)```
+expands into the public key.
 
 - Restart the salt service as root.
 
@@ -300,3 +318,152 @@ salt-key -a debian -y
 ```
 
 Note: debian is my hostname in my example.
+
+- (Optionally) Accept all keys as root.
+
+```
+salt-key -A -y
+```
+
+- All minions can communicate at this point.
+
+- (Optional) Reject all keys as root.
+
+```
+salt-key -R
+```
+
+## Renaming a minion
+
+- Edit or overwrite the contents of the ```minion_id``` file as root.
+
+```
+echo "newminionname" > /etc/salt/minion_id
+```
+
+- Remove the ```minion.pem``` and ```minion.pub``` keys that are associated with
+  the old minion name from the minion as root.
+
+```
+cd /etc/salt/pki/minion
+rm minion.pem
+rm minion.pub
+```
+
+Alternatively, you could run this command as root:
+
+```
+rm -f /etc/salt/pki/minion/minion.p*
+```
+
+- List the salt keys as root.
+
+```
+salt-key -L
+```
+
+- Remote the old minion key from the salt-master as root.
+
+```
+salt-key -d oldminionidhere
+```
+
+- (Optionally) Remove all of the minion keys from the salt-master as root.
+
+```
+salt-key -D -y
+```
+
+- Verify the keys have been removed.
+
+```
+salt-key -L
+```
+
+- Regenerate minion keys by restarting the salt-minion service as root.
+
+```
+systemctl restart salt-minion
+```
+
+- The keys are now listed as ```Unaccepted keys```.
+
+```
+salt-key -L
+```
+
+- View fingerprints of available keys as root.
+
+```
+salt-key -F
+```
+
+- Find our local minion fingerprint as root.
+
+```
+salt-call --local key.finger
+```
+
+- Match the fingerprints from the last two commands.  Copy the hostname.
+
+- Accept the minion id as root.
+
+```
+salt-key -a debian -y
+```
+
+Note: debian is my hostname in my example.
+
+- (Optionally) Accept all keys as root.
+
+```
+salt-key -A -y
+```
+
+- All minions can communicate at this point.
+
+## Execution modules
+
+Execution modules run an action on many systems at once.
+
+[List of execution modules](https://docs.saltstack.com/en/latest/ref/modules/all/index.html)
+
+[Remote Execution Tutorial](https://docs.saltstack.com/en/latest/topics/tutorials/modules.html)
+
+- Remote execution syntax
+
+```
+salt 'TARGET(S)' FUNCTION ARGUMENTS
+```
+
+- Ping all targets.
+
+```
+salt '*' test.ping
+```
+
+- Echo command
+
+```
+salt '*' test.echo 'This is a test!'
+```
+
+- Run arbitrary commands.
+
+```
+salt '*' cmd.run "whoami" runas=user
+```
+
+Note: ```runas=``` allows you to specify the user that runs the command.
+```root``` is the default and does not require explicitly using ```runas=```.
+
+- Run multiple functions at once.
+
+```
+salt '*' test.ping,test.echo ,'This is a test!'
+```
+
+## Targeting
+
+[Targeting Minions](https://docs.saltstack.com/en/latest/topics/targeting/index.html)
+

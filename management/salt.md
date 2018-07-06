@@ -44,6 +44,7 @@ user:
   user.present:
     - home: /home/user
     - shell: /bin/bash
+```
 
 ## Managing Windows
 
@@ -83,7 +84,6 @@ Here are four methods:
 The bootstrap method is most common.
 
 - Install the dependencies ```curl``` and ```python3-pip``` using your package manager.
-
 
 ```
 yum install -y curl 2>/dev/null

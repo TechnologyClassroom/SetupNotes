@@ -73,6 +73,10 @@ Modules specific to Windows start with ```win_```.
   - In minion config, set ```file_client``` line to ```local```.
   - ```--local``` is not necessary.
   - Good for testing before pushing to production or configuring masters.
+- Agentless
+  - Install the salt-ssh package.
+  - Do not install agents on the minions.
+  - Similar to Ansible or Puppet Bolt.
 
 ## Installing Salt
 
@@ -309,6 +313,9 @@ salt-key -F
 salt-call --local key.finger
 ```
 
+```salt-call --local``` can be used to run nearly any salt command on your local
+machine to test custom configurations.
+
 - Match the fingerprints from the last two commands.  Copy the hostname.
 
 - Accept the minion id as root.
@@ -436,6 +443,8 @@ Execution modules run an action on many systems at once.
 salt 'TARGET(S)' FUNCTION ARGUMENTS
 ```
 
+### test module
+
 - Ping all targets.
 
 ```
@@ -448,6 +457,14 @@ salt '*' test.ping
 salt '*' test.echo 'This is a test!'
 ```
 
+- Run multiple functions at once.
+
+```
+salt '*' test.ping,test.echo ,'This is a test!'
+```
+
+### cmd module
+
 - Run arbitrary commands.
 
 ```
@@ -457,13 +474,100 @@ salt '*' cmd.run "whoami" runas=user
 Note: ```runas=``` allows you to specify the user that runs the command.
 ```root``` is the default and does not require explicitly using ```runas=```.
 
-- Run multiple functions at once.
+- Run which.
 
 ```
-salt '*' test.ping,test.echo ,'This is a test!'
+salt '*' cmd.which "whoami"
+```
+
+- Set vim to use 2 spaces for tabs.
+
+```
+salt 'salt' cmd.run 'echo "set softtabstop=2\nset tabstop=2\nset shiftwidth=2\nset extendtaib\nretab" >> .vimrc' runas=user
+```
+
+From https://linuxacademy.com/cp/courses/lesson/course/1826/lesson/3/completed/2/module/190
+
+### sys module
+
+- List all installed modules on the salt master.
+
+```
+salt 'salt' sys.list_modules
+```
+
+- List all functions of an installed module on the salt master.
+
+```
+salt 'salt' sys.list_functions user
+```
+
+- View documenation for a module.
+
+```
+salt 'salt' sys.doc user
+```
+
+- View documenation for a function.
+
+```
+salt 'salt' sys.doc user.add
+```
+
+### pkg module
+
+- Upgrade all software.
+
+```
+salt '*' pkg.upgrade
+```
+
+- Install a program.
+
+```
+salt '*' pkg.install vim
+```
+
+- Remove a program.
+
+```
+salt '*' pkg.remove vim
 ```
 
 ## Targeting
 
 [Targeting Minions](https://docs.saltstack.com/en/latest/topics/targeting/index.html)
 
+Targets can be identified by:
+
+- Grains
+- Pillars
+- [Nodegroups](https://docs.saltstack.com/en/latest/topics/targeting/nodegroups.html#targeting-nodegroups)
+- minion_id
+- regular expressions
+
+Compound Targeting is the act of using multiple methods of targeting at once.
+
+- Target everything.
+
+```
+salt '*' cmd.run "whoami" runas=user
+```
+
+- Target by minion_id.
+
+```
+salt 'database01' cmd.run "whoami" runas=user
+```
+
+- Target by grain.
+
+```
+salt -G 'os:Ubuntu' cmd.run "whoami" runas=user
+```
+
+- Compound targeting with grains and regular expressions.
+
+```
+salt -C 'G@os:Ubuntu or E@web*' cmd.run "whoami" runas=user
+```

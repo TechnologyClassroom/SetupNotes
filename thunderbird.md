@@ -7,20 +7,22 @@ https://www.mozilla.org/en-US/thunderbird/
 
 ## Add-ons
 
+- TT DeepDark - Elegant dark theme for Thunderbird based on FF DeepDark.  In my
+  opinion this is easier on the eyes.
+  https://addons.mozilla.org/en-US/thunderbird/addon/tt-deepdark/
 - QuickText - Quickly retrieve your commonly used text blocks with a keystroke.
   I often copy and paste blocks of text for my work.
   https://addons.mozilla.org/en-US/thunderbird/addon/quicktext/
-- Markdown Here - Write emails in markdown and convert before sending. 
-  https://addons.mozilla.org/en-US/thunderbird/addon/markdown-here-xul/
 - Send Later - Queue emails to send at reasonable, professional hours with Send
   Later.  Alternative to "Boomerang for Gmail" without giving your login details
   to strangers.
   https://addons.mozilla.org/en-US/thunderbird/addon/send-later-3/
 - EnigMail - Adds encryption options to Thunderbird
   https://addons.mozilla.org/en-US/thunderbird/addon/enigmail/
-- TT DeepDark - Elegant dark theme for Thunderbird based on FF DeepDark.  In my
-  opinion this is easier on the eyes.
-  https://addons.mozilla.org/en-US/thunderbird/addon/tt-deepdark/
+- Paranoia - Shows who read your email in transit.
+  https://addons.mozilla.org/en-US/thunderbird/addon/paranoia/
+- Markdown Here - Write emails in markdown and convert before sending. 
+  https://addons.mozilla.org/en-US/thunderbird/addon/markdown-here-xul/
 - ThunderHTMLEdit - Adds the ability to edit the html of an email directly in
   the compose window.
   https://addons.mozilla.org/en-US/thunderbird/addon/thunderhtmledit/

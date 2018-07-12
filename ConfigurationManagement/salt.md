@@ -497,6 +497,14 @@ salt 'salt' cmd.run 'echo "set softtabstop=2\nset tabstop=2\nset shiftwidth=2\ns
 
 From https://linuxacademy.com/cp/courses/lesson/course/1826/lesson/3/completed/2/module/190
 
+### grain module
+
+- List the operating systems in use on your minions.
+
+```
+salt '*' grains.fetch os_family 
+```
+
 ### sys module
 
 - List all installed modules on the salt master.
@@ -845,6 +853,113 @@ apache_restart:
       - apache_configuration
 ```
 
-## Templating
+## Templating with Jinja
+
+[Getting Started: Jinja](https://docs.saltstack.com/en/getstarted/config/jinja.html)
+
+[Doc: Jinja](https://docs.saltstack.com/en/latest/topics/jinja/index.html)
+
+Jinja is the default templating language.  Jinja is interpreted before YAML.
+Jinja is easily recognizable and encased in ```{{ }}``` or ```{% %}``` pairs.
+
+Templating is useful when systems contain predicatable differences such as a
+package has a different name across operating systems.
 
 [Linuxacademy apache example repo](https://github.com/linuxacademy/using-salt-apache)
+
+- Inline apache example
+
+The inline method is simple to comprehend, but becomes messy quickly.
+
+The apache package is named differently on Red Hat based distributions and
+Debian based distributions.  This can be solved with Jinja.
+
+The ```/srv/salt/apache/init.sls``` file could look like this:
+
+```
+apache_install:
+  pkg_installed:
+    {% if grains['os_family'] == 'Debian' %}
+    - name: apache2
+    {% elif grains['os_family'] == 'RedHat' %}
+    - name: httpd
+    {% endif%}
+  service.running:
+    {% if grains['os_family'] == 'Debian' %}
+    - name: apache2
+    {% elif grains['os_family'] == 'RedHat' %}
+    - name: httpd
+    {% endif%}
+    - enable: true
+```
+
+- Header method apache example
+
+With the header method, all of the Jinja is at the top of the sls file and the
+rest of the file references the header.  This is not ideal when variables will
+be reused in multiple files.
+
+The ```/srv/salt/apache/init.sls``` file could look like this:
+
+```
+{% set apache = salt['grains.filter_by']({
+'Debian': { 'package': 'apache2' },
+'RedHat': { 'package': 'httpd' }
+}) %}
+
+apache_install:
+  pkg_installed:
+    - name: {{ apache.package }}
+  service.running:
+    - name: {{ apache.package }}
+    - enable: true
+```
+
+- Map for an entire formula apache example
+
+Create a map.jinja file.  The ```/srv/salt/apache/map.jinja``` file could look
+like
+[this example](https://github.com/linuxacademy/using-salt-apache/blob/master/map.jinja).
+
+The header from the previous example can then be replaced with a smaller header
+for all files that within the formula that can reuse the variables:
+
+```
+{% from "apache/map.jinja" import apache with context %}
+```
+
+## Code Style and Linting
+
+[Doc: Code Style](https://docs.saltstack.com/en/latest/topics/development/conventions/style.html)
+
+When adding to salt's python stack, you can lint with ```saltpylint```.
+
+- A great way to test code is with the ```test=true``` argument.
+
+- Install ```saltpylint``` with pip as root.
+
+```
+pip3 install pylint
+pip3 install saltpylint
+```
+
+- Salt's python code style varies from pep8 so the flake8 linter will have errors.
+```~/.config/flake8``` should look like this to avoid the conflict:
+
+```
+[flake8]
+ignore = E226,E241,E242,E126
+```
+
+- [johanek's salt-lint](https://github.com/johanek/salt-lint)
+
+- [lukaszraczylo's salt-lint](https://github.com/lukaszraczylo/salt-lint)
+
+- [atom-salt](https://github.com/saltstack/atom-salt) linter for atom
+
+- [willthame's ansible-lint](https://github.com/willthames/ansible-lint).  Since
+  SaltStack and Ansible both use YAML and Jinja, you can try linting with
+  linters geared towards Ansible.  [pip](https://pypi.org/project/ansible-lint/)
+
+- [mschucard's linter-ansible-linting](https://github.com/mschuchard/linter-ansible-linting)
+  for atom

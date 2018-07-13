@@ -893,6 +893,9 @@ apache_install:
     - enable: true
 ```
 
+Note: ```if``` statements can be used on entire sections of YAML instead of only
+single lines.
+
 - Header method apache example
 
 With the header method, all of the Jinja is at the top of the sls file and the
@@ -927,6 +930,61 @@ for all files that within the formula that can reuse the variables:
 ```
 {% from "apache/map.jinja" import apache with context %}
 ```
+
+Variables are used the same way as before with the ```{{ formula.variable }}```
+format.
+
+Note: This also works with configuration files.
+
+## Pillar
+
+[Doc: Pillar](https://docs.saltstack.com/en/latest/topics/pillar/)
+
+[Linuxacademy mysql example repo](https://github.com/linuxacademy/using-salt-mysql)
+
+The default pillar root is the ```/srv/pillar``` directory.
+
+Pillar uses ```top.sls``` and ```.sls``` files to similar to salt states.
+
+- Call a Pillar variable with this syntax:
+
+```
+{{ pillar['formula']['function']['variable'] }}
+```
+
+##  Encrypting Pillar Variables
+
+Variable can be encrypted using gpg
+
+Pillar is only visable to the master and the minions.
+
+- Create a gpgkeys directory as root.
+
+```
+mkdir /etc/salt/gpgkeys
+```
+
+Note: This is not the ```/srv/salt/gpgkeys``` directory.
+
+- Change the permissions for the folder as root.
+
+```
+chmod 700 /etc/salt/gpgkeys
+```
+
+- Create a gpg key for salt.
+
+Interactively method as root.
+
+```
+gpg --homedir /etc/salt/gpgkeys --gen-key 
+```
+
+Note: Do not set a password on the gpg key.
+
+Automated method as root.
+
+```--batch``` and a batch file can be used to pass the choices to ```gpg```.
 
 ## Code Style and Linting
 
@@ -963,3 +1021,11 @@ ignore = E226,E241,E242,E126
 
 - [mschucard's linter-ansible-linting](https://github.com/mschuchard/linter-ansible-linting)
   for atom
+
+## Best Practices
+
+[Doc: Best Practices](https://docs.saltstack.com/en/latest/topics/best_practices.html)
+
+The best practices revolve around modularity and clarity.  Everthing should be
+modular so that different machines can pull only what they need.  Everything
+should be clearly stated to increase readability and reuse.

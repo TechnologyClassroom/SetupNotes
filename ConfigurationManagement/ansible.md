@@ -11,7 +11,7 @@ Ansible Tower.
 ## Install Ansible
 
 Install the latest ansible with pip on Debian 9 that will control the other
-machines.
+machines as root.
 
 ```
 apt update
@@ -19,6 +19,14 @@ apt install -y python3-pip
 apt install -y openssh-client
 pip3 install ansible
 ```
+
+If ansible is already installed, update ansible as root.
+
+```
+pip3 install -U ansible
+```
+
+## Install dependencies on clients
 
 All of the clients need openssh-server.
 
@@ -28,6 +36,9 @@ apt install -y openssh-server
 systemctl start ssh.service
 systemctl enable ssh.service
 ```
+
+The clients also need python which is included by default on most major
+distributions.
 
 ## Establishing initial SSH connections
 
@@ -279,6 +290,12 @@ From http://docs.ansible.com/ansible/latest/modules/yum_module.html
 
 ## More modules
 
+List the installed modules.
+
+```
+ansible-doc -l
+```
+
 See the links section below for more modules.
 
 ## Managing Windows systems
@@ -390,7 +407,17 @@ Run a series of roles from a playbook by defining the roles in a play.
 - [Inventory](http://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html)
 - [modules](http://docs.ansible.com/ansible/devel/user_guide/modules_intro.html)
   - [Modules by Category](http://docs.ansible.com/ansible/devel/modules/modules_by_category.html)
-  - [Command modules]()
+  - [Cloud modules](https://docs.ansible.com/ansible/latest/modules/list_of_cloud_modules.html)
+    - [digital_ocean](https://docs.ansible.com/ansible/latest/modules/digital_ocean_module.html)
+
+digital_oceans depends upon dopy.  dopy 0.3.7 is broken and 0.3.5 must be used
+as of 20180808.
+
+```
+sudo pip install 'dopy>=0.3.5,<=0.3.5'
+```
+
+  - [Command modules](https://docs.ansible.com/ansible/latest/modules/list_of_commands_modules.html)
     - [command](http://docs.ansible.com/ansible/devel/modules/command_module.html)
     - [expect](http://docs.ansible.com/ansible/devel/modules/expect_module.html)
     - [script](http://docs.ansible.com/ansible/devel/plugins/inventory/script.html)

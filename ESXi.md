@@ -381,3 +381,104 @@ Disable SSH
 
 Intel Ethernet Converged Network Adapter X710-DA4 does not work with v6.0 U2 and
 does work with v6.5.
+
+## Installing VMware vSphere Perl SDK on Ubuntu
+
+https://code.vmware.com/web/sdk/67/vsphere-perl
+
+The site says, "The vSphere Perl SDK targets the development of Perl
+applications that access the vSphere platform. The SDK exposes the vSphere Perl
+APIs that are created as a Perl binding for the vSphere Web Services APIs."
+
+- Make an account and download the sdk using the above link.
+
+I downloaded VMware-vSphere-Perl-SDK-6.7.0-8156551.x86_64.tar.gz and there might
+be a new version.
+
+- Extract the file.
+
+```
+tar zxvf VMware-vSphere-Perl-SDK-6.7.0-8156551.x86_64.tar.gz
+```
+
+- Change directories.
+
+```
+cd vmware-vsphere-cli-distrib
+```
+
+- Install dependencies.
+
+```
+sudo apt update
+sudo apt-get install -y libxml2-dev
+```
+
+- Run the installer.
+
+```
+sudo ./vmware-install.pl
+```
+
+Press enter, q, yes, yes to get through the menu.  This can be automated with
+heredocs in a bash script.
+
+## Find the moid of your VM
+
+- Install the Perl SDK from the previous section.
+
+- Download the VirtuallyGhetto scripts.
+
+[VirtuallyGhetto](https://www.virtuallyghetto.com/) is William Lam's blog about
+VMware, ESXi, and cloud automation.
+
+```
+git clone https://github.com/lamw/vghetto-scripts
+```
+
+- Change directory.
+
+```
+cd vghetto-scripts/perl
+```
+
+- Run the script.
+
+```
+./moRefFinder.pl --name VM-NAME-HERE --type vm --server ESXI-SERVER-IP-ADDRESS-HERE --username root --password ESXI-SERVER-PASSWORD-HERE
+```
+
+- The output should tell you the moid.
+
+```
+EntityName: VM-NAME-HERE         MoRefID: 2
+```
+
+## Login to VM with vmrc
+
+- Find the moid using the previous two sections.
+
+- Download vmrc.
+
+https://www.vmware.com/go/download-vmrc
+
+I used VMware-Remote-Console-10.0.3-9300449.x86_64.bundle at the time of this
+writing.  The file is a plaintext bash script.
+
+- Install vmrc.
+
+```
+sudo bash VMware-Remote-Console-10.0.3-9300449.x86_64.bundle
+```
+
+- Connect to the VM that is already running.
+
+```
+vmrc --moid=2 --host=ESXI-SERVER-IP-ADDRESS-HERE --user=root --password=ESXI-SERVER-PASSWORD-HERE
+```
+
+Note: Change moid to the number from the previous section.
+
+Note: I installed proprietary software in the last three sections because the
+web portal in ESXi 6.7 could not send CTRL+ALT+DEL to the host system through
+the browser.

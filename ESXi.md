@@ -14,22 +14,19 @@ and
 If you see I have made a mistake or know of a better way of doing things, add an
 issue to the SetupNotes repository or send me an email.
 
-Official documentation: https://www.vmware.com/support/vsphere-hypervisor.html
+[Official documentation](https://www.vmware.com/support/vsphere-hypervisor.html)
 
-v6.5 documentation:
-https://www.vmware.com/support/pubs/vsphere-esxi-vcenter-server-6-pubs.html
+[v6.5 documentation](https://www.vmware.com/support/pubs/vsphere-esxi-vcenter-server-6-pubs.html)
 
-v6.0 documentation: http://pubs.vmware.com/vsphere-60/index.jsp
+[v6.0 documentation](http://pubs.vmware.com/vsphere-60/index.jsp)
 
-Hardware Compatibility:
-https://www.vmware.com/resources/compatibility/search.php
+[Hardware Compatibility](https://www.vmware.com/resources/compatibility/search.php)
 
-Product Compatibility and Interoperability Matrixes:
-http://partnerweb.vmware.com/comp_guide2/sim/interop_matrix.php
+[Product Compatibility and Interoperability Matrixes](http://partnerweb.vmware.com/comp_guide2/sim/interop_matrix.php)
 
-Download (free account required): http://www.vmware.com/go/get-free-esxi
+[Download (free account required)](http://www.vmware.com/go/get-free-esxi)
 
-Note: At the time of this writing, only 6.5 can be downloaded with a free
+Note: At the time of this writing, only the latest iso can be downloaded with a free
 account.  In January 2017, every available version could be downloaded with a
 free account.
 
@@ -322,7 +319,7 @@ Unlike LSI drivers for all other operating systems, LSI drivers must be
 downloaded from the vmware page.  A free login is required.  Here is a search
 link to start your search:
 
-https://www.vmware.com/search.html#/?q=lsi%20driver&client=VMware_Site_1&num=20&filter=0&site=(VMware_Site_support_and_downloads)&ie=UTF-8&oe=UTF-8&getfields=*&partialfields=&requiredfields=&entqr=0&start=0&sort=&tlen=200&numgm=3&cn=vmware&cc=en&cid=&tid=&stype=main
+https://my.vmware.com/group/vmware/searchresults#site=my_download&client=my_download&getfields=*&output=xml_no_dtd&filter=0&proxyreload=1&proxystylesheet=my_download_en&sort=date:D:S:d1&num=10&entqr=3&q=SAS+Driver+for+Avago+MegaRAID&dscaf=__&requiredfields=dsca_lang:en&ie=UTF-8&ulang=en&ip=198.0.155.97&access=p&entqrm=0&wc=200&wc_mc=1&oe=UTF-8&ud=1&start=10
 
 - Once you have the package for your version, extract the vib file from the
 archive onto your local machine.

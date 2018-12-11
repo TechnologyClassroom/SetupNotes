@@ -19,6 +19,10 @@ not work, but may work in the future or with a legacy build.
   websites.  This is very useful for slow Internet connections and preparing for
   presentations.
   https://addons.mozilla.org/en-US/firefox/addon/video-downloadhelper/
+- LibreJS - Actively control the licenses and freedom of your JavaScript while
+  browsing.  See [The JavaScript Trap](https://www.gnu.org/philosophy/javascript-trap.en.html)
+  for more information.
+  https://addons.mozilla.org/en-US/firefox/addon/librejs/
 - uMatrix allows you to control the content of your browser.  This will break
   website functionality until properly configured.
   https://addons.mozilla.org/en-US/firefox/addon/umatrix/

@@ -11,10 +11,6 @@ Source code: https://hg.mozilla.org/mozilla-central/
 Extensions have significantly changed since Firefox Quantum.  Some of these may
 not work, but may work in the future or with a legacy build.
 
-- DownThemAll - If you have a list of links to files, DTA helps you download all
-  of them with a few clicks.
-  https://addons.mozilla.org/en-US/firefox/addon/downthemall/
-  https://addons.mozilla.org/en-US/firefox/addon/downthemall-anticontainer/
 - Video Downloadhelper allows you to download streaming videos from popular
   websites.  This is very useful for slow Internet connections and preparing for
   presentations.
@@ -37,11 +33,17 @@ not work, but may work in the future or with a legacy build.
   https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/
 - HTTPS Everywhere defaults to using the https version of a website
   https://www.eff.org/https-everywhere
-- FT DeepDark is a dark theme for Firefox.
-  https://addons.mozilla.org/en-US/firefox/addon/ft-deepdark/
 - Dark background light text is a dark theme for webpages.  This will break
   website functionality.
   https://addons.mozilla.org/en-US/firefox/addon/dark-background-light-text/
+- DownThemAll (Not available for Firefox Quantum yet) - If you have a list of
+  links to files, DTA helps you download all of them with a few clicks.
+  https://addons.mozilla.org/en-US/firefox/addon/downthemall/
+  https://addons.mozilla.org/en-US/firefox/addon/downthemall-anticontainer/
+- FT DeepDark (Not available for Firefox Quantum yet) is a dark theme for
+  Firefox.
+  https://addons.mozilla.org/en-US/firefox/addon/ft-deepdark/
+  A dark theme is now installed by default and can be enabled through settings.
 
 ## Troubleshooting
 

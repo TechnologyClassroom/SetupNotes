@@ -1,9 +1,11 @@
-# Thunderbird notes
+# Thunderbird/Icedove notes
 
-Mozilla Thunderbird is a great free and open source email program and works for
-GNU/Linux, Mac, and Windows.
+Mozilla Thunderbird or Icedove is a great free and open source email program and
+works for GNU/Linux, Mac, and Windows.
 
 https://www.mozilla.org/en-US/thunderbird/
+
+https://wiki.debian.org/Icedove
 
 ## Add-ons
 
@@ -27,6 +29,17 @@ https://www.mozilla.org/en-US/thunderbird/
   the compose window.
   https://addons.mozilla.org/en-US/thunderbird/addon/thunderhtmledit/
 
+## Adding an email signature
+
+- Menu Icon (Sandwich) > Hover over the arrow to the right of Preferences >
+  Account Settings
+- Click on the email address in the left side to bring up the options for that
+  address.
+- In the `Signature test:` box add your email signature.
+- Repeat the last two steps for any other email addresses you may want to
+  configure.
+- Click on the `OK` button.
+
 ## Remove the dashes before your email signature
 
 From https://support.mozilla.org/en-US/questions/1019583
@@ -47,8 +60,8 @@ From http://www.pctips4u.com/2016/10/add-email-signature-above-quoted-text.html
 
 - Menu Icon (Sandwich) > Preferences > Account Settings > Composition &
   Addressing
-- Use the pull down box to change: ```[...] and place my signature: below the
-  quote (recommended)``` to ```below my reply (above the quote)```
+- Use the ```[...] and place my signature:``` pull down box to change: ```below
+  the quote (recommended)``` to ```below my reply (above the quote)```
 - Click on the "OK" button to save changes.
 
 ## Open links in the browser of your choice

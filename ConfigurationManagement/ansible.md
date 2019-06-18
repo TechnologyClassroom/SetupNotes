@@ -98,7 +98,7 @@ Group names should be descriptive of their defined goal.  Machines can be in
 multiple groups.  Some common group name examples are dev, prod, webservers,
 database, compute, cluster, and client.
 
-Variables can be held in the hosts file or in a separate group_vars folder. 
+Variables can be held in the hosts file or in a separate group_vars folder.
 
 ```
 [database]
@@ -147,7 +147,7 @@ ansible group -i hostsfile -m module -a arguments -u username
 The all group is built into ansible and sends the task to every host listed in
 the hosts file.
 
-Test a connection to hosts with the ping module.  
+Test a connection to hosts with the ping module.
 
 ```
 ansible all -i hosts -m ping -u user
@@ -384,7 +384,7 @@ Run a series of roles from a playbook by defining the roles in a play.
 - hosts: client
   sudo: yes
   serial: 7
- 
+
   pre_tasks:
     - name: Description of task
     - command: ledctl locate=/dev/sda
@@ -399,7 +399,7 @@ Run a series of roles from a playbook by defining the roles in a play.
 
   post_tasks:
     -
-```	
+```
 
 ## Links
 
@@ -505,7 +505,7 @@ sudo pip install 'dopy>=0.3.5,<=0.3.5'
     - [user](http://docs.ansible.com/ansible/devel/modules/user_module.html) can
       create and modify users.
   - [Utility modules](http://docs.ansible.com/ansible/devel/modules/list_of_utilities_modules.html)
-    - [debug](http://docs.ansible.com/ansible/latest/modules/debug_module.html
+    - [debug](http://docs.ansible.com/ansible/latest/modules/debug_module.html)
     - [fail](http://docs.ansible.com/ansible/devel/modules/fail_module.html)
     - [pause](http://docs.ansible.com/ansible/devel/modules/pause_module.html)
     - [set_fact](http://docs.ansible.com/ansible/devel/modules/set_fact_module.html)
@@ -538,14 +538,14 @@ sudo pip install 'dopy>=0.3.5,<=0.3.5'
 - [become](http://docs.ansible.com/ansible/devel/user_guide/become.html)
 - [YAML Syntax](http://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html#yaml-syntax)
 
-Ansible Github
+### Ansible Github
 - [ansible](https://github.com/ansible/ansible)
 - [ansible-examples](https://github.com/ansible/ansible-examples) - examples and
   best practices for building Ansible Playbooks.
 - [ansible-modules-core](https://github.com/ansible/ansible-modules-core)
 - [galaxy](https://github.com/ansible/galaxy)
 
-Tutorials and third-party examples
+### Tutorials and third-party examples
 - https://www.youtube.com/watch?v=ZNB1at8mJWY
 - https://github.com/geerlingguy/raspberry-pi-dramble
 - https://github.com/geerlingguy/ansible-vagrant-examples
@@ -557,6 +557,6 @@ Tutorials and third-party examples
 - https://github.com/bertvv/ansible-role-pxeserver
 - https://github.com/PacktPublishing/OpenStack-Administration-with-Ansible-2
 
-Linters
+### Linters
 - [ansible-lint](https://github.com/willthames/ansible-lint)
 - [yaml-lint](https://github.com/rasshofer/yaml-lint)

@@ -572,3 +572,7 @@ sudo sed -i 's|^exit 0.*$|# Numlock enable\n[ -x /usr/bin/numlockx ] \&\& numloc
 ```
 
 https://help.ubuntu.com/community/NumLock
+
+Problem: This message appears when you login to a server: `-bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)`
+
+Solution: Run this command `locale-gen en_US.UTF-8` as root.

@@ -10,7 +10,7 @@ Another practical use case: An intern wanted to see an upgrade process.  Schedul
 
 ## Install
 
-Install with apt:
+Install with apt on Debian based operating systems:
 
     sudo apt update && sudo apt install -y asciinema
 

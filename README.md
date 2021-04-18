@@ -23,6 +23,9 @@ changes.  I then document that process.
 Months later when I have forgotten the process, I can can look at my notes
 instead of restarting over again at the research phase.
 
+If you like what I am doing here and found some of this advice useful, consider
+supporting me through [LibrePay](https://liberapay.com/technologyclassroom/).
+
 These are **some of** my notes.
  
 - [os/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/os) - Operating Systems
@@ -50,3 +53,5 @@ These are **some of** my notes.
   - [thunderbird.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/programs/thunderbird.md)
   - [tmux.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/programs/tmux.md)
   - [web-browsers/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/programs/web-browsers)
+
+Note: I reorganized several directories so I may have broken some links if you have bookmarked any of my pages.

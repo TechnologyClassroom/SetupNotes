@@ -194,7 +194,7 @@ rm .bash_history
 history -c
 ```
 
-## [Ubuntu 17.10 Server networking](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/UbuntuServer.md#ubuntu-1710-server-networking)
+## [Ubuntu 17.10 Server networking](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/UbuntuServer.md#ubuntu-1710-server-networking)
 
 The workflow for Ubuntu Server networking has changed on 17.10 because it now
 uses netplan.  Instead of changing the /etc/network/interfaces file, we change

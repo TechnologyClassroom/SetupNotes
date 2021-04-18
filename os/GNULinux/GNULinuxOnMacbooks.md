@@ -1,6 +1,10 @@
-# [Notes on dual-booting GNU/Linux on Macbook 2009](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#notes-on-dual-booting-gnulinux-on-macbook-2009)
+# [Notes on dual-booting GNU/Linux on Macbook 2009](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinuxOnMacbooks.md#notes-on-dual-booting-gnulinux-on-macbook-2009)
 
 Michael McMahon
+
+Note: Some of these old Macbooks are supported by
+[LibreBoot](https://libreboot.org/docs/hardware/).  LibreBoot is more complex
+than this guide but would have a more secure end result.
 
 Rewrite/update based on Peter Upfold's article
 https://fosswire.com/post/2009/03/how-to-ubuntu-810-on-white-macbook/
@@ -12,16 +16,16 @@ if you want to increase the productivity of your Mac.
 
 I have only tested this on white macbooks from 2009 with Mac OS X 10.6.8.
 
-## [Table of Contents](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#table-of-contents)
-* [Configuring the original Mac OS X 10.6.8](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#configuring-the-original-mac-os-x-1068)
-* [Shrink your Mac installation to make room for GNU/Linux](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#shrink-your-mac-installation-to-make-room-for-gnulinux)
-* [Download and Install rEFIt](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#download-and-install-refit)
-* [Create a liveDVD or liveUSB with a GNU/Linux ISO](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#create-a-livedvd-or-liveusb-with-a-gnulinux-iso)
-* [Install GNU/Linux](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#install-gnulinux)
-* [If the grub installation fails, use Boot-Repair](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#if-the-grub-installation-fails-use-boot-repair)
-* [Configure Ubuntu Studio](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#configuring-ubuntu-studio)
+## [Table of Contents](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinuxOnMacbooks.md#table-of-contents)
+* [Configuring the original Mac OS X 10.6.8](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinuxOnMacbooks.md#configuring-the-original-mac-os-x-1068)
+* [Shrink your Mac installation to make room for GNU/Linux](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinuxOnMacbooks.md#shrink-your-mac-installation-to-make-room-for-gnulinux)
+* [Download and Install rEFIt](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinuxOnMacbooks.md#download-and-install-refit)
+* [Create a liveDVD or liveUSB with a GNU/Linux ISO](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinuxOnMacbooks.md#create-a-livedvd-or-liveusb-with-a-gnulinux-iso)
+* [Install GNU/Linux](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinuxOnMacbooks.md#install-gnulinux)
+* [If the grub installation fails, use Boot-Repair](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinuxOnMacbooks.md#if-the-grub-installation-fails-use-boot-repair)
+* [Configure Ubuntu Studio](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinuxOnMacbooks.md#configuring-ubuntu-studio)
 
-## [Configuring the original Mac OS X 10.6.8](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#configuring-the-original-mac-os-x-1068)
+## [Configuring the original Mac OS X 10.6.8](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinuxOnMacbooks.md#configuring-the-original-mac-os-x-1068)
 
 Skip this section if you have already setup your Mac for the first time.  The
 Macs I tested this on had never been used before.
@@ -74,7 +78,7 @@ more settings optimization in System Preferences.
 	* Click the < arrow at the top left.
   * Click the red X at the top left to close System Preferences.
 
-# [Shrink your Mac installation to make room for GNU/Linux](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#shrink-your-mac-installation-to-make-room-for-gnulinux)
+# [Shrink your Mac installation to make room for GNU/Linux](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinuxOnMacbooks.md#shrink-your-mac-installation-to-make-room-for-gnulinux)
 
 * Boot Camp Assistant
   * Click on the magnifying glass in the top right.
@@ -97,7 +101,7 @@ more settings optimization in System Preferences.
      with the terminal command: df -h
   * Click on "Quit and Install Later" because we are not installing Windows.
 
-## [Download and install rEFIt](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#download-and-install-refit)
+## [Download and install rEFIt](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinuxOnMacbooks.md#download-and-install-refit)
 
 * rEFIt
   * Download the Mac disc image of rEFInd from
@@ -111,16 +115,16 @@ more settings optimization in System Preferences.
   * Enter your admin password > OK
   * Close
   
-## [Create a liveDVD or liveUSB with a GNU/Linux ISO](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#create-a-livedvd-or-liveusb-with-a-gnulinux-iso)
+## [Create a liveDVD or liveUSB with a GNU/Linux ISO](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinuxOnMacbooks.md#create-a-livedvd-or-liveusb-with-a-gnulinux-iso)
 
-## [Shut Down the Mac](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#shut-down-the-mac)
+## [Shut Down the Mac](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinuxOnMacbooks.md#shut-down-the-mac)
 
 * Shut Down
   * Click on the Apple icon in the top left
   * Shut Down...
   * Shut Down
 
-## [Install GNU/Linux](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#install-gnulinux)
+## [Install GNU/Linux](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinuxOnMacbooks.md#install-gnulinux)
 * Insert a liveUSB or liveDVD with GNU/Linux installed.  I am using Ubuntu
   Studio 16.04 64 bit on a DVD.
 * Press the power button.
@@ -166,7 +170,7 @@ more settings optimization in System Preferences.
 * Continue
 * Wait a long time for the system to be installed.
 
-## [If the grub installation fails, use Boot-Repair](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#if-the-grub-installation-fails-use-boot-repair)
+## [If the grub installation fails, use Boot-Repair](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinuxOnMacbooks.md#if-the-grub-installation-fails-use-boot-repair)
 Due to a bug in the ubiquity installer, it may read "GRUB installation failed
 The 'grub-efi-amd64-signed' package failed to install into /target/. Without the
 GRUB boot loader, the installed system will not boot." That is serious, but do
@@ -210,14 +214,14 @@ sudo apt-get install -y boot-repair
      you have completed each action.  When I ran the Boot-Repair, I ran 3
      commands, Forward, 1 command, Forward, No, OK, and I closed the logfile.
 
-## [Shut Down the liveDVD or liveUSB](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#shut-down-the-livedvd-or-liveusb)
+## [Shut Down the liveDVD or liveUSB](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinuxOnMacbooks.md#shut-down-the-livedvd-or-liveusb)
 
 * Click on the Ubuntu Studio icon in the top left.
 * Click on the power icon in the drop down menu.
 * Click on the "Shut Down" button.  If you are using a DVD, it will eject and
   ask you to press the enter key.
 
-## [Configuring Ubuntu Studio](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#configuring-ubuntu-studio)
+## [Configuring Ubuntu Studio](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinuxOnMacbooks.md#configuring-ubuntu-studio)
 
 * Connect to the Internet through an ethernet wire or through a wifi device that
   is supported by the Linux kernel.
@@ -274,7 +278,7 @@ sudo sh InstallProcessing.sh
 
 * Configure browser preferences
 
-## [Add right click buttons](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md#add-right-click-buttons)
+## [Add right click buttons](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinuxOnMacbooks.md#add-right-click-buttons)
 
 The white macbook I used did not have a right click.  This limits what you can
 do with a GUI environment.

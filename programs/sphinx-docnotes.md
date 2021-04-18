@@ -3,6 +3,11 @@
 sphinx-doc is a way to write ebooks, documentation, or websites once and export
 to your desired output.  Exported formats include epub, html, pdf, etc.
 
+Also checkout my other repository
+[publishing-workshop](https://github.com/TechnologyClassroom/publishing-workshop)
+which is a simple skeleton for self-publishing with sphinx that I used in a
+small presentation.
+
 ## Creating a new sphinx-doc project
 
 Install sphinx-doc according to their documentation.  Open a terminal.  Navigate

@@ -6,6 +6,9 @@ Michael McMahon
 Minecraft or other voxel games.  This engine can run a variety of games called
 [subgames](https://wiki.minetest.net/Subgames).
 
+Note: Minecraft 4 and Minecraft 5 are incompatible.  If using multiplayer, the
+client version must match the server version.
+
 ## Teaching computer science
 
 The engine is written in C++, but knowing C++ is not necessary to mod the game.
@@ -23,13 +26,16 @@ documents folder, anyone can mod the game without admin rights.
   in under a minute.  Tears follow.  Regular backup plans help mitigate this,
   but deleting tnt is easiest.  The benefits of having tnt are heavily shadowed
   by the drawbacks.
+- Consider removing lava for a similar reason.  Not as simple to do.
 - Multiplayer servers include chatting with strangers.  Block the public
   servers.  I include this functionality in the
-  https://github.com/bluehillbgcb/hosts project.  It can also be modified
+  https://github.com/technologyclassroom/hosts project.  It can also be modified
   through the minetest/builtin/ lua files.  I do not remember what I changed to
   make that happen, sorry.
 - The main menus can be modified to remove the delete world button.  This saves
   tears laters.
+- Rename `/killme` command to `/spawn`.
+- Disable PvP.
 
 The file minetest/builtin/mainmenu/tab_singleplayer.lua is the menu for
 singleplayer.
@@ -82,14 +88,22 @@ to this:
 
 ## Subgames to start with:
 
+- [MineClone 2](https://git.minetest.land/MineClone2/MineClone2) - An addictive attempt at recreating a popular proprietary game that is similar to Minetest.  Includes achievements, mobs, experience, etc.
+- [Minetest game](https://content.minetest.net/packages/Minetest/minetest_game/) - The default barebones game.  This is not very exciting, but a great starting point if you are building your own subgame.
+- [Dreambuilder](https://content.minetest.net/packages/VanessaE/dreambuilder_game/) - Comes packed with lots of building materials
+
+Older subgames:
+
 - Carbone - Comes action packed with monsters and excellent mods
-- Dreambuilder - Comes packed with lots of building materials
 - Moontest - Start on the moon!  Warning You will suffocate without a spacesuit.
 
 ## Mods to look for:
 
 - [Blockly Minetest](https://devel.trisquel.info/ruben/blockly-minetest) - adds
   a python and blockly api to build blocks with code.
+- Technic - Adds tools that greatly enhance single player such as drills,
+  chainsaws, and drilling lazers.  Add machines that must be powered by coal,
+  solar, etc.
 - [protector](https://forum.minetest.net/viewtopic.php?id=4212) - adds
   protection blocks.  This prevents your house from being destroyed or looted.
   Kids can be mean and this helps curb this.  Protection blocks can be added to

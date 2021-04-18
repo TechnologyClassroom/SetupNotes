@@ -2,13 +2,13 @@
 
 Michael McMahon
 
-- [arch.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/arch.md)
+- [arch.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/arch.md)
   is a helpful rundown to set you in the right direction with Arch and Parabola.
-- [GNULinux.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinux.md)
+- [GNULinux.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinux.md)
   is a general set of notes.
-- [GNULinuxOnMacbooks.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/GNULinuxOnMacbooks.md)
+- [GNULinuxOnMacbooks.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinuxOnMacbooks.md)
   is a detailed set of instructions for dual booting an old Macbook.
-- [UbuntuServer.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/GNULinux/UbuntuServer.md)
+- [UbuntuServer.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/UbuntuServer.md)
   is instructions for configuring Ubuntu Server.
 
 ## Todo

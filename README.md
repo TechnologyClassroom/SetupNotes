@@ -35,13 +35,11 @@ These are **some of** my notes.
     - [android.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/mobile/android.md)
         install instructions for dual-booting a white Macbook from 2009
   - [Chromebook.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/Chromebook.md)
+  - [PXE](https://github.com/TechnologyClassroom/PXE)
   - [Windows.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/Windows.md)
   - [Apple/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/os/Apple)
   - [BSD/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/os/BSD)
   - [ESXi.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/ESXi.md)
-  - [PXEchain.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/PXEchain.md)
-    is deprecated.  See
-    [PXE](https://github.com/TechnologyClassroom/PXE).
 - [programs/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/programs) - Programs
   - [asciinema.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/programs/asciinema.md)
   - [configuration-mgmt/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/programs/configuration-mgmt)

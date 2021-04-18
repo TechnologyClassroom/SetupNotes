@@ -3,6 +3,19 @@
 This file will always be incomplete.  Use free, libre, and open source operating
 systems if you value privacy.
 
+Microsoft Windows was my first major experience with computers outside of
+ancient systems that were left around my schools growing up.  Troubleshooting
+Windows systems for friends and family during high school started my career
+with technology.  My note taking habit started with seeing recurring issues
+that various people had with Windows systems.  My notes eventually filled the
+equivalence of a book which I intended to publish.  As the years went by, I
+found myself playing catchup solving the same problems in different ways on
+different versions of Windows.  I concluded that the book was not worth my time
+and I started publishing notes in this repository instead.  The book about
+Windows is mostly unpublished at this point and I have moved on to focusing on
+GNU/Linux systems which can be configured how I wish without fighting each new
+version.
+
 When installing a Windows system, it comes with terrible defaults that do not
 always have your best interests in mind.  Be very careful when installing for
 the first time.  As a rule of thumb, turn everything off unless you are sure
@@ -10,8 +23,36 @@ that you need it.
 
 ## Troubleshooting
 
-Problem: Motherboard is set to UTC time for GNU/Linux distributions.  Windows 7
-has the incorrect time.
+Problem: Unwanted programs startup with the computer.
+Solution: Download
+[autoruns](https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns)
+from Microsoft.  Extract the file.  Run as Administrator.  Uncheck unwanted or
+missing programs.  If you do not know what something is, look it up.
+
+Warning: You can break your systems with autoruns.  If you broke your system
+with autoruns, you are to blame.  Keep good backups.
+
+Problem: The system is generally slow and may have malware installed.
+Solution: Backup your system, download
+[Tron Script](https://old.reddit.com/r/TronScript/), extract, open a cmd prompt
+with Adminstator privaleges, navigate to the directory where you extracted
+`tron.bat` using `cd`, and run this command:
+
+```
+tron.bat -asm -x
+```
+
+The system will reboot into safe mode, if you were not in safe mode.  If it
+reboots into safemode, start another command prompt with Administrator
+privilages, and run the command again.  The scans will take several hours and
+it is best to run the scans before you go to sleep.
+
+Warning: Tron Script is not a replacement for good security practices.  Tron
+Script may make your system unusable.  Use at your own risk.  Keep good
+backups.
+
+Problem: When dual-booting, motherboard is set to UTC time for GNU/Linux
+distributions.  Windows 7 has the incorrect time.
 Solution: Add a Windows registry key to use UTC time.
 
 - Run regedit.exe as Administrator.

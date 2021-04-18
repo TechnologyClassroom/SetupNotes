@@ -20,8 +20,8 @@ what each step does.
 If I messed up something, I should be able to refer to my notes and undo any
 changes.  I then document that process.
 
-Months later when I have forgotten the process, I can can look at my notes
-instead of restarting over again at the research phase.
+Months later when I have forgotten the process, I can look at my notes instead
+of restarting over again at the research phase.
 
 If you like what I am doing here and found some of this advice useful, consider
 supporting me through [LibrePay](https://liberapay.com/technologyclassroom/).

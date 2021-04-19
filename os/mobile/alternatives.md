@@ -36,7 +36,13 @@ I tried Ubuntu Touch and Mobian with it.
 
 [Mobian](mobian-project.org/)
 
+[Mobian wiki](https://wiki.mobian-project.org/doku.php?id=install)
+
 I tried Ubuntu Touch and Mobian with it.
+
+I flashed Mobian to the eMMC with
+[JumpDrive](https://github.com/dreemurrs-embedded/Jumpdrive/releases)
+and `bmaptool` and a local file.
 
 ### PineTime
 

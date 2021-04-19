@@ -7,6 +7,9 @@ text on [Setup Notes](https://github.com/TechnologyClassroom/SetupNotes/)
 by Michael McMahon is licensed under the
 [Creative Commons Attribution-ShareAlike License 4.0 (International) (CC-BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
 
+If you like what I am doing here and found some of this advice useful, consider
+supporting me through [LibrePay](https://liberapay.com/technologyclassroom/).
+
 The one thing that has advanced my career with technology the most is taking
 notes.
 
@@ -22,9 +25,6 @@ changes.  I then document that process.
 
 Months later when I have forgotten the process, I can look at my notes instead
 of restarting over again at the research phase.
-
-If you like what I am doing here and found some of this advice useful, consider
-supporting me through [LibrePay](https://liberapay.com/technologyclassroom/).
 
 These are **some of** my notes.
  

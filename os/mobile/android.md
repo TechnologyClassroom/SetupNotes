@@ -16,17 +16,21 @@ The Google line of phones all come with
 [stock Android](https://developers.google.com/android/images) and can be
 purchased with an unlocked bootloader.
 
+When buying a new phone, consult whether the phone is supported by alternative
+operating systems.  Check the
+[LineageOS Download page](https://download.lineageos.org/) and
+[Replicant Devices](https://www.replicant.us/supported-devices.php) page first
+to see what your options are.
+
+Older Google phones can be found cheaper on ebay.
+
 ## Alternative versions of Android
 
-I would suggest using [LineageOS](https://lineageos.org/),
-[CopperheadOS](https://copperhead.co/android/), or
+I would suggest using [LineageOS](https://lineageos.org/) or
 [Replicant](https://www.replicant.us/).
 
 [LineageOS](https://lineageos.org/) is Android without Google.  This is my
 favorite version of Android.
-
-[CopperheadOS](https://copperhead.co/android/) is Android without Google and
-a hardened kernel for the privacy conscious.
 
 [Replicant](https://www.replicant.us/) is Android without any proprietary
 software.

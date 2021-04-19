@@ -31,9 +31,10 @@ These are **some of** my notes.
 - [os/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/os) - Operating Systems
   - [GNULinux/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/os/GNULinux)
     - [GNULinuxOnMacbooks.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/GNULinux/GNULinuxOnMacbooks.md)
+        install instructions for dual-booting a white Macbook from 2009
   - [mobile/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/os/mobile)
     - [android.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/mobile/android.md)
-        install instructions for dual-booting a white Macbook from 2009
+    - [alternatives.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/mobile/alternatives.md)
   - [Chromebook.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/Chromebook.md)
   - [PXE](https://github.com/TechnologyClassroom/PXE)
   - [Windows.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/Windows.md)

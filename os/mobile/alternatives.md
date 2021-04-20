@@ -24,6 +24,8 @@ mobile products here.
 
 [Wiki](https://wiki.pine64.org/index.php/PinePhone)
 
+[Forum](https://forum.pine64.org/forumdisplay.php?fid=120)
+
 [Mobian](mobian-project.org/)
 
 I tried Ubuntu Touch and Mobian with it.
@@ -33,6 +35,8 @@ I tried Ubuntu Touch and Mobian with it.
 [PineTab](https://www.pine64.org/pinetab/)
 
 [Wiki](https://wiki.pine64.org/index.php/PineTab)
+
+[Forum](https://forum.pine64.org/forumdisplay.php?fid=140)
 
 [Mobian](mobian-project.org/)
 
@@ -49,6 +53,8 @@ and `bmaptool` and a local file.
 [PineTime](https://www.pine64.org/pinetime/)
 
 [Wiki](https://wiki.pine64.org/index.php/PineTime)
+
+[Forum](https://forum.pine64.org/forumdisplay.php?fid=134)
 
 [Infinitime](https://infinitime.io/) is software that can run on the PineTime.  [Documentation](https://infinitime.io/documentation/) [GitHub](https://github.com/JF002/InfiniTime) [Releases](https://github.com/JF002/InfiniTime/releases)
 

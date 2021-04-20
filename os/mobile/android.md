@@ -12,17 +12,26 @@ or removed.
 
 ## Recommended phones and tablets
 
+Most phones that can be purchased at mobile phone stores are not very good.
+They usually are locked down to a specific carrier with unwanted programs
+pre-installed including spyware and have a locked bootloader.  None of which is
+good.
+
 The Google line of phones all come with
 [stock Android](https://developers.google.com/android/images) and can be
-purchased with an unlocked bootloader.
+purchased with an unlocked bootloader through their website.  Older unlocked
+Google phones can be found cheaper on ebay.
 
 When buying a new phone, consult whether the phone is supported by alternative
 operating systems.  Check the
 [LineageOS Download page](https://download.lineageos.org/) and
 [Replicant Devices](https://www.replicant.us/supported-devices.php) page first
-to see what your options are.
+to see what your options are.  It is much easier to buy a phone that will do
+what you want rather than making a phone do what you want without support.
 
-Older Google phones can be found cheaper on ebay.
+If you already have a phone that I would not recommend, remember this for the
+next time that you are shopping for a phone.
+
 
 ## Alternative versions of Android
 
@@ -37,9 +46,25 @@ software.
 
 Before changing the OS, make a backup of your files and OS.
 
+Beware of unofficial releases of operating systems.  The operating system must
+be trusted more than any of the rest of the software on your phone.  If the
+author is a random person on a forum that does not use their real name, would
+you trust giving that person access to your location and passwords?  You should
+not trust an individual on the Internet that is anonymous.
+
+Read and follow the documentation for installing new operating systems on your
+phone.
+
+If checksums are available, make sure that your download is correct.
+
+If signing keys are available, make sure the download came from the developer.
+
 ## App Stores
 
-Unlike iOS, there are many different app stores available for Android.
+Unlike Apple iOS, there are many different app stores available for Android, but
+only one of them is good.
+
+### F-Droid
 
 [F-Droid](https://f-droid.org/en/) is a free and open source app repository for
 Android based phones.  Applications that may not have your best interests will
@@ -49,7 +74,103 @@ Stallman's Four Freedoms.
 Most phones will come with Google Play Store preinstalled.  I do not trust
 Google and I only use [F-Droid](https://f-droid.org/en/).
 
+F-Droid can be installed on any Android based phone and do not require on of
+the recommended alternatives.
+
+If an app has features that you may not like, they are clearly marked as
+anti-features.
+
+#### F-Droid Apps
+
+There are many apps on F-Droid.  Searching for useful apps is kind of difficult
+if you are new to F-Droid.  These are my favorite apps separated by category
+and loosely ranked for usefulness within each category.
+
+##### Navigation
+
+* [OSMAnd~](https://f-droid.org/en/packages/net.osmand.plus/) - OpenStreetMap Android client - Navigate offline with maps that you can download before you go.
+* [StreetComplete](https://f-droid.org/en/packages/de.westnordost.streetcomplete/) - OpenStreetMap editor - Find local quests that help build OpenStreetMap.  Instead of contributing to a closed dataset from a map company by playing Pokemon GO, help build a map that the community owns with StreetComplete.  Great motivation to take walks around neighborhoods and explore.
+
+##### Social Media
+
+* [RedReader](https://f-droid.org/packages/org.quantumbadger.redreader/) - The best Reddit client in my opinion.
+* [NewPipe]() - Youtube client.
+* [Thorium]() - Peertube client.
+* [Fedilab]() - Fediverse client (includes Mastodon).
+* [Silence]() - Encrypted SMS text messages
+* [Session]() - Session solves all of my concerns against Signal.
+* [Jitsi Meet](https://f-droid.org/en/packages/org.jitsi.meet/) - Video chat that can be trusted.  Works best with 2-4 people.
+* [Jami]()
+* [AntennaPod](https://f-droid.org/en/packages/de.danoeh.antennapod/) - Podcast browser, fetcher, and player.
+* [ObscuraCam](https://f-droid.org/en/packages/org.witness.sscphase1/) - Censor photos on your phone before uploading them to the Internet.
+* [Scrabled Exif](https://f-droid.org/en/packages/com.jarsilio.android.scrambledeggsif/) - Remove picture metadata before uploading them to the Internet.
+* [MemeTastic]() - Create memes offline without watermarks.  You must supply your own templates.
+* [Element]() - Matrix client
+* [Materialistic]() - Hacker News client
+* [DankChat]() - Twitch chat client
+
+##### Development
+
+* [FastHub-Libre](https://f-droid.org/en/packages/com.fastaccess.github.libre/) - GitHub client.
+* [LabCoat]() - GitLab client
+* [Termux](https://f-droid.org/en/packages/com.termux/) - Terminal client for Android that includes a package manager.
+* [Hacker's Keyboard](https://f-droid.org/en/packages/org.pocketworkstation.pckeyboard/) - Alternative keyboard that has all of the keys of a standard computer keyboard.
+* [Script Manager](https://f-droid.org/en/packages/com.smartpack.scriptmanager/) - Run bash scripts on your phone with a few taps.  This is really handy for running scripts often without needing to use the on-screen keyboard.
+* [WiFiAnalyzer]() - Helps search for WiFi channels in range and helps decide which channel you should use when setting up a new router.
+* [CV Droid](https://f-droid.org/en/packages/org.commonvoice.saverio/) - Unofficial Common Voice client to train the DeepSpeech neural network.
+
+##### Utility
+
+* [G-Droid]() - Alternative F-Droid client with a better search function and more metrics about individual apps.
+* [OpenCamera]() - Better than the stock LineageOS camera.
+* [OCR]() - Optical Character Recognition (OCR)
+* [Markor]() - Text editor with markdown support.
+* [KOReader]() - Ebook reader
+* [UntrackMe]() - Convert links to AGPL alternatives.
+* [AFWall+](https://f-droid.org/en/packages/dev.ukanth.ufirewall/) - (Requires root) Application FireWall allows detailed control of how an app can interact with your networks.  If you have metered Internet or dataplans, this is a must have application.  Control whether an app can communicate on your local area network, access the Internet through WiFi, or access the Internet through data plan.
+* [AdAway]() - (Requires root) Block common ads and tracker domains through the hosts file on your phone.
+* [Simple Bitcoin Widget]() - Widget to track cryptocurrency prices (not just BTC).
+* [LibreSpeed]() - Speed test
+* [Metronome]() - Musicians can keep time with a metronome
+* [NFC Reader]() - Read RFID beacons.
+* [andOTP]() - One time password generator that does not require Google Authenticator
+* [phyphox]()
+* [SatStat]()
+* [microMathematics Plus](https://f-droid.org/en/packages/com.mkulesh.micromath.plus/) - Turn your phone into a graphing calculator
+* [Share to Computer]()
+* [Diary]()
+* [MuPDF viewer]() - Read PDF files.
+* [Coffee](https://f-droid.org/en/packages/com.github.muellerma.coffee/) - Keep the phone awake.  This is especially handy for when you need to read a recipe.
+* [NoPhoneSpam](https://f-droid.org/en/packages/at.bitfire.nophonespam/) - Automatically block known spam calls.
+* [Firefox Klar](https://f-droid.org/en/packages/org.mozilla.klar/) - Firefox browser with extension capability.
+* [IceCat Mobile](https://f-droid.org/en/packages/org.gnu.icecat/) - Fork of Firefox ESR with privacy extensions pre-installed.
+* [Lemmur](https://f-droid.org/en/packages/com.krawieck.lemmur/) - Lemmy (Reddit alternative) client
+* [Loyalty Card Keychain](https://f-droid.org/packages/protect.card_locker/) - Scan your barcodes and use an app instead of carrying around your library cards and grocery store discount cards.
+* [ConnectBot](https://f-droid.org/en/packages/org.connectbot/) - SSH client
+* [ClassySharkExodus](https://f-droid.org/en/packages/com.oF2pks.classyshark3xodus/) - Scan apps for tracking behavior.
+* [PilferShush Jammer](https://f-droid.org/en/packages/cityfreqs.com.pilfershushjammer/) - Jam tracking behavior of other devices around you actively.  Jam tracking behavior of untrusted apps on your phone passively.
+* [Priority Alerts]() - Based on strings or numbers, set off an alarm when important text messages come in.  This is especially useful for sysadmins that receive text alerts.
+
+##### Fun
+
+* [Kore]() - If you use Kodi, you need kore as a remote control.
+* [M.A.L.P.](https://f-droid.org/en/packages/org.gateshipone.malp/) - If you use mpd, you need M.A.L.P. as a remote control.
+* [ReGeX](https://f-droid.org/en/packages/com.phikal.regex/) - Learn regular expressions through "regex golf" gamification.  My regular expressions have improved because of this app.
+* [Easy XKCD]()
+* [Open Chaos Chess]() - What if you could only choose which piece to move instead of where it went?  That question is answered by Open Chaos Chess.
+* [Mindustry](https://f-droid.org/en/packages/io.anuke.mindustry/) - Building and defense management game which runs very well on mobile.
+* [OMW Nightly](https://f-droid.org/en/packages/is.xyz.omw_nightly/) - OpenMorrowind for mobile.  Incredible open world first person RPG game.  Assets must be purchased separately online.
+* [Minetest]() - Open sandbox game similar to a very popular voxel building game.
+* [PianOli]() - Piano app with lockdown mechanism for kids to play with your phone.
+* [Vitosha Blackjack]() - Classic casino style of blackjack.
+* [OneTwo]() - Dice probability simulator.  Left your dice bag at home?  You can still play any dice game on the go.
+* [RetroArch]() - (Not on official F-Droid repository) Emulate retro games.  Compatible with RetroAchievements.
+* [Kodi]() - (Not on F-Droid, but the apk can be downloaded directly from their site) Run Kodi media center directly on your phone.
+* [Cataclysm: Dark Days Ahead](https://cataclysmdda.org/releases/) - (Not on F-Droid, but apk is available direct from their website) Apocalyptic survival horror rogue-like game.
+
 ## adb
+
+`adb` is a command line program to interact with Android based mobile phones.
 
 ### Install
 

@@ -93,6 +93,8 @@ and loosely ranked for usefulness within each category.
 
 ##### Social Media
 
+<!-- TODO: Add links to the remainder of the apps -->
+
 * [RedReader](https://f-droid.org/packages/org.quantumbadger.redreader/) - The best Reddit client in my opinion.
 * [NewPipe]() - Youtube client.
 * [Thorium]() - Peertube client.

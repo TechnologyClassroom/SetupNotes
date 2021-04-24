@@ -31,20 +31,31 @@ you remove them.
 
 ## Extensions
 
-- uBlock Origin removes ads from most webpages.  This is reported to decrease
-  your network traffic by about 17% which increases the speed of your entire
-  network.
-  https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en
-- Privacy Badger blocks tracking between websites.  It automatically builds your
-  blocklist as you browse.
-  https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp?hl=en-US
-- KeePassXC-Browser communicates between KeePassXC to store passwords securely.
-  https://chrome.google.com/webstore/detail/keepassxc-browser/oboonakemofpalcgghocfoadofidjkkk
-- HTTPS Everywhere defaults to using the https version of a website
-  https://www.eff.org/https-everywhere
-- History 2 helps reviewing browsing history on a per machine basis.
-  https://chrome.google.com/webstore/detail/history-2/cahejgbbfgmlmjgdjlibphdjeldhagkp?utm_source=chrome-app-launcher-info-dialog
-- Link Grabber is useful for copying all links from a page.
-  https://chrome.google.com/webstore/detail/link-grabber/caodelkhipncidmoebgbbeemedohcdma
-- GC DeepDark Theme
-  https://chrome.google.com/webstore/detail/gc-deep-dark/gbkflacjgfkmilflednkmcogolnikmki
+### Style
+
+* [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
+  can customize CSS on individual pages or domains.
+- [GC DeepDark Theme](https://chrome.google.com/webstore/detail/gc-deep-dark/gbkflacjgfkmilflednkmcogolnikmki)
+
+### Utility
+* [New Tab Redirect](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna)
+  sets the page that opens when you open a new tab.  Great to enable before
+  giving a presentation.  Set the new page to be `about:blank` for example.
+- [History 2](https://chrome.google.com/webstore/detail/history-2/cahejgbbfgmlmjgdjlibphdjeldhagkp?utm_source=chrome-app-launcher-info-dialog)
+  helps reviewing browsing history on a per machine basis.
+- [Link Grabber](https://chrome.google.com/webstore/detail/link-grabber/caodelkhipncidmoebgbbeemedohcdma)
+  is useful for copying all links from a page.
+
+### Security
+- [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en)
+  removes ads from most webpages.  This is reported to decrease your network
+  traffic by about 17% which increases the speed of your entire network.
+- [Privacy Badger](https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp?hl=en-US)
+  blocks tracking between websites.  It automatically builds your blocklist as
+  you browse passively.
+- [KeePassXC-Browser](https://chrome.google.com/webstore/detail/keepassxc-browser/oboonakemofpalcgghocfoadofidjkkk)
+  communicates between KeePassXC to store passwords outside the browser.  I
+  would suggest not saving your passwords in your browser or using this
+  extension.  Instead copy and paste passwords from KeePassXC.
+- [HTTPS Everywhere](https://www.eff.org/https-everywhere) defaults to using
+  the https version of a website

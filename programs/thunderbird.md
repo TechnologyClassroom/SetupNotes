@@ -98,3 +98,20 @@ network.protocol-handler.warn-external.https; false
 - Click on the ```Open Link``` button.
 - If the link opens correctly, repeat the last seven steps until ftp, http, and
   https are configured.
+
+## Message Filters and Folders
+
+I would recommend creating local folders and using `Message Filters` to sort
+incoming mail into different categories.
+
+After years of use, Thunderbird/IceDove does slow down.  Purging old mailing
+list archives and subscriptions every once in a while helps which can be
+automated through `Message Filters`.
+
+Example filter to delete a mailing list after ~2 months:
+
+`Match all of the following`
+`From, To, CC, or BCC` `contains` MAILINGLISTADDRESSHERE
+`Age in Days` `is greater than` `60`
+Perform these actions:
+`Delete Message`

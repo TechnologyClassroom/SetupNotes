@@ -7,8 +7,9 @@ Download: https://www.mozilla.org/en-US/firefox/
 Source code: https://hg.mozilla.org/mozilla-central/
 
 There are several Mozilla based browsers that are also worth checking out such
-as [abrowser](https://trisquel.info/en/wiki/abrowser-help) and
-[icecat](https://www.gnu.org/software/gnuzilla/).
+as [abrowser](https://trisquel.info/en/wiki/abrowser-help),
+[icecat](https://www.gnu.org/software/gnuzilla/), and
+[LibreWolf](https://librewolf-community.gitlab.io/).
 
 ## Extensions
 

@@ -115,3 +115,10 @@ Example filter to delete a mailing list after ~2 months:
 `Age in Days` `is greater than` `60`
 Perform these actions:
 `Delete Message`
+
+## Hide tasks from Lightning's Today Pane
+
+Click on the `<` icon at the top of the Today Pane to cycle through the
+different modes.  I use task warrior for my tasks so I do not need to see an
+empty list while checking my email.  This leaves me with upcoming events from
+my calendar.

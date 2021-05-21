@@ -28,6 +28,20 @@ look at my notes instead of restarting over again at the research phase.
 
 Here are some other resources that can help you along the way:
 
+- [Linux Journey](https://linuxjourney.com/) has milestones to help you learn
+  GNU/Linux as if you were playing an RPG game sort of.
+  https://linuxjourney.com/
+
+- [/r/linuxupskillchallenge](https://old.reddit.com/r/linuxupskillchallenge/) is
+  a Reddit community built around a 30 day commitment to learning how to manage
+  a webserver.  This is a reasonable and practical way to learn the fundamentals
+  of system administration.
+
+- [overthewire](http://overthewire.org/) is a series of games.
+  [Bandit](http://overthewire.org/wargames/bandit/) is a game played through
+  SSH.  Try to get the next level's password by figuring out a command line
+  concept.
+
 - [Codecademy](https://www.codecademy.com/learn/learn-the-command-line) is a
   great interactive way to learn programming languages for the web.  They have a
   quick course on using the UNIX and GNU/Linux command line.  Expect to spend
@@ -48,26 +62,19 @@ Here are some other resources that can help you along the way:
 
   Add any courses you complete to your resume.
 
-- [Linux Journey](https://linuxjourney.com/) has milestones to help you learn
-  GNU/Linux as if you were playing an RPG game sort of.
-  https://linuxjourney.com/
-
 - If you do not have permission to install another operating system or dual-boot
   your machine, you can use a Virtual Machine manager such as
   [VirtualBox](https://www.virtualbox.org/) to practice installing and using an
   operating sytem that you may not be familiar with.  Install
-  [Ubuntu Server](https://www.ubuntu.com/download/server),
-  [Lubuntu](https://lubuntu.net/downloads/), or
+  [Ubuntu Server](https://www.ubuntu.com/download/server) or
   [Debian](https://www.debian.org/) as a virtual machine and follow along with
-  the tutorials in a course.
+  the tutorials in a course.  If you are already using a GNU/Linux machine, I
+  would recommend `virt-manager` instead of VirtualBox.
 
 - [The Linux Command Line](http://linuxcommand.org/tlcl.php) By William Shotts
   and published by No Starch Press is an excellent book to learn some of the
   basics about the command line.  You can also download the PDF free from
   [his page](http://sourceforge.net/projects/linuxcommand/files/TLCL/17.10/TLCL-17.10.pdf/download).
-
-- [The Debian System Administrator's Handbook](https://debian-handbook.info/) is
-  a useful ebook for learning system administration techniques.
 
 - Self reference -  All commands have built in help.
 
@@ -82,10 +89,6 @@ man cat
 - [The Arch wiki](https://wiki.archlinux.org/) contains a large amount of
   quality information about GNU/Linux.  Arch is an operating system, but the
   information is very useful for all GNU/Linux distributions.
-- [overthewire](http://overthewire.org/) is a series of games.
-  [Bandit](http://overthewire.org/wargames/bandit/) is a game played through
-  SSH.  Try to get the next level's password by figuring out a command line
-  concept.
 - [cmdchallenge](https://cmdchallenge.com/) has tricky problems that can be
   solved with UNIX one-liners (web based).
 - [vim adventures](https://vim-adventures.com/) teaches vim like an old school
@@ -99,36 +102,35 @@ man cat
   - [News from the Free Software Foundation](https://www.fsf.org/news)
   - [Electronic Freedom Foundation](https://www.eff.org/)
   - Subreddits
-    - [/r/linux](https://www.reddit.com/r/linux/)
-    - [/r/linux4noobs](https://www.reddit.com/r/linux4noobs/)
-    - [/r/linuxquestions](https://www.reddit.com/r/linuxquestions/)
+    - [/r/linux](https://old.reddit.com/r/linux/)
+    - [/r/linux4noobs](https://old.reddit.com/r/linux4noobs/)
+    - [/r/linuxquestions](https://old.reddit.com/r/linuxquestions/)
+    - [/r/linuxupskillchallenge](https://old.reddit.com/r/linuxupskillchallenge/)
   - Magazines
     - [Linux Format](https://www.linuxformat.com/)
     - [Linux Magazine](http://www.linux-magazine.com/)
     - [Linux Journal](https://www.linuxjournal.com/)
     - Raspberry Pi's [MagPi](https://www.raspberrypi.org/magpi/)
-  
+
 ## Suggested Distributions
 
 - [Debian](https://www.debian.org/) - Community driven, stable OS with only
-  libre software by default.  https://www.debian.org/
+  libre software by default.  Avoid the nonfree repo if you can.
 - [Ubuntu Studio](https://ubuntustudio.org/) - Targeted towards those interested
   in graphic design and audio/video production activities.
-  https://ubuntustudio.org/
 - [Trisquel](https://trisquel.info/) - Based on Ubuntu, but with all non-free
-  software removed.  https://trisquel.info/
+  software removed.
 - [Arch](https://www.archlinux.org/) - Bleeding edge community driven distro
-  based on minimalism and simplicity.  https://www.archlinux.org/
+  based on minimalism and simplicity.
 - [Parabola](https://www.parabola.nu/) - Arch Linux with non-free software
-  removed.  https://www.parabola.nu/
-- [Fedora](https://getfedora.org/) - Community driven development branch of Red
-  Hat Enterprise Linux.  https://getfedora.org/
-- [CentOS](https://www.centos.org/) - Stable community driven branch of Red Hat
-  Enterprise Linux.  https://www.centos.org/
+  removed.
 - [Ubuntu Server](https://www.ubuntu.com/download/server) - Ubuntu without a
   graphical user interface (GUI) is a popular choice for enterprise servers.
-- [Lubuntu](https://lubuntu.net/downloads/) - Ubuntu with the LXDE desktop
-  environment (DE) is good for older computers.
+- [Xubuntu](https://xubuntu.org/) - Ubuntu with the XFCE desktop
+  environment (DE) is good OS for older computers.
+- [AlmaLinux](https://almalinux.org/) - Stable community driven branch of Red
+  Hat Enterprise Linux (RHEL).  I would only recommend AlmaLinux if you are
+  trying to prepare for a job that will be using RHEL.
 
 ## Proprietary NVIDIA drivers
 
@@ -141,32 +143,33 @@ nouveau driver if you must use NVIDIA hardware.
 
 ## Stress testing CPU on debian based systems
 
-http://askubuntu.com/questions/15832/how-do-i-get-the-cpu-temperature
-http://www.tecmint.com/linux-cpu-load-stress-test-with-stress-ng-tool/
+<http://askubuntu.com/questions/15832/how-do-i-get-the-cpu-temperature>
 
-```apt update && apt install lm-sensors stress stress-ng```
+<http://www.tecmint.com/linux-cpu-load-stress-test-with-stress-ng-tool/>
 
-If lm-sensors and stress are not found, add universe to the
-/etc/apt/sources.list file.
+    apt update && apt install -y lm-sensors stress
 
-```sensors && uptime && stress --cpu 8 -v --timeout 30s && uptime && sensors```
+If `lm-sensors` and `stress` are not found, you may need to add the `universe`
+repository to the `/etc/apt/sources.list` file.
+
+    sensors && uptime && stress --cpu 8 -v --timeout 30s && uptime && sensors
 
 See my [HardwareTest](https://github.com/TechnologyClassroom/HardwareTest)
 repository for more thorough, comprehensive tests.
 
 ## UEFI Install resources
 
-http://ubuntuforums.org/showthread.php?t=2147295
+<http://ubuntuforums.org/showthread.php?t=2147295>
 
 ## Samba Network Shares
 
 If you want to share files between Windows and GNU/Linux, you can use samba.
 
-```sudo apt-get install samba samba-client```
+    sudo apt install -y samba samba-client
 
 Modify the configuration file.
 
-```sudo nano /etc/samba/smb.conf```
+    sudo nano /etc/samba/smb.conf
 
 Add the details for your share at the bottom of the page.  Here is an example
 that worked as a public folder:
@@ -184,22 +187,23 @@ create mask = 0755
 
 Restart samba for changes to take effect.
 
-```sudo /etc/init.d/samba restart```
+    sudo /etc/init.d/samba restart
 
 ## Useful commands
 
-Upgrade pip
+Upgrade pip.
 
-```
-sudo pip install --upgrade pip
-sudo pip3 install --upgrade pip
-```
+    sudo pip3 install -U pip
 
-Seach within files for a string and list the filenames with matches
+Seach within files for a string and list the filenames with matches.
 
-```grep string -l *```
+    grep string -l *
 
-Install tldr offline examples
+Search for a string within files recursively.
+
+    grep -R string .
+
+Install tldr offline examples.
 
 ```
 sudo npm install -g tldr
@@ -207,33 +211,27 @@ tldr --update
 tldr tar
 ```
 
-Source https://github.com/tldr-pages/tldr
+[tldr source](https://github.com/tldr-pages/tldr)
 
 Access common examples from command line without installing additional packages.
 
-```curl cheat.sh/tar```
+    curl cheat.sh/tar
 
 Replace tar with the program name.
 
-Source https://github.com/chubin/cheat.sh
+[cheat.sh source](https://github.com/chubin/cheat.sh)
 
 List cronjobs.
 
-```
-crontab -l
-```
+    crontab -l
 
 Edit cron jobs as root.
 
-```
-sudo crontab -e
-```
+    sudo crontab -e
 
 Edit cron jobs as another users.
 
-```
-sudo crontab -u username -e
-```
+    sudo crontab -u username -e
 
 ## Add drive to fstab manually
 
@@ -241,24 +239,24 @@ I often find myself trying to set a drive to automatically boot on a system.
 
 List the drives by uuid.
 
-```ls -la /dev/disk/by-uuid/```
+    ls -la /dev/disk/by-uuid/
 
 Find the one you want and complete the ls entry using tab completion.
 
-```ls -la /dev/disk/by-uuid/926c2f9e-239d-4f4b-8bfd-f937f0de253f```
+    ls -la /dev/disk/by-uuid/926c2f9e-239d-4f4b-8bfd-f937f0de253f
 
 As root, remove the first part and replace it with echo and append it to the
 /etc/fstab file.
 
-```echo 926c2f9e-239d-4f4b-8bfd-f937f0de253f >> /etc/fstab```
+    echo 926c2f9e-239d-4f4b-8bfd-f937f0de253f >> /etc/fstab
 
 Edit /etc/fstab as root.
 
-```nano /etc/fstab```
+    nano /etc/fstab
 
 Modify the line to look like this.
 
-```UUID=926c2f9e-239d-4f4b-8bfd-f937f0de253f /mnt/desiredtmountpoint      ext4    defaults        0       2```
+    UUID=926c2f9e-239d-4f4b-8bfd-f937f0de253f /mnt/desiredtmountpoint      ext4    defaults        0       2
 
 Change desired mountpoint to that of your chosing.  CTRL+X, y, enter
 
@@ -301,19 +299,19 @@ yum clean all # Clean package cache
 
 Look for a package.
 
-```cnf man```
+    cnf man
 
 Install package.
 
-```sudo zypper install -y -l man```
+    sudo zypper install -y -l man
 
 Update packages.
 
-```sudo zypper update -y -l```
+    sudo zypper update -y -l
 
 Update distribution packages
 
-```sudo zypper dist-upgrade -y -l```
+    sudo zypper dist-upgrade -y -l
 
 # Exit QEMU
 
@@ -332,29 +330,29 @@ Solution: Use GNU/Linux command line tools to inspect and repair problems.
 This command checked the fat32 partition for errors.  If errors are found, fix
 them automatically.  /dev/sdc is my flash drive in this example.
 
-```sudo dosfsck -w -r -l -a -v -t /dev/sdc1```
+    sudo dosfsck -w -r -l -a -v -t /dev/sdc1
 
 dosfsck complained about a dirty bit and could not automatically repair.  This
 command can fix a dirty bit:
 
-```sudo fsck.vfat /dev/sdc1```
+    sudo fsck.vfat /dev/sdc1
 
 My response was 2 to restore backup.
 
 My response was 1 and y to remove dirty bit.
 
 Sources:
-http://askubuntu.com/questions/147228/how-to-repair-a-corrupted-fat32-file-system
-https://bbs.archlinux.org/viewtopic.php?id=164185
+- <http://askubuntu.com/questions/147228/how-to-repair-a-corrupted-fat32-file-system>
+- <https://bbs.archlinux.org/viewtopic.php?id=164185>
 
 Problem: nodejs cannot find the correct path.  Gives error:
 
-```/usr/bin/env: node: No such file or directory```
+    /usr/bin/env: node: No such file or directory
 
 Solution: Improperly named nodejs needs to be linked to node.  Create symlink
 with:
 
-```sudo ln -s /usr/bin/nodejs /usr/bin/node```
+    sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 From digitalmediums at https://github.com/nodejs/node-v0.x-archive/issues/3911
 
@@ -365,7 +363,7 @@ Note: Only use this for standard account
 
 http://ubuntuhandbook.org/index.php/2015/06/minimum-password-length-ubuntu/
 
-```sudo nano /etc/pam.d/common-password```
+    sudo nano /etc/pam.d/common-password
 
 Remove the word 'obscure' and save.
 
@@ -382,7 +380,7 @@ exec bash # Restart shell
 
 Links for directories work the same way.
 
-```sudo ln -s /data/software/drivers/linux /usr/share/nginx/html/```
+    sudo ln -s /data/software/drivers/linux /usr/share/nginx/html/
 
 Restart network stack with Ubuntu 16.04 server
 sudo systemctl restart NetworkManager.service
@@ -391,7 +389,7 @@ Problem: Ubuntu 16.04 crashes on apt-get update.
 Solution: Something changed in Ubuntu 16.04 during the Summer of 2017 and
 libappstream3 breaks updates.  Remove libappstream3 to fix the problem.
 
-```sudo apt-get purge -y libappstream3```
+    sudo apt-get purge -y libappstream3
 
 Problem: Ubuntu skips grub menu
 
@@ -399,14 +397,14 @@ Solution: During boot, hold Shift to access a hidden grub menu.
 
 If that does not work, edit the /etc/default/grub file.
 
-```sudo nano /etc/default/grub```
+    sudo nano /etc/default/grub
 
 Add a "#" symbol at the start of line GRUB_HIDDEN_TIMEOUT=0.  CTRL+X, y, enter
 to save.
 
 Update grub.
 
-```sudo update-grub```
+    sudo update-grub
 
 Modified from Eric Carvalho & Vojtech Trefny at
 http://askubuntu.com/questions/16042/how-to-get-to-the-grub-menu-at-boot-time
@@ -416,7 +414,7 @@ manually.
 
 Solution: Edit config file and set managed equal to true.
 
-```sudo nano /etc/NetworkManager/NetworkManager.conf```
+    sudo nano /etc/NetworkManager/NetworkManager.conf
 
 Change ```managed=false``` to ```managed=true```.  CTRL+X, y, enter
 
@@ -424,7 +422,7 @@ Problem: Ubuntu's outdated Sugar DE clobbers the cursor outside of sugar
 
 Solution: Reset cursor theme
 
-```gsettings reset org.gnome.desktop.interface cursor-theme```
+    gsettings reset org.gnome.desktop.interface cursor-theme
 
 Problem: No audio output and command line only.
 
@@ -460,11 +458,11 @@ Solution: List all cards and manually add them to /etc/network/interfaces
 Lists all network ports.  Network ports are something like eth0, em1, p4n1,
 enp3s0, and wlan0.
 
-```ip link show```
+    ip link show
 
 Edit the /etc/network/interfaces file.
 
-```sudo nano /etc/network/interfaces```
+    sudo nano /etc/network/interfaces
 
 Use the template shown with lo for all of your network ports.  CTRL+X, y, enter
 
@@ -473,7 +471,7 @@ not have the GUI tools to fix this problem
 
 Solution: Change default keyboard settings in /etc/default/keyboard
 
-```sudo nano /etc/default/keyboard```
+    sudo nano /etc/default/keyboard
 
 Remove intl from XKBLAYOUT and XKBVARIANT.  Hold CTRL and press X, press y, and
 press the enter or return key.
@@ -482,7 +480,7 @@ Problem: Debian asks for the installation CD while updating repositories.
 
 Solution: Remove the cdrom source from the /etc/apt/sources.list file.
 
-```sudo nano /etc/apt/sources.list```
+    sudo nano /etc/apt/sources.list
 
 Add a # at the beginning of the line that starts with "deb cdrom" and leave
 everything else.  Hold CTRL and press X, press y, and press the enter or return
@@ -507,7 +505,7 @@ Problem: The default program is not the preferred choice.
 
 Solution: Change default applications.
 
-```sudo update-alternatives --config```
+    sudo update-alternatives --config
 
 Use tab completion after this to list all options.  I use:
 
@@ -521,9 +519,7 @@ Problem: How do I find which display manager I am using with systemd?
 
 Solution: Run this command:
 
-```
-cat /etc/systemd/system/display-manager.service | grep ExecStart
-```
+    cat /etc/systemd/system/display-manager.service | grep ExecStart
 
 Problem: During a Ubuntu 16.04 upgrade, I receive the error:
 
@@ -547,7 +543,7 @@ Problem: Installing vim, changes vi.
 
 Solution: Change vim to vim.tiny
 
-```sudo update-alternatives --config vi```
+    sudo update-alternatives --config vi
 
 There are 2 choices for the alternative vi (providing /usr/bin/vi).
 
@@ -571,7 +567,7 @@ sudo apt-get install numlockx
 sudo sed -i 's|^exit 0.*$|# Numlock enable\n[ -x /usr/bin/numlockx ] \&\& numlockx on\n\nexit 0|' /etc/rc.local
 ```
 
-https://help.ubuntu.com/community/NumLock
+<https://help.ubuntu.com/community/NumLock>
 
 Problem: This message appears when you login to a server: `-bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)`
 

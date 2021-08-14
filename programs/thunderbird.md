@@ -18,9 +18,7 @@ https://wiki.debian.org/Icedove
 - Send Later - Queue emails to send at reasonable, professional hours with Send
   Later.  Alternative to "Boomerang for Gmail" without giving your login details
   to strangers.
-  https://addons.mozilla.org/en-US/thunderbird/addon/send-later-3/
-- EnigMail - Adds encryption options to Thunderbird
-  https://addons.mozilla.org/en-US/thunderbird/addon/enigmail/
+  https://addons.mozilla.org/en-US/thunderbird/addon/send-late
 - Paranoia - Shows who read your email in transit.
   https://addons.mozilla.org/en-US/thunderbird/addon/paranoia/
 - Markdown Here - Write emails in markdown and convert before sending. 
@@ -28,6 +26,33 @@ https://wiki.debian.org/Icedove
 - ThunderHTMLEdit - Adds the ability to edit the html of an email directly in
   the compose window.
   https://addons.mozilla.org/en-US/thunderbird/addon/thunderhtmledit/
+
+## Encryption
+
+The content of your emails should be encrypted so your mail provider cannot read your messages.
+
+Follow the directions at [Email Self-Defense](https://emailselfdefense.fsf.org/en/)
+and test your setup with the Edward bot.
+
+Tell your friends to do the same and swap public keys.
+
+Never share your private key with anyone and store it securely.
+
+### Unencrypt Subject line
+
+The subject is also encrypted which turns the subject line into `...` which is unhelpful and makes searching for relevant emails difficult.
+
+- Menu Icon (Sandwich) > Preferences > Preferences > Advanced > General tab
+- Click on the "Config Editor..." button.
+- Click on the "I accept the risk!" button.
+- In top search, type: ```protectSubject```
+- Look for the entry:
+  ```mail.identity.default.protectSubject```
+- Double click to toggle ```true``` to ```false```.
+- Close config editor with CTRL+W.
+- Click on the "Close" button to save changes.
+
+Based on https://blog.effenberger.org/2020/12/08/thunderbird-78-do-not-encrypt-subject/
 
 ## Adding an email signature
 

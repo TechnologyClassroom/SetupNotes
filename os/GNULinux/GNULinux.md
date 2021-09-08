@@ -94,6 +94,7 @@ man cat
 - [vim adventures](https://vim-adventures.com/) teaches vim like an old school
   rpg.  vim is a command line text editor like nano, but FAR more powerful and
   customizable.
+- [Article: GNU/Linux command line wizardry: Learn to think in sed, awk, and grep](https://arstechnica.com/gadgets/2021/08/linux-bsd-command-line-101-using-awk-sed-and-grep-in-the-terminal/)
 - Stay up-to-date with changes by subscribing to relevant news sources such as:
   - [LWN.net](https://lwn.net/)
   - [Linux Today](https://www.linuxtoday.com/)

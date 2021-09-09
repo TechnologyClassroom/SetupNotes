@@ -573,3 +573,15 @@ sudo sed -i 's|^exit 0.*$|# Numlock enable\n[ -x /usr/bin/numlockx ] \&\& numloc
 Problem: This message appears when you login to a server: `-bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)`
 
 Solution: Run this command `locale-gen en_US.UTF-8` as root.
+
+Problem: Console reports an issue with /dev/dm-3.  How do you know what /dev/dm-3 is?
+
+Solution: /dev/dm* are device mapper entries associated with lvm partitions.
+
+The command to reveal what /dev/dm-3 is mapped to would be this command:
+
+    sudo dmsetup info /dev/dm-3
+
+To list them all, use this command:
+
+    dmsetup ls

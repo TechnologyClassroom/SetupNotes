@@ -31,6 +31,7 @@ Extensions can make Firefox based browsers highly configurable.
   is a dark theme for the browser menu bars.
 
 ### Privacy/Security
+* [JShelter](https://jshelter.org/) minimizes harm caused by JavaScript.  [FSF Blog post about JShelter](https://www.fsf.org/news/fsf-announces-jshelter-browser-add-on-to-combat-threats-from-nonfree-javascript)
 * [NoScript](https://addons.mozilla.org/en-US/firefox/addon/noscript/)
   selectively blocks JavaScript by domain.
 * [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)

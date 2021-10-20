@@ -67,7 +67,7 @@ The left text box translates into the right box.
 Example workflow translating from Vietnamese into English:
 
 1. Set the left drop down to `Vietnamese` and the right drop down to `English`.
-1. Replace the default text `Text to translate from` in the left text box with some text in Vietnamese.  A quick way to do this is to click in the left text box and press the keyboard shortcut `CTRL+a`.
+1. Replace the default text `Text to translate from` in the left text box with some text in Vietnamese.  A quick way to do this is to click in the left text box and press the keyboard shortcut `CTRL+a` to select all and then `CTRL+v` to paste.
 1. Wait patiently.
 1. When text appears in the right text box, read it.
 

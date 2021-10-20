@@ -42,6 +42,7 @@ These are **some of** my notes.
   - [BSD/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/os/BSD)
   - [ESXi.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/ESXi.md)
 - [programs/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/programs) - Programs
+  - [argos-translate.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/programs/argos-translate.md) - Offline translation
   - [asciinema.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/programs/asciinema.md)
   - [configuration-mgmt/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/programs/configuration-mgmt)
     - [ansible.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/programs/configuration-mgmt/ansible.md)

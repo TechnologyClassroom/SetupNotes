@@ -12,9 +12,9 @@ A self-hosted version exists as [LibreTranslate](https://directory.fsf.org/wiki/
 
 ## Install
 
-Argos Translate was very simple to install if you have `pip3`.
+Argos Translate was very simple to install or update if you have `pip3`.
 
-    python3 -m pip install argostranslate
+    python3 -m pip install -U argostranslate
 
 Run the GUI version of Argos Translate.
 

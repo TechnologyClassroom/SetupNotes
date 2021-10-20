@@ -2,6 +2,8 @@
 
 Michael McMahon
 
+IMPORTANT NOTE: Use [Proxmox](https://www.proxmox.com/en/) instead of ESXi.
+
 ESXi (VMware vSphere Hypervisor) uses the proprietary vmkernel.
 
 Some of my clients use ESXi so I have started teaching myself.  I am not

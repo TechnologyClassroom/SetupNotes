@@ -40,7 +40,7 @@ These are **some of** my notes.
   - [Windows.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/Windows.md)
   - [Apple/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/os/Apple)
   - [BSD/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/os/BSD)
-  - [ESXi.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/ESXi.md)
+  - [ESXi.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/os/ESXi.md)
 - [programs/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/programs) - Programs
   - [argos-translate.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/programs/argos-translate.md) - Offline translation
   - [asciinema.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/programs/asciinema.md)

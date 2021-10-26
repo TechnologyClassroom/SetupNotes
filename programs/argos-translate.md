@@ -72,7 +72,7 @@ Optionally, you could install all language pairs using BASH.
 
 ### Removing a pair through the CLI
 
-Remove the Turkish to English pair: `argospm install translate-tr_en`
+Remove the Turkish to English pair: `argospm remove translate-tr_en`
 
 Optionally, you could remove all language pairs using BASH if you need to free space fast.
 

@@ -105,3 +105,11 @@ https://answers.microsoft.com/en-us/windows/forum/windows_7-files/how-do-i-searc
 
 name:~"*(2)*"
 (2) can be changed to other literal strings.
+
+## Booting to the boot menu of Lenovo IdeaPad Yoga 11
+
+Problem: The usual ESC, F2, F10, and F12 do not work when booting the system as Windows never truely shuts down anymore.
+
+Solution: Shut the system down and use the Novo button to the left of the power button.  Use the arrow keys and enter to make a selection.
+
+Reference: https://superuser.com/a/970389/1647920

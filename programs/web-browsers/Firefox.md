@@ -92,6 +92,18 @@ Extensions can make Firefox based browsers highly configurable.
 * [Pinger](https://addons.mozilla.org/en-US/firefox/addon/pinger/) checks a
   page for broken links.
 
+### Block annoying page elements using uBlock origin
+
+Some websites use annoying techniques to lead the viewer towards agreeing to things they would not normally choose.  Instead of agreeing or coming to a compromise, you can remove the annoyances manually.
+
+1. Install [uBlock Origin browser extension](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/).
+1. Right click on an element that you never want to see again like the cookie agreement on stackoverflow.
+1. Click on `Block element...` option.
+1. Verify the correct element is selected.
+1. Click on the `Create` button to never see it again.
+
+If the wrong thing is selected after choosing `Block element...` or only a piece of the element is highlighted, click on the `Pick` button and crosshairs will appear, hover until you have the correct item, click, and then click on the `Create` button. The escape key cancels the selection process.
+
 ## Troubleshooting
 
 Problem: Google Docs does not support copy and paste.  Reason: This is a

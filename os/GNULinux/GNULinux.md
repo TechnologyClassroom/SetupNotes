@@ -585,3 +585,11 @@ The command to reveal what /dev/dm-3 is mapped to would be this command:
 To list them all, use this command:
 
     dmsetup ls
+
+Problem: Need to connect to WiFi using command line after initial install.
+
+Solution: Use Network Manager's `nmcli` to connect.
+
+     sudo nmcli device wifi connect ACCESSPOINTNAMEHERE password PASSWORDHERE
+
+If you cannot see the output, watch network connections from router to see if it worked.

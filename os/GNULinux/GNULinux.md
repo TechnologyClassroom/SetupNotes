@@ -559,6 +559,10 @@ Press <enter> to keep the current choice[*], or type selection number: 2
 update-alternatives: using /usr/bin/vim.tiny to provide /usr/bin/vi (vi) in manual mode
 ```
 
+Sometimes you just want to check where the alternatives are set to and they might be 2 redirects deep.  This command is useful for checking in that instance.
+
+    ls -la $(ls -la $(which phar) | awk '{print $NF}')
+
 Problem: Num lock is off after reboot.
 
 Solution: Install numlockx and insert the command into your rc.local file.

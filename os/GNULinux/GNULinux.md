@@ -516,6 +516,10 @@ sudo update-alternatives --config x-terminal-emulator
 sudo update-alternatives --config x-www-browser
 ```
 
+`editor` will open the default text editor.  This is useful for scripting.
+
+`xdg-open` will open a file with the default graphical utility.
+
 Problem: How do I find which display manager I am using with systemd?
 
 Solution: Run this command:

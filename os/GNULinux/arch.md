@@ -1,9 +1,11 @@
 # Arch Linux
 
-Arch has a steep learning curve for users that are new to GNU/Linux.  I would
+Arch is known for a steep learning curve for users that are new to GNU/Linux.  This is not entirely the case anymore, but it does come with it's own set of challenges.  I would
 only suggest using Arch if you have used GNU/Linux as your primary operating
-system for at least 6 months.  After the arduous installation is complete, the
+system for at least 6 months.  After the installation is complete, the
 system is very nice to use.
+
+What makes Arch uniquely different is that most of the software comes unmodified directly from the upstream developers.  This is in stark contrast to stable distributions such as Debian stable, Ubuntu LTS, CentOS, and Red Hat Enterprise Linux who may simultaneously maintain several versions of packages for up to ten years.
 
 [Arch webpage](https://www.archlinux.org/)
 
@@ -38,12 +40,9 @@ After installation, look at the
 [General recommendations](https://wiki.archlinux.org/index.php/General_recommendations)
 for a direction to take.
 
-If you give a full attempt and fail, try
-[Antegros](https://antergos.com/try-it/) or [ArchBang](http://bbs.archbang.org/)
-which are Arch based distributions that still use the default Arch repositories.
+If you give a full attempt and fail, try using the archinstall script.
 
-On your second install, use your notes or use
-[ArchFi](https://github.com/MatMoul/archfi) to automate the installation.
+On your second install, use your notes or automate the installation.
 
 ## AUR and pacaur
 
@@ -99,10 +98,3 @@ include proprietary software at all.
 install to Parabola
 
 [Parabola Downloads](https://wiki.parabola.nu/Get_Parabola)
-
-## More resources
-
-[Arch + btrfs + Jenkins +  systemd-nspawn containers](https://blog.bastelfreak.de/2016/05/creating-a-reliable-arch-linux-package-build-environment/)
-
-[Powerpill](https://wiki.archlinux.org/index.php/powerpill) - Pacman wrapper
-using parallel and segmented downloading

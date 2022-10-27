@@ -83,3 +83,7 @@ If you want to share the asciinema recording with the general public, you can up
     asciinema upload FILENAME.cast
 
 If you only need to share a recording with one person, you could also email the cast file and give them instructions on how to install `asciinema` and playback the file.
+
+# VHS
+
+VHS is a similar project written in Go that is built to generate gifs from terminal.  <https://github.com/charmbracelet/vhs>

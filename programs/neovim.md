@@ -1,26 +1,18 @@
 # Neovim notes
 
-Neovim is a fantastic tool for writing and even coding after proper setting.
+[Website](https://neovim.io/) - [Documentation](https://neovim.io/doc/) - [Source](https://github.com/neovim/neovim) Apache-2.0
 
-The notes are meant to provide serious of steps, which anyone may follow by just    
-copying and paste without suffering from hours of tutorials online.
+Neovim is a fantastic tool for writing, programming, and system administration.
 
-**What is worthy noticing is that settings of neovim is kind of personal and don't just copy others settings without understanding how things work.**
-
-***The notes are mainly for ubuntu but I will steps are more or less likely on other GNU/Linue distro or even Windows(which is not recommended for privacy issues)***
+The notes are meant to provide a series of steps, which anyone may follow quickly.
 
 # Installation
 
-## Ubuntu/Debian based
+## Debian-based systems
+
 ```
-for unstable version of neovim
-sudo add-apt-repository ppa:neovim-ppa/unstable
-
-for stable version of neovim
-sudo add-apt-repository ppa:neovim-ppa/stable
-
-sudo apt-get update
-sudo apt-get install neovim
+sudo apt update
+sudo apt install -y neovim
 ```
 ## Arch
 
@@ -36,13 +28,23 @@ sudo dnf install neovim
 
 ## Windows
 
+### Scoop
+
 ```
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time
-irm get.scoop.sh | iex
+irm get.scoop.sh -outfile 'install-scoop.ps1'
+```
+
+Verify install-scoop.ps1 contains what it should.
+
+```
+.\install-scoop.ps1
 scoop install neovim
 ```
 
-# Configuration    
+# Configuration
+
+Note that settings of neovim are kind of personal and do not just copy others settings without understanding how things work. Using neovim without any configuration is fine and might be preferable if you find yourself working on remote systems often.
 
 ## If you prefer vim script
 
@@ -52,20 +54,23 @@ mkdir nvim
 nvim init.vim
 ```
 
-```
-# installation of plug manager: vim-plug
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'       
+## vim-plug
 
-# somehow this won't work on any of my OS. So I just manually dowloand the plug.vim file.
+[Website](https://github.com/junegunn/vim-plug)
 
-And put the plug.vim file into my /usr/share/nvim/runtime/autoload file
-
-The file can be found at https://github.com/junegunn/vim-plug.
-```
+vim-plug is a plugin manager for neovim.
 
 ```
-# put these in your init.vim file and these are just some exmaples.
+# Installation of plug manager: vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+For global install, mv the the `plug.vim` file into the `/usr/share/nvim/runtime/autoload/` directory.
+
+Example `~/.config/nvim/plug` file:
+
+```
 call plug#begin('~/.config/nvim/plug')
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
@@ -94,22 +99,8 @@ and press <ESC> input ':source %' to source the file.
 then press <ESC> input ':PlugInstall' to install the plug
 ```
 
-## Further settings 
+## Additional sources
 
-Actually, the configuration of neovim or vim is super personal.
-
-But there are some excellent tutorials on ***youtube***
-
-I highly recommand **Theprimeagen** and the video below 
-
-https://www.youtube.com/watch?v=DogKdiRx7ls&t=1250s
-
-
-## If you prefer lua
-
-The lua version of configurations of lua is kind of complicated to cover in just 
-one markdown file but it is actually  more straightforward and easy-to-understand when one has many lines of configurations.
-
-Again, I hignly recommend **Theprimeagen** and another viedo below where he makes outstanding illustrations of how these things work.
-
-https://www.youtube.com/watch?v=x2QJYq4IX6M&t=76s
+* YouTube
+** [Theprimeagen on configuration](https://www.youtube.com/watch?v=DogKdiRx7ls&t=1250s)
+** [Theprimeagen on lua configuration](https://www.youtube.com/watch?v=x2QJYq4IX6M&t=76s)

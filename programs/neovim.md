@@ -69,7 +69,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 For global install, mv the the `plug.vim` file into the `/usr/share/nvim/runtime/autoload/` directory.
 
-Example `~/touch ~/.config/nvim/init.vim` file:
+Example `~/touch ~/.config/nvim/init.vim` file (I have not personally vetted all of these plugins yet):
 
 ```
 mkdir -p ~/.config/nvim

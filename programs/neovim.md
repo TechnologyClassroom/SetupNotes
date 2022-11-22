@@ -106,5 +106,5 @@ nvim +PlugInstall +qall
 ## Additional sources
 
 * YouTube
-** [Theprimeagen on configuration](https://www.youtube.com/watch?v=DogKdiRx7ls&t=1250s)
-** [Theprimeagen on lua configuration](https://www.youtube.com/watch?v=x2QJYq4IX6M&t=76s)
+  * [Theprimeagen on configuration](https://www.youtube.com/watch?v=DogKdiRx7ls&t=1250s)
+  * [Theprimeagen on lua configuration](https://www.youtube.com/watch?v=x2QJYq4IX6M&t=76s)

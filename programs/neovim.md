@@ -61,17 +61,19 @@ nvim init.vim
 vim-plug is a plugin manager for neovim.
 
 ```
-# Installation of plug manager: vim-plug
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+# Installation of plugin manager: vim-plug
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 For global install, mv the the `plug.vim` file into the `/usr/share/nvim/runtime/autoload/` directory.
 
-Example `~/.config/nvim/plug` file:
+Example `~/touch ~/.config/nvim/init.vim` file:
 
 ```
-call plug#begin('~/.config/nvim/plug')
+mkdir -p ~/.config/nvim
+cat >> ~/.config/nvim/init.vim << EOL
+call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'itchyny/lightline.vim'
@@ -92,11 +94,13 @@ Plug 'preservim/vim-markdown'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 call plug#end()
+EOL
 ```
 
+Install the plugins.
+
 ```
-and press <ESC> input ':source %' to source the file.
-then press <ESC> input ':PlugInstall' to install the plug
+nvim +PlugInstall +qall
 ```
 
 ## Additional sources

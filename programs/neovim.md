@@ -46,12 +46,13 @@ scoop install neovim
 
 Note that settings of neovim are kind of personal and do not just copy others settings without understanding how things work. Using neovim without any configuration is fine and might be preferable if you find yourself working on remote systems often.
 
+My simple neovim config is in [dotfiles](https://github.com/TechnologyClassroom/dotfiles/blob/master/nvim.rc).
+
 ## If you prefer vim script
 
 ```
-cd  ~/.config
-mkdir nvim
-nvim init.vim
+mkdir -p ~/.config/nvim
+nvim ~/.config/nvim/init.vim
 ```
 
 ## vim-plug

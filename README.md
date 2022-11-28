@@ -52,6 +52,8 @@ These are **some of** my notes.
   - [sphinx-docnotes.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/programs/sphinx-docnotes.md)
   - [thunderbird.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/programs/thunderbird.md)
   - [tmux.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/programs/tmux.md)
+  - [Zotero.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/programs/Zotero.md)
+  - [neovim.md](https://github.com/TechnologyClassroom/SetupNotes/blob/master/programs/neovim.md)
   - [web-browsers/](https://github.com/TechnologyClassroom/SetupNotes/tree/master/programs/web-browsers)
 
 Note: I reorganized several directories so I may have broken some links if you have bookmarked any of my pages.

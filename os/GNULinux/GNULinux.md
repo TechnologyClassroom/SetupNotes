@@ -601,3 +601,7 @@ Solution: Use Network Manager's `nmcli` to connect.
      sudo nmcli device wifi connect ACCESSPOINTNAMEHERE password PASSWORDHERE
 
 If you cannot see the output, watch network connections from router to see if it worked.
+
+Problem: When running `gpg --recv-keys GPGFINGERPRINTHERE`, `gpg` returns `gpg: keyserver receive failed: Server indicated a failure` instead of downloading a key.
+
+Solution: Specify a keyserver that is likely to work such as Ubuntu's SKS pool `gpg --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 GPGFINGERPRINTHERE`. You can also set this permanently by adding `keyserver hkp://keyserver.ubuntu.com` to your `~/.gnupg/gpg.conf` configuration file.

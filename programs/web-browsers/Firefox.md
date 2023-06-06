@@ -45,12 +45,6 @@ Extensions can make Firefox based browsers highly configurable.
   goes to the `https` page automatically instead of `http`.
 * [AdNauseum](https://addons.mozilla.org/en-US/firefox/addon/adnauseam/) blocks
   ads and clicks on all of the ads to confuse advertisers.
-* ~~[Third-party request Blocker](https://addons.mozilla.org/en-US/firefox/addon/tprb/)
-  blocks third-party domains. ([Unmaintained since 2019.](https://old.reddit.com/r/FirefoxAddons/comments/8y3rsu/what_the_heck_is_going_on_with_thirdparty_request/))~~
-- [uMatrix](https://addons.mozilla.org/en-US/firefox/addon/umatrix/) allows you
-  to control the content of your browser.  This will break website
-  functionality until properly configured.  uMatrix is not necessary if you use
-  NoScript.
 - [KeePassXC-Browser](https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/)
   communicates between KeePassXC to store passwords securely.  I would suggest
   not saving passwords in your browser or using this extension, but this is

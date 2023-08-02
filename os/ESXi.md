@@ -4,10 +4,23 @@ Michael McMahon
 
 IMPORTANT NOTE: Use [Proxmox](https://www.proxmox.com/en/) instead of ESXi.
 
+Reasons to use Proxmox instead of ESXi:
+
+* Proxmox is based on the community-run Debian distribution.
+* Proxmox seems to generally do things the correct way.
+* Hardware compatibility is better with Proxmox.
+* Proxmox can optionally use Ceph storage.
+* No account is required to download and use Proxmox.
+* There is no downside. Use Proxmox instead of ESXi.
+
+Reasons to use ESXi instead of Proxmox:
+
+* Your work refuses to use anything other than ESXi.
+
 ESXi (VMware vSphere Hypervisor) uses the proprietary vmkernel.
 
-Some of my clients use ESXi so I have started teaching myself.  I am not
-interested in this subject so I will only focus on installation and initial
+Some of my former clients used ESXi so I had started teaching myself. I am not
+interested in this subject so Ionly focus on installation and initial
 configuration because of VMware's proprietary nature and 
 [this](https://sfconservancy.org/copyleft-compliance/vmware-lawsuit-faq.html), 
 [this](http://www.zdnet.com/article/vmware-sued-for-failure-to-comply-with-linuxs-license/),
@@ -29,7 +42,7 @@ issue to the SetupNotes repository or send me an email.
 [Download (free account required)](http://www.vmware.com/go/get-free-esxi)
 
 Note: At the time of this writing, only the latest iso can be downloaded with a free
-account.  In January 2017, every available version could be downloaded with a
+account. In January 2017, every available version could be downloaded with a
 free account.
 
 ## Installation

@@ -605,3 +605,15 @@ If you cannot see the output, watch network connections from router to see if it
 Problem: When running `gpg --recv-keys GPGFINGERPRINTHERE`, `gpg` returns `gpg: keyserver receive failed: Server indicated a failure` instead of downloading a key.
 
 Solution: Specify a keyserver that is likely to work such as Ubuntu's SKS pool `gpg --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 GPGFINGERPRINTHERE`. You can also set this permanently by adding `keyserver hkp://keyserver.ubuntu.com` to your `~/.gnupg/gpg.conf` configuration file.
+
+Problem: Debian's root user is having trouble finding programs that it should have access to.
+
+Solution: Make sure /bin/sbin is in your path.
+
+    echo $PATH
+
+If not, make a temporary fix.
+
+    export PATH="/usr/sbin:$PATH"
+
+A permanent fix is adding the above line to your `/root/.bashrc` file and reloading your terminal with the `source ~/.bashrc` command.

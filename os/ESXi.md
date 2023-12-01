@@ -2,7 +2,7 @@
 
 Michael McMahon
 
-IMPORTANT NOTE: Use [Proxmox](https://www.proxmox.com/en/) instead of ESXi.
+IMPORTANT NOTE: Use [Proxmox](https://www.proxmox.com/en/) or [virt-manager](https://virt-manager.org/) instead of ESXi.
 
 Reasons to use Proxmox instead of ESXi:
 
@@ -11,6 +11,7 @@ Reasons to use Proxmox instead of ESXi:
 * Hardware compatibility is better with Proxmox.
 * Proxmox can optionally use Ceph storage.
 * No account is required to download and use Proxmox.
+* [ESXi does not play well with others.](https://en.wikipedia.org/wiki/VMware#Litigation)
 * There is no downside. Use Proxmox instead of ESXi.
 
 Reasons to use ESXi instead of Proxmox:

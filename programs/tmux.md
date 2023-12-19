@@ -52,6 +52,10 @@ revert back to the previous terminal pane.
 
 ## Preserve work during remote connections
 
+This is also very useful if you want to share a screen with two people that both
+have SSH access to the same server. Even if you are in the same room, this is
+preferred to looking over a physical shoulder.
+
 If you are familar with SSH connections, you have probably ran into the scenario
 where you were working on a long process and lost connection or closed the
 terminal window.  The process cancels at that point on the remote server and can
@@ -65,6 +69,15 @@ tmux attach
 ```
 
 Your tmux session will be exactly as you left it.
+
+You can also run this abbreviation to do the same thing.
+
+```
+tmux a
+```
+
+You can also use the keystroke `CTRL+b, d` to disconnect purposefully if you want
+to leave a long process running in the background.
 
 ## tmux in tmux
 

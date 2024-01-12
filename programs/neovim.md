@@ -49,7 +49,7 @@ Note that settings of neovim are kind of personal and do not just copy others se
 My simple neovim config is in [dotfiles](https://github.com/TechnologyClassroom/dotfiles/blob/master/nvim.rc).
 
 
-Another neovim config with Lazy.nvim[dotfiles](https://github.com/wujackwill/nvim)
+Another neovim config with Lazy.nvim [dotfiles](https://github.com/wujackwill/nvim)
 
 
 ## Additional sources

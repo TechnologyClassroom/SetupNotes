@@ -42,15 +42,29 @@ Verify install-scoop.ps1 contains what it should.
 scoop install neovim
 ```
 
+# Run
+
+Run `nvim` from the command line usually with a filename after.
+
+    nvim file.txt
+
+# Exit
+
+To save and exit, use esc key, `:wq`, and the enter key. `w` stands for write. `q` stands for quit.
+
+To quit without saving, use `:q!` instead.
+
+# Learning how to use neovim
+
+Once inside `nvim` type `:Tutor` and enter to start the tutorial.
+
 # Configuration
 
 Note that settings of neovim are kind of personal and do not just copy others settings without understanding how things work. Using neovim without any configuration is fine and might be preferable if you find yourself working on remote systems often.
 
 My simple neovim config is in [dotfiles](https://github.com/TechnologyClassroom/dotfiles/blob/master/nvim.rc).
 
-
 Another neovim config with Lazy.nvim [dotfiles](https://github.com/wujackwill/nvim)
-
 
 ## Additional sources
 

@@ -14,9 +14,9 @@ Install with apt on Debian based operating systems:
 
     sudo apt update && sudo apt install -y asciinema
 
-Install/upgrade with `pip3`:
+Install/upgrade with `cargo`:
 
-    sudo pip3 install -U asciinema
+    cargo install --git https://github.com/asciinema/asciinema
 
 ### Config file
 

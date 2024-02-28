@@ -38,9 +38,13 @@ url = 127.0.0.1
 
 ### Record locally
 
-Record a session without uploading it to their website.  I would suggest using a filename that is descriptive about what you are doing such as `drupalupgrade.cast`.
+Record a session without uploading it to their website. I would suggest using a filename that is descriptive about what you are doing such as `drupalupgrade.cast`.
 
     asciinema rec FILENAME.cast
+
+Record a session without uploading it to their website with a date stamp.
+
+    asciinema rec FILENAME$(date +%Y-%m-%d).cast
 
 `asciinema` will drop you into a new shell.  Exit the shell with `exit` or `CTRL + d` to stop the recording.
 

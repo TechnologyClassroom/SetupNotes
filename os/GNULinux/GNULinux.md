@@ -116,7 +116,7 @@ man cat
 ## Suggested Distributions
 
 - [Debian](https://www.debian.org/) - Community driven, stable OS with only
-  libre software by default.  Avoid the nonfree repo if you can.
+  libre software by default. Avoid the nonfree repo if you can.
 - [Ubuntu Studio](https://ubuntustudio.org/) - Targeted towards those interested
   in graphic design and audio/video production activities.
 - [Trisquel](https://trisquel.info/) - Based on Ubuntu, but with all non-free
@@ -127,8 +127,6 @@ man cat
   removed.
 - [Ubuntu Server](https://www.ubuntu.com/download/server) - Ubuntu without a
   graphical user interface (GUI) is a popular choice for enterprise servers.
-- [Xubuntu](https://xubuntu.org/) - Ubuntu with the XFCE desktop
-  environment (DE) is good OS for older computers.
 - [AlmaLinux](https://almalinux.org/) - Stable community driven branch of Red
   Hat Enterprise Linux (RHEL).  I would only recommend AlmaLinux if you are
   trying to prepare for a job that will be using RHEL.
@@ -617,3 +615,36 @@ If not, make a temporary fix.
     export PATH="/usr/sbin:$PATH"
 
 A permanent fix is adding the above line to your `/root/.bashrc` file and reloading your terminal with the `source ~/.bashrc` command.
+
+Problem: Ubuntu added ads when you SSH into a server or run apt. Examples: `The following security updates require Ubuntu Pro with 'esm-apps' enabled:` and `Expanded Security Maintenance for Applications is not enabled.`
+
+Solutions:
+
+Opt-out with this command:
+
+    sudo pro config set apt_news=false
+
+From Gaia and Pablo Bianchi at https://askubuntu.com/a/1457810/1651935
+
+Comment out the action lines in the apt hook.
+
+    sudo sed -i'' -e 's/^\(\s\+\)\([^#]\)/\1# \2/' /etc/apt/apt.conf.d/20apt-esm-hook.conf
+
+From nb52er and John Weldon at https://askubuntu.com/a/1434762/1651935
+
+Add return statements before messages.
+
+    sudo sed -Ezi.orig \
+      -e 's/(def _output_esm_service_status.outstream, have_esm_service, service_type.:\n)/\1    return\n/' \
+      -e 's/(def _output_esm_package_alert.*?\n.*?\n.:\n)/\1    return\n/' \
+      /usr/lib/update-notifier/apt_check.py
+
+Test.
+
+    /usr/lib/update-notifier/apt_check.py --human-readable
+
+Regenerate.
+
+    sudo /usr/lib/update-notifier/update-motd-updates-available --force
+
+From jwatson0 at https://askubuntu.com/a/1456185/1651935

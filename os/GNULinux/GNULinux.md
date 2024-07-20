@@ -648,3 +648,19 @@ Regenerate.
     sudo /usr/lib/update-notifier/update-motd-updates-available --force
 
 From jwatson0 at https://askubuntu.com/a/1456185/1651935
+
+Problem: `apt-file` increases the `apt update` time considerably by downloading contents updates.
+
+Solution: Disable the apt-file configuration.
+
+    sudo mv /etc/apt/apt.conf.d/50apt-file.conf{,.disabled}
+
+If you want to enable it again, use this command:
+
+    sudo mv /etc/apt/apt.conf.d/50apt-file.conf{.disabled,}
+
+If you want to enable it, update the contents for apt-file, and then disable it again, do this:
+
+    sudo mv /etc/apt/apt.conf.d/50apt-file.conf{.disabled,} && sudo apt update && sudo mv /etc/apt/apt.conf.d/50apt-file.conf{,.disabled}
+
+From Stephen Kitt at https://unix.stackexchange.com/a/495022/553861

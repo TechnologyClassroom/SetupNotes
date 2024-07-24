@@ -664,3 +664,20 @@ If you want to enable it, update the contents for apt-file, and then disable it 
     sudo mv /etc/apt/apt.conf.d/50apt-file.conf{.disabled,} && sudo apt update && sudo mv /etc/apt/apt.conf.d/50apt-file.conf{,.disabled}
 
 From Stephen Kitt at https://unix.stackexchange.com/a/495022/553861
+
+Problem: Disk is full when I run the `df -h` command. How do you get some wiggle room?
+
+Solution: Free up some space.
+
+On a Debian-based system, mark journal logs as archived, remove journal logs except for 100MB, remove dependencies that are no longer needed with apt, and clear local apt cache.
+
+    sudo journalctl --rotate && sudo journalctl --vacuum-size=100M && sudo apt autoremove && sudo apt autoclean
+
+From cowlinator at https://askubuntu.com/a/1461683/1651935
+
+Look for directories that take up the most space with the `ncdu` program.
+
+    sudo apt install -y ncdu
+    sudo ncdu /
+
+Make sure you have backups or do not need the files before removing them. The `d` key can delete files and directories from within the `ncdu` program.

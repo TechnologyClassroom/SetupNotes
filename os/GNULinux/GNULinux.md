@@ -2,12 +2,16 @@
 
 This is a set of notes on learning more about GNU/Linux.
 
+You cannot learn everything at once.
+
 ## Learning GNU/Linux in a self-paced way
 
 I am frequently asked how to learn GNU/Linux.  The fastest way to learn is to
 install a GNU/Linux distribution on your computer and use it everyday.  Figure
 out how to do all of the tasks you would normally do with a computer using only
-free, libre, and open source software.
+free, libre, and open source software. Do not try to run all of the programs
+you once used, learn what the task was that you were doing and find a workflow
+that can accomplish the task.
 
 The second thing that has advanced my career with GNU/Linux the most is taking
 notes.
@@ -681,3 +685,24 @@ Look for directories that take up the most space with the `ncdu` program.
     sudo ncdu /
 
 Make sure you have backups or do not need the files before removing them. The `d` key can delete files and directories from within the `ncdu` program.
+
+Problem: Disk is full, but `df -h` shows that I have disk space.
+
+Solution: Lots of little files are taking up available inodes. Run `df -ih` to check free inodes. You can search your current directory for where the most inodes are being used with this command:
+
+    sudo find . -xdev -type f | cut -d "/" -f 2 | sort | uniq -c | sort -n
+
+From simon and the Tin Man at https://stackoverflow.com/a/9387415
+
+Problem: GNOME Terminal is missing characters.
+
+Solution: In GNOME Termianl, click on `Edit` in the menu bar. Click on the `Preferences` option. Click on the `Compatibility` tab. Beside `Encoding` select something that is not `Unicode - UTF-8` preferably in a similar locale to your own. Change it back to the `Unicode - UTF-8` option. Click on the `Close` button.
+
+From hlidka at https://unix.stackexchange.com/a/365281/553861
+
+Problem: System and WeeChat color scheme makes it difficult to read nicks when they ping you.
+
+Solution: Change the `weechat.color.chat_highlight` colors to very different options.
+
+    /set weechat.color.chat_highlight black
+    /set weechat.color.chat_highlight_bg green

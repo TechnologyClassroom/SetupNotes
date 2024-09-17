@@ -1,6 +1,6 @@
 # Windows
 
-This file will always be incomplete.  Use free, libre, and open source operating
+This file will always be incomplete. Windows will not get better; it will only get worse. Use free, libre, and open source operating
 systems if you value privacy.
 
 Microsoft Windows was my first major experience with computers outside of
@@ -23,6 +23,8 @@ that you need it.
 
 ## Troubleshooting
 
+### Too many programs start at login
+
 Problem: Unwanted programs startup with the computer.
 Solution: Download
 [autoruns](https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns)
@@ -31,6 +33,8 @@ missing programs.  If you do not know what something is, look it up.
 
 Warning: You can break your systems with autoruns.  If you broke your system
 with autoruns, you are to blame.  Keep good backups.
+
+### Malware
 
 Problem: The system is generally slow and may have malware installed.
 Solution: Backup your system, download
@@ -51,6 +55,8 @@ Warning: Tron Script is not a replacement for good security practices.  Tron
 Script may make your system unusable.  Use at your own risk.  Keep good
 backups.
 
+### Dual-boot time
+
 Problem: When dual-booting, motherboard is set to UTC time for GNU/Linux
 distributions.  Windows 7 has the incorrect time.
 Solution: Add a Windows registry key to use UTC time.
@@ -63,6 +69,8 @@ Solution: Add a Windows registry key to use UTC time.
 
 From http://crashmag.net/configuring-windows-7-support-for-utc-bios-time
 
+### MSN startup
+
 Problem: MSN opens a browser when logging in.
 Solution: Change the registry.
 From http://www.troublefixing.in/solved-windows-launch-msn-or-bing-page-on-starup/345/
@@ -70,6 +78,8 @@ regedit Run As Administrator
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet\
 On right side pane you will find a EnableActiveProbing value, just double click
 on it and change its value from 1 to 0.
+
+### Too many Kerbal Space Programs
 
 Problem: Users start multiple instances of a program causing nothing to work.
 Solution: Create a batch script in a text file using this line and save it as
@@ -82,6 +92,8 @@ tasklist /nh /fi "imagename eq KSP.exe" | find /i "KSP.exe" > nul || (start KSP.
 ```
 
 From http://superuser.com/questions/654088
+
+### Unwanted password expiration notices
 
 Problem: Password expiration notice appears and the machine's password should
 not expire.
@@ -97,6 +109,21 @@ Solution: Disable Password Expiration for a User in Windows 8.1/8/7
 
 Based on https://www.windowspasswordsrecovery.com/articles/password/enable-or-disable-password-expiration-for-a-user-in-windows-8-7.html
 
+### Black screen
+
+Problem: Windows 10 has a black screen instead of login or recovery.
+
+Solution: Win + CTRL + Shift + B restarts the graphics driver. Rebooting then returned to normal.
+
+### Booting to the boot menu of Lenovo IdeaPad Yoga 11
+
+Problem: The usual ESC, F2, F10, and F12 do not work when booting the system as Windows never truely shuts down anymore.
+
+Solution: Shut the system down and use the Novo button to the left of the power button.  Use the arrow keys and enter to make a selection.
+
+Reference: https://superuser.com/a/970389/1647920
+
+## Tips
 
 ## How to search for literal strings in Explorer
 
@@ -105,11 +132,3 @@ https://answers.microsoft.com/en-us/windows/forum/windows_7-files/how-do-i-searc
 
 name:~"*(2)*"
 (2) can be changed to other literal strings.
-
-## Booting to the boot menu of Lenovo IdeaPad Yoga 11
-
-Problem: The usual ESC, F2, F10, and F12 do not work when booting the system as Windows never truely shuts down anymore.
-
-Solution: Shut the system down and use the Novo button to the left of the power button.  Use the arrow keys and enter to make a selection.
-
-Reference: https://superuser.com/a/970389/1647920

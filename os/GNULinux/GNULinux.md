@@ -298,7 +298,7 @@ yum install -y nano # Install nano
 yum clean all # Clean package cache
 ```
 
-## opensuse tumbleweed notes
+## openSUSE Tumbleweed notes
 
 Look for a package.
 
@@ -316,7 +316,7 @@ Update distribution packages
 
     sudo zypper dist-upgrade -y -l
 
-# Exit QEMU
+# Exit QEMU control capture
 
 ```
 CTRL+ALT+2
@@ -324,6 +324,8 @@ quit
 ```
 
 ## Troubleshooting
+
+### USB Boot problems
 
 Problem: fat32 and fat16 formatted flash drive gives errors and has trouble
 booting.
@@ -348,6 +350,8 @@ Sources:
 - <http://askubuntu.com/questions/147228/how-to-repair-a-corrupted-fat32-file-system>
 - <https://bbs.archlinux.org/viewtopic.php?id=164185>
 
+### Node.js path problem
+
 Problem: nodejs cannot find the correct path.  Gives error:
 
     /usr/bin/env: node: No such file or directory
@@ -359,16 +363,20 @@ with:
 
 From digitalmediums at https://github.com/nodejs/node-v0.x-archive/issues/3911
 
+### Password is too short notification
+
 Problem: Password is too short.
 Solution: Allow passwords of any length
 
-Note: Only use this for standard account
+Note: Only use this for standard account and when security does not matter.
 
 http://ubuntuhandbook.org/index.php/2015/06/minimum-password-length-ubuntu/
 
     sudo nano /etc/pam.d/common-password
 
 Remove the word 'obscure' and save.
+
+### Dash default problem
 
 Problem: Ubuntu defaults to dash instead of bash.  Bash scripts sometimes do not
 work.
@@ -388,11 +396,15 @@ Links for directories work the same way.
 Restart network stack with Ubuntu 16.04 server
 sudo systemctl restart NetworkManager.service
 
+### libappstream3 problem
+
 Problem: Ubuntu 16.04 crashes on apt-get update.
 Solution: Something changed in Ubuntu 16.04 during the Summer of 2017 and
 libappstream3 breaks updates.  Remove libappstream3 to fix the problem.
 
     sudo apt-get purge -y libappstream3
+
+### Hidden grub problem
 
 Problem: Ubuntu skips grub menu
 
@@ -412,6 +424,8 @@ Update grub.
 Modified from Eric Carvalho & Vojtech Trefny at
 http://askubuntu.com/questions/16042/how-to-get-to-the-grub-menu-at-boot-time
 
+### Old DHCP problem
+
 Problem: Ubuntu 16.04 does not manage the network devices.  dhcp can be set
 manually.
 
@@ -421,11 +435,15 @@ Solution: Edit config file and set managed equal to true.
 
 Change ```managed=false``` to ```managed=true```.  CTRL+X, y, enter
 
+### Old Sugar cursor problem
+
 Problem: Ubuntu's outdated Sugar DE clobbers the cursor outside of sugar
 
 Solution: Reset cursor theme
 
     gsettings reset org.gnome.desktop.interface cursor-theme
+
+### No sound issue
 
 Problem: No audio output and command line only.
 
@@ -435,6 +453,8 @@ Solution: Use amixer to toggle your output.
 amixer # Lists all outputs
 amixer sset Headphone toggle
 ```
+
+### Ruby gem issue
 
 Problem: gem install fails with message:
 
@@ -454,6 +474,8 @@ sudo yum install -y ruby-devel 2>/dev/null
 sudo zypper install -y ruby-devel 2>/dev/null
 ```
 
+### Old NIC issue
+
 Problem: All ethernet devices are not shown in ifconfig on Ubuntu Server 16.04.
 
 Solution: List all cards and manually add them to /etc/network/interfaces
@@ -469,6 +491,8 @@ Edit the /etc/network/interfaces file.
 
 Use the template shown with lo for all of your network ports.  CTRL+X, y, enter
 
+### International keyboad issue
+
 Problem: Keyboard incorrectly set to international and your minimal install does
 not have the GUI tools to fix this problem
 
@@ -479,6 +503,8 @@ Solution: Change default keyboard settings in /etc/default/keyboard
 Remove intl from XKBLAYOUT and XKBVARIANT.  Hold CTRL and press X, press y, and
 press the enter or return key.
 
+### Debian CD sources issue
+
 Problem: Debian asks for the installation CD while updating repositories.
 
 Solution: Remove the cdrom source from the /etc/apt/sources.list file.
@@ -488,6 +514,8 @@ Solution: Remove the cdrom source from the /etc/apt/sources.list file.
 Add a # at the beginning of the line that starts with "deb cdrom" and leave
 everything else.  Hold CTRL and press X, press y, and press the enter or return
 key.
+
+### Incomplete install issue
 
 Problem: Ubuntu machine lost power during an install.
 
@@ -503,6 +531,8 @@ sudo shutdown -r now
 ```
 
 If this does not fix the problem, backup and reinstall.
+
+### Default program preferences
 
 Problem: The default program is not the preferred choice.
 
@@ -522,11 +552,15 @@ sudo update-alternatives --config x-www-browser
 
 `xdg-open` will open a file with the default graphical utility.
 
+### Display manager preference
+
 Problem: How do I find which display manager I am using with systemd?
 
 Solution: Run this command:
 
     cat /etc/systemd/system/display-manager.service | grep ExecStart
+
+### Old grub issue
 
 Problem: During a Ubuntu 16.04 upgrade, I receive the error:
 
@@ -545,6 +579,8 @@ sudo update-grub
 ```
 
 Based on John and David Foerster at https://askubuntu.com/questions/763472
+
+### vim clobber vi issue
 
 Problem: Installing vim, changes vi.
 
@@ -569,6 +605,8 @@ Sometimes you just want to check where the alternatives are set to and they migh
 
     ls -la $(ls -la $(which phar) | awk '{print $NF}')
 
+### Persistent num lock settings issue
+
 Problem: Num lock is off after reboot.
 
 Solution: Install numlockx and insert the command into your rc.local file.
@@ -580,9 +618,13 @@ sudo sed -i 's|^exit 0.*$|# Numlock enable\n[ -x /usr/bin/numlockx ] \&\& numloc
 
 <https://help.ubuntu.com/community/NumLock>
 
+### Locale issue
+
 Problem: This message appears when you login to a server: `-bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)`
 
 Solution: Run this command `locale-gen en_US.UTF-8` as root.
+
+### LVM issue
 
 Problem: Console reports an issue with /dev/dm-3.  How do you know what /dev/dm-3 is?
 
@@ -596,6 +638,8 @@ To list them all, use this command:
 
     dmsetup ls
 
+### Connecting to the Internet with nmcli
+
 Problem: Need to connect to WiFi using command line after initial install.
 
 Solution: Use Network Manager's `nmcli` to connect.
@@ -604,9 +648,13 @@ Solution: Use Network Manager's `nmcli` to connect.
 
 If you cannot see the output, watch network connections from router to see if it worked.
 
+### GPG key retrieval issue
+
 Problem: When running `gpg --recv-keys GPGFINGERPRINTHERE`, `gpg` returns `gpg: keyserver receive failed: Server indicated a failure` instead of downloading a key.
 
 Solution: Specify a keyserver that is likely to work such as Ubuntu's SKS pool `gpg --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 GPGFINGERPRINTHERE`. You can also set this permanently by adding `keyserver hkp://keyserver.ubuntu.com` to your `~/.gnupg/gpg.conf` configuration file.
+
+### Debian root path issue
 
 Problem: Debian's root user is having trouble finding programs that it should have access to.
 
@@ -619,6 +667,8 @@ If not, make a temporary fix.
     export PATH="/usr/sbin:$PATH"
 
 A permanent fix is adding the above line to your `/root/.bashrc` file and reloading your terminal with the `source ~/.bashrc` command.
+
+### Ubuntu ads issue
 
 Problem: Ubuntu added ads when you SSH into a server or run apt. Examples: `The following security updates require Ubuntu Pro with 'esm-apps' enabled:` and `Expanded Security Maintenance for Applications is not enabled.`
 
@@ -653,6 +703,41 @@ Regenerate.
 
 From jwatson0 at https://askubuntu.com/a/1456185/1651935
 
+When the ad packages ubuntu-advantage-tools and or ubunutu-pro-client-l10n have an update, this change will cause packages to be held-back wtih unattended-upgrades enabled.
+
+    sudo apt update
+    sudo apt upgrade
+
+The installer will get hung up like this:
+
+```
+Configuration file '/etc/apt/apt.conf.d/20apt-esm-hook.conf'                                                      
+ ==> Modified (by you or by a script) since installation.                                                         
+ ==> Package distributor has shipped an updated version.                                                          
+   What would you like to do about it ?  Your options are:                                                        
+    Y or I  : install the package maintainer's version                                                            
+    N or O  : keep your currently-installed version                                                               
+      D     : show the differences between the versions                                                           
+      Z     : start a shell to examine the situation                                                              
+ The default action is to keep your current version.                                                              
+*** 20apt-esm-hook.conf (Y/I/N/O/D/Z) [default=N] ?
+```
+
+You can compare the proposed change with D if you want, or just use the default N to keep it as it is.
+
+After fixing the held-package, there will still be a notice when you log in over SSH.
+
+```
+2 updates could not be installed automatically. For more details,
+see /var/log/unattended-upgrades/unattended-upgrades.log
+```
+
+This is fixed by removing the `kept-back` file.
+
+    sudo rm /var/lib/unattended-upgrades/kept-back
+
+### apt-file update issue
+
 Problem: `apt-file` increases the `apt update` time considerably by downloading contents updates.
 
 Solution: Disable the apt-file configuration.
@@ -668,6 +753,8 @@ If you want to enable it, update the contents for apt-file, and then disable it 
     sudo mv /etc/apt/apt.conf.d/50apt-file.conf{.disabled,} && sudo apt update && sudo mv /etc/apt/apt.conf.d/50apt-file.conf{,.disabled}
 
 From Stephen Kitt at https://unix.stackexchange.com/a/495022/553861
+
+### Disk full issue
 
 Problem: Disk is full when I run the `df -h` command. How do you get some wiggle room?
 
@@ -686,6 +773,8 @@ Look for directories that take up the most space with the `ncdu` program.
 
 Make sure you have backups or do not need the files before removing them. The `d` key can delete files and directories from within the `ncdu` program.
 
+### Disk inodes issue
+
 Problem: Disk is full, but `df -h` shows that I have disk space.
 
 Solution: Lots of little files are taking up available inodes. Run `df -ih` to check free inodes. You can search your current directory for where the most inodes are being used with this command:
@@ -694,11 +783,15 @@ Solution: Lots of little files are taking up available inodes. Run `df -ih` to c
 
 From simon and the Tin Man at https://stackoverflow.com/a/9387415
 
+### GNOME missing characters
+
 Problem: GNOME Terminal is missing characters.
 
 Solution: In GNOME Termianl, click on `Edit` in the menu bar. Click on the `Preferences` option. Click on the `Compatibility` tab. Beside `Encoding` select something that is not `Unicode - UTF-8` preferably in a similar locale to your own. Change it back to the `Unicode - UTF-8` option. Click on the `Close` button.
 
 From hlidka at https://unix.stackexchange.com/a/365281/553861
+
+### WeeChat color issue
 
 Problem: System and WeeChat color scheme makes it difficult to read nicks when they ping you.
 

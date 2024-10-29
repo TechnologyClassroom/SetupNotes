@@ -7,7 +7,7 @@ mobile phone operating system and uses the
 
 The majority of Android is free and open source through the
 [Android Open Source Project (AOSP)](https://source.android.com/), but the phone
-manufacturers frequently add proprietary apps and drivers that cannot be audited
+manufacturers (including Google) frequently add proprietary apps and drivers that cannot be audited
 or removed.
 
 ## Recommended phones and tablets
@@ -35,14 +35,14 @@ next time that you are shopping for a phone.
 
 I would suggest using [GrapheneOS](https://grapheneos.org/). GrapheneOS is a security hardened version of Android.
 
-Other options that I would recommend and have personally used include [LineageOS](https://lineageos.org/).
+Anoterh options that I would recommend and have personally used is [LineageOS](https://lineageos.org/). I would also consider trying [DivestOS](https://divestos.org/).
 
 Before changing the OS, make a backup of your files and OS.
 
 Beware of unofficial releases of operating systems. The operating system must
 be trusted more than any of the rest of the software on your phone. If the
 author is a random person on a forum that does not use their real name, would
-you trust giving that person access to your location and passwords? You should
+you trust giving that person access to your location, communication and browsing history, and passwords? You should
 not trust an individual on the Internet that is anonymous.
 
 Read and follow the documentation for installing new operating systems on your
@@ -65,7 +65,7 @@ list their antifeatures. Most applications found in F-Droid contain Richard
 Stallman's Four Freedoms.
 
 Most phones will come with Google Play Store preinstalled. I do not trust
-Google and I only use [F-Droid](https://f-droid.org/en/).
+Google and I only use [F-Droid](https://f-droid.org/en/) for daily usage.
 
 F-Droid can be installed on any Android based phone and do not require on of
 the recommended alternatives.

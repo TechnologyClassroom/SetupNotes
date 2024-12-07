@@ -156,6 +156,18 @@ and loosely ranked for usefulness within each category.
 
 `adb` is a command line program to interact with Android based mobile phones.
 
+### Enabling developer mode
+
+I cannot remember if this is a prerequisite for this process as I always do it first thing to a new phone install.
+
+* Open the `Settings` app.
+* Select the `About Phone` option.
+* Find the `Build number`. Tap on that several times until it says that you enabled developer mode.
+* Go back a page and select the `System` option.
+* Select the `Developer options` option.
+* Enable the `USB debugging` option.
+* Exit the settings app.
+
 ### Install
 
 Install adb on a Debian based GNU/Linux distribution.  `adb` works for other

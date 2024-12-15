@@ -162,14 +162,58 @@ Installed apps are as follows:
 
 ### Connect to WiFi
 
-### Install F-Droid
+Settings > Connections > Wi-Fi
 
-* [Download F-Droid](https://f-droid.org/).
-* Install F-Droid. You will have to allow installation of APK files through Chrome source.
-* Update F-Droid. You will have to allow installation of APK files through F-Droid.
-* Install Neo Store, open it, give it all of the permissions it asks for. Open the gear icon, repositories tab, and disable everything except for F-Droid. Back out of the settings, and tap on the refresh icon.
-* Install more apps from F-Droid through Neo Store.
+Select your network, enter your password, and get connected.
 
 ### Update the OS
 
+Settings > Software update > Download and install
+
+While waiting for the download, you can continue on.
+
 Keep updating until Settings > Software update says, "Your software is up to date."
+
+### Install F-Droid
+
+* Open Chrome
+  * Select `Use without an account` option.
+  * At the ad privacy settings prompt, select the `Settings` button.
+  * Select `Ad topics` and disable the `Ad topics` option. Tap on the back arrow.
+  * Select `Site-suggested ads` and disable the `Site-suggested ads` option. Tap on the back arrow.
+  * Select `Ad measurement` and disable the `Ad measurement` option. Tap on the back arrow.
+* In the URL bar, enter `fdroid.org` and tap enter.
+* [Download F-Droid](https://f-droid.org/). There may be a warning that the file may be harmful and tap on the `Download anyway` button.
+* After the download has finished, tap on the `Open` button.
+* It will give another warning that your phone currently isn't allowed to install unknown apps from this source. Tap on the `Settings` button.
+* Enable `Allow permission` option to be able to install apk files from Chrome.
+* Tap on the `Install` button to install F-Droid.
+* Another warning will open that F-Droid was built for an older version of Android. Tap more details and `Install anyway` option and enter your password.
+* Open F-Droid once it is installed. Give it any permissions it asks for such as sending notifications.
+* Go to the Updates tab, and update F-Droid. You will have to allow installation of APK files through F-Droid.
+* It will give another warning that your phone currently isn't allowed to install unknown apps from this source. Tap on the `Settings` button.
+* Enable `Allow permission` option to be able to install apk files from Chrome.
+* Tap on the `Update` button to update F-Droid.
+* Open F-Droid again, tap on the `Latest` tab and search for `Neo Store`.
+* Install Neo Store, open it, give it all of the permissions it asks for. Open the gear icon, repositories tab, and disable everything except for F-Droid. Back out of the settings, and tap on the refresh icon.
+* Install more apps from F-Droid through Neo Store such as Mull, VLC, OSMAnd, Markor, Hacker's Keyboard, Termux, Dicio, and Luanti.
+
+### Configure Firefox
+
+* Set as default browser.
+* Add widget.
+* Tap `Not now` when asked about syncing between devices.
+* Tap `Turn on notifications` option. Tap the `Allow` button.
+* Tap on the ellipsis and the `Extensions` option.
+* Install `uBlock Origin` and `Dark Reader` extensions. Allow them in private browsing and tap on the `Add` and `OK` buttons.
+* Tap on `uBlock Origin` and tap on the `Settings` option. Tap on the `Filter lists` tab. Enable both `Cookie notices` lists. Expand `Annoyances` > `EasyList - Annoyances` and enable `EasyList - Chat Widgets` lists. Expand `AdGuard - Annoyances` and enable `Mobile App Banners` and `Popup overlays` lists. Tap on the `Update now` button. Close the `uBlock Origin` settings tab.
+
+### Configure OSMAnd
+
+Start the app and download the map of the place where you are.
+
+### Retro Games
+
+(Optionally) install RetroArch through Mull.
+
+### Rearrange icons

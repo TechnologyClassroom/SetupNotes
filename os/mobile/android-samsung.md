@@ -216,4 +216,11 @@ Start the app and download the map of the place where you are.
 
 (Optionally) install RetroArch through Mull.
 
+### Third-party stores and Google Family Link
+
+Google Family Link disables the installation of third-party app stores such as
+F-Droid. To resolve this, you must use a secondary device and the Google Family
+Link app to control the primary device. It is not in an intuitive place and the
+setting can be found under devices.
+
 ### Rearrange icons

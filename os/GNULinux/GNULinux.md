@@ -236,9 +236,37 @@ Edit cron jobs as another users.
 
     sudo crontab -u username -e
 
+## Mount a drive neatly in /media/ from the command line like the GUI file managers
+
+List the drives.
+
+    lsblk
+
+    ls -la /dev/disk/by-path
+
+Mount the device with the `udiskctl mount` command.
+
+    udisksctl mount -b /dev/sdb1
+
+If the disk is encrypted, decrypt first with `udiskctl unlock` command and replace sdb1 with the drive identifier.
+
+    udisksctl unlock -b /dev/sdb1
+
+If successful, the command will return a dm device. Proceed to use `udiskctl mount` command on the dm devices that the command gives you.
+
+    udisksctl mount -b /dev/dm-4
+
+To unmount, do the opposite with `udiskctl unmount` command.
+
+    udisksctl unmount -b /dev/dm-4
+
+If the disk was encrypted, you can lock it again with `udiskctl lock` command.
+
+    udisksctl lock -b /dev/sdb1
+
 ## Add drive to fstab manually
 
-I often find myself trying to set a drive to automatically boot on a system.
+I often found myself trying to set a drive to automatically boot on a system.
 
 List the drives by uuid.
 

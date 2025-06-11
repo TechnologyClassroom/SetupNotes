@@ -260,4 +260,4 @@ vim ~/.ssh/authorized_keys
 
 `CTRL+b ]` pastes.
 
-Then save the file. `ESC` `:wq` saves and quites from `vim`.
+Then save the file. `ESC` `:wq` saves and quits from `vim`.

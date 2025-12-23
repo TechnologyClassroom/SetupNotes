@@ -115,5 +115,12 @@ sudo dmesg -wH
 
 Install flashrom.
 
+```
+sudo apt install -y flashrom
+```
+
 Follow the instructions on https://codeberg.org/Riku_V/pico-serprog to flash
 your first chip.
+
+Free BIOS files can be found at the
+[GNU Boot](https://www.gnu.org/software/gnuboot/) project.

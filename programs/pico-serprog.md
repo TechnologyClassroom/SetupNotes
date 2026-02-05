@@ -14,6 +14,17 @@ What do you need?
 For this, I am using the Raspberry Pi Pico H, but it may work for all of the
 Raspberry Pi Pico boards.
 
+I prices out all of these parts based on Cambridge, MA prices includes sales tax on 2026-02-05.
+
+$5.31 [Raspberry Pico H](https://www.microcenter.com/product/650107/raspberry-pi-pico-h-raspberry-pi-pico-with-headers-pre-installed)
+$6.45 [SOIC8 chip clip](https://www.ebay.com/itm/316562966853) (Can save buying in larger quantities.)
+$8.88 [SOIC8 chip clip](https://www.ebay.com/itm/358148638213) (Can save buying in larger quantities.)
+$5.31 [Dupont jumper cables](https://www.microcenter.com/product/613879/inland-dupont-jumper-wire-20cm-3-pack)
+$6.37 [MicroUSB cable](https://www.microcenter.com/product/485276/inland-usb-20-(type-a)-to-micro-usb-(type-b)-male-cable-3-ft-black) (You probably have one of these already.)
+I assume everyone already has a computer.
+
+Total $32.32 USD
+
 ## Configuring your environment
 
 I am using Triquel 11 which is a variation of Ubuntu 22.04, but these

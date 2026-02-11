@@ -819,6 +819,52 @@ Solution: In GNOME Termianl, click on `Edit` in the menu bar. Click on the `Pref
 
 From hlidka at https://unix.stackexchange.com/a/365281/553861
 
+### GNOME shutdown updates
+
+Problem: GNOME tries to update packages on reboot and shutdown with a checked box to update packages. If that fails or tries to do more or less than what is intended, it may break the system.
+
+Solution: Disable that option through polkit setting.
+
+Create a new rule file.
+
+    sudo vim /etc/polkit-1/rules.d/99-disable-offline-update.rules
+
+Place this text in the file:
+
+```
+polkit.addRule(function(action, subject) {
+  if ((action.id == "org.freedesktop.packagekit.trigger-offline-update")) {
+    return polkit.Result.NO;
+  }
+});
+```
+
+Set the ownership of the file to the `root` user and the `polkitd` group.
+
+    sudo chown root:polkitd /etc/polkit-1/rules.d/99-disable-offline-update.rules
+
+Based on Jonathan Kamens solution at <https://askubuntu.com/a/1562050>.
+
+### Prevent apt from updating a package
+
+Problem: I have a system with an older NVIDIA card. If I update all of the packages, the NVIDIA drivers will break and I will not have a graphical display upon reboot.
+
+Solution: Hold the packages with apt.
+
+This is the format.
+
+    sudo apt-mark hold nameofpackage
+
+This is the literal command I used to hold all of the NVIDIA packages at version 580.105.08-1 the latest version that works with my old graphics card.
+
+    sudo apt-mark hold nvidia-open-580.105.08:amd64=580.105.08-1 nvidia-kernel-open-dkms:amd64=580.105.08-1 firmware-nvidia-gsp:amd64=580.105.08-1 nvidia-driver:amd64=580.105.08-1 nvidia-kernel-support:amd64=580.105.08-1 nvidia-driver-libs:amd64=580.105.08-1 libnvidia-rtcore:amd64=580.105.08-1 libgles-nvidia1:amd64=580.105.08-1 libgles-nvidia2:amd64=580.105.08-1 libnvidia-vksc-core:amd64=580.105.08-1 nvidia-egl-icd:amd64=580.105.08-1 nvidia-vulkan-icd:amd64=580.105.08-1 libnvidia-eglcore:amd64=580.105.08-1 libnvidia-api1:amd64=580.105.08-1 libglx-nvidia0:amd64=580.105.08-1 libnvidia-gpucomp:amd64=580.105.08-1 libnvidia-ml1:amd64=580.105.08-1 libnvidia-glvkspirv:amd64=580.105.08-1 libnvidia-allocator1:amd64=580.105.08-1 libnvidia-cfg1:amd64=580.105.08-1 libnvidia-ngx1:amd64=580.105.08-1 nvidia-vdpau-driver:amd64=580.105.08-1 libegl-nvidia0:amd64=580.105.08-1 xserver-xorg-video-nvidia:amd64=580.105.08-1 nvidia-modprobe:amd64=580.105.08-1 libnvidia-glcore:amd64=580.105.08-1 nvidia-driver-cuda:amd64=580.105.08-1 nvidia-opencl-icd:amd64=580.105.08-1 libnvcuvid1:amd64=580.105.08-1 libnvidia-opticalflow1:amd64=580.105.08-1 libnvidia-fbc1:amd64=580.105.08-1 libnvoptix1:amd64=580.105.08-1 libnvidia-nvvm4:amd64=580.105.08-1 libnvidia-encode1:amd64=580.105.08-1 libnvidia-sandboxutils:amd64=580.105.08-1 libnvidia-nvvm704:amd64=580.105.08-1 libnvidia-present:amd64=580.105.08-1 libcuda1:amd64=580.105.08-1 libnvidia-ptxjitcompiler1:amd64=580.105.08-1 libnvidia-pkcs11-openssl3:amd64=580.105.08-1 libcudadebugger1:amd64=580.105.08-1 nvidia-persistenced:amd64=580.105.08-1 nvidia-settings:amd64=580.105.08-1 libxnvctrl0:amd64=580.105.08-1 nvidia-xconfig:amd64=580.105.08-1 libegl-nvidia0:i386=580.105.08-1 libgles-nvidia2:i386=580.105.08-1 libnvidia-allocator1:i386=580.105.08-1 libnvidia-glcore:i386=580.105.08-1 libnvidia-gpucomp:i386=580.105.08-1 nvidia-driver-libs:i386=580.105.08-1 libgles-nvidia1:i386=580.105.08-1 libglx-nvidia0:i386=580.105.08-1 libnvidia-eglcore:i386=580.105.08-1 libnvidia-glvkspirv:i386=580.105.08-1 libnvidia-ml1:i386=580.105.08-1 nvidia-vulkan-icd:i386=580.105.08-1
+
+List held packages.
+
+    apt-mark showhold
+
+Accepting donations for a newer graphics card. :D
+
 ### WeeChat color issue
 
 Problem: System and WeeChat color scheme makes it difficult to read nicks when they ping you.

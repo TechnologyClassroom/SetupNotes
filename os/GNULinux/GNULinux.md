@@ -67,6 +67,12 @@ Here are some other resources that can help you along the way:
   to translate what you learned into a practical skill that you can use on your
   own computer.
 
+- [DataCamp](https://www.datacamp.com/) is similar to Codecademy with interactive
+  lessons, but DataCamp dives deeper into data analysis topics. Again, make sure
+  that you can do everything locally on your machine. This will sometimes require
+  sourcing local data sets or working with your own data, but that is a good skill
+  to have too.
+
 - [The Linux Foundation](https://training.linuxfoundation.org/linux-courses/system-administration-training)
   has a series of free MOOCs about understanding and learning "Linux" for the
   enterprise.

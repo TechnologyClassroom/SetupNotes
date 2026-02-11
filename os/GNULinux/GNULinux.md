@@ -6,8 +6,8 @@ You cannot learn everything at once.
 
 ## Learning GNU/Linux in a self-paced way
 
-I am frequently asked how to learn GNU/Linux.  The fastest way to learn is to
-install a GNU/Linux distribution on your computer and use it everyday.  Figure
+I am frequently asked how to learn GNU/Linux. The fastest way to learn is to
+install a GNU/Linux distribution on your computer and use it everyday. Figure
 out how to do all of the tasks you would normally do with a computer using only
 free, libre, and open source software. Do not try to run all of the programs
 you once used, learn what the task was that you were doing and find a workflow
@@ -17,15 +17,15 @@ The second thing that has advanced my career with GNU/Linux the most is taking
 notes.
 
 When I am about to do something new, I first write out what I am trying to do,
-the problem that I am trying to solve, or the original error message.  I then
-research the topic.  I take notes on the research and add the relevant links.
+the problem that I am trying to solve, or the original error message. I then
+research the topic. I take notes on the research and add the relevant links.
 Before I enter in any commands from the Internet, I try to understand the
-commands and switches as thoroughly as possible.  I document the commands I use
-and add any notes about what each command does.  If I forgot to document my
+commands and switches as thoroughly as possible. I document the commands I use
+and add any notes about what each command does. If I forgot to document my
 commands, I can piece them together by looking at the. bash_history file.
 
 If I messed up something, I should be able to refer to my notes and undo any
-changes.  I then document that process.
+changes. I then document that process.
 
 Months later when the issue arises again and I have forgotten the process, I can
 look at my notes instead of restarting over again at the research phase.
@@ -38,22 +38,34 @@ Here are some other resources that can help you along the way:
 
 - [/r/linuxupskillchallenge](https://old.reddit.com/r/linuxupskillchallenge/) is
   a Reddit community built around a 30 day commitment to learning how to manage
-  a webserver.  This is a reasonable and practical way to learn the fundamentals
+  a webserver. This is a reasonable and practical way to learn the fundamentals
   of system administration.
 
 - [overthewire](http://overthewire.org/) is a series of games.
   [Bandit](http://overthewire.org/wargames/bandit/) is a game played through
-  SSH.  Try to get the next level's password by figuring out a command line
+  SSH. Try to get the next level's password by figuring out a command line
   concept.
 
 - [Codecademy](https://www.codecademy.com/learn/learn-the-command-line) is a
-  great interactive way to learn programming languages for the web.  They have a
-  quick course on using the UNIX and GNU/Linux command line.  Expect to spend
+  great interactive way to learn programming languages for the web. They have a
+  quick course on using the UNIX and GNU/Linux command line. Expect to spend
   about an hour on this course and it should be done in one sitting.
   https://www.codecademy.com/learn/learn-the-command-line
 
   Other useful courses on Codecademy: Their HTML + CSS course is very quick and
-  useful.  Their Python 2 course is VERY good.
+  useful. Their Python course was good. The quality of the free resources seems
+  to have gotten worse over time.
+
+  To get the most out of Codecademy or any other site like it where there is a
+  text editor that runs code in the browser or a terminal in the browser, make
+  sure you can translate the same concept to your local machine. It takes a bit
+  more work to copy and paste and do everything twice, but you do not have to
+  recreate each lesson. At the end of each section, make sure that you can
+  locally edit text files, run them through a programming language, run a
+  web server, or run the commands locally on your machine. If you skip this
+  important unwritten step, you may realize that you do not actually know how
+  to translate what you learned into a practical skill that you can use on your
+  own computer.
 
 - [The Linux Foundation](https://training.linuxfoundation.org/linux-courses/system-administration-training)
   has a series of free MOOCs about understanding and learning "Linux" for the
@@ -69,18 +81,22 @@ Here are some other resources that can help you along the way:
 - If you do not have permission to install another operating system or dual-boot
   your machine, you can use a Virtual Machine manager such as
   [VirtualBox](https://www.virtualbox.org/) to practice installing and using an
-  operating sytem that you may not be familiar with.  Install
+  operating sytem that you may not be familiar with. Install
   [Ubuntu Server](https://www.ubuntu.com/download/server) or
   [Debian](https://www.debian.org/) as a virtual machine and follow along with
-  the tutorials in a course.  If you are already using a GNU/Linux machine, I
-  would recommend `virt-manager` instead of VirtualBox.
+  the tutorials in a course. If you are already using a GNU/Linux machine, I
+  would recommend `virt-manager` instead of VirtualBox. I would also recommend
+  using a single-board computer such as a
+  [Raspberry Pi](https://github.com/TechnologyClassroom/RaspberryPiProgrammingWorkshop/)
+  as they are cheap enough that you can take more risks than experimenting with
+  your only computer.
 
 - [The Linux Command Line](http://linuxcommand.org/tlcl.php) By William Shotts
   and published by No Starch Press is an excellent book to learn some of the
-  basics about the command line.  You can also download the PDF free from
+  basics about the command line. You can also download the PDF free from
   [his page](http://sourceforge.net/projects/linuxcommand/files/TLCL/17.10/TLCL-17.10.pdf/download).
 
-- Self reference -  All commands have built in help.
+- Self reference - All commands have built in help.
 
 ```
 cat -h
@@ -91,12 +107,12 @@ man cat
 - [Explainshell](http://explainshell.com/) pulls relevant man page information
   for commands that are entered.
 - [The Arch wiki](https://wiki.archlinux.org/) contains a large amount of
-  quality information about GNU/Linux.  Arch is an operating system, but the
+  quality information about GNU/Linux. Arch is an operating system, but the
   information is very useful for all GNU/Linux distributions.
 - [cmdchallenge](https://cmdchallenge.com/) has tricky problems that can be
   solved with UNIX one-liners (web based).
 - [vim adventures](https://vim-adventures.com/) teaches vim like an old school
-  rpg.  vim is a command line text editor like nano, but FAR more powerful and
+  rpg. vim is a command line text editor like nano, but FAR more powerful and
   customizable.
 - [Article: GNU/Linux command line wizardry: Learn to think in sed, awk, and grep](https://arstechnica.com/gadgets/2021/08/linux-bsd-command-line-101-using-awk-sed-and-grep-in-the-terminal/)
 - Stay up-to-date with changes by subscribing to relevant news sources such as:
@@ -132,7 +148,7 @@ man cat
 - [Ubuntu Server](https://www.ubuntu.com/download/server) - Ubuntu without a
   graphical user interface (GUI) is a popular choice for enterprise servers.
 - [AlmaLinux](https://almalinux.org/) - Stable community driven branch of Red
-  Hat Enterprise Linux (RHEL).  I would only recommend AlmaLinux if you are
+  Hat Enterprise Linux (RHEL). I would only recommend AlmaLinux if you are
   trying to prepare for a job that will be using RHEL.
 
 ## Proprietary NVIDIA drivers
@@ -141,7 +157,7 @@ See my [NVIDIA](https://github.com/TechnologyClassroom/nvidia) repository for
 bash scripts to help make installing proprietary NVIDIA drivers and CUDA.
 
 Note: If privacy is a concern of yours do not use the proprietary NVIDIA
-drivers as they contain telemetry that cannot be turned off.  Instead use the
+drivers as they contain telemetry that cannot be turned off. Instead use the
 nouveau driver if you must use NVIDIA hardware.
 
 ## Stress testing CPU on debian based systems
@@ -174,7 +190,7 @@ Modify the configuration file.
 
     sudo nano /etc/samba/smb.conf
 
-Add the details for your share at the bottom of the page.  Here is an example
+Add the details for your share at the bottom of the page. Here is an example
 that worked as a public folder:
 
 ```
@@ -289,7 +305,7 @@ Modify the line to look like this.
 
     UUID=926c2f9e-239d-4f4b-8bfd-f937f0de253f /mnt/desiredtmountpoint      ext4    defaults        0       2
 
-Change desired mountpoint to that of your chosing.  CTRL+X, y, enter
+Change desired mountpoint to that of your chosing. CTRL+X, y, enter
 
 ## Blink lights
 
@@ -360,12 +376,12 @@ booting.
 
 Solution: Use GNU/Linux command line tools to inspect and repair problems.
 
-This command checked the fat32 partition for errors.  If errors are found, fix
-them automatically.  /dev/sdc is my flash drive in this example.
+This command checked the fat32 partition for errors. If errors are found, fix
+them automatically. /dev/sdc is my flash drive in this example.
 
     sudo dosfsck -w -r -l -a -v -t /dev/sdc1
 
-dosfsck complained about a dirty bit and could not automatically repair.  This
+dosfsck complained about a dirty bit and could not automatically repair. This
 command can fix a dirty bit:
 
     sudo fsck.vfat /dev/sdc1
@@ -380,11 +396,11 @@ Sources:
 
 ### Node.js path problem
 
-Problem: nodejs cannot find the correct path.  Gives error:
+Problem: nodejs cannot find the correct path. Gives error:
 
     /usr/bin/env: node: No such file or directory
 
-Solution: Improperly named nodejs needs to be linked to node.  Create symlink
+Solution: Improperly named nodejs needs to be linked to node. Create symlink
 with:
 
     sudo ln -s /usr/bin/nodejs /usr/bin/node
@@ -406,7 +422,7 @@ Remove the word 'obscure' and save.
 
 ### Dash default problem
 
-Problem: Ubuntu defaults to dash instead of bash.  Bash scripts sometimes do not
+Problem: Ubuntu defaults to dash instead of bash. Bash scripts sometimes do not
 work.
 
 Solution: Remove links to dash and repace link to bash.
@@ -428,7 +444,7 @@ sudo systemctl restart NetworkManager.service
 
 Problem: Ubuntu 16.04 crashes on apt-get update.
 Solution: Something changed in Ubuntu 16.04 during the Summer of 2017 and
-libappstream3 breaks updates.  Remove libappstream3 to fix the problem.
+libappstream3 breaks updates. Remove libappstream3 to fix the problem.
 
     sudo apt-get purge -y libappstream3
 
@@ -442,7 +458,7 @@ If that does not work, edit the /etc/default/grub file.
 
     sudo nano /etc/default/grub
 
-Add a "#" symbol at the start of line GRUB_HIDDEN_TIMEOUT=0.  CTRL+X, y, enter
+Add a "#" symbol at the start of line GRUB_HIDDEN_TIMEOUT=0. CTRL+X, y, enter
 to save.
 
 Update grub.
@@ -454,14 +470,14 @@ http://askubuntu.com/questions/16042/how-to-get-to-the-grub-menu-at-boot-time
 
 ### Old DHCP problem
 
-Problem: Ubuntu 16.04 does not manage the network devices.  dhcp can be set
+Problem: Ubuntu 16.04 does not manage the network devices. dhcp can be set
 manually.
 
 Solution: Edit config file and set managed equal to true.
 
     sudo nano /etc/NetworkManager/NetworkManager.conf
 
-Change ```managed=false``` to ```managed=true```.  CTRL+X, y, enter
+Change ```managed=false``` to ```managed=true```. CTRL+X, y, enter
 
 ### Old Sugar cursor problem
 
@@ -508,7 +524,7 @@ Problem: All ethernet devices are not shown in ifconfig on Ubuntu Server 16.04.
 
 Solution: List all cards and manually add them to /etc/network/interfaces
 
-Lists all network ports.  Network ports are something like eth0, em1, p4n1,
+Lists all network ports. Network ports are something like eth0, em1, p4n1,
 enp3s0, and wlan0.
 
     ip link show
@@ -517,7 +533,7 @@ Edit the /etc/network/interfaces file.
 
     sudo nano /etc/network/interfaces
 
-Use the template shown with lo for all of your network ports.  CTRL+X, y, enter
+Use the template shown with lo for all of your network ports. CTRL+X, y, enter
 
 ### International keyboad issue
 
@@ -528,7 +544,7 @@ Solution: Change default keyboard settings in /etc/default/keyboard
 
     sudo nano /etc/default/keyboard
 
-Remove intl from XKBLAYOUT and XKBVARIANT.  Hold CTRL and press X, press y, and
+Remove intl from XKBLAYOUT and XKBVARIANT. Hold CTRL and press X, press y, and
 press the enter or return key.
 
 ### Debian CD sources issue
@@ -540,7 +556,7 @@ Solution: Remove the cdrom source from the /etc/apt/sources.list file.
     sudo nano /etc/apt/sources.list
 
 Add a # at the beginning of the line that starts with "deb cdrom" and leave
-everything else.  Hold CTRL and press X, press y, and press the enter or return
+everything else. Hold CTRL and press X, press y, and press the enter or return
 key.
 
 ### Incomplete install issue
@@ -568,7 +584,7 @@ Solution: Change default applications.
 
     sudo update-alternatives --config
 
-Use tab completion after this to list all options.  I use:
+Use tab completion after this to list all options. I use:
 
 ```
 sudo update-alternatives --config editor
@@ -576,7 +592,7 @@ sudo update-alternatives --config x-terminal-emulator
 sudo update-alternatives --config x-www-browser
 ```
 
-`editor` will open the default text editor.  This is useful for scripting.
+`editor` will open the default text editor. This is useful for scripting.
 
 `xdg-open` will open a file with the default graphical utility.
 
@@ -629,7 +645,7 @@ Press <enter> to keep the current choice[*], or type selection number: 2
 update-alternatives: using /usr/bin/vim.tiny to provide /usr/bin/vi (vi) in manual mode
 ```
 
-Sometimes you just want to check where the alternatives are set to and they might be 2 redirects deep.  This command is useful for checking in that instance.
+Sometimes you just want to check where the alternatives are set to and they might be 2 redirects deep. This command is useful for checking in that instance.
 
     ls -la $(ls -la $(which phar) | awk '{print $NF}')
 
@@ -654,7 +670,7 @@ Solution: Run this command `locale-gen en_US.UTF-8` as root.
 
 ### LVM issue
 
-Problem: Console reports an issue with /dev/dm-3.  How do you know what /dev/dm-3 is?
+Problem: Console reports an issue with /dev/dm-3. How do you know what /dev/dm-3 is?
 
 Solution: /dev/dm* are device mapper entries associated with lvm partitions.
 
@@ -739,15 +755,15 @@ When the ad packages ubuntu-advantage-tools and or ubunutu-pro-client-l10n have 
 The installer will get hung up like this:
 
 ```
-Configuration file '/etc/apt/apt.conf.d/20apt-esm-hook.conf'                                                      
- ==> Modified (by you or by a script) since installation.                                                         
- ==> Package distributor has shipped an updated version.                                                          
-   What would you like to do about it ?  Your options are:                                                        
-    Y or I  : install the package maintainer's version                                                            
-    N or O  : keep your currently-installed version                                                               
-      D     : show the differences between the versions                                                           
-      Z     : start a shell to examine the situation                                                              
- The default action is to keep your current version.                                                              
+Configuration file '/etc/apt/apt.conf.d/20apt-esm-hook.conf'
+ ==> Modified (by you or by a script) since installation.
+ ==> Package distributor has shipped an updated version.
+   What would you like to do about it ?  Your options are:
+    Y or I  : install the package maintainer's version
+    N or O  : keep your currently-installed version
+      D     : show the differences between the versions
+      Z     : start a shell to examine the situation
+ The default action is to keep your current version.
 *** 20apt-esm-hook.conf (Y/I/N/O/D/Z) [default=N] ?
 ```
 
